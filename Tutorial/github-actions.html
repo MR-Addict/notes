@@ -112,7 +112,7 @@
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <a href="https://github.com/mr-addict/my-notes" title="Git repository" aria-label="Git repository">
+                        <a href="https://github.com/mr-addict/notes" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                     </div>
@@ -139,13 +139,13 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="使用github-action"><a class="header" href="#使用github-action">使用GitHub Action</a></h1>
+                        <h1 id="使用github-actions"><a class="header" href="#使用github-actions">使用GitHub Actions</a></h1>
 <h2 id="一基本模板"><a class="header" href="#一基本模板">一、基本模板：</a></h2>
-<p>进入配置文件：</p>
+<p>新建配置文件：</p>
 <pre><code class="language-bash">vim .github/workflows/demo.yml
 </code></pre>
 <p>然后添加以下内容：</p>
-<pre><code class="language-yml">name: GitHub-Actions-Demo
+<pre><code class="language-yml">name: build
 on:
   push:
     branches:
@@ -175,7 +175,7 @@ jobs:
         run: echo $PSVersionTable
 </code></pre>
 <h2 id="二部署mdbook模板"><a class="header" href="#二部署mdbook模板">二、部署mdbook模板</a></h2>
-<pre><code class="language-yml">name: Deploy-Github-Pages
+<pre><code class="language-yml">name: build
 
 on:
   push:
@@ -208,7 +208,7 @@ jobs:
           publish_dir: ./book
 </code></pre>
 <h2 id="三部署hexo模板"><a class="header" href="#三部署hexo模板">三、部署hexo模板</a></h2>
-<pre><code class="language-yml">name: Deploy-Github-Pages
+<pre><code class="language-yml">name: build
 
 on:
   push:
@@ -229,7 +229,7 @@ jobs:
           node-version: '16'
 
       - name: Cache npm dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.4
         with:
           path: node_modules
           key: ${{ runner.OS }}-npm-cache
