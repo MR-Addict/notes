@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="Intro.html">我的笔记</a></li><li class="chapter-item "><a href="RPI/Intro.html"><strong aria-hidden="true">1.</strong> 树莓派</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="RPI/config/Intro.html"><strong aria-hidden="true">1.1.</strong> 配置</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="RPI/config/vim.html"><strong aria-hidden="true">1.1.1.</strong> 配置vim</a></li><li class="chapter-item "><a href="RPI/config/aliases.html"><strong aria-hidden="true">1.1.2.</strong> 配置alias</a></li><li class="chapter-item "><a href="RPI/config/cmds.html"><strong aria-hidden="true">1.1.3.</strong> 常用命令</a></li><li class="chapter-item "><a href="RPI/config/others.html"><strong aria-hidden="true">1.1.4.</strong> 其他配置</a></li></ol></li><li class="chapter-item "><a href="RPI/tutorial/Intro.html"><strong aria-hidden="true">1.2.</strong> 教程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="RPI/tutorial/ssh.html"><strong aria-hidden="true">1.2.1.</strong> 使用ssh</a></li><li class="chapter-item "><a href="RPI/tutorial/clash.html"><strong aria-hidden="true">1.2.2.</strong> 使用clash</a></li><li class="chapter-item "><a href="RPI/tutorial/crontab.html"><strong aria-hidden="true">1.2.3.</strong> 使用crontab</a></li><li class="chapter-item "><a href="RPI/tutorial/wiringpi.html"><strong aria-hidden="true">1.2.4.</strong> 使用wiringpi</a></li></ol></li></ol></li><li class="chapter-item "><a href="Programming/Intro.html"><strong aria-hidden="true">2.</strong> 编程语言</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Programming/Chapter1.html"><strong aria-hidden="true">2.1.</strong> Hello-World</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="Intro.html">我的笔记</a></li><li class="chapter-item "><a href="RPI/Intro.html"><strong aria-hidden="true">1.</strong> 树莓派</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="RPI/vim.html"><strong aria-hidden="true">1.1.</strong> 配置vim</a></li><li class="chapter-item "><a href="RPI/aliases.html"><strong aria-hidden="true">1.2.</strong> 配置alias</a></li><li class="chapter-item "><a href="RPI/ssh.html"><strong aria-hidden="true">1.3.</strong> 使用ssh</a></li><li class="chapter-item "><a href="RPI/crontab.html"><strong aria-hidden="true">1.4.</strong> 使用crontab</a></li><li class="chapter-item "><a href="RPI/wiringpi.html"><strong aria-hidden="true">1.5.</strong> 使用wiringpi</a></li><li class="chapter-item "><a href="RPI/others.html"><strong aria-hidden="true">1.6.</strong> 其他配置</a></li><li class="chapter-item "><a href="RPI/cmds.html"><strong aria-hidden="true">1.7.</strong> 常用命令</a></li></ol></li><li class="chapter-item "><a href="Tutorial/Intro.html"><strong aria-hidden="true">2.</strong> 教程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Tutorial/git.html"><strong aria-hidden="true">2.1.</strong> 使用git</a></li><li class="chapter-item "><a href="Tutorial/github-actions.html"><strong aria-hidden="true">2.2.</strong> 使用GitHub Actions</a></li><li class="chapter-item "><a href="Tutorial/clash.html"><strong aria-hidden="true">2.3.</strong> 使用Clash内核</a></li></ol></li><li class="chapter-item "><a href="Programming/Intro.html"><strong aria-hidden="true">3.</strong> 编程语言</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Programming/Chapter1.html"><strong aria-hidden="true">3.1.</strong> Hello-World</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,17 +147,11 @@
 <p>目前包括以下几个部分：</p>
 <ul>
 <li><a href="RPI/Intro.html">树莓派</a></li>
+<li><a href="Tutorial/Intro.html">教程</a></li>
 <li><a href="Programming/Intro.html">编程语言</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="树莓派笔记"><a class="header" href="#树莓派笔记">树莓派笔记</a></h1>
 <p>本专题内容跟都是和树莓派相关，包括常用的命令、配置以及项目使用等等。</p>
-<p>我主要把项目分成配置和教程两部分：</p>
-<ul>
-<li><a href="RPI/config/Intro.html">配置</a></li>
-<li><a href="RPI/tutorial/Intro.html">教程</a></li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="树莓派配置"><a class="header" href="#树莓派配置">树莓派配置</a></h1>
-<p>与树莓派配置相关的内容。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="配置vim"><a class="header" href="#配置vim">配置vim</a></h1>
 <h2 id="一安装vim"><a class="header" href="#一安装vim">一、安装vim</a></h2>
 <pre><code class="language-bash">sudo apt-get install vim -y
@@ -188,6 +182,49 @@ let &amp;t_EI = &quot;\e[2 q&quot;
 <blockquote>
 <p>注意：本配置只在pi用户下有效，如果你想在root也有效需要重新配置</p>
 </blockquote>
+<h2 id="三使用vim"><a class="header" href="#三使用vim">三、使用vim</a></h2>
+<h3 id="命令类"><a class="header" href="#命令类">命令类</a></h3>
+<hr />
+<p>强制退出：</p>
+<pre><code>q!
+</code></pre>
+<p>退出并保存：</p>
+<pre><code>qw
+</code></pre>
+<p>执行命令：</p>
+<pre><code>!echo hello
+</code></pre>
+<h3 id="编辑类"><a class="header" href="#编辑类">编辑类</a></h3>
+<hr />
+<p>在后方插入：</p>
+<pre><code>i
+</code></pre>
+<p>在最前端插入：</p>
+<pre><code>[shift]+i
+</code></pre>
+<p>在前方插入：</p>
+<pre><code>a
+</code></pre>
+<p>在最后端插入：</p>
+<pre><code>[shift]+a
+</code></pre>
+<p>在下方插入：</p>
+<pre><code>o
+</code></pre>
+<p>在上方插入：</p>
+<pre><code>[shift]+o
+</code></pre>
+<h3 id="快捷键类"><a class="header" href="#快捷键类">快捷键类</a></h3>
+<hr />
+<p>删除：</p>
+<pre><code>v+d
+</code></pre>
+<p>复制：</p>
+<pre><code>v+y
+</code></pre>
+<p>粘贴：</p>
+<pre><code>p
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="配置alias"><a class="header" href="#配置alias">配置alias</a></h1>
 <p>进入bash_aliaes配置文件</p>
 <pre><code class="language-bash">vim ~/.bash_aliaes
@@ -201,42 +238,12 @@ alias apt-update=&quot;sudo apt-get update &amp;&amp; sudo apt-get upgrade -y&qu
 alias cpu-temp=&quot;vcgencmd measure_temp&quot;
 alias eeprom-update=&quot;sudo rpi-eeprom-update -a&quot;
 
-alias autologin=&quot;/home/pi/Projects/Autologin/autologin.sh&quot;
+alias autologin=&quot;/home/pi/Projects/Autologin/autologin.py&quot;
 alias autorun=&quot;pwsh -File /home/pi/Projects/Autorun/autorun.ps1&quot;
 </code></pre>
 <blockquote>
 <p>注意：本配置只在pi用户下有效，如果你想在root也有效需要重新配置</p>
 </blockquote>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="常用命令"><a class="header" href="#常用命令">常用命令</a></h1>
-<p>查看系统CPU：</p>
-<pre><code class="language-bash">htop
-</code></pre>
-<p>查看系统存储空间：</p>
-<pre><code class="language-bash">df -h
-</code></pre>
-<p>查看系统进程：</p>
-<pre><code class="language-bash">ps -A
-</code></pre>
-<p>结束某个程序：</p>
-<pre><code class="language-bash">kill $id
-</code></pre>
-<p>更新树莓派eeprom：</p>
-<pre><code class="language-bash">sudo rpi-eeprom-update -a
-</code></pre>
-<p>查看树莓派温度：</p>
-<pre><code class="language-bash">vcgencmd measure_temp
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="其他配置"><a class="header" href="#其他配置">其他配置</a></h1>
-<h2 id="一配置wifi"><a class="header" href="#一配置wifi">一、配置WiFi</a></h2>
-<pre><code class="language-bash">sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
-</code></pre>
-<h2 id="二更新并使用pip-review"><a class="header" href="#二更新并使用pip-review">二、更新并使用pip-review</a></h2>
-<pre><code class="language-bash">pip install pip-review
-pip-review --interactive
-</code></pre>
-<h2 id="三"><a class="header" href="#三">三</a></h2>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="树莓派教程"><a class="header" href="#树莓派教程">树莓派教程</a></h1>
-<p>树莓派项目相关的内容</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用ssh"><a class="header" href="#使用ssh">使用ssh</a></h1>
 <h2 id="一使用puttygen"><a class="header" href="#一使用puttygen">一、使用puttygen</a></h2>
 <p>直接参考以下文章：</p>
@@ -258,13 +265,286 @@ pip-review --interactive
      User pi
      IdentityFile ~/ssh-private-key/piserver
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="使用clash"><a class="header" href="#使用clash">使用clash</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="使用crontab"><a class="header" href="#使用crontab">使用crontab</a></h1>
+<p>进入corntab的配置文件：</p>
+<pre><code class="language-bash">crontab -e
+</code></pre>
+<p>如果你是第一次使用，crontab可能需要你选择默认的编辑器，这边我一般会选择vim作为我的编辑器，因此输入2：</p>
+<pre><code>Select an editor.  To change later, run 'select-editor'.
+  1. /bin/nano        &lt;---- easiest
+  2. /usr/bin/vim.basic
+  3. /usr/bin/vim.tiny
+  4. /bin/ed
+</code></pre>
+<p>你也可以在后面更改默认的编辑器：</p>
+<pre><code class="language-bash">select-editor
+</code></pre>
+<p>默认编辑器选择完后就会进入编辑界面，在文件末尾添加以下内容：</p>
+<pre><code>30 23 * * * sudo /usr/sbin/shutdown -h now
+
+@reboot gpio mode 15 out &amp;&amp; gpio write 15 1
+@reboot /usr/local/bin/clash
+@reboot /home/pi/Projects/Autologin/autologin.sh
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="在树莓派上使用c控制gpio"><a class="header" href="#在树莓派上使用c控制gpio">在树莓派上使用c控制GPIO</a></h1>
+<h2 id="一安装wiringpi"><a class="header" href="#一安装wiringpi">一、安装wiringpi</a></h2>
+<p>你可以前往<a href="http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b/">wiringpi官网</a>参考相关内容安装wiringpi。</p>
+<p>安装wiringpi：</p>
+<pre><code class="language-bash">cd /tmp
+wget https://project-downloads.drogon.net/wiringpi-latest.deb
+sudo dpkg -i wiringpi-latest.deb
+</code></pre>
+<p>测试是否安成功：</p>
+<pre><code class="language-bash">gpio -v
+</code></pre>
+<h2 id="二基础命令"><a class="header" href="#二基础命令">二、基础命令</a></h2>
+<p>查看GPIO状态：</p>
+<pre><code class="language-bash">gpio readall
+</code></pre>
+<p>设置GPIO 14号引脚为输出，并且输出高电平：</p>
+<pre><code class="language-bash">gpio mode 15 out
+gpio write 15 1
+</code></pre>
+<p>还原GPIO 14状态：</p>
+<pre><code class="language-bash">gpio write 15 0
+gpio mode 15 in
+</code></pre>
+<h2 id="三调用wiringpi"><a class="header" href="#三调用wiringpi">三、调用wiringpi</a></h2>
+<p>我们写一个fan.c的程序，该程序用于控制树莓派的GPIO 14。</p>
+<pre><code class="language-c">#include &lt;wiringPi.h&gt;
+#include &lt;signal.h&gt;
+
+#define Fan 14
+
+int isLoop = 1;
+
+void breakLoop(int signal) {
+    isloop = 0;
+}
+
+int main(void) {
+    signal(SIGINT, breakLoop);
+    signal(SIGTERM, breakLoop);
+    signal(SIGHUP, breakLoop);
+
+    wiringPiSetupGpio();
+    pinMode(Fan, OUTPUT);
+    digitalWrite(Fan, HIGH);
+
+    while (isloop);
+
+    digitalWrite(Fan, LOW);
+    pinMode(Fan, INPUT);
+    return 0;
+}
+</code></pre>
+<p>编译代码：</p>
+<pre><code class="language-bash">gcc -Wall fan.c -lwiringPi -o fan
+</code></pre>
+<p>执行代码：</p>
+<pre><code class="language-bash">./fan
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="其他配置"><a class="header" href="#其他配置">其他配置</a></h1>
+<h2 id="一配置wifi"><a class="header" href="#一配置wifi">一、配置WiFi</a></h2>
+<pre><code class="language-bash">sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
+</code></pre>
+<h2 id="二更新并使用pip-review"><a class="header" href="#二更新并使用pip-review">二、更新并使用pip-review</a></h2>
+<pre><code class="language-bash">pip install pip-review
+pip-review --interactive
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="常用命令"><a class="header" href="#常用命令">常用命令</a></h1>
+<p>查看系统CPU：</p>
+<pre><code class="language-bash">htop
+</code></pre>
+<p>查看系统存储空间：</p>
+<pre><code class="language-bash">df -h
+</code></pre>
+<p>查看系统进程：</p>
+<pre><code class="language-bash">ps -A
+</code></pre>
+<p>结束某个程序：</p>
+<pre><code class="language-bash">kill $id
+</code></pre>
+<p>更新树莓派eeprom：</p>
+<pre><code class="language-bash">sudo rpi-eeprom-update -a
+</code></pre>
+<p>查看树莓派温度：</p>
+<pre><code class="language-bash">vcgencmd measure_temp
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="教程笔记"><a class="header" href="#教程笔记">教程笔记</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="使用git"><a class="header" href="#使用git">使用git</a></h1>
+<h2 id="一配置git"><a class="header" href="#一配置git">一、配置git</a></h2>
+<p>首先进入配置文件：</p>
+<pre><code class="language-bash">vim ~/.gitconfig
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code>[user]
+    name=MR-Addict
+    email=2750417853@qq.com
+[http]
+    proxy=http://127.0.0.1:7890
+[https]
+    proxy=http://127.0.0.1:7890
+[init]
+    defaultBranch=main
+</code></pre>
+<h2 id="二常用命令"><a class="header" href="#二常用命令">二、常用命令</a></h2>
+<p>查看本地配置：</p>
+<pre><code class="language-bash">git config --list
+</code></pre>
+<p>查看全局配置：</p>
+<pre><code class="language-bash">git config --global --list
+</code></pre>
+<p>查看提交记录：</p>
+<pre><code class="language-bash">git log
+</code></pre>
+<p>查看当前状态：</p>
+<pre><code class="language-bash">git status
+</code></pre>
+<p>回退版本：</p>
+<pre><code class="language-bash">git reset --hard $hash_value_of_last_commit
+</code></pre>
+<p>验证登录：</p>
+<pre><code class="language-bash">git auth login -w
+</code></pre>
+<p>设置本地默认分支：</p>
+<pre><code class="language-bash">git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/$branch_name
+</code></pre>
+<p>删除本地和远程分支：</p>
+<pre><code class="language-bash">git branch -D $branch_name
+git push --delete $branch_name
+</code></pre>
+<h2 id="三首次提交模板"><a class="header" href="#三首次提交模板">三、首次提交模板</a></h2>
+<p>添加基本内容：</p>
+<pre><code class="language-bash">git init
+echo &quot;# Test&quot; &gt; README.md
+git add README.md
+git commit -m &quot;First commit&quot;
+</code></pre>
+<p>添加远程地址链接：</p>
+<pre><code class="language-bash">git remote add origin git@github.com:mr-addict/test.git
+</code></pre>
+<p>更改默认分支名为main：</p>
+<pre><code class="language-bash">git branch -M main
+</code></pre>
+<p>推送提交到远程地址：</p>
+<pre><code class="language-bash">git push -u origin main
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="使用github-action"><a class="header" href="#使用github-action">使用GitHub Action</a></h1>
+<h2 id="一基本模板"><a class="header" href="#一基本模板">一、基本模板：</a></h2>
+<p>进入配置文件：</p>
+<pre><code class="language-bash">vim .github/workflows/demo.yml
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code class="language-yml">name: GitHub-Actions-Demo
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  Check-Python-Version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current branch
+        uses: actions/checkout@v2
+
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Check python version
+        run: python --version
+
+  Check-Windows-Powershell-Version:
+    runs-on: windows-latest
+    steps:
+      - name: Check-Windows-Powershell-Version
+        shell: powershell
+        run: echo $PSVersionTable
+</code></pre>
+<h2 id="二部署mdbook模板"><a class="header" href="#二部署mdbook模板">二、部署mdbook模板</a></h2>
+<pre><code class="language-yml">name: Deploy-Github-Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  Deploy-Github-Pages:
+    runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: Checkout current branch
+        uses: actions/checkout@v2
+
+      - name: Setup mdBook
+        uses: peaceiris/actions-mdbook@v1
+        with:
+          mdbook-version: 'latest'
+
+      - name: Build book
+        run: mdbook build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./book
+</code></pre>
+<h2 id="三部署hexo模板"><a class="header" href="#三部署hexo模板">三、部署hexo模板</a></h2>
+<pre><code class="language-yml">name: Deploy-Github-Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  Deploy-Github-Pages:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout current branch
+        uses: actions/checkout@v2
+
+      - name: Setup nodejs
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Cache npm dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: ${{ runner.OS }}-npm-cache
+
+      - name: Install npm dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="使用clash内核"><a class="header" href="#使用clash内核">使用Clash内核</a></h1>
 <h2 id="一下载clash"><a class="header" href="#一下载clash">一、下载Clash</a></h2>
 <p>在这里我们使用Clash作为科学上网的代理框架，你可以到GitHub下载<a href="https://github.com/Dreamacro/clash/releases">Clash内核</a>。如果你是<strong>树莓派4B 32位的操作系统</strong>，那么你应该下载对应armv7版本的<a href="https://github.com/Dreamacro/clash/releases/download/v1.11.0/clash-linux-armv7-v1.11.0.gz">clash-linux-armv7-v1.10.6.gz</a>。</p>
 <p>其他型号的树莓派可以通过以下命令查看树莓派的架构：</p>
 <pre><code class="language-bash">arch
 </code></pre>
-<p><img src="RPI/tutorial/images/clash-release.png" alt="clash-release" /></p>
+<p><img src="Tutorial/images/clash-release.png" alt="clash-release" /></p>
 <p>下载完成后解压文件，建议把文件名改为<code>clash</code>， 然后移动到<code>/usr/local/bin/clash</code>位置，同时给该文件以执行的权限：</p>
 <pre><code class="language-bash">wget https://github.com/Dreamacro/clash/releases/download/v1.10.6/clash-linux-armv7-v1.10.6.gz
 gunzip clash-linux-armv7-v1.10.6.gz
@@ -383,80 +663,7 @@ git checkout -b gh-pages origin/gh-pages
 external-controller: 127.0.0.1:9090
 </code></pre>
 <p>然后在浏览器中输入<a href="http://127.0.0.1:9090/ui">http://127.0.0.1:9090/ui</a>就可以看到Clash的控制面板了。</p>
-<p><img src="RPI/tutorial/images/clash-dashboard.png" alt="clash-dashboard" /></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="使用crontab"><a class="header" href="#使用crontab">使用crontab</a></h1>
-<p>进入corntab的配置文件：</p>
-<pre><code class="language-bash">crontab -e
-</code></pre>
-<p>如果你是第一次使用，crontab可能需要你选择默认的编辑器，这边我一般选择会选择vim作为我的编辑器，因此输入2</p>
-<p>你也可以在后面更改默认的编辑器：</p>
-<pre><code class="language-bash">select-editor
-</code></pre>
-<p>然后在文件末尾添加以下内容：</p>
-<pre><code>30 23 * * * sudo /usr/sbin/shutdown -h now
-
-@reboot gpio mode 15 out &amp;&amp; gpio write 15 1
-@reboot /usr/local/bin/clash
-@reboot /home/pi/Projects/Autologin/autologin.sh
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="在树莓派上使用c控制gpio"><a class="header" href="#在树莓派上使用c控制gpio">在树莓派上使用c控制GPIO</a></h1>
-<h2 id="一安装wiringpi"><a class="header" href="#一安装wiringpi">一、安装wiringpi</a></h2>
-<p>你可以前往<a href="http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b/">wiringpi官网</a>参考相关内容安装wiringpi。</p>
-<p>安装wiringpi：</p>
-<pre><code class="language-bash">cd /tmp
-wget https://project-downloads.drogon.net/wiringpi-latest.deb
-sudo dpkg -i wiringpi-latest.deb
-</code></pre>
-<p>测试是否安成功：</p>
-<pre><code class="language-bash">gpio -v
-</code></pre>
-<h2 id="二基础命令"><a class="header" href="#二基础命令">二、基础命令</a></h2>
-<p>查看GPIO状态：</p>
-<pre><code class="language-bash">gpio readall
-</code></pre>
-<p>设置GPIO 14号引脚为输出，并且输出高电平：</p>
-<pre><code class="language-bash">gpio mode 15 out
-gpio write 15 1
-</code></pre>
-<p>还原GPIO 14状态：</p>
-<pre><code class="language-bash">gpio write 15 0
-gpio mode 15 in
-</code></pre>
-<h2 id="三调用wiringpi"><a class="header" href="#三调用wiringpi">三、调用wiringpi</a></h2>
-<p>我们写一个fan.c的程序，该程序用于控制树莓派的GPIO 14。</p>
-<pre><code class="language-c">#include &lt;wiringPi.h&gt;
-#include &lt;signal.h&gt;
-
-#define Fan 14
-
-int isLoop = 1;
-
-void breakLoop(int signal) {
-    isloop = 0;
-}
-
-int main(void) {
-    signal(SIGINT, breakLoop);
-    signal(SIGTERM, breakLoop);
-    signal(SIGHUP, breakLoop);
-
-    wiringPiSetupGpio();
-    pinMode(Fan, OUTPUT);
-    digitalWrite(Fan, HIGH);
-
-    while (isloop);
-
-    digitalWrite(Fan, LOW);
-    pinMode(Fan, INPUT);
-    return 0;
-}
-</code></pre>
-<p>编译程序：</p>
-<pre><code class="language-bash">gcc -Wall fan.c -lwiringPi -o fan
-</code></pre>
-<p>执行程序：</p>
-<pre><code class="language-bash">./fan
-</code></pre>
+<p><img src="Tutorial/images/clash-dashboard.png" alt="clash-dashboard" /></p>
 <div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div>
                     </main>
 
