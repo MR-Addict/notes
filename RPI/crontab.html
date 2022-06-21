@@ -140,6 +140,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="使用crontab"><a class="header" href="#使用crontab">使用crontab</a></h1>
+<h2 id="一配置crontab"><a class="header" href="#一配置crontab">一、配置crontab</a></h2>
 <p>进入corntab配置文件：</p>
 <pre><code class="language-bash">crontab -e
 </code></pre>
@@ -154,12 +155,45 @@
 <pre><code class="language-bash">select-editor
 </code></pre>
 <p>默认编辑器选择完后就会进入编辑界面，在文件末尾添加以下内容：</p>
-<pre><code>30 23 * * * sudo /usr/sbin/shutdown -h now
+<pre><code>30 23 * * 0-5 sudo /usr/sbin/shutdown -h now
 
 @reboot gpio mode 15 out &amp;&amp; gpio write 15 1
 @reboot /usr/local/bin/clash
 @reboot /home/pi/Projects/Autologin/autologin.sh
 </code></pre>
+<p>查看已有任务：</p>
+<pre><code class="language-bash">crontab -l
+</code></pre>
+<h2 id="二contab语法"><a class="header" href="#二contab语法">二、contab语法</a></h2>
+<p>可以使用在线crontab编辑器：<a href="https://crontab.guru/">crontab.guru</a></p>
+<p>基本格式：</p>
+<pre><code>* * * * * [username] command(s)
+- - - - -
+| | | | |
+| | | | ----- Day of week  (0 - 7) (Sunday=0 or 7)
+| | | ------- Month        (1 - 12)
+| | --------- Day of month (1 - 31)
+| ----------- Hour         (0 - 23)
+------------- Minute       (0 - 59)
+</code></pre>
+<p>部分符号含义：</p>
+<table><thead><tr><th style="text-align: center">符号</th><th style="text-align: center">含义</th></tr></thead><tbody>
+<tr><td style="text-align: center">*</td><td style="text-align: center">任意值</td></tr>
+<tr><td style="text-align: center">,</td><td style="text-align: center">分割符</td></tr>
+<tr><td style="text-align: center">-</td><td style="text-align: center">范围符</td></tr>
+<tr><td style="text-align: center">/</td><td style="text-align: center">步数符</td></tr>
+<tr><td style="text-align: center">@reboot</td><td style="text-align: center">启动事件</td></tr>
+</tbody></table>
+<h2 id="三示例"><a class="header" href="#三示例">三、示例</a></h2>
+<pre><code>* */2 * * * root apt-get update &amp;&amp; apt-get upgrade -y
+</code></pre>
+<p>每两小时自动更新apt。</p>
+<pre><code>30 23 * * 0-5 sudo /usr/sbin/shutdown -h now
+</code></pre>
+<p>周日到周五晚23:30自动关机，即跳过星期六。</p>
+<pre><code>@reboot gpio mode 15 out &amp;&amp; gpio write 15 1
+</code></pre>
+<p>开机自动调用wiringpi打开风扇。</p>
 
                     </main>
 

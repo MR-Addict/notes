@@ -154,6 +154,8 @@
     proxy=http://127.0.0.1:7890
 [init]
     defaultBranch=main
+[pull]
+    ff=only
 </code></pre>
 <h2 id="二常用命令"><a class="header" href="#二常用命令">二、常用命令</a></h2>
 <p>查看本地配置：</p>
@@ -171,8 +173,11 @@
 <p>回退版本：</p>
 <pre><code class="language-bash">git reset --hard $hash_value_of_last_commit
 </code></pre>
-<p>验证登录：</p>
-<pre><code class="language-bash">git auth login -w
+<p>保存登录验证：</p>
+<pre><code class="language-bash">git config --global credential.helper cache
+</code></pre>
+<p>只拉取不提交：</p>
+<pre><code class="language-bash">git config --global pull.ff only
 </code></pre>
 <p>设置本地默认分支：</p>
 <pre><code class="language-bash">git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/$branch_name

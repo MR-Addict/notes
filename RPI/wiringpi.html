@@ -162,10 +162,10 @@ gpio write 15 1
 <pre><code class="language-bash">gpio write 15 0
 gpio mode 15 in
 </code></pre>
-<h2 id="三调用wiringpi"><a class="header" href="#三调用wiringpi">三、调用wiringpi</a></h2>
+<h2 id="三调用wiringpih"><a class="header" href="#三调用wiringpih">三、调用&lt;wiringpi.h&gt;</a></h2>
 <p>我们写一个fan.c的程序，该程序用于控制树莓派的GPIO 14。</p>
-<pre><code class="language-c">#include &lt;wiringPi.h&gt;
-#include &lt;signal.h&gt;
+<pre><code class="language-c">#include &lt;signal.h&gt;
+#include &lt;wiringPi.h&gt;
 
 #define Fan 14
 
@@ -192,7 +192,7 @@ int main(void) {
 }
 </code></pre>
 <p>编译代码：</p>
-<pre><code class="language-bash">gcc -Wall fan.c -lwiringPi -o fan
+<pre><code class="language-bash">gcc -Wall -o fan fan.c -lwiringPi
 </code></pre>
 <p>执行代码：</p>
 <pre><code class="language-bash">./fan
