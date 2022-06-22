@@ -158,12 +158,6 @@
     ff=only
 </code></pre>
 <h2 id="二常用命令"><a class="header" href="#二常用命令">二、常用命令</a></h2>
-<p>查看本地配置：</p>
-<pre><code class="language-bash">git config --list
-</code></pre>
-<p>查看全局配置：</p>
-<pre><code class="language-bash">git config --global --list
-</code></pre>
 <p>查看提交记录：</p>
 <pre><code class="language-bash">git log
 </code></pre>
@@ -173,8 +167,17 @@
 <p>回退版本：</p>
 <pre><code class="language-bash">git reset --hard $hash_value_of_last_commit
 </code></pre>
+<p>查看本地配置：</p>
+<pre><code class="language-bash">git config --list
+</code></pre>
+<p>查看全局配置：</p>
+<pre><code class="language-bash">git config --global --list
+</code></pre>
+<p>编辑全局配置：</p>
+<pre><code class="language-bash">git config --global --edit
+</code></pre>
 <p>保存登录验证：</p>
-<pre><code class="language-bash">git config --global credential.helper cache
+<pre><code class="language-bash">git config --global credential.helper store
 </code></pre>
 <p>只拉取不提交：</p>
 <pre><code class="language-bash">git config --global pull.ff only

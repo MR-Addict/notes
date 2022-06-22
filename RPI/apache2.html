@@ -169,7 +169,8 @@ sudo apt-get install apache2 -y
     Require all granted
 &lt;/Directory&gt;
 </code></pre>
-<p>最后就是激活网页了，首先我们需要disable默认的apache网页：</p>
+<h2 id="三使用apache2"><a class="header" href="#三使用apache2">三、使用apache2</a></h2>
+<p>首先我们需要关闭默认的apache网页：</p>
 <pre><code class="language-bash">sudo a2dissite 000-default.conf
 </code></pre>
 <p>然后激活我们的网页：</p>
@@ -179,6 +180,18 @@ sudo apt-get install apache2 -y
 <pre><code class="language-bash">sudo systemctl reload apache2
 </code></pre>
 <p>然后我们就可以通过这个网址<a href="http://localhost">http://localhost</a>访问我们的网页了。</p>
+<p>查看apche2服务：</p>
+<pre><code class="language-bash">sudo systemctl status apache2
+</code></pre>
+<p>停止apache2服务：</p>
+<pre><code class="language-bash">sudo systemctl stop apache2
+</code></pre>
+<p>注销apache2服务：</p>
+<pre><code class="language-bash">sudo systemctl disable apache2
+</code></pre>
+<p>注册apache2服务：</p>
+<pre><code class="language-bash">sudo systemctl enable apache2
+</code></pre>
 
                     </main>
 
