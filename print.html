@@ -78,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="Intro.html">我的笔记</a></li><li class="chapter-item "><a href="RPI/Intro.html"><strong aria-hidden="true">1.</strong> 树莓派</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="RPI/vim.html"><strong aria-hidden="true">1.1.</strong> 配置vim</a></li><li class="chapter-item "><a href="RPI/aliases.html"><strong aria-hidden="true">1.2.</strong> 配置alias</a></li><li class="chapter-item "><a href="RPI/ssh.html"><strong aria-hidden="true">1.3.</strong> 使用ssh</a></li><li class="chapter-item "><a href="RPI/crontab.html"><strong aria-hidden="true">1.4.</strong> 使用crontab</a></li><li class="chapter-item "><a href="RPI/apache2.html"><strong aria-hidden="true">1.5.</strong> 使用apache2</a></li><li class="chapter-item "><a href="RPI/wiringpi.html"><strong aria-hidden="true">1.6.</strong> 使用wiringpi</a></li><li class="chapter-item "><a href="RPI/others.html"><strong aria-hidden="true">1.7.</strong> 其他配置</a></li><li class="chapter-item "><a href="RPI/cmds.html"><strong aria-hidden="true">1.8.</strong> 常用命令</a></li></ol></li><li class="chapter-item "><a href="Tutorial/Intro.html"><strong aria-hidden="true">2.</strong> 教程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Tutorial/git.html"><strong aria-hidden="true">2.1.</strong> 使用git</a></li><li class="chapter-item "><a href="Tutorial/github-actions.html"><strong aria-hidden="true">2.2.</strong> 使用GitHub Actions</a></li><li class="chapter-item "><a href="Tutorial/clash.html"><strong aria-hidden="true">2.3.</strong> 使用Clash内核</a></li></ol></li><li class="chapter-item "><a href="Programme/Intro.html"><strong aria-hidden="true">3.</strong> 编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Programme/Chapter1.html"><strong aria-hidden="true">3.1.</strong> Hello-World</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item affix "><a href="Intro.html">我的笔记</a></li><li class="chapter-item "><a href="RPI/Intro.html"><strong aria-hidden="true">1.</strong> 树莓派</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="RPI/vim.html"><strong aria-hidden="true">1.1.</strong> 配置vim</a></li><li class="chapter-item "><a href="RPI/aliases.html"><strong aria-hidden="true">1.2.</strong> 配置alias</a></li><li class="chapter-item "><a href="RPI/ssh.html"><strong aria-hidden="true">1.3.</strong> 使用ssh</a></li><li class="chapter-item "><a href="RPI/crontab.html"><strong aria-hidden="true">1.4.</strong> 使用crontab</a></li><li class="chapter-item "><a href="RPI/apache2.html"><strong aria-hidden="true">1.5.</strong> 使用apache2</a></li><li class="chapter-item "><a href="RPI/wiringpi.html"><strong aria-hidden="true">1.6.</strong> 使用wiringpi</a></li><li class="chapter-item "><a href="RPI/powershell.html"><strong aria-hidden="true">1.7.</strong> 使用powershell</a></li><li class="chapter-item "><a href="Tutorial/oh-my-posh.html"><strong aria-hidden="true">1.8.</strong> 配置oh-my-posh</a></li><li class="chapter-item "><a href="RPI/others.html"><strong aria-hidden="true">1.9.</strong> 其他配置</a></li><li class="chapter-item "><a href="RPI/cmds.html"><strong aria-hidden="true">1.10.</strong> 常用命令</a></li></ol></li><li class="chapter-item "><a href="Tutorial/Intro.html"><strong aria-hidden="true">2.</strong> 教程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Tutorial/git.html"><strong aria-hidden="true">2.1.</strong> 使用git</a></li><li class="chapter-item "><a href="Tutorial/github-actions.html"><strong aria-hidden="true">2.2.</strong> 使用GitHub Actions</a></li><li class="chapter-item "><a href="Tutorial/clash.html"><strong aria-hidden="true">2.3.</strong> 使用Clash内核</a></li></ol></li><li class="chapter-item "><a href="Programme/Intro.html"><strong aria-hidden="true">3.</strong> 编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Programme/Chapter1.html"><strong aria-hidden="true">3.1.</strong> Hello-World</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -285,7 +285,6 @@ alias autorun=&quot;pwsh -File /home/pi/Projects/Autorun/autorun.ps1&quot;
 <pre><code class="language-bash">crontab -l
 </code></pre>
 <h2 id="二contab语法"><a class="header" href="#二contab语法">二、contab语法</a></h2>
-<p>可以使用在线crontab编辑器：<a href="https://crontab.guru/">crontab.guru</a></p>
 <p>基本格式：</p>
 <pre><code>* * * * * [username] command(s)
 - - - - -
@@ -304,6 +303,9 @@ alias autorun=&quot;pwsh -File /home/pi/Projects/Autorun/autorun.ps1&quot;
 <tr><td style="text-align: center">/</td><td style="text-align: center">步数符</td></tr>
 <tr><td style="text-align: center">@reboot</td><td style="text-align: center">启动事件</td></tr>
 </tbody></table>
+<blockquote>
+<p>注：可以使用<a href="https://crontab.guru">在线crontab编辑器</a></p>
+</blockquote>
 <h2 id="三示例"><a class="header" href="#三示例">三、示例</a></h2>
 <pre><code>* */2 * * * root apt-get update &amp;&amp; apt-get upgrade -y
 </code></pre>
@@ -368,8 +370,10 @@ sudo apt-get install apache2 -y
 <pre><code class="language-bash">sudo systemctl enable apache2
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用wiringpi"><a class="header" href="#使用wiringpi">使用wiringpi</a></h1>
+<blockquote>
+<p>链接：<a href="http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b">wiringpi</a>官方文档</p>
+</blockquote>
 <h2 id="一安装wiringpi"><a class="header" href="#一安装wiringpi">一、安装wiringpi</a></h2>
-<p>你可以前往<a href="http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b/">wiringpi官网</a>参考相关内容安装wiringpi。</p>
 <p>安装wiringpi：</p>
 <pre><code class="language-bash">cd /tmp
 wget https://project-downloads.drogon.net/wiringpi-latest.deb
@@ -425,6 +429,66 @@ int main(void) {
 <p>执行代码：</p>
 <pre><code class="language-bash">./fan
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="使用powershell"><a class="header" href="#使用powershell">使用Powershell</a></h1>
+<blockquote>
+<p>链接：<a href="https://docs.microsoft.com/en-us/powershell/scripting/install/install-raspbian?view=powershell-7.2">Powershell</a>官方文档</p>
+</blockquote>
+<h2 id="一安装poweshell"><a class="header" href="#一安装poweshell">一、安装Poweshell</a></h2>
+<p>32位和64位系统的唯一的区别就是32位需要安装依赖，而64位可以不用。</p>
+<h3 id="32位操作系统"><a class="header" href="#32位操作系统">32位操作系统</a></h3>
+<p>安装依赖：</p>
+<pre><code class="language-bash">sudo apt-get update
+sudo apt-get install '^libssl1.0.[0-9]$' libunwind8 -y
+</code></pre>
+<p>下载解压文件，在我写此文档时powershell最新版本是7.2.5，你可以前往官网下载更新的<a href="https://github.com/PowerShell/PowerShell/releases">版本</a>：</p>
+<pre><code class="language-bash">wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.5/powershell-7.2.5-linux-arm32.tar.gz
+mkdir ~/Powershell
+tar -xvf ./powershell-7.2.5-linux-arm32.tar.gz -C ~/Powershell
+</code></pre>
+<h3 id="64位操作系统"><a class="header" href="#64位操作系统">64位操作系统</a></h3>
+<p>直接下载解压文件：</p>
+<pre><code class="language-bash">wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.5/powershell-7.2.5-linux-arm64.tar.gz
+mkdir ~/Powershell
+tar -xvf ./powershell-7.2.5-linux-arm64.tar.gz -C ~/Powershell
+</code></pre>
+<h2 id="二配置powershell"><a class="header" href="#二配置powershell">二、配置Powershell：</a></h2>
+<pre><code class="language-bash">sudo ~/Powershell/pwsh -command 'New-Item -ItemType SymbolicLink -Path &quot;/usr/bin/pwsh&quot; -Target &quot;$PSHOME/pwsh&quot; -Force'
+</code></pre>
+<h2 id="三使用powershell"><a class="header" href="#三使用powershell">三、使用Powershell：</a></h2>
+<pre><code class="language-bash">pwsh
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="使用oh-my-posh"><a class="header" href="#使用oh-my-posh">使用Oh-My-Posh</a></h1>
+<blockquote>
+<p>链接：<a href="https://ohmyposh.dev/docs">oh-my-posh</a>官方文档</p>
+</blockquote>
+<h2 id="一安装字体"><a class="header" href="#一安装字体">一、安装字体</a></h2>
+<p>首先你需要安装一个<a href="https://github.com/ryanoasis/nerd-fonts/releases">Nerd字体</a>才能正常显示oh-my-posh，推荐安装<a href="https://github.com/ryanoasis/nerd-fonts/releases/download/2.2.0-RC/Hack.zip">Hack字体</a>。</p>
+<p>树莓派需要先安装一个font-manager，然后选择需要安装的字体就好了。</p>
+<pre><code class="language-bash">sudo apt install font-manager
+</code></pre>
+<h2 id="二安装oh-my-posh"><a class="header" href="#二安装oh-my-posh">二、安装oh-my-posh</a></h2>
+<p>首先前往<a href="https://github.com/JanDeDobbeleer/oh-my-posh/releases">oh-my-posh官方</a>地址下载对应的版本，如果是树莓派64位就下载<a href="https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.6.0/posh-linux-arm64">posh-linux-arm64</a>。</p>
+<pre><code class="language-bash">sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-arm64 -O /usr/local/bin/oh-my-posh
+sudo chmod +x /usr/local/bin/oh-my-posh
+</code></pre>
+<p>安装主题：</p>
+<pre><code class="language-bash">mkdir ~/.poshthemes
+wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip
+unzip ~/.poshthemes/themes.zip -d ~/.poshthemes
+chmod u+rw ~/.poshthemes/*.omp.*
+rm ~/.poshthemes/themes.zip
+</code></pre>
+<h2 id="三配置终端"><a class="header" href="#三配置终端">三、配置终端</a></h2>
+<p>进入配置文件：</p>
+<pre><code class="language-bash">sudo vim ~/.bashrc
+</code></pre>
+<p>在最后添加以下内容：</p>
+<pre><code class="language-bash">eval &quot;$(oh-my-posh --init --shell bash --config /home/pi/.poshthemes/paradox.omp.json)&quot;
+</code></pre>
+<p>如果是powershell，因该进入$PROFILE，然后添加以下内容：</p>
+<pre><code class="language-bash">oh-my-posh --init --shell pwsh --config /home/pi/.poshthemes/paradox.omp.json | Invoker-Expression
+</code></pre>
+<p>重新启动终端就可以正常使用了。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="其他配置"><a class="header" href="#其他配置">其他配置</a></h1>
 <h2 id="一配置wifi"><a class="header" href="#一配置wifi">一、配置WiFi</a></h2>
 <pre><code class="language-bash">sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
