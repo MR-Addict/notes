@@ -85,7 +85,56 @@ sudo vim /etc/docker/daemon.json
 }
 ```
 
-## 四、常用命令
+### 服务器配置代理
+
+进入配置文件：
+
+```bash
+sudo systemctl edit docker.service
+```
+
+添加以下内容：
+
+```
+[Service]
+Environment="HTTP_PROXY=http://127.0.0.1:7890"
+Environment="HTTPS_PROXY=http://127.0.0.1:7890"
+Environment="NO_PROXY=localhost,127.0.0.1"
+```
+
+### 容器配置代理
+
+进入配置文件：
+
+```bash
+vim ~/.docker/config.json
+```
+
+添加以下内容：
+
+```
+{
+ "proxies":
+ {
+   "default":
+   {
+     "httpProxy": "http://192.168.10.4:7890",
+     "httpsProxy": "http://192.168.10.4:7890",
+     "noProxy": "localhost,127.0.0.1"
+   }
+ }
+}
+```
+
+## 四、示例
+
+运行nginx容器：
+
+```bash
+docker run -d --rm -p 80:80 -v /home/cael/Documents/Projects/Notes/book:/usr/share/nginx/html --name notes nginx
+```
+
+## 五、常用命令
 
 下载镜像：
 
@@ -99,31 +148,43 @@ docker pull ubuntu
 docker images
 ```
 
-显示正在运行的镜像：
+显示正在运行的容器：
 
 ```bash
 docker ps
 ```
 
-运行某个镜像：
+显示所有容器：
+
+```bash
+docker ps -a
+```
+
+运行某容器：
 
 ```bash
 docker run ubuntu
 ```
 
-后台运行某个镜像：
+后台运行某个容器：
 
 ```bash
 docker run -d ubuntu
 ```
 
-运行某个版本的镜像：
+运行某个版本的容器：
 
 ```bash
 docker run -d ubuntu:18
 ```
 
-运行可交互镜像：
+运行结束后自动删除容器：
+
+```bash
+docker run -d -rm ubuntu
+```
+
+运行可交互容器：
 
 ```bash
 docker run -it ubuntu
@@ -141,13 +202,13 @@ docker run -d -p 80:8080 ubuntu
 docker run -d -v /opt/mydata:/var/lib/mysql ubuntu
 ```
 
-停止正在运行的镜像：
+停止正在运行的容器：
 
 ```bash
 docker stop ubuntu
 ```
 
-重启某个镜像：
+重启某个容器：
 
 ```bash
 docker restart ubuntu
@@ -157,4 +218,16 @@ docker restart ubuntu
 
 ```bash
 docker rmi --force ubuntu
+```
+
+删除容器：
+
+```bash
+docker rm $container-name-or-id
+```
+
+删除所有容器：
+
+```bash
+docker rm $(docker ps --filter status=exited -q)
 ```
