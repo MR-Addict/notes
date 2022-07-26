@@ -71,3 +71,9 @@ pip-review --interactive
 ```bash
 Telegram --startintray
 ```
+
+设置默认编辑器：
+
+```bash
+sudo update-alternatives --config editor
+```

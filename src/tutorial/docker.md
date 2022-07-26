@@ -134,6 +134,12 @@ vim ~/.docker/config.json
 docker run -d --rm -p 80:80 -v /home/cael/Documents/Projects/Notes/book:/usr/share/nginx/html --name notes nginx
 ```
 
+运行adguradhome容器：
+
+```bash
+docker run --name adguardhome --restart unless-stopped -v /home/cael/Documents/Adguardhome/workdir:/opt/adguardhome/work -v /home/cael/Documents/Adguardhome/confdir:/opt/adguardhome/conf -p 5050:53 -p 3000:3000 -d adguard/adguardhome
+```
+
 ## 五、常用命令
 
 下载镜像：
