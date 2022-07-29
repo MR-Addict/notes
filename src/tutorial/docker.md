@@ -131,13 +131,13 @@ vim ~/.docker/config.json
 运行nginx容器：
 
 ```bash
-docker run -d --rm -p 80:80 -v /home/cael/Documents/Projects/Notes/book:/usr/share/nginx/html --name notes nginx
+docker run --name notes -d --restart unless-stopped -p 80:80 -v /home/cael/Documents/Projects/Notes/book:/usr/share/nginx/html nginx
 ```
 
 运行adguradhome容器：
 
 ```bash
-docker run --name adguardhome --restart unless-stopped -v /home/cael/Documents/Adguardhome/workdir:/opt/adguardhome/work -v /home/cael/Documents/Adguardhome/confdir:/opt/adguardhome/conf -p 5050:53 -p 3000:3000 -d adguard/adguardhome
+docker run --name adguardhome -d --restart unless-stopped -p 5050:53 -p 3000:3000 -v /home/cael/Documents/Adguardhome/workdir:/opt/adguardhome/work -v /home/cael/Documents/Adguardhome/confdir:/opt/adguardhome/conf adguard/adguardhome
 ```
 
 ## 五、常用命令
