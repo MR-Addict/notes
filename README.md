@@ -4,4 +4,4 @@
 
 因为是笔记的原因，所以我不会写得太详细，目的是达到我自己能看懂，日后有时间会逐渐完善更正相关内容。
 
-你可以通过以下网址访问网页内容 [https://mraddict.gitlab.io/notes](https://mraddict.gitlab.io/notes)
+你可以通过以下网址访问网页内容 [https://notes.mraddict.one](https://notes.mraddict.one)
