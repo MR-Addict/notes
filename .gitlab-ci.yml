@@ -1,6 +1,5 @@
 stages:
   - build
-  - deploy
 
 # Runtime platform: arch=amd64 os=windows pid=9900 revision=76984217 version=15.1.0
 pages:
@@ -21,8 +20,8 @@ pages:
     - main
 
 #Runtime platform arch=amd64 os=linux pid=7468 revision=32fc1585 version=15.2.1
-deploy:
-  stage: deploy
+server:
+  stage: build
   tags:
     - Ubuntu
   before_script:
@@ -34,4 +33,4 @@ deploy:
     - ssh-keyscan $HOSTNAME >> ~/.ssh/known_hosts
     - chmod 644 ~/.ssh/known_hosts
   script:
-    - ssh -o StrictHostKeyChecking=no $USERNAME@$HOSTNAME "cd /home/$USERNAME/Projects/Notes && mdbook build && exit"
+    - ssh -o StrictHostKeyChecking=no $USERNAME@$HOSTNAME "cd /home/$USERNAME/Projects/Notes && git pull && mdbook build && exit"
