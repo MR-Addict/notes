@@ -11,7 +11,7 @@
 生成密钥，一路回车选择默认选项就好了：
 
 ```bash
-ssh-keygen -t rsa -b 1024 -f piserver -C "Piserver-ssh-key"
+ssh-keygen -t rsa -b 2048 -f piserver -C "piserver-ssh-key"
 ```
 
 配置服务器，将公钥放到服务器上：

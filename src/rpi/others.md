@@ -77,3 +77,9 @@ netstat --tcp --listening --programs --numeric
 ```bash
 sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
 ```
+
+设置用户默认shell：
+
+```bash
+sudo usermod --shell /bin/bash ubuntu
+```

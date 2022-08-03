@@ -3,7 +3,7 @@
 进入bash_aliaes配置文件
 
 ```bash
-vim ~/.bash_aliaes
+vim ~/.bash_aliases
 ```
 
 添加以下内容：
