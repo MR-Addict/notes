@@ -24,7 +24,36 @@ vim ~/.gitconfig
     ff=only
 ```
 
-## 二、常用命令
+## 二、首次提交模板
+
+添加基本内容：
+
+```bash
+git init
+echo "# Test" > README.md
+git add README.md
+git commit -m "First commit"
+```
+
+添加远程仓库链接：
+
+```bash
+git remote add github https://github.com/MR-Addict/Doc-Share.git
+```
+
+更改默认分支名为main：
+
+```bash
+git branch -M main
+```
+
+推送提交到远程仓库：
+
+```bash
+git push -u github main
+```
+
+## 三、常用命令
 
 查看提交记录：
 
@@ -108,31 +137,8 @@ git branch -D $branch_name
 git push --delete $branch_name
 ```
 
-## 三、首次提交模板
-
-添加基本内容：
+重置所有内容，并且删除新文件：
 
 ```bash
-git init
-echo "# Test" > README.md
-git add README.md
-git commit -m "First commit"
-```
-
-添加远程仓库链接：
-
-```bash
-git remote add origin git@github.com:mr-addict/test.git
-```
-
-更改默认分支名为main：
-
-```bash
-git branch -M main
-```
-
-推送提交到远程仓库：
-
-```bash
-git push -u origin main
+git restore . && git clean -f
 ```

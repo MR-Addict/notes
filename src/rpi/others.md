@@ -81,5 +81,12 @@ sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
 设置用户默认shell：
 
 ```bash
-sudo usermod --shell /bin/bash ubuntu
+sudo usermod --shell /bin/bash $USER
+```
+
+bash脚本出现^M错误：
+
+```bash
+sed -i 's/\r//' $yourfile
+cat -e $yourfile
 ```
