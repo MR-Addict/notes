@@ -1,5 +1,4 @@
-<h1>我的笔记👻<img src="https://gitlab.com/mraddict/notes/badges/main/pipeline.svg" /> <img src="https://github.com/MR-Addict/notes/actions/workflows/server.yml/badge.svg?branch=main" />
-</h1>
+<h1>我的笔记👻<img src="https://gitlab.com/mraddict/notes/badges/main/pipeline.svg" /></h1>
 
 本项目基于mdbook框架，主要是用作笔记的功能，记录一些重要的内容，以方便我在不同的机器上使用Copy+Paste魔法。
 
@@ -7,5 +6,4 @@
 
 你可以通过以下网址访问网页内容：
 
-- [https://notes.mraddict.top](https://notes.mraddict.top)(github)
 - [https://notes.mraddict.one](https://notes.mraddict.one)(gitlab)

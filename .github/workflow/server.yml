@@ -1,7 +1,10 @@
-name: pages
+name: server
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
 
 jobs:
   Deploy-To-Server:
