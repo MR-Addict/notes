@@ -125,3 +125,47 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
 ```
+
+## 四、创建个人Actions-Runner
+
+### 部署Runner
+
+可以参照Github，这边跳过。
+
+运行Runner：
+
+```bash
+./run.sh
+```
+
+### 将Actions Runner注册为开机自启任务
+
+注册任务：
+
+```bash
+sudo ./svc.sh install
+```
+
+启动任务：
+
+```bash
+sudo ./svc.sh start
+```
+
+查看状态：
+
+```bash
+sudo ./svc.sh status
+```
+
+停止任务：
+
+```bash
+sudo ./svc.sh stop
+```
+
+注销任务：
+
+```bash
+sudo ./svc.sh uninstall
+```
