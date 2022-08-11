@@ -33,4 +33,4 @@ server:
     - ssh-keyscan $HOSTNAME >> ~/.ssh/known_hosts
     - chmod 644 ~/.ssh/known_hosts
   script:
-    - ssh -o StrictHostKeyChecking=no $USERNAME@$HOSTNAME "cd /home/$USERNAME/Projects/Notes && git pull && mdbook build && exit"
+    - ssh -o StrictHostKeyChecking=no $USERNAME@$HOSTNAME "cd /home/$USERNAME/Projects/Notes && git pull -f && mdbook build && exit"
