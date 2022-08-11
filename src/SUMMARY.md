@@ -22,4 +22,8 @@
   - [使用Linux用户和用户组](tutorial/users.md)
 
 - [编程](programme/intro.md)
-  - [Hello-World](programme/chapter1.md)
+  - [SQL](programme/sql/intro.md)
+    - [HELLO-WORLD](programme/sql/hello-world.md)
+    - [SELECT用法](programme/sql/select.md)
+    - [WHERE用法](programme/sql/where.md)
+    - [AND-OR-NOT运算符](programme/sql/and-or-not.md)
