@@ -6,4 +6,4 @@
 
 你可以通过以下网址访问网页内容：
 
-- [https://notes.mraddict.one](https://notes.mraddict.one)(gitlab)
+- [https://mraddict.gitlab.io/notes](https://mraddict.gitlab.io/notes)
