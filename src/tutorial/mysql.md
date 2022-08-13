@@ -138,3 +138,21 @@ SELECT User, Host FROM mysql.user;
 ```sql
 DROP USER 'user_name'@'localhost';
 ```
+
+查看当前密码协议：
+
+```sql
+SHOW VARIABLES LIKE 'validate_password%';
+```
+
+更改当前密码协议：
+
+```sql
+SET GLOBAL validate_password.policy=LOW;
+```
+
+更改用户密码：
+
+```sql
+ALTER USER 'user_name'@'localhost' IDENTIFIED BY 'new_password';
+```

@@ -17,7 +17,7 @@ sudo apt-get install nginx
 使能nginx：
 
 ```bash
-sudo systemctl enbable nginx
+sudo systemctl enable nginx
 ```
 
 启动nginx：
@@ -73,7 +73,7 @@ server {
     listen 80;
     location / {
         root /var/www/book;
-        index index.html
+        index index.html;
     }
 }
 ```
