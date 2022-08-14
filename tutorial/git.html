@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
-<html lang="zh-cn" class="sidebar-visible no-js rust">
+<html lang="zh-cn" class="sidebar-visible no-js light">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>使用powershell - 我的笔记</title>
+        <title>使用Git - 我的笔记</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="">
+        <meta name="description" content="我的笔记(方便施展Copy+Paste魔法)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href=".././assets/mdbook-admonish.css">
         <!-- MathJax -->
         <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
@@ -32,7 +33,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -58,7 +59,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('rust')
+            html.classList.remove('light')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -77,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="../Intro.html">我的笔记</a></li><li class="chapter-item expanded "><a href="../RPI/Intro.html"><strong aria-hidden="true">1.</strong> 树莓派</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../RPI/vim.html"><strong aria-hidden="true">1.1.</strong> 配置vim</a></li><li class="chapter-item "><a href="../RPI/aliases.html"><strong aria-hidden="true">1.2.</strong> 配置alias</a></li><li class="chapter-item "><a href="../RPI/ssh.html"><strong aria-hidden="true">1.3.</strong> 使用ssh</a></li><li class="chapter-item "><a href="../RPI/crontab.html"><strong aria-hidden="true">1.4.</strong> 使用crontab</a></li><li class="chapter-item "><a href="../RPI/apache2.html"><strong aria-hidden="true">1.5.</strong> 使用apache2</a></li><li class="chapter-item "><a href="../RPI/wiringpi.html"><strong aria-hidden="true">1.6.</strong> 使用wiringpi</a></li><li class="chapter-item expanded "><a href="../RPI/powershell.html" class="active"><strong aria-hidden="true">1.7.</strong> 使用powershell</a></li><li class="chapter-item "><a href="../Tutorial/oh-my-posh.html"><strong aria-hidden="true">1.8.</strong> 配置oh-my-posh</a></li><li class="chapter-item "><a href="../RPI/others.html"><strong aria-hidden="true">1.9.</strong> 其他配置</a></li><li class="chapter-item "><a href="../RPI/cmds.html"><strong aria-hidden="true">1.10.</strong> 常用命令</a></li></ol></li><li class="chapter-item "><a href="../Tutorial/Intro.html"><strong aria-hidden="true">2.</strong> 教程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Tutorial/git.html"><strong aria-hidden="true">2.1.</strong> 使用git</a></li><li class="chapter-item "><a href="../Tutorial/github-actions.html"><strong aria-hidden="true">2.2.</strong> 使用GitHub Actions</a></li><li class="chapter-item "><a href="../Tutorial/clash.html"><strong aria-hidden="true">2.3.</strong> 使用Clash内核</a></li></ol></li><li class="chapter-item "><a href="../Programme/Intro.html"><strong aria-hidden="true">3.</strong> 编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Programme/Chapter1.html"><strong aria-hidden="true">3.1.</strong> Hello-World</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../intro.html">我的笔记</a></li><li class="chapter-item expanded "><a href="../rpi/intro.html"><strong aria-hidden="true">1.</strong> 树莓派</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rpi/vim.html"><strong aria-hidden="true">1.1.</strong> 配置vim</a></li><li class="chapter-item expanded "><a href="../rpi/ssh.html"><strong aria-hidden="true">1.2.</strong> 使用ssh</a></li><li class="chapter-item expanded "><a href="../rpi/aliases.html"><strong aria-hidden="true">1.3.</strong> 配置alias</a></li><li class="chapter-item expanded "><a href="../rpi/crontab.html"><strong aria-hidden="true">1.4.</strong> 使用crontab</a></li><li class="chapter-item expanded "><a href="../rpi/wiringpi.html"><strong aria-hidden="true">1.5.</strong> 使用wiringpi</a></li><li class="chapter-item expanded "><a href="../rpi/powershell.html"><strong aria-hidden="true">1.6.</strong> 使用powershell</a></li><li class="chapter-item expanded "><a href="../rpi/oh-my-posh.html"><strong aria-hidden="true">1.7.</strong> 配置oh-my-posh</a></li><li class="chapter-item expanded "><a href="../rpi/others.html"><strong aria-hidden="true">1.8.</strong> 其他配置及常用命令</a></li></ol></li><li class="chapter-item expanded "><a href="../tutorial/intro.html"><strong aria-hidden="true">2.</strong> 教程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tutorial/git.html" class="active"><strong aria-hidden="true">2.1.</strong> 使用Git</a></li><li class="chapter-item expanded "><a href="../tutorial/nginx.html"><strong aria-hidden="true">2.2.</strong> 使用Nginx</a></li><li class="chapter-item expanded "><a href="../tutorial/mysql.html"><strong aria-hidden="true">2.3.</strong> 使用MySQL</a></li><li class="chapter-item expanded "><a href="../tutorial/docker.html"><strong aria-hidden="true">2.4.</strong> 使用Docker</a></li><li class="chapter-item expanded "><a href="../tutorial/apache2.html"><strong aria-hidden="true">2.5.</strong> 使用Apache2</a></li><li class="chapter-item expanded "><a href="../tutorial/clash.html"><strong aria-hidden="true">2.6.</strong> 使用Clash内核</a></li><li class="chapter-item expanded "><a href="../tutorial/github-actions.html"><strong aria-hidden="true">2.7.</strong> 使用GitHub Actions</a></li><li class="chapter-item expanded "><a href="../tutorial/users.html"><strong aria-hidden="true">2.8.</strong> 使用Linux用户和用户组</a></li></ol></li><li class="chapter-item expanded "><a href="../programme/intro.html"><strong aria-hidden="true">3.</strong> 编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programme/sql/intro.html"><strong aria-hidden="true">3.1.</strong> SQL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programme/sql/hello-world.html"><strong aria-hidden="true">3.1.1.</strong> HELLO-WORLD</a></li><li class="chapter-item "><a href="../programme/sql/select.html"><strong aria-hidden="true">3.1.2.</strong> SELECT用法</a></li><li class="chapter-item "><a href="../programme/sql/where.html"><strong aria-hidden="true">3.1.3.</strong> WHERE用法</a></li><li class="chapter-item "><a href="../programme/sql/and-or-not.html"><strong aria-hidden="true">3.1.4.</strong> AND-OR-NOT运算符</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -95,8 +96,8 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -112,8 +113,8 @@
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <a href="https://github.com/mr-addict/notes" title="Git repository" aria-label="Git repository">
-                            <i id="git-repository-button" class="fa fa-github"></i>
+                        <a href="https://gitlab.com/mraddict/notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-gitlab"></i>
                         </a>
                     </div>
                 </div>
@@ -139,43 +140,94 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="使用powershell"><a class="header" href="#使用powershell">使用Powershell</a></h1>
-<blockquote>
-<p>链接：<a href="https://docs.microsoft.com/en-us/powershell/scripting/install/install-raspbian?view=powershell-7.2">Powershell</a>官方文档</p>
-</blockquote>
-<h2 id="一安装poweshell"><a class="header" href="#一安装poweshell">一、安装Poweshell</a></h2>
-<p>32位和64位系统的唯一的区别就是32位需要安装依赖，而64位可以不用。</p>
-<h3 id="32位操作系统"><a class="header" href="#32位操作系统">32位操作系统</a></h3>
-<p>安装依赖：</p>
-<pre><code class="language-bash">sudo apt-get update
-sudo apt-get install '^libssl1.0.[0-9]$' libunwind8 -y
+                        <h1 id="使用git"><a class="header" href="#使用git">使用git</a></h1>
+<h2 id="一配置git"><a class="header" href="#一配置git">一、配置git</a></h2>
+<p>进入git配置文件：</p>
+<pre><code class="language-bash">vim ~/.gitconfig
 </code></pre>
-<p>下载解压文件，在我写此文档时powershell最新版本是7.2.5，你可以前往官网下载更新的<a href="https://github.com/PowerShell/PowerShell/releases">版本</a>：</p>
-<pre><code class="language-bash">wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.5/powershell-7.2.5-linux-arm32.tar.gz
-mkdir ~/Powershell
-tar -xvf ./powershell-7.2.5-linux-arm32.tar.gz -C ~/Powershell
+<p>然后添加以下内容：</p>
+<pre><code>[user]
+    name=MR-Addict
+    email=2750417853@qq.com
+[http]
+    proxy=http://127.0.0.1:7890
+[https]
+    proxy=http://127.0.0.1:7890
+[init]
+    defaultBranch=main
+[pull]
+    ff=only
 </code></pre>
-<h3 id="64位操作系统"><a class="header" href="#64位操作系统">64位操作系统</a></h3>
-<p>直接下载解压文件：</p>
-<pre><code class="language-bash">wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.5/powershell-7.2.5-linux-arm64.tar.gz
-mkdir ~/Powershell
-tar -xvf ./powershell-7.2.5-linux-arm64.tar.gz -C ~/Powershell
+<h2 id="二首次提交模板"><a class="header" href="#二首次提交模板">二、首次提交模板</a></h2>
+<p>添加基本内容：</p>
+<pre><code class="language-bash">git init
+echo &quot;# Test&quot; &gt; README.md
+git add README.md
+git commit -m &quot;First commit&quot;
 </code></pre>
-<h2 id="二配置powershell"><a class="header" href="#二配置powershell">二、配置Powershell：</a></h2>
-<pre><code class="language-bash">sudo ~/Powershell/pwsh -command 'New-Item -ItemType SymbolicLink -Path &quot;/usr/bin/pwsh&quot; -Target &quot;$PSHOME/pwsh&quot; -Force'
+<p>添加远程仓库链接：</p>
+<pre><code class="language-bash">git remote add github https://github.com/MR-Addict/Doc-Share.git
 </code></pre>
-<h2 id="三使用powershell"><a class="header" href="#三使用powershell">三、使用Powershell：</a></h2>
-<pre><code class="language-bash">pwsh
+<p>更改默认分支名为main：</p>
+<pre><code class="language-bash">git branch -M main
+</code></pre>
+<p>推送提交到远程仓库：</p>
+<pre><code class="language-bash">git push -u github main
+</code></pre>
+<h2 id="三常用命令"><a class="header" href="#三常用命令">三、常用命令</a></h2>
+<p>查看提交记录：</p>
+<pre><code class="language-bash">git log
+</code></pre>
+<p>查看当前状态：</p>
+<pre><code class="language-bash">git status
+</code></pre>
+<p>设置全局用户名：</p>
+<pre><code class="language-bash">git config --global user.name MR-Addict
+</code></pre>
+<p>配置全局用户邮箱：</p>
+<pre><code class="language-bash">git config --global user.email 2750417853@qq.com
+</code></pre>
+<p>回退版本：</p>
+<pre><code class="language-bash">git reset --hard $hash_value_of_last_commit
+</code></pre>
+<p>查看本地配置：</p>
+<pre><code class="language-bash">git config --list
+</code></pre>
+<p>查看全局配置：</p>
+<pre><code class="language-bash">git config --global --list
+</code></pre>
+<p>编辑全局配置：</p>
+<pre><code class="language-bash">git config --global --edit
+</code></pre>
+<p>保存系统登录验证：</p>
+<pre><code class="language-bash">git config --system credential.helper store
+</code></pre>
+<p>重置系统登录验证：</p>
+<pre><code class="language-bash">git config --system --unset credential.helper
+</code></pre>
+<p>只拉取不提交：</p>
+<pre><code class="language-bash">git config --global pull.ff only
+</code></pre>
+<p>设置本地默认分支：</p>
+<pre><code class="language-bash">git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/$branch_name
+</code></pre>
+<p>删除本地和远程分支：</p>
+<pre><code class="language-bash">git branch -D $branch_name
+</code></pre>
+<pre><code class="language-bash">git push --delete $branch_name
+</code></pre>
+<p>重置所有内容，并且删除新文件：</p>
+<pre><code class="language-bash">git restore . &amp;&amp; git clean -f
 </code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../RPI/wiringpi.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../tutorial/intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../Tutorial/oh-my-posh.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../tutorial/nginx.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -184,10 +236,10 @@ tar -xvf ./powershell-7.2.5-linux-arm64.tar.gz -C ~/Powershell
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../RPI/wiringpi.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../tutorial/intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../Tutorial/oh-my-posh.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../tutorial/nginx.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

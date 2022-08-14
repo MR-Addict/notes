@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="zh-cn" class="sidebar-visible no-js rust">
+<html lang="zh-cn" class="sidebar-visible no-js light">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -7,7 +7,7 @@
         <meta name="robots" content="noindex" />
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="">
+        <meta name="description" content="我的笔记(方便施展Copy+Paste魔法)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
@@ -26,6 +26,7 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./assets/mdbook-admonish.css">
         <!-- MathJax -->
         <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
@@ -33,7 +34,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -59,7 +60,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('rust')
+            html.classList.remove('light')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -78,7 +79,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item affix "><a href="Intro.html">我的笔记</a></li><li class="chapter-item "><a href="RPI/Intro.html"><strong aria-hidden="true">1.</strong> 树莓派</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="RPI/vim.html"><strong aria-hidden="true">1.1.</strong> 配置vim</a></li><li class="chapter-item "><a href="RPI/aliases.html"><strong aria-hidden="true">1.2.</strong> 配置alias</a></li><li class="chapter-item "><a href="RPI/ssh.html"><strong aria-hidden="true">1.3.</strong> 使用ssh</a></li><li class="chapter-item "><a href="RPI/crontab.html"><strong aria-hidden="true">1.4.</strong> 使用crontab</a></li><li class="chapter-item "><a href="RPI/apache2.html"><strong aria-hidden="true">1.5.</strong> 使用apache2</a></li><li class="chapter-item "><a href="RPI/wiringpi.html"><strong aria-hidden="true">1.6.</strong> 使用wiringpi</a></li><li class="chapter-item "><a href="RPI/powershell.html"><strong aria-hidden="true">1.7.</strong> 使用powershell</a></li><li class="chapter-item "><a href="Tutorial/oh-my-posh.html"><strong aria-hidden="true">1.8.</strong> 配置oh-my-posh</a></li><li class="chapter-item "><a href="RPI/others.html"><strong aria-hidden="true">1.9.</strong> 其他配置</a></li><li class="chapter-item "><a href="RPI/cmds.html"><strong aria-hidden="true">1.10.</strong> 常用命令</a></li></ol></li><li class="chapter-item "><a href="Tutorial/Intro.html"><strong aria-hidden="true">2.</strong> 教程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Tutorial/git.html"><strong aria-hidden="true">2.1.</strong> 使用git</a></li><li class="chapter-item "><a href="Tutorial/github-actions.html"><strong aria-hidden="true">2.2.</strong> 使用GitHub Actions</a></li><li class="chapter-item "><a href="Tutorial/clash.html"><strong aria-hidden="true">2.3.</strong> 使用Clash内核</a></li></ol></li><li class="chapter-item "><a href="Programme/Intro.html"><strong aria-hidden="true">3.</strong> 编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="Programme/Chapter1.html"><strong aria-hidden="true">3.1.</strong> Hello-World</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">我的笔记</a></li><li class="chapter-item expanded "><a href="rpi/intro.html"><strong aria-hidden="true">1.</strong> 树莓派</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rpi/vim.html"><strong aria-hidden="true">1.1.</strong> 配置vim</a></li><li class="chapter-item expanded "><a href="rpi/ssh.html"><strong aria-hidden="true">1.2.</strong> 使用ssh</a></li><li class="chapter-item expanded "><a href="rpi/aliases.html"><strong aria-hidden="true">1.3.</strong> 配置alias</a></li><li class="chapter-item expanded "><a href="rpi/crontab.html"><strong aria-hidden="true">1.4.</strong> 使用crontab</a></li><li class="chapter-item expanded "><a href="rpi/wiringpi.html"><strong aria-hidden="true">1.5.</strong> 使用wiringpi</a></li><li class="chapter-item expanded "><a href="rpi/powershell.html"><strong aria-hidden="true">1.6.</strong> 使用powershell</a></li><li class="chapter-item expanded "><a href="rpi/oh-my-posh.html"><strong aria-hidden="true">1.7.</strong> 配置oh-my-posh</a></li><li class="chapter-item expanded "><a href="rpi/others.html"><strong aria-hidden="true">1.8.</strong> 其他配置及常用命令</a></li></ol></li><li class="chapter-item expanded "><a href="tutorial/intro.html"><strong aria-hidden="true">2.</strong> 教程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorial/git.html"><strong aria-hidden="true">2.1.</strong> 使用Git</a></li><li class="chapter-item expanded "><a href="tutorial/nginx.html"><strong aria-hidden="true">2.2.</strong> 使用Nginx</a></li><li class="chapter-item expanded "><a href="tutorial/mysql.html"><strong aria-hidden="true">2.3.</strong> 使用MySQL</a></li><li class="chapter-item expanded "><a href="tutorial/docker.html"><strong aria-hidden="true">2.4.</strong> 使用Docker</a></li><li class="chapter-item expanded "><a href="tutorial/apache2.html"><strong aria-hidden="true">2.5.</strong> 使用Apache2</a></li><li class="chapter-item expanded "><a href="tutorial/clash.html"><strong aria-hidden="true">2.6.</strong> 使用Clash内核</a></li><li class="chapter-item expanded "><a href="tutorial/github-actions.html"><strong aria-hidden="true">2.7.</strong> 使用GitHub Actions</a></li><li class="chapter-item expanded "><a href="tutorial/users.html"><strong aria-hidden="true">2.8.</strong> 使用Linux用户和用户组</a></li></ol></li><li class="chapter-item expanded "><a href="programme/intro.html"><strong aria-hidden="true">3.</strong> 编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="programme/sql/intro.html"><strong aria-hidden="true">3.1.</strong> SQL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="programme/sql/hello-world.html"><strong aria-hidden="true">3.1.1.</strong> HELLO-WORLD</a></li><li class="chapter-item "><a href="programme/sql/select.html"><strong aria-hidden="true">3.1.2.</strong> SELECT用法</a></li><li class="chapter-item "><a href="programme/sql/where.html"><strong aria-hidden="true">3.1.3.</strong> WHERE用法</a></li><li class="chapter-item "><a href="programme/sql/and-or-not.html"><strong aria-hidden="true">3.1.4.</strong> AND-OR-NOT运算符</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -96,8 +97,8 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -113,8 +114,8 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <a href="https://github.com/mr-addict/notes" title="Git repository" aria-label="Git repository">
-                            <i id="git-repository-button" class="fa fa-github"></i>
+                        <a href="https://gitlab.com/mraddict/notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-gitlab"></i>
                         </a>
                     </div>
                 </div>
@@ -159,8 +160,8 @@
 
 set number
 set relativenumber
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set expandtab
 set smartcase
 set incsearch
@@ -173,9 +174,8 @@ set smartindent
 let &amp;t_SI = &quot;\e[6 q&quot;
 let &amp;t_EI = &quot;\e[2 q&quot;
 </code></pre>
-<blockquote>
-<p>注意：本配置只在pi用户下有效，如果你想在root也有效需要重新配置</p>
-</blockquote>
+<pre><code class="language-admonish warning">注意：本配置只在pi用户下有效，如果你想在root也有效需要重新配置
+</code></pre>
 <h2 id="三使用vim"><a class="header" href="#三使用vim">三、使用vim</a></h2>
 <h3 id="命令类"><a class="header" href="#命令类">命令类</a></h3>
 <hr />
@@ -219,32 +219,13 @@ let &amp;t_EI = &quot;\e[2 q&quot;
 <p>粘贴：</p>
 <pre><code>p
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="配置alias"><a class="header" href="#配置alias">配置alias</a></h1>
-<p>进入bash_aliaes配置文件</p>
-<pre><code class="language-bash">vim ~/.bash_aliaes
-</code></pre>
-<p>添加以下内容：</p>
-<pre><code>alias la=&quot;ls -a&quot;
-alias ll=&quot;ls -l&quot;
-
-alias apt-clean=&quot;sudo apt-get autoremove -y &amp;&amp; sudo apt-get clean -y&quot;
-alias apt-update=&quot;sudo apt-get update &amp;&amp; sudo apt-get upgrade -y&quot;
-alias cpu-temp=&quot;vcgencmd measure_temp&quot;
-alias eeprom-update=&quot;sudo rpi-eeprom-update -a&quot;
-
-alias autologin=&quot;/home/pi/Projects/Autologin/autologin.sh&quot;
-alias autorun=&quot;pwsh -File /home/pi/Projects/Autorun/autorun.ps1&quot;
-</code></pre>
-<blockquote>
-<p>注意：本配置只在pi用户下有效，如果你想在root也有效需要重新配置</p>
-</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用ssh"><a class="header" href="#使用ssh">使用ssh</a></h1>
 <h2 id="一使用puttygen"><a class="header" href="#一使用puttygen">一、使用puttygen</a></h2>
-<p>直接参考以下文章：</p>
-<p><a href="https://docs.oracle.com/en/cloud/paas/goldengate-cloud/tutorial-change-private-key-format/">How to generate public and private ssh key using putty</a></p>
+<pre><code class="language-admonish info">直接参考以下文章：[How to generate public and private ssh key using putty](https://docs.oracle.com/en/cloud/paas/goldengate-cloud/tutorial-change-private-key-format/)
+</code></pre>
 <h2 id="二使用ssh-keygen"><a class="header" href="#二使用ssh-keygen">二、使用ssh-keygen</a></h2>
 <p>生成密钥，一路回车选择默认选项就好了：</p>
-<pre><code class="language-bash">ssh-keygen -t rsa -b 1024 -f piserver -C &quot;Piserver-ssh-key&quot;
+<pre><code class="language-bash">ssh-keygen -t rsa -b 2048 -f piserver -C &quot;piserver-ssh-key&quot;
 </code></pre>
 <p>配置服务器，将公钥放到服务器上：</p>
 <pre><code class="language-bash">cat piserver.pub &gt;&gt; ~/.ssh/authorized_keys
@@ -258,6 +239,36 @@ alias autorun=&quot;pwsh -File /home/pi/Projects/Autorun/autorun.ps1&quot;
      Port 22
      User pi
      IdentityFile ~/ssh-private-key/piserver
+</code></pre>
+<h2 id="三使用ssh复制文件"><a class="header" href="#三使用ssh复制文件">三、使用ssh复制文件</a></h2>
+<p>从服务器复制文件，服务器路径为<code>/home/pi/Projects/hello.py</code>，客户端路径为当前路径：</p>
+<pre><code class="language-bash">scp pi@192.168.1.1:Projects/hello.py .
+</code></pre>
+<p>向客户端传输文件，服务器路径为<code>/home/pi/Projects</code>，客户端路径为当前路径：</p>
+<pre><code class="language-bash">scp hello.py pi@192.168.1.1:Projects
+</code></pre>
+<p>复制整个文件夹到服务器，服务器路径为<code>/home/pi/Pictures</code>，客户端路径为当前路径：</p>
+<pre><code class="language-bash">scp -r Images pi@192.168.1.3:Pictures
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="配置alias"><a class="header" href="#配置alias">配置alias</a></h1>
+<p>进入bash_aliaes配置文件</p>
+<pre><code class="language-bash">vim ~/.bash_aliases
+</code></pre>
+<p>添加以下内容：</p>
+<pre><code>alias la=&quot;ls -a&quot;
+alias ll=&quot;ls -l&quot;
+alias reboot=&quot;sudo reboot&quot;
+alias shutdown=&quot;sudo shutdown -h now&quot;
+
+alias cpu-temp=&quot;vcgencmd measure_temp&quot;
+alias eeprom-update=&quot;sudo rpi-eeprom-update -a&quot;
+alias apt-update=&quot;sudo apt-get update &amp;&amp; sudo apt-get upgrade -y&quot;
+alias apt-clean=&quot;sudo apt-get autoremove -y &amp;&amp; sudo apt-get clean -y&quot;
+
+alias autologin=&quot;/home/pi/Projects/Autologin/autologin.sh&quot;
+alias autorun=&quot;pwsh -File /home/pi/Projects/Autorun/autorun.ps1&quot;
+</code></pre>
+<pre><code class="language-admonish warning">注意：注意：本配置只在pi用户下有效，如果你想在root也有效需要重新配置
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用crontab"><a class="header" href="#使用crontab">使用crontab</a></h1>
 <h2 id="一配置crontab"><a class="header" href="#一配置crontab">一、配置crontab</a></h2>
@@ -277,9 +288,10 @@ alias autorun=&quot;pwsh -File /home/pi/Projects/Autorun/autorun.ps1&quot;
 <p>默认编辑器选择完后就会进入编辑界面，在文件末尾添加以下内容：</p>
 <pre><code>30 23 * * 0-5 sudo /usr/sbin/shutdown -h now
 
-@reboot gpio mode 15 out &amp;&amp; gpio write 15 1
 @reboot /usr/local/bin/clash
+@reboot gpio mode 15 out &amp;&amp; gpio write 15 1
 @reboot sleep 10 &amp;&amp; /home/pi/Projects/Autologin/autologin.sh
+@reboot echo 'ds3231 0x68' | sudo tee /sys/class/i2c-adapter/i2c-1/new_device &amp;&amp; sudo hwclock -s
 </code></pre>
 <p>查看已有任务：</p>
 <pre><code class="language-bash">crontab -l
@@ -296,16 +308,16 @@ alias autorun=&quot;pwsh -File /home/pi/Projects/Autorun/autorun.ps1&quot;
 ------------- Minute       (0 - 59)
 </code></pre>
 <p>部分符号含义：</p>
-<table><thead><tr><th style="text-align: center">符号</th><th style="text-align: center">含义</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">符号</th><th style="text-align: center">含义</th></tr></thead><tbody>
 <tr><td style="text-align: center">*</td><td style="text-align: center">任意值</td></tr>
 <tr><td style="text-align: center">,</td><td style="text-align: center">分割符</td></tr>
 <tr><td style="text-align: center">-</td><td style="text-align: center">范围符</td></tr>
 <tr><td style="text-align: center">/</td><td style="text-align: center">步数符</td></tr>
 <tr><td style="text-align: center">@reboot</td><td style="text-align: center">启动事件</td></tr>
 </tbody></table>
-<blockquote>
-<p>注：可以使用<a href="https://crontab.guru">在线crontab编辑器</a></p>
-</blockquote>
+</div>
+<pre><code class="language-admonish info">crontab在线编辑器：[crontab.guru](https://crontab.guru)
+</code></pre>
 <h2 id="三示例"><a class="header" href="#三示例">三、示例</a></h2>
 <pre><code>* */2 * * * root apt-get update &amp;&amp; apt-get upgrade -y
 </code></pre>
@@ -316,63 +328,9 @@ alias autorun=&quot;pwsh -File /home/pi/Projects/Autorun/autorun.ps1&quot;
 <pre><code>@reboot gpio mode 15 out &amp;&amp; gpio write 15 1
 </code></pre>
 <p>开机自动调用wiringpi打开风扇。</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="使用apache2"><a class="header" href="#使用apache2">使用apache2</a></h1>
-<h2 id="一安装apache2"><a class="header" href="#一安装apache2">一、安装apache2</a></h2>
-<pre><code class="language-bash">sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get install apache2 -y
-</code></pre>
-<p>打开apache2默认地址 <a href="http://localhost">http://localhost</a>查看默认的网页内容。</p>
-<h2 id="二配置apache2"><a class="header" href="#二配置apache2">二、配置apache2</a></h2>
-<p>首先准备好一个网页，然后我们需要对网页进行一些配置。这里我已我的笔记网页为例<code>/home/pi/Projects/Notes/book</code></p>
-<p>新建配置文件：</p>
-<pre><code class="language-bash">sudo vim /etc/apache2/sites-available/note.conf
-</code></pre>
-<p>添加以下内容：</p>
-<pre><code>&lt;VirtualHost *:80&gt;
-    ServerAdmin webmaster@localhost
-    DocumentRoot /home/pi/Projects/Notes/book
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-&lt;/VirtualHost&gt;
-</code></pre>
-<p>然后进入apache的配置文件给该目录以权限：</p>
-<pre><code class="language-bash">sudo vim /etc/apache2/apache2.conf
-</code></pre>
-<p>添加以下内容：</p>
-<pre><code>&lt;Directory &quot;/home/pi/Projects/Notes/book&quot;&gt;
-    Options Indexes FollowSymLinks
-    AllowOverride None
-    Require all granted
-&lt;/Directory&gt;
-</code></pre>
-<h2 id="三使用apache2"><a class="header" href="#三使用apache2">三、使用apache2</a></h2>
-<p>首先我们需要关闭默认的apache网页：</p>
-<pre><code class="language-bash">sudo a2dissite 000-default.conf
-</code></pre>
-<p>然后激活我们的网页：</p>
-<pre><code class="language-bash">sudo a2ensite notes.conf
-</code></pre>
-<p>最后重新启动apache：</p>
-<pre><code class="language-bash">sudo systemctl reload apache2
-</code></pre>
-<p>然后我们就可以通过这个网址<a href="http://localhost">http://localhost</a>访问我们的网页了。</p>
-<p>查看apche2服务：</p>
-<pre><code class="language-bash">sudo systemctl status apache2
-</code></pre>
-<p>停止apache2服务：</p>
-<pre><code class="language-bash">sudo systemctl stop apache2
-</code></pre>
-<p>注销apache2服务：</p>
-<pre><code class="language-bash">sudo systemctl disable apache2
-</code></pre>
-<p>注册apache2服务：</p>
-<pre><code class="language-bash">sudo systemctl enable apache2
-</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用wiringpi"><a class="header" href="#使用wiringpi">使用wiringpi</a></h1>
-<blockquote>
-<p>链接：<a href="http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b">wiringpi</a>官方文档</p>
-</blockquote>
+<pre><code class="language-admonish info">官方文档：[wiringpi](http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b)
+</code></pre>
 <h2 id="一安装wiringpi"><a class="header" href="#一安装wiringpi">一、安装wiringpi</a></h2>
 <p>安装wiringpi：</p>
 <pre><code class="language-bash">cd /tmp
@@ -430,11 +388,10 @@ int main(void) {
 <pre><code class="language-bash">./fan
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用powershell"><a class="header" href="#使用powershell">使用Powershell</a></h1>
-<blockquote>
-<p>链接：<a href="https://docs.microsoft.com/en-us/powershell/scripting/install/install-raspbian?view=powershell-7.2">Powershell</a>官方文档</p>
-</blockquote>
-<h2 id="一安装poweshell"><a class="header" href="#一安装poweshell">一、安装Poweshell</a></h2>
-<p>32位和64位系统的唯一的区别就是32位需要安装依赖，而64位可以不用。</p>
+<pre><code class="language-admonish info">官方文档：[powershell](https://docs.microsoft.com/en-us/powershell/scripting/install/install-raspbian?view=powershell-7.2)
+</code></pre>
+<h2 id="一安装powershell"><a class="header" href="#一安装powershell">一、安装Powershell</a></h2>
+<p>32位和64位系统的唯一的区别就是32位需要安装依赖，而64位不需要。</p>
 <h3 id="32位操作系统"><a class="header" href="#32位操作系统">32位操作系统</a></h3>
 <p>安装依赖：</p>
 <pre><code class="language-bash">sudo apt-get update
@@ -452,15 +409,31 @@ mkdir ~/Powershell
 tar -xvf ./powershell-7.2.5-linux-arm64.tar.gz -C ~/Powershell
 </code></pre>
 <h2 id="二配置powershell"><a class="header" href="#二配置powershell">二、配置Powershell：</a></h2>
+<p>添加快捷设置：</p>
 <pre><code class="language-bash">sudo ~/Powershell/pwsh -command 'New-Item -ItemType SymbolicLink -Path &quot;/usr/bin/pwsh&quot; -Target &quot;$PSHOME/pwsh&quot; -Force'
 </code></pre>
+<p>进入配置文件：</p>
+<pre><code class="language-bash">sudo vim $PROFILE
+</code></pre>
+<p>添加以下内容：</p>
+<pre><code># Set Aliases
+Set-Alias -Name ls -Value Get-ChildItem
+Set-Alias -Name ll -Value Get-ChildItem
+Set-Alias -Name la -Value Get-ChildItem
+
+# Import Modules
+Import-Module -Name Terminal-Icons
+
+# Init oh-my-posh
+oh-my-posh --init --shell pwsh --config /home/pi/.poshthemes/paradox.omp.json | Invoke-Expression
+</code></pre>
 <h2 id="三使用powershell"><a class="header" href="#三使用powershell">三、使用Powershell：</a></h2>
+<p>在终端中输入以下命令启动powershell：</p>
 <pre><code class="language-bash">pwsh
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用oh-my-posh"><a class="header" href="#使用oh-my-posh">使用Oh-My-Posh</a></h1>
-<blockquote>
-<p>链接：<a href="https://ohmyposh.dev/docs">oh-my-posh</a>官方文档</p>
-</blockquote>
+<pre><code class="language-admonish info">官方文档：[oh-my-posh](https://ohmyposh.dev/docs)
+</code></pre>
 <h2 id="一安装字体"><a class="header" href="#一安装字体">一、安装字体</a></h2>
 <p>首先你需要安装一个<a href="https://github.com/ryanoasis/nerd-fonts/releases">Nerd字体</a>才能正常显示oh-my-posh，推荐安装<a href="https://github.com/ryanoasis/nerd-fonts/releases/download/2.2.0-RC/Hack.zip">Hack字体</a>。</p>
 <p>树莓派需要先安装一个font-manager，然后选择需要安装的字体就好了。</p>
@@ -475,7 +448,7 @@ sudo chmod +x /usr/local/bin/oh-my-posh
 <pre><code class="language-bash">mkdir ~/.poshthemes
 wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip
 unzip ~/.poshthemes/themes.zip -d ~/.poshthemes
-chmod u+rw ~/.poshthemes/*.omp.*
+sudo chmod u+rw ~/.poshthemes/*.omp.*
 rm ~/.poshthemes/themes.zip
 </code></pre>
 <h2 id="三配置终端"><a class="header" href="#三配置终端">三、配置终端</a></h2>
@@ -486,22 +459,10 @@ rm ~/.poshthemes/themes.zip
 <pre><code class="language-bash">eval &quot;$(oh-my-posh --init --shell bash --config /home/pi/.poshthemes/paradox.omp.json)&quot;
 </code></pre>
 <p>如果是powershell，应该进入<code>$PROFILE</code>，然后添加以下内容：</p>
-<pre><code class="language-bash">oh-my-posh --init --shell pwsh --config /home/pi/.poshthemes/paradox.omp.json | Invoker-Expression
+<pre><code class="language-bash">oh-my-posh --init --shell pwsh --config /home/pi/.poshthemes/paradox.omp.json | Invoke-Expression
 </code></pre>
 <p>最后重新启动终端就可以正常使用了。</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="其他配置"><a class="header" href="#其他配置">其他配置</a></h1>
-<h2 id="一配置wifi"><a class="header" href="#一配置wifi">一、配置WiFi</a></h2>
-<pre><code class="language-bash">sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
-</code></pre>
-<h2 id="二更新并使用pip-review"><a class="header" href="#二更新并使用pip-review">二、更新并使用pip-review</a></h2>
-<pre><code class="language-bash">pip install pip-review
-</code></pre>
-<pre><code class="language-bash">pip-review --interactive
-</code></pre>
-<p>安静启动Telegram：</p>
-<pre><code class="language-bash">Telegram --startintray
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="常用命令"><a class="header" href="#常用命令">常用命令</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="其他配置及常用命令"><a class="header" href="#其他配置及常用命令">其他配置及常用命令</a></h1>
 <p>查看系统CPU：</p>
 <pre><code class="language-bash">htop
 </code></pre>
@@ -514,11 +475,39 @@ rm ~/.poshthemes/themes.zip
 <p>结束某个进程：</p>
 <pre><code class="language-bash">kill $id
 </code></pre>
+<p>安装字体：</p>
+<pre><code class="language-bash">sudo fc-cache -fv
+</code></pre>
 <p>更新树莓派eeprom：</p>
 <pre><code class="language-bash">sudo rpi-eeprom-update -a
 </code></pre>
 <p>查看树莓派温度：</p>
 <pre><code class="language-bash">vcgencmd measure_temp
+</code></pre>
+<p>使用pip-review更新pip</p>
+<pre><code class="language-bash">pip-review --interactive
+</code></pre>
+<p>安静启动Telegram</p>
+<pre><code class="language-bash">Telegram --startintray
+</code></pre>
+<p>解压tar压缩包：</p>
+<pre><code class="language-bash">tar -xvf your/tar/gz/file
+</code></pre>
+<p>设置默认编辑器：</p>
+<pre><code class="language-bash">sudo update-alternatives --config editor
+</code></pre>
+<p>查看系统内部端口使用情况：</p>
+<pre><code class="language-bash">netstat --tcp --listening --programs --numeric
+</code></pre>
+<p>配置WiFi：</p>
+<pre><code class="language-bash">sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
+</code></pre>
+<p>设置用户默认shell：</p>
+<pre><code class="language-bash">sudo usermod --shell /bin/bash $USER
+</code></pre>
+<p>bash脚本出现^M错误：</p>
+<pre><code class="language-bash">sed -i 's/\r//' $yourfile
+cat -e $yourfile
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="教程笔记"><a class="header" href="#教程笔记">教程笔记</a></h1>
 <p>这个专题主要就是折腾笔记，把一些瞎折腾的东西给搬过来。</p>
@@ -541,12 +530,34 @@ rm ~/.poshthemes/themes.zip
 [pull]
     ff=only
 </code></pre>
-<h2 id="二常用命令"><a class="header" href="#二常用命令">二、常用命令</a></h2>
+<h2 id="二首次提交模板"><a class="header" href="#二首次提交模板">二、首次提交模板</a></h2>
+<p>添加基本内容：</p>
+<pre><code class="language-bash">git init
+echo &quot;# Test&quot; &gt; README.md
+git add README.md
+git commit -m &quot;First commit&quot;
+</code></pre>
+<p>添加远程仓库链接：</p>
+<pre><code class="language-bash">git remote add github https://github.com/MR-Addict/Doc-Share.git
+</code></pre>
+<p>更改默认分支名为main：</p>
+<pre><code class="language-bash">git branch -M main
+</code></pre>
+<p>推送提交到远程仓库：</p>
+<pre><code class="language-bash">git push -u github main
+</code></pre>
+<h2 id="三常用命令"><a class="header" href="#三常用命令">三、常用命令</a></h2>
 <p>查看提交记录：</p>
 <pre><code class="language-bash">git log
 </code></pre>
 <p>查看当前状态：</p>
 <pre><code class="language-bash">git status
+</code></pre>
+<p>设置全局用户名：</p>
+<pre><code class="language-bash">git config --global user.name MR-Addict
+</code></pre>
+<p>配置全局用户邮箱：</p>
+<pre><code class="language-bash">git config --global user.email 2750417853@qq.com
 </code></pre>
 <p>回退版本：</p>
 <pre><code class="language-bash">git reset --hard $hash_value_of_last_commit
@@ -560,8 +571,11 @@ rm ~/.poshthemes/themes.zip
 <p>编辑全局配置：</p>
 <pre><code class="language-bash">git config --global --edit
 </code></pre>
-<p>保存登录验证：</p>
-<pre><code class="language-bash">git config --global credential.helper store
+<p>保存系统登录验证：</p>
+<pre><code class="language-bash">git config --system credential.helper store
+</code></pre>
+<p>重置系统登录验证：</p>
+<pre><code class="language-bash">git config --system --unset credential.helper
 </code></pre>
 <p>只拉取不提交：</p>
 <pre><code class="language-bash">git config --global pull.ff only
@@ -571,24 +585,540 @@ rm ~/.poshthemes/themes.zip
 </code></pre>
 <p>删除本地和远程分支：</p>
 <pre><code class="language-bash">git branch -D $branch_name
-git push --delete $branch_name
 </code></pre>
-<h2 id="三首次提交模板"><a class="header" href="#三首次提交模板">三、首次提交模板</a></h2>
-<p>添加基本内容：</p>
-<pre><code class="language-bash">git init
-echo &quot;# Test&quot; &gt; README.md
-git add README.md
-git commit -m &quot;First commit&quot;
+<pre><code class="language-bash">git push --delete $branch_name
 </code></pre>
-<p>添加远程仓库链接：</p>
-<pre><code class="language-bash">git remote add origin git@github.com:mr-addict/test.git
+<p>重置所有内容，并且删除新文件：</p>
+<pre><code class="language-bash">git restore . &amp;&amp; git clean -f
 </code></pre>
-<p>更改默认分支名为main：</p>
-<pre><code class="language-bash">git branch -M main
+<div style="break-before: page; page-break-before: always;"></div><h1 id="使用nginx"><a class="header" href="#使用nginx">使用nginx</a></h1>
+<h2 id="一安装nginx"><a class="header" href="#一安装nginx">一、安装nginx</a></h2>
+<p>更新apt源：</p>
+<pre><code class="language-bash">sudo apt-get update
 </code></pre>
-<p>推送提交到远程仓库：</p>
-<pre><code class="language-bash">git push -u origin main
+<p>安装nginx：</p>
+<pre><code class="language-bash">sudo apt-get install nginx
 </code></pre>
+<p>使能nginx：</p>
+<pre><code class="language-bash">sudo systemctl enable nginx
+</code></pre>
+<p>启动nginx：</p>
+<pre><code class="language-bash">sudo systemctl start nginx
+</code></pre>
+<p>查看nginx状态：</p>
+<pre><code class="language-bash">sudo systemctl status nginx
+</code></pre>
+<h2 id="二使用nginx"><a class="header" href="#二使用nginx">二、使用nginx</a></h2>
+<h3 id="准备网站资源"><a class="header" href="#准备网站资源">准备网站资源</a></h3>
+<p>首先我们需要准备一个可用的静态网站，这里我就使用我GitHub上基于mdbook的项目，你也可以使用自己的网站：</p>
+<pre><code class="language-bash">git clone https://github.com/mr-addict/Doc-Share.git
+cd Doc-Share
+mdbook build
+</code></pre>
+<p>运行<code>mdbook build</code>后会在当前文件夹自动编译出一个book文件夹，也即是我的网页内容，然后我们需要把这个网页放到ngixn默认的网页目录下<code>/var/www/</code></p>
+<pre><code class="language-bash">sudo cp -r /home/ubuntu/Doc-Share/book /var/www/
+</code></pre>
+<h3 id="配置网站"><a class="header" href="#配置网站">配置网站</a></h3>
+<p>然后我们需要配置一下nginx的配置文件，nginx将配置文件放在了两个文件夹下，分别是：</p>
+<ul>
+<li>sites-available</li>
+<li>sites-enabled</li>
+</ul>
+<p>sites-available文件夹用于放置所有的网站配置，sites-enabled文件夹用于放置所有正在使用的网站配置。</p>
+<p>首先我们在sites-available中新建一个文件：</p>
+<pre><code class="language-bash">sudo vim /etc/nginx/sites-availale/notes.conf
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code class="language-bash">server {
+    listen 80;
+    location / {
+        root /var/www/book;
+        index index.html;
+    }
+}
+</code></pre>
+<p>完成配置后我们可以通过链接的命令，将sites-available中的配置文件链接到sites-enabled文件夹中：</p>
+<pre><code class="language-bash">sudo ln -sf /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
+</code></pre>
+<p>最后我们重新启动一下nginx就可以在本地80端口<a href="http://localhost">http://localhost</a>正常访问我们的网页内容了：</p>
+<pre><code class="language-bash">sudo systemctl restart nginx
+</code></pre>
+<h2 id="三nginx模板"><a class="header" href="#三nginx模板">三、nginx模板</a></h2>
+<p>nginx基本配置模板：</p>
+<pre><code>server{
+  listen 80;
+  server_name mraddict.top;
+  location / {
+    root /var/www/book;
+    index index.html
+  }
+}
+</code></pre>
+<p>nginx基于SSL签证模板：</p>
+<pre><code>server{
+  listen 80;
+  server_name mraddict.top;
+  return 301 https://$host$request_uri;
+}
+
+server {
+  listen 443 ssl;
+  server_name mraddict.top;
+
+  ssl_certificate  /etc/nginx/certs/mraddict.top/mraddict.top_bundle.crt;
+  ssl_certificate_key /etc/nginx/certs/mraddict.top/mraddict.top.key;
+  ssl_session_timeout 5m;
+  ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+  ssl_protocols TLSv1.2 TLSv1.3;
+  ssl_prefer_server_ciphers on;
+
+  location / {
+    root /var/www/book;
+    index index.html
+  }
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="使用mysql"><a class="header" href="#使用mysql">使用MySQL</a></h1>
+<pre><code class="language-admonish info">Digital Ocean参考文档：[MySQL](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04)
+</code></pre>
+<h2 id="一使用mysql"><a class="header" href="#一使用mysql">一、使用MySQL</a></h2>
+<p>更新apt库：</p>
+<pre><code class="language-bash">sudo apt-get update
+</code></pre>
+<p>安装MySQL：</p>
+<pre><code class="language-bash">sudo apt-get install mysql-server -y
+</code></pre>
+<h2 id="二配置mysql"><a class="header" href="#二配置mysql">二、配置MySQL</a></h2>
+<p>首先先登录MySQL：</p>
+<pre><code class="language-bash">sudo mysql
+</code></pre>
+<p>然后更改root密码：</p>
+<pre><code class="language-sql">ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_new_password';
+</code></pre>
+<p>然后退出运行安装脚本：</p>
+<pre><code class="language-bash">sudo mysql_secure_installation
+</code></pre>
+<h2 id="三创建新用户"><a class="header" href="#三创建新用户">三、创建新用户</a></h2>
+<p>进入mysql：</p>
+<pre><code class="language-bash">sudo mysql -u root -p
+</code></pre>
+<p>创建新用户：</p>
+<pre><code class="language-sql">CREATE USER 'user_name'@'localhost' IDENTIFIED WITH mysql_native_password BY 'user_password';
+</code></pre>
+<p>授予用户权限：</p>
+<pre><code class="language-sql">GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'user_name'@'localhost' WITH GRANT OPTION;
+</code></pre>
+<p>清空权限缓存：</p>
+<pre><code class="language-sql">FLUSH PRIVILEGES;
+</code></pre>
+<p>退出然后登录新用户：</p>
+<pre><code class="language-bash">sudo mysql -u user_name -p
+</code></pre>
+<h2 id="四允许远程连接"><a class="header" href="#四允许远程连接">四、允许远程连接：</a></h2>
+<p>进入配置文件：</p>
+<pre><code class="language-bash">sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
+</code></pre>
+<p>找到以下内容，注释掉IP绑定：</p>
+<pre><code># Instead of skip-networking the default is now to listen only on
+# localhost which is more compatible and is not less secure.
+# bind-address          = 127.0.0.1
+# mysqlx-bind-address   = 127.0.0.1
+</code></pre>
+<p>然后进入MySQL，创建可以允许远程连接的用户：</p>
+<pre><code class="language-sql">CREATE USER 'user_name'@'remote_login_server_ip' IDENTIFIED BY 'user_password';
+</code></pre>
+<p>你也可以更改当前的用户：</p>
+<pre><code class="language-sql">RENAME USER 'user_name'@'localhost' TO 'user_name'@'remote_login_server_ip';
+</code></pre>
+<h2 id="五更改密码协议"><a class="header" href="#五更改密码协议">五、更改密码协议</a></h2>
+<p>查看当前密码协议：</p>
+<pre><code class="language-sql">SHOW VARIABLES LIKE 'validate_password%';
+</code></pre>
+<p>更改当前密码协议：</p>
+<pre><code class="language-sql">SET GLOBAL validate_password.policy=LOW;
+</code></pre>
+<p>更改用户密码：</p>
+<pre><code class="language-sql">ALTER USER 'user_name'@'localhost' IDENTIFIED BY 'new_password';
+</code></pre>
+<h2 id="六常用命令"><a class="header" href="#六常用命令">六、常用命令</a></h2>
+<p>显示已有数据库：</p>
+<pre><code class="language-sql">SHOW DATABASES;
+</code></pre>
+<p>创建新的数据库：</p>
+<pre><code class="language-sql">CREATE DATABASE db_name;
+</code></pre>
+<p>使用某个数据库：</p>
+<pre><code class="language-sql">USE db_name;
+</code></pre>
+<p>创建Table：</p>
+<pre><code class="language-sql">CREATE TABLE books(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(50) NOT NULL,
+    price INT NOT NULL,
+    lang VARCHAR(50) DEFAULT &quot;English&quot; NOT NULL,
+    author VARCHAR(60) NOT NULL
+);
+</code></pre>
+<p>显示Table框架：</p>
+<pre><code class="language-sql">DESCRIBE books;
+</code></pre>
+<p>插入新的记录：</p>
+<pre><code class="language-sql">INSERT INTO books(title, price, lang, author) VALUE(&quot;Bible&quot;,50.00,&quot;Hindi&quot;,&quot;Jone&quot;);
+</code></pre>
+<p>插入新列：</p>
+<pre><code class="language-sql">ALTER TABLE table_name;
+ADD COLUMN column_name column_definition;
+</code></pre>
+<p>删除数据库：</p>
+<pre><code class="language-sql">DROP DATABASE db_name;
+</code></pre>
+<p>查看所有用户：</p>
+<pre><code class="language-sql">SELECT User, Host FROM mysql.user;
+</code></pre>
+<p>删除用户：</p>
+<pre><code class="language-sql">DROP USER 'user_name'@'localhost';
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="使用docker"><a class="header" href="#使用docker">使用Docker</a></h1>
+<pre><code class="language-admonish info">官方文档：[docker](https://docs.docker.com/engine/install/ubuntu/)
+</code></pre>
+<h2 id="一安装docker"><a class="header" href="#一安装docker">一、安装Docker</a></h2>
+<p>安装前建议先卸载旧版本的Docker：</p>
+<pre><code class="language-bash">sudo apt-get remove docker docker-engine docker.io containerd runc
+</code></pre>
+<h3 id="方法一偷懒式安装docker"><a class="header" href="#方法一偷懒式安装docker">方法一：偷懒式安装Docker</a></h3>
+<pre><code class="language-bash">sudo apt install docker.io
+</code></pre>
+<h3 id="方法二将docker添加到apt源中再安装"><a class="header" href="#方法二将docker添加到apt源中再安装">方法二：将Docker添加到apt源中再安装</a></h3>
+<p>更新apt并且安装相关依赖：</p>
+<pre><code class="language-bash">sudo apt-get update
+sudo apt-get install ca-certificates curl gnupg lsb-release
+</code></pre>
+<p>添加Docker的GPG密钥：</p>
+<pre><code class="language-bash">sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+</code></pre>
+<p>添加Docker源地址：</p>
+<pre><code class="language-bash">echo &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</code></pre>
+<p>安装Docker：</p>
+<pre><code class="language-bash">sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+</code></pre>
+<p>添加当前用户到docker用户组：</p>
+<pre><code class="language-bash">sudo usermod -aG docker $(whoami)
+</code></pre>
+<h2 id="二安装docker-compose"><a class="header" href="#二安装docker-compose">二、安装Docker-Compose</a></h2>
+<p>前往GitHub下载对应的<a href="https://github.com/docker/compose/releases">Docker-Compose</a></p>
+<pre><code class="language-bash">wget https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64
+sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
+sudo chmod u+x /usr/local/bin/docker-compose
+</code></pre>
+<h2 id="三配置docker"><a class="header" href="#三配置docker">三、配置Docker</a></h2>
+<h3 id="配置log"><a class="header" href="#配置log">配置log</a></h3>
+<p>进入Docker配置文件：</p>
+<pre><code class="language-bash">sudo vim /etc/docker/daemon.json
+</code></pre>
+<p>添加以下内容：</p>
+<pre><code>{
+  &quot;log-driver&quot;: &quot;json-file&quot;,
+  &quot;log-opts&quot;: {
+    &quot;max-size&quot;: &quot;10m&quot;,
+    &quot;max-file&quot;: &quot;3&quot; 
+  }
+}
+</code></pre>
+<h3 id="服务器配置代理"><a class="header" href="#服务器配置代理">服务器配置代理</a></h3>
+<p>进入配置文件：</p>
+<pre><code class="language-bash">sudo systemctl edit docker.service
+</code></pre>
+<p>添加以下内容：</p>
+<pre><code>[Service]
+Environment=&quot;HTTP_PROXY=http://127.0.0.1:7890&quot;
+Environment=&quot;HTTPS_PROXY=http://127.0.0.1:7890&quot;
+Environment=&quot;NO_PROXY=localhost,127.0.0.1&quot;
+</code></pre>
+<h3 id="容器配置代理"><a class="header" href="#容器配置代理">容器配置代理</a></h3>
+<p>进入配置文件：</p>
+<pre><code class="language-bash">vim ~/.docker/config.json
+</code></pre>
+<p>添加以下内容：</p>
+<pre><code>{
+ &quot;proxies&quot;:
+ {
+   &quot;default&quot;:
+   {
+     &quot;httpProxy&quot;: &quot;http://192.168.10.4:7890&quot;,
+     &quot;httpsProxy&quot;: &quot;http://192.168.10.4:7890&quot;,
+     &quot;noProxy&quot;: &quot;localhost,127.0.0.1&quot;
+   }
+ }
+}
+</code></pre>
+<h2 id="四docker-compose模板"><a class="header" href="#四docker-compose模板">四、Docker-Compose模板</a></h2>
+<p>nginx容器模板：</p>
+<pre><code>version: '3'
+services:
+  notes:
+    image: nginx:latest
+    container_name: notes
+    restart: unless-stopped
+    ports:
+      - 80:80
+    volumes:
+      - /home/ubuntu/Projects/Notes/book:/usr/share/nginx/html
+      - /home/ubuntu/Projects/Notes/docker/certs:/etc/nginx/certs
+      - /home/ubuntu/Projects/Notes/docker/conf.d:/etc/nginx/conf.d
+</code></pre>
+<h2 id="五编译推送镜像"><a class="header" href="#五编译推送镜像">五、编译推送镜像</a></h2>
+<p>登录dockerhub，输入token：</p>
+<pre><code class="language-bash">docker login -u &lt;dockrhub_username&gt;
+</code></pre>
+<h3 id="初次编译"><a class="header" href="#初次编译">初次编译</a></h3>
+<p>编译镜像：</p>
+<pre><code class="language-bash">docker build -t &lt;dockerhub_username&gt;/&lt;dockerhub_repo_name&gt; .
+</code></pre>
+<p>推送镜像：</p>
+<pre><code class="language-bash">docker push &lt;dockerhub_username&gt;/&lt;dockerhub_repo_name&gt;
+</code></pre>
+<h3 id="推送已有镜像"><a class="header" href="#推送已有镜像">推送已有镜像</a></h3>
+<p>提交变更：</p>
+<pre><code class="language-bash">docker commit &lt;existing_image&gt; &lt;dockerhub_username&gt;/&lt;dockerhub_repo_name&gt;
+</code></pre>
+<p>推送镜像：</p>
+<pre><code class="language-bash">docker push &lt;dockerhub_username&gt;/&lt;dockerhub_repo_name&gt;
+</code></pre>
+<h2 id="六常用命令-1"><a class="header" href="#六常用命令-1">六、常用命令</a></h2>
+<p>下载镜像：</p>
+<pre><code class="language-bash">docker pull ubuntu
+</code></pre>
+<p>显示所有镜像：</p>
+<pre><code class="language-bash">docker images
+</code></pre>
+<p>显示正在运行的容器：</p>
+<pre><code class="language-bash">docker ps
+</code></pre>
+<p>显示所有容器：</p>
+<pre><code class="language-bash">docker ps -a
+</code></pre>
+<p>运行某容器：</p>
+<pre><code class="language-bash">docker run ubuntu
+</code></pre>
+<p>后台运行某个容器：</p>
+<pre><code class="language-bash">docker run -d ubuntu
+</code></pre>
+<p>运行某个版本的容器：</p>
+<pre><code class="language-bash">docker run -d ubuntu:18
+</code></pre>
+<p>运行结束后自动删除容器：</p>
+<pre><code class="language-bash">docker run -d -rm ubuntu
+</code></pre>
+<p>运行可交互容器：</p>
+<pre><code class="language-bash">docker run -it ubuntu
+</code></pre>
+<p>端口映射：</p>
+<pre><code class="language-bash">docker run -d -p 80:8080 ubuntu
+</code></pre>
+<p>文件映射：</p>
+<pre><code class="language-bash">docker run -d -v /opt/mydata:/var/lib/mysql ubuntu
+</code></pre>
+<p>停止正在运行的容器：</p>
+<pre><code class="language-bash">docker stop ubuntu
+</code></pre>
+<p>重启某个容器：</p>
+<pre><code class="language-bash">docker restart ubuntu
+</code></pre>
+<p>删除镜像：</p>
+<pre><code class="language-bash">docker rmi --force ubuntu
+</code></pre>
+<p>删除容器：</p>
+<pre><code class="language-bash">docker rm $container-name-or-id
+</code></pre>
+<p>删除所有容器：</p>
+<pre><code class="language-bash">docker rm $(docker ps --filter status=exited -q)
+</code></pre>
+<p>运行docker-compose：</p>
+<pre><code class="language-bash">sudo docker-compose up -d
+</code></pre>
+<p>删除docker-compose：</p>
+<pre><code class="language-bash">sudo docker-compose down
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="使用apache2"><a class="header" href="#使用apache2">使用apache2</a></h1>
+<h2 id="一安装apache2"><a class="header" href="#一安装apache2">一、安装apache2</a></h2>
+<pre><code class="language-bash">sudo apt-get update
+sudo apt-get install apache2 -y
+</code></pre>
+<p>打开apache2默认地址查看默认的网页内容<a href="http://localhost">http://localhost</a>。</p>
+<h2 id="二配置apache2"><a class="header" href="#二配置apache2">二、配置apache2</a></h2>
+<p>首先准备好一个网页，然后我们需要对网页进行一些配置。这里我已我的笔记网页为例<code>/home/pi/Projects/Notes/book</code>。</p>
+<p>新建配置文件：</p>
+<pre><code class="language-bash">sudo vim /etc/apache2/sites-available/note.conf
+</code></pre>
+<p>添加以下内容：</p>
+<pre><code>&lt;VirtualHost *:80&gt;
+    ServerAdmin webmaster@localhost
+    DocumentRoot /home/pi/Projects/Notes/book
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+&lt;/VirtualHost&gt;
+</code></pre>
+<p>然后进入apache的配置文件给该目录以权限：</p>
+<pre><code class="language-bash">sudo vim /etc/apache2/apache2.conf
+</code></pre>
+<p>添加以下内容：</p>
+<pre><code>&lt;Directory &quot;/home/pi/Projects/Notes/book&quot;&gt;
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+&lt;/Directory&gt;
+</code></pre>
+<h2 id="三使用apache2"><a class="header" href="#三使用apache2">三、使用apache2</a></h2>
+<p>首先我们需要关闭默认的apache网页：</p>
+<pre><code class="language-bash">sudo a2dissite 000-default.conf
+</code></pre>
+<p>然后激活我们的网页：</p>
+<pre><code class="language-bash">sudo a2ensite notes.conf
+</code></pre>
+<p>最后重新启动apache：</p>
+<pre><code class="language-bash">sudo systemctl reload apache2
+</code></pre>
+<p>然后我们就可以通过默认网址访问我们的网页了<a href="http://localhost">http://localhost</a>。</p>
+<p>查看apche2服务：</p>
+<pre><code class="language-bash">sudo systemctl status apache2
+</code></pre>
+<p>停止apache2服务：</p>
+<pre><code class="language-bash">sudo systemctl stop apache2
+</code></pre>
+<p>注销apache2服务：</p>
+<pre><code class="language-bash">sudo systemctl disable apache2
+</code></pre>
+<p>注册apache2服务：</p>
+<pre><code class="language-bash">sudo systemctl enable apache2
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="使用clash内核"><a class="header" href="#使用clash内核">使用Clash内核</a></h1>
+<h2 id="一下载clash"><a class="header" href="#一下载clash">一、下载Clash</a></h2>
+<p>在这里我们使用Clash作为科学上网的代理框架，为什么使用Clash呢，那是因为Clash内核支持各种Unix平台的各个架构；还支持各种代理协议，像Trojan、Vmess、Shadowsocks等等；以及强大的分流规则，可以非常方便地自定义各种规则。</p>
+<p>你可以到GitHub下载<a href="https://github.com/Dreamacro/clash/releases">Clash内核</a>。如果你是<strong>树莓派4B 32位操作系统</strong>，那么你应该下载对应armv7版本的<a href="https://github.com/Dreamacro/clash/releases/download/v1.11.0/clash-linux-armv7-v1.11.0.gz">clash-linux-armv7-v1.11.0.gz</a>，如果是<strong>树莓派4B 64位操作系统</strong>，那么你应该下载对应armv7版本的<a href="https://github.com/Dreamacro/clash/releases/download/v1.11.0/clash-linux-armv8-v1.11.0.gz">clash-linux-armv8-v1.11.0.gz</a>。</p>
+<p>其他型号的树莓派可以通过以下命令查看树莓派的架构：</p>
+<pre><code class="language-bash">arch
+</code></pre>
+<p><img src="tutorial/images/clash-release.png" alt="clash-release" /></p>
+<p>下载完成后解压文件，建议把文件名改为<code>clash</code>， 然后移动到<code>/usr/local/bin/clash</code>位置，同时给该文件以执行的权限：</p>
+<pre><code class="language-bash">wget https://github.com/Dreamacro/clash/releases/download/v1.10.6/clash-linux-armv7-v1.10.6.gz
+gunzip clash-linux-armv7-v1.10.6.gz
+rm -rf clash-linux-armv7-v1.10.6.gz
+mv clash-linux-armv7 clash
+sudo mv clash /usr/local/bin
+sudo chmod a+x /usr/local/bin/clash
+</code></pre>
+<h2 id="二配置clash"><a class="header" href="#二配置clash">二、配置Clash</a></h2>
+<p>Clash配置文件的默认路径是<code>~/.config/clash</code>，如果你的Home目录不存在相应文件夹就需要你自己创建，然后把你机场提供的配置文件放到该文件下就可以了，Clash配置文件的默认名称应该是<code>config.yaml</code>。</p>
+<pre><code class="language-bash">mkdir ~/.config/clash
+mv your/clash/config/file config.yaml
+mv config.yaml ~/.config/clash
+</code></pre>
+<p>另外Clash还需要一个<a href="tutorial/data/Country.mmdb">Country.mmdb文件</a>，Country.mmdb是全球IP库，可以实现各个国家的IP信息解析和地理定位，没有这个文件clash无法正常启动，你可以前往<a href="https://github.com/SukkaW/Koolshare-Clash/blob/master/koolclash/koolclash/config/Country.mmdb">GitHub下载</a>。下载完成后同样放在默认路径下就可以了<code>~/.config/clash</code>。</p>
+<h2 id="三配置终端代理"><a class="header" href="#三配置终端代理">三、配置终端代理</a></h2>
+<p>首先我们需要添加几个环境变量：</p>
+<pre><code class="language-bash">sudo vim /etc/environment
+</code></pre>
+<p>然后添加以下配置内容：</p>
+<pre><code>export http_proxy=&quot;http://127.0.0.1:7890&quot;
+export https_proxy=&quot;http://127.0.0.1:7890&quot;
+export no_proxy=&quot;localhost, 127.0.0.1, *edu.cn&quot;
+</code></pre>
+<pre><code class="language-admonish warning">系统变量的https_proxy的代理地址和http_proxy的代理地址是一样的，因为Clash使用一个地址同时代理http和https。另外，no_proxy表示其中的地址不需要代理，这一点很重要，比如我们不需要代理我们的校园网地址，因此加入要`*edu.cn`。
+</code></pre>
+<p>然后再对相应的终端应用配置代理：</p>
+<h3 id="为sudo配置代理"><a class="header" href="#为sudo配置代理">为sudo配置代理</a></h3>
+<p>进入sudo配置文件：</p>
+<pre><code class="language-bash">sudo visudo
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code>Defaults env_keep+=&quot;http_proxy https_proxy no_proxy&quot;
+</code></pre>
+<h3 id="为apt配置代理"><a class="header" href="#为apt配置代理">为apt配置代理</a></h3>
+<p>进入apt配置文件：</p>
+<pre><code class="language-bash">sudo vim /etc/apt/apt.conf.d/10proxy
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code>Acquire::http::Proxy &quot;http://127.0.0.1:7890/&quot;;
+</code></pre>
+<h3 id="为git配置代理"><a class="header" href="#为git配置代理">为git配置代理</a></h3>
+<p>进入git配置文件：</p>
+<pre><code class="language-bash">vim ~/.gitconfig
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code class="language-bash">[http]
+  proxy=http://127.0.0.1:7890
+[https]
+  proxy=http://127.0.0.1:7890
+</code></pre>
+<h3 id="为pip配置代理"><a class="header" href="#为pip配置代理">为pip配置代理</a></h3>
+<p>进入pip配置文件：</p>
+<pre><code class="language-bash">vim ~/.config/pip/pip.conf
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code>[global]
+  proxy = http://127.0.0.1:7890
+  http-proxy = http://127.0.0.1:7890
+  https-proxy = http://127.0.0.1:7890
+  trusted-host = pypi.python.org global.trusted-host pypi.org global.trusted-host files.pythonhosted.org
+</code></pre>
+<h3 id="为npm配置代理"><a class="header" href="#为npm配置代理">为npm配置代理</a></h3>
+<p>进入npm配置文件：</p>
+<pre><code class="language-bash">vim ~/.npmrc
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code>proxy=http://127.0.0.1:7890
+http-proxy=http://127.0.0.1:7890
+https-proxy=http://127.0.0.1:7890
+</code></pre>
+<h3 id="为cargo配置代理"><a class="header" href="#为cargo配置代理">为cargo配置代理</a></h3>
+<p>进入cargo配置文件：</p>
+<pre><code class="language-bash">vim ~/.cargo/config
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code>[http]
+  proxy=http://127.0.0.1:7890
+[https]
+  proxy=http://127.0.0.1:7890
+</code></pre>
+<h2 id="四使用clash"><a class="header" href="#四使用clash">四、使用Clash</a></h2>
+<p>配置完成后需要重启树莓派让配置生效，这样配置才能生效。理论上这样一波配置后，大部分终端应用都可以正常使用了，如果你有其他的终端应用可自行参考相关文档进行配置。</p>
+<p>重启之后在终端中输入clash，如果输出类似以下内容那么就说明Clash启动成功了。</p>
+<pre><code>INFO[0000] Start initial compatible provider 手动选择
+INFO[0000] Start initial compatible provider 节点选择
+INFO[0000] Start initial compatible provider 故障切换
+INFO[0000] Start initial compatible provider 自动选择
+INFO[0000] HTTP proxy listening at: [::]:7890
+INFO[0000] RESTful API listening at: 127.0.0.1:9090
+INFO[0000] SOCKS proxy listening at: [::]:7891
+</code></pre>
+<p>你可以更新一下系统或者打开浏览器测试一下Google，如果可以访问你就可以愉快地玩耍了！</p>
+<pre><code class="language-admonish warning">在终端请不要使用`ping google.com`来测试，因为ping使用不同的协议无法被Clash代理，但是可以使用`curl google.com`。
+</code></pre>
+<h2 id="五开机自启"><a class="header" href="#五开机自启">五、开机自启</a></h2>
+<p>既然我们都已经可以使用Clash了，当然要让树莓派能够开机自启Clash对吧。在树莓派推荐使用crontab作为自动任务管理器。</p>
+<p>输入以下命令可以打开crontab：</p>
+<pre><code class="language-bash">crontab -e
+</code></pre>
+<p>第一次使用可能需要你选择默认的编辑器，看个人喜好选择就好，然后在打开的文件末尾添加以下内容：</p>
+<pre><code>@reboot /usr/local/bin/clash
+</code></pre>
+<h2 id="六控制面板"><a class="header" href="#六控制面板">六、控制面板</a></h2>
+<p>GitHub上有很多优秀的有关Clash Dashboard的项目，这些项目可以非常方便地帮助你查看、设置和管理你的Clash。</p>
+<p>从GitHub上克隆<a href="https://github.com/Dreamacro/clash-dashboard.git">Clash Dashbaord</a>到Clash的默认配置文件夹下。</p>
+<pre><code class="language-bash">cd ~/.config/clash
+git clone https://github.com/Dreamacro/clash-dashboard.git
+cd ~/.config/clash/clash-dashboard
+git checkout -b gh-pages origin/gh-pages
+</code></pre>
+<p>下载完成后你需要对Clash的配置文件稍作修改，在config.yaml的头部添加或者修改以下两项：</p>
+<pre><code class="language-config.yaml">external-ui: clash-dashboard
+external-controller: 127.0.0.1:9090
+</code></pre>
+<p>然后在浏览器中输入<a href="http://127.0.0.1:9090/ui">http://127.0.0.1:9090/ui</a>就可以看到Clash的控制面板了。</p>
+<p><img src="tutorial/images/clash-dashboard.png" alt="clash-dashboard" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用github-actions"><a class="header" href="#使用github-actions">使用GitHub Actions</a></h1>
 <h2 id="一基本模板"><a class="header" href="#一基本模板">一、基本模板</a></h2>
 <p>新建配置文件：</p>
@@ -700,134 +1230,135 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="使用clash内核"><a class="header" href="#使用clash内核">使用Clash内核</a></h1>
-<h2 id="一下载clash"><a class="header" href="#一下载clash">一、下载Clash</a></h2>
-<p>在这里我们使用Clash作为科学上网的代理框架，你可以到GitHub下载<a href="https://github.com/Dreamacro/clash/releases">Clash内核</a>。如果你是<strong>树莓派4B 32位操作系统</strong>，那么你应该下载对应armv7版本<a href="Tutorial/data/clash-linux-armv7">clash-linux-armv7-v1.10.6.gz</a>，如果是<strong>树莓派4B 64位操作系统</strong>，那么你应该下载对应armv8版本<a href="Tutorial/data/clash-linux-armv8">clash-linux-armv8-v1.10.6.gz</a>。</p>
-<p>其他型号的树莓派可以通过以下命令查看树莓派的架构：</p>
-<pre><code class="language-bash">arch
+<h2 id="四创建个人actions-runner"><a class="header" href="#四创建个人actions-runner">四、创建个人Actions-Runner</a></h2>
+<h3 id="部署runner"><a class="header" href="#部署runner">部署Runner</a></h3>
+<p>可以参照Github，这边跳过。</p>
+<p>运行Runner：</p>
+<pre><code class="language-bash">./run.sh
 </code></pre>
-<p><img src="Tutorial/images/clash-release.png" alt="clash-release" /></p>
-<p>下载完成后解压文件，建议把文件名改为<code>clash</code>， 然后移动到<code>/usr/local/bin/clash</code>位置，同时给该文件以执行的权限：</p>
-<pre><code class="language-bash">wget https://github.com/Dreamacro/clash/releases/download/v1.10.6/clash-linux-armv7-v1.10.6.gz
-gunzip clash-linux-armv7-v1.10.6.gz
-rm -rf clash-linux-armv7-v1.10.6.gz
-mv clash-linux-armv7 clash
-sudo mv clash /usr/local/bin
-sudo chmod a+x /usr/local/bin/clash
+<h3 id="将actions-runner注册为开机自启任务"><a class="header" href="#将actions-runner注册为开机自启任务">将Actions Runner注册为开机自启任务</a></h3>
+<p>注册任务：</p>
+<pre><code class="language-bash">sudo ./svc.sh install
 </code></pre>
-<h2 id="二配置clash"><a class="header" href="#二配置clash">二、配置Clash</a></h2>
-<p>Clash配置文件的默认路径是<code>~/.config/clash</code>，如果你的Home目录不存在相应文件夹就需要你自己创建，然后把你机场提供的配置文件放到该文件下就可以了，Clash配置文件的默认名称应该是<code>config.yaml</code>。</p>
-<pre><code class="language-bash">mkdir ~/.config/clash
-mv your/clash/config/file config.yaml
-mv config.yaml ~/.config/clash
+<p>启动任务：</p>
+<pre><code class="language-bash">sudo ./svc.sh start
 </code></pre>
-<p>另外Clash还需要一个<a href="Tutorial/data/Country.mmdb">Country.mmdb文件</a>，Country.mmdb是全球IP库，可以实现各个国家的IP信息解析和地理定位，没有这个文件clash无法正常启动，你可以前往<a href="https://github.com/SukkaW/Koolshare-Clash/blob/master/koolclash/koolclash/config/Country.mmdb">GitHub下载</a>。下载完成后同样放在默认路径下就可以了<code>~/.config/clash</code>。</p>
-<h2 id="三配置终端代理"><a class="header" href="#三配置终端代理">三、配置终端代理</a></h2>
-<p>首先我们需要添加几个环境变量：</p>
-<pre><code class="language-bash">sudo vim /etc/environment
+<p>查看状态：</p>
+<pre><code class="language-bash">sudo ./svc.sh status
 </code></pre>
-<p>然后添加以下配置内容：</p>
-<pre><code>export http_proxy=&quot;http://127.0.0.1:7890&quot;
-export https_proxy=&quot;http://127.0.0.1:7890&quot;
-export no_proxy=&quot;localhost, 127.0.0.1, *edu.cn&quot;
+<p>停止任务：</p>
+<pre><code class="language-bash">sudo ./svc.sh stop
 </code></pre>
-<blockquote>
-<p>注意：系统变量的https_proxy的代理地址和http_proxy的代理地址是一样的，因为Clash使用一个地址同时代理http和https。另外，no_proxy表示其中的地址不需要代理，这一点很重要，比如我们不需要代理我们的校园网地址，因此加入要<code>*edu.cn</code>。</p>
-</blockquote>
-<p>然后再对相应的终端应用配置代理：</p>
-<h3 id="为sudo配置代理"><a class="header" href="#为sudo配置代理">为sudo配置代理</a></h3>
-<p>进入sudo配置文件：</p>
-<pre><code class="language-bash">sudo visudo
+<p>注销任务：</p>
+<pre><code class="language-bash">sudo ./svc.sh uninstall
 </code></pre>
-<p>然后添加以下内容：</p>
-<pre><code>Defaults env_keep+=&quot;http_proxy https_proxy no_proxy&quot;
+<div style="break-before: page; page-break-before: always;"></div><h1 id="使用linux用户和用户组"><a class="header" href="#使用linux用户和用户组">使用Linux用户和用户组</a></h1>
+<h2 id="一管理用户"><a class="header" href="#一管理用户">一、管理用户</a></h2>
+<p>查看当前用户：</p>
+<pre><code class="language-bash">whoami
 </code></pre>
-<h3 id="为apt配置代理"><a class="header" href="#为apt配置代理">为apt配置代理</a></h3>
-<p>进入apt配置文件：</p>
-<pre><code class="language-bash">sudo vim /etc/apt/apt.conf.d/10proxy
+<p>查看所有用户：</p>
+<pre><code class="language-bash">cat /etc/passwd
 </code></pre>
-<p>然后添加以下内容：</p>
-<pre><code>Acquire::http::Proxy &quot;http://127.0.0.1:7890/&quot;;
+<p>添加新用户：</p>
+<pre><code class="language-bash">sudo useradd -m -s /bin/bash -c &quot;test-user&quot; test
 </code></pre>
-<h3 id="为git配置代理"><a class="header" href="#为git配置代理">为git配置代理</a></h3>
-<p>进入git配置文件：</p>
-<pre><code class="language-bash">vim ~/.gitconfig
+<p>更改用户密码：</p>
+<pre><code class="language-bash">sudo passwd test
 </code></pre>
-<p>然后添加以下内容：</p>
-<pre><code class="language-bash">[http]
-  proxy=http://127.0.0.1:7890
-[https]
-  proxy=http://127.0.0.1:7890
+<p>更改文件或者问价夹所有者：</p>
+<pre><code class="language-bash">sudo chmod $user:$user $filename_or_folder
 </code></pre>
-<h3 id="为pip配置代理"><a class="header" href="#为pip配置代理">为pip配置代理</a></h3>
-<p>进入pip配置文件：</p>
-<pre><code class="language-bash">vim ~/.config/pip/pip.conf
+<p>登录其他用户：</p>
+<pre><code class="language-bash">su test
 </code></pre>
-<p>然后添加以下内容：</p>
-<pre><code>[global]
-  proxy = http://127.0.0.1:7890
-  http-proxy = http://127.0.0.1:7890
-  https-proxy = http://127.0.0.1:7890
-  trusted-host = pypi.python.org global.trusted-host pypi.org global.trusted-host files.pythonhosted.org
+<p>删除用户：</p>
+<pre><code class="language-bash">sudo userdel test
 </code></pre>
-<h3 id="为npm配置代理"><a class="header" href="#为npm配置代理">为npm配置代理</a></h3>
-<p>进入npm配置文件：</p>
-<pre><code class="language-bash">vim ~/.npmrc
+<h2 id="二管理用户组"><a class="header" href="#二管理用户组">二、管理用户组</a></h2>
+<p>查看所有用户组：</p>
+<pre><code class="language-bash">cat /etc/group
 </code></pre>
-<p>然后添加以下内容：</p>
-<pre><code>proxy=http://127.0.0.1:7890
-http-proxy=http://127.0.0.1:7890
-https-proxy=http://127.0.0.1:7890
+<p>添加用户到其他用户组：</p>
+<pre><code class="language-bash">sudo usermod -aG sudo test
 </code></pre>
-<h3 id="为cargo配置代理"><a class="header" href="#为cargo配置代理">为cargo配置代理</a></h3>
-<p>进入cargo配置文件：</p>
-<pre><code class="language-bash">vim ~/.cargo/config
+<p>添加新用户组：</p>
+<pre><code class="language-bash">sudo groupadd test
 </code></pre>
-<p>然后添加以下内容：</p>
-<pre><code>[http]
-  proxy=http://127.0.0.1:7890
-[https]
-  proxy=http://127.0.0.1:7890
+<p>删除用户组：</p>
+<pre><code class="language-bash">sudo groupdel test
 </code></pre>
-<h2 id="四使用clash"><a class="header" href="#四使用clash">四、使用Clash</a></h2>
-<p>配置完成后需要重启树莓派让配置生效，这样配置才能生效。理论上这样一波配置后，大部分终端应用都可以正常使用了，如果你有其他的终端应用可自行参考相关文档进行配置。</p>
-<p>重启之后在终端中输入clash，如果输出类似以下内容那么就说明Clash启动成功了。</p>
-<pre><code>INFO[0000] Start initial compatible provider 手动选择
-INFO[0000] Start initial compatible provider 节点选择
-INFO[0000] Start initial compatible provider 故障切换
-INFO[0000] Start initial compatible provider 自动选择
-INFO[0000] HTTP proxy listening at: [::]:7890
-INFO[0000] RESTful API listening at: 127.0.0.1:9090
-INFO[0000] SOCKS proxy listening at: [::]:7891
-</code></pre>
-<p>你可以更新一下系统或者打开浏览器测试一下Google，如果可以访问你就可以愉快地玩耍了！</p>
-<blockquote>
-<p>注意：在终端请不要使用<code>ping google.com</code>来测试，因为ping使用不同的协议无法被Clash代理，不过你可以使用<code>curl google.com</code>。</p>
-</blockquote>
-<h2 id="五开机自启"><a class="header" href="#五开机自启">五、开机自启</a></h2>
-<p>既然我们都已经可以使用Clash了，当然要让树莓派能够开机自启Clash对吧。在树莓派推荐使用crontab作为自动任务管理器。</p>
-<p>输入以下命令可以打开crontab：</p>
-<pre><code class="language-bash">crontab -e
-</code></pre>
-<p>第一次使用可能需要你选择默认的编辑器，看个人喜好选择就好，然后在打开的文件末尾添加以下内容：</p>
-<pre><code>@reboot /usr/local/bin/clash
-</code></pre>
-<h2 id="六控制面板"><a class="header" href="#六控制面板">六、控制面板</a></h2>
-<p>GitHub上有很多优秀的有关Clash Dashboard的项目，这些项目可以非常方便地帮助你查看、设置和管理你的Clash。</p>
-<p>从GitHub上克隆<a href="https://github.com/Dreamacro/clash-dashboard.git">Clash Dashbaord</a>到Clash的默认配置文件夹下。</p>
-<pre><code class="language-bash">cd ~/.config/clash
-git clone https://github.com/Dreamacro/clash-dashboard.git
-cd ~/.config/clash/clash-dashboard
-git checkout -b gh-pages origin/gh-pages
-</code></pre>
-<p>下载完成后你需要对Clash的配置文件稍作修改，在config.yaml的头部添加或者修改以下两项：</p>
-<pre><code class="language-config.yaml">external-ui: clash-dashboard
-external-controller: 127.0.0.1:9090
-</code></pre>
-<p>然后在浏览器中输入<a href="http://127.0.0.1:9090/ui">http://127.0.0.1:9090/ui</a>就可以看到Clash的控制面板了。</p>
-<p><img src="Tutorial/images/clash-dashboard.png" alt="clash-dashboard" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="编程笔记"><a class="header" href="#编程笔记">编程笔记</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="hello-world"><a class="header" href="#hello-world">Hello world</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sql笔记"><a class="header" href="#sql笔记">SQL笔记</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hello-world"><a class="header" href="#hello-world">HELLO WORLD</a></h1>
+<h2 id="一知识点"><a class="header" href="#一知识点">一、知识点</a></h2>
+<ul>
+<li><code>USE</code>使用DB</li>
+<li><code>SELECT</code>选择Column</li>
+<li><code>FROM</code>选择Table</li>
+<li><code>WHERE</code>筛选</li>
+<li><code>ORDER BY</code>排序</li>
+<li><code>--</code>注释</li>
+</ul>
+<h2 id="二示例"><a class="header" href="#二示例">二、示例</a></h2>
+<pre><code class="language-sql">USE sql_store;
+
+SELECT *
+FROM customers
+-- WHERE customer_id = 1
+ORDER BY first_name
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="select用法"><a class="header" href="#select用法">SELECT用法</a></h1>
+<h2 id="一知识点-1"><a class="header" href="#一知识点-1">一、知识点</a></h2>
+<ul>
+<li>SELECT可以有多个参数筛选列</li>
+<li>SELECT可以换行</li>
+<li>SELECT可以使用别名<code>AS</code></li>
+<li>SELECT可以使用四则运算和括号产生新的列</li>
+</ul>
+<h2 id="二示例-1"><a class="header" href="#二示例-1">二、示例</a></h2>
+<pre><code class="language-sql">USE sql_store;
+
+SELECT
+	first_name,
+	last_name, 
+	points, 
+    (points + 10) * 10 AS &quot;discount factor&quot;
+FROM customers
+ORDER BY points
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="where用法"><a class="header" href="#where用法">WHERE用法</a></h1>
+<h2 id="一知识点-2"><a class="header" href="#一知识点-2">一、知识点</a></h2>
+<ul>
+<li>WHERE可以使用逻辑运算符</li>
+<li>SQL的时间格式是<code>YYYY-MM-DD HH-MM-SS</code></li>
+</ul>
+<h2 id="二示例-2"><a class="header" href="#二示例-2">二、示例</a></h2>
+<pre><code class="language-sql">USE sql_store;
+
+SELECT *
+FROM customers
+-- WHERE points &gt; 3000
+-- WHERE state = 'VA'
+-- WHERE state != 'VA'
+WHERE birth_date &gt; '1990-01-01'
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="and-or-not运算符"><a class="header" href="#and-or-not运算符">AND-OR-NOT运算符</a></h1>
+<h2 id="一知识点-3"><a class="header" href="#一知识点-3">一、知识点</a></h2>
+<ul>
+<li>逻辑运算符AND优先级更高</li>
+<li>逻辑运算符可以通过括号改变运算顺序</li>
+</ul>
+<h2 id="二示例-3"><a class="header" href="#二示例-3">二、示例</a></h2>
+<pre><code class="language-sql">USE sql_store;
+
+SELECT *
+FROM customers
+-- WHERE points &gt; 3000 AND birth_date &gt; '1990-01-01'
+-- WHERE points &gt; 3000 OR birth_date &gt; '1990-01-01'
+-- WHERE birth_date &gt; '1990-01-01' OR (points &gt; 1000 AND state = 'VA')
+WHERE NOT (birth_date &gt; '1990-01-01' OR points &gt; 1000)
+</code></pre>
 
                     </main>
 
