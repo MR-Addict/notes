@@ -70,7 +70,56 @@ FLUSH PRIVILEGES;
 sudo mysql -u user_name -p
 ```
 
-## 四、常用命令
+## 四、允许远程连接：
+
+进入配置文件：
+
+```bash
+sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
+```
+
+找到以下内容，注释掉IP绑定：
+
+```
+# Instead of skip-networking the default is now to listen only on
+# localhost which is more compatible and is not less secure.
+# bind-address          = 127.0.0.1
+# mysqlx-bind-address   = 127.0.0.1
+```
+
+然后进入MySQL，创建可以允许远程连接的用户：
+
+```sql
+CREATE USER 'user_name'@'remote_login_server_ip' IDENTIFIED BY 'user_password';
+```
+
+你也可以更改当前的用户：
+
+```sql
+RENAME USER 'user_name'@'localhost' TO 'user_name'@'remote_login_server_ip';
+```
+
+## 五、更改密码协议
+
+查看当前密码协议：
+
+```sql
+SHOW VARIABLES LIKE 'validate_password%';
+```
+
+更改当前密码协议：
+
+```sql
+SET GLOBAL validate_password.policy=LOW;
+```
+
+更改用户密码：
+
+```sql
+ALTER USER 'user_name'@'localhost' IDENTIFIED BY 'new_password';
+```
+
+## 六、常用命令
 
 显示已有数据库：
 
@@ -137,22 +186,4 @@ SELECT User, Host FROM mysql.user;
 
 ```sql
 DROP USER 'user_name'@'localhost';
-```
-
-查看当前密码协议：
-
-```sql
-SHOW VARIABLES LIKE 'validate_password%';
-```
-
-更改当前密码协议：
-
-```sql
-SET GLOBAL validate_password.policy=LOW;
-```
-
-更改用户密码：
-
-```sql
-ALTER USER 'user_name'@'localhost' IDENTIFIED BY 'new_password';
 ```
