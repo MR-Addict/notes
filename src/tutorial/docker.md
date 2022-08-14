@@ -145,7 +145,43 @@ services:
       - /home/ubuntu/Projects/Notes/docker/conf.d:/etc/nginx/conf.d
 ```
 
-## 五、常用命令
+## 五、编译推送镜像
+
+登录dockerhub，输入token：
+
+```bash
+docker login -u <dockrhub_username>
+```
+
+### 初次编译
+
+编译镜像：
+
+```bash
+docker build -t <dockerhub_username>/<dockerhub_repo_name> .
+```
+
+推送镜像：
+
+```bash
+docker push <dockerhub_username>/<dockerhub_repo_name>
+```
+
+### 推送已有镜像
+
+提交变更：
+
+```bash
+docker commit <existing_image> <dockerhub_username>/<dockerhub_repo_name>
+```
+
+推送镜像：
+
+```bash
+docker push <dockerhub_username>/<dockerhub_repo_name>
+```
+
+## 六、常用命令
 
 下载镜像：
 
