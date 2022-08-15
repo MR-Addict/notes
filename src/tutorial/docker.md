@@ -181,19 +181,7 @@ docker commit <existing_image> <dockerhub_username>/<dockerhub_repo_name>
 docker push <dockerhub_username>/<dockerhub_repo_name>
 ```
 
-## 六、常用命令
-
-下载镜像：
-
-```bash
-docker pull ubuntu
-```
-
-显示所有镜像：
-
-```bash
-docker images
-```
+## 六、Docker的容器操作
 
 显示正在运行的容器：
 
@@ -207,7 +195,19 @@ docker ps
 docker ps -a
 ```
 
-运行某容器：
+停止正在运行的容器：
+
+```bash
+docker stop ubuntu
+```
+
+重启某个容器：
+
+```bash
+docker restart ubuntu
+```
+
+从镜像运行容器：
 
 ```bash
 docker run ubuntu
@@ -249,22 +249,16 @@ docker run -d -p 80:8080 ubuntu
 docker run -d -v /opt/mydata:/var/lib/mysql ubuntu
 ```
 
-停止正在运行的容器：
+docker-compose运行容器：
 
 ```bash
-docker stop ubuntu
+docker-compose up -d
 ```
 
-重启某个容器：
+docker-compose删除容器：
 
 ```bash
-docker restart ubuntu
-```
-
-删除镜像：
-
-```bash
-docker rmi --force ubuntu
+docker-compose down
 ```
 
 删除容器：
@@ -279,14 +273,34 @@ docker rm $container-name-or-id
 docker rm $(docker ps --filter status=exited -q)
 ```
 
-运行docker-compose：
+## 七、Docker的镜像操作
+
+拉取镜像：
 
 ```bash
-sudo docker-compose up -d
+docker pull ubuntu
 ```
 
-删除docker-compose：
+显示已有镜像：
 
 ```bash
-sudo docker-compose down
+docker images
+```
+
+删除镜像：
+
+```bash
+docker rmi ubuntu
+```
+
+删除无用镜像：
+
+```bash
+docker images prune
+```
+
+删除所有无用的镜像、容器、网络和存储器：
+
+```bash
+docker system prune -a
 ```
