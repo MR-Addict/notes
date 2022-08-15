@@ -1,7 +1,9 @@
 book
 CNAME
 README.md
+Dockerfile
 actions-runner
+docker-compose.yml
 .git
 .github
 .gitignore
