@@ -33,4 +33,4 @@ server:
     - ssh-keyscan $HOSTNAME >> ~/.ssh/known_hosts
     - chmod 644 ~/.ssh/known_hosts
   script:
-    - ssh -o StrictHostKeyChecking=no $USERNAME@$HOSTNAME 'cd /home/$USERNAME/Projects/Notes && git pull && docker-compose down && docker build -t mraddict063/notes --rm . && docker rmi $(docker images --filter "dangling=true" -q --no-trunc) && docker-compose up -d && docker push mraddict063/notes && exit'
+    - ssh -o StrictHostKeyChecking=no $USERNAME@$HOSTNAME 'cd /home/$USER/Projects/Notes && git pull && docker-compose down && docker build -t mraddict063/notes --rm . && docker rmi $(docker images --filter "dangling=true" -q --no-trunc) && docker-compose up -d && docker push mraddict063/notes && exit'
