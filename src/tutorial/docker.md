@@ -181,7 +181,39 @@ docker commit <existing_image> <dockerhub_username>/<dockerhub_repo_name>
 docker push <dockerhub_username>/<dockerhub_repo_name>
 ```
 
-## 六、Docker的容器操作
+## 六、Docker的镜像操作
+
+拉取镜像：
+
+```bash
+docker pull ubuntu
+```
+
+显示已有镜像：
+
+```bash
+docker images
+```
+
+删除镜像：
+
+```bash
+docker rmi ubuntu
+```
+
+删除无用镜像：
+
+```bash
+docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
+```
+
+删除所有无用的镜像、容器、网络和存储器：
+
+```bash
+docker system prune -a
+```
+
+## 七、Docker的容器操作
 
 显示正在运行的容器：
 
@@ -271,36 +303,4 @@ docker rm $container-name-or-id
 
 ```bash
 docker rm $(docker ps --filter status=exited -q)
-```
-
-## 七、Docker的镜像操作
-
-拉取镜像：
-
-```bash
-docker pull ubuntu
-```
-
-显示已有镜像：
-
-```bash
-docker images
-```
-
-删除镜像：
-
-```bash
-docker rmi ubuntu
-```
-
-删除无用镜像：
-
-```bash
-docker images prune
-```
-
-删除所有无用的镜像、容器、网络和存储器：
-
-```bash
-docker system prune -a
 ```
