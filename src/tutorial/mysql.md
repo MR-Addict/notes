@@ -70,7 +70,34 @@ FLUSH PRIVILEGES;
 sudo mysql -u user_name -p
 ```
 
-## 四、允许远程连接：
+## 四、用户操作
+
+查看所有用户：
+
+```sql
+SELECT User, Host FROM mysql.user;
+```
+
+删除用户：
+
+```sql
+DROP USER 'user_name'@'localhost';
+```
+
+更改用户密码：
+
+```sql
+ALTER USER 'user_name'@'localhost' IDENTIFIED BY 'new_password';
+```
+
+更改用户名和主机名：
+
+```sql
+RENAME USER 'user_name'@'host_ip' TO 'another_user_name'@'another_host_ip'
+```
+
+
+## 五、允许远程连接：
 
 进入配置文件：
 
@@ -99,7 +126,7 @@ CREATE USER 'user_name'@'remote_login_server_ip' IDENTIFIED BY 'user_password';
 RENAME USER 'user_name'@'localhost' TO 'user_name'@'remote_login_server_ip';
 ```
 
-## 五、更改密码协议
+## 六、更改密码协议
 
 查看当前密码协议：
 
@@ -119,7 +146,26 @@ SET GLOBAL validate_password.policy=LOW;
 ALTER USER 'user_name'@'localhost' IDENTIFIED BY 'new_password';
 ```
 
-## 六、常用命令
+## 七、禁用ONLY_FULL_GROUP_BY
+
+进入配置文件：
+
+```bash
+sudo vim /etc/mysql/my.cnf
+```
+
+添加或修改以下内容：
+
+```
+!includedir /etc/mysql/conf.d/
+!includedir /etc/mysql/mysql.conf.d/
+
+[mysqld]
+sql_mode = "STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"
+```
+
+
+## 八、常用命令
 
 显示已有数据库：
 
@@ -174,16 +220,4 @@ ADD COLUMN column_name column_definition;
 
 ```sql
 DROP DATABASE db_name;
-```
-
-查看所有用户：
-
-```sql
-SELECT User, Host FROM mysql.user;
-```
-
-删除用户：
-
-```sql
-DROP USER 'user_name'@'localhost';
 ```
