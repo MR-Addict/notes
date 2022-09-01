@@ -96,76 +96,7 @@ ALTER USER 'user_name'@'localhost' IDENTIFIED BY 'new_password';
 RENAME USER 'user_name'@'host_ip' TO 'another_user_name'@'another_host_ip'
 ```
 
-
-## 五、允许远程连接：
-
-进入配置文件：
-
-```bash
-sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
-```
-
-找到以下内容，注释掉IP绑定：
-
-```
-# Instead of skip-networking the default is now to listen only on
-# localhost which is more compatible and is not less secure.
-# bind-address          = 127.0.0.1
-# mysqlx-bind-address   = 127.0.0.1
-```
-
-然后进入MySQL，创建可以允许远程连接的用户：
-
-```sql
-CREATE USER 'user_name'@'remote_login_server_ip' IDENTIFIED BY 'user_password';
-```
-
-你也可以更改当前的用户：
-
-```sql
-RENAME USER 'user_name'@'localhost' TO 'user_name'@'remote_login_server_ip';
-```
-
-## 六、更改密码协议
-
-查看当前密码协议：
-
-```sql
-SHOW VARIABLES LIKE 'validate_password%';
-```
-
-更改当前密码协议：
-
-```sql
-SET GLOBAL validate_password.policy=LOW;
-```
-
-更改用户密码：
-
-```sql
-ALTER USER 'user_name'@'localhost' IDENTIFIED BY 'new_password';
-```
-
-## 七、禁用ONLY_FULL_GROUP_BY
-
-进入配置文件：
-
-```bash
-sudo vim /etc/mysql/my.cnf
-```
-
-添加或修改以下内容：
-
-```
-!includedir /etc/mysql/conf.d/
-!includedir /etc/mysql/mysql.conf.d/
-
-[mysqld]
-sql_mode = "STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"
-```
-
-
-## 八、常用命令
+## 五、数据库操作
 
 显示已有数据库：
 
@@ -184,6 +115,20 @@ CREATE DATABASE db_name;
 ```sql
 USE db_name;
 ```
+
+删除数据库：
+
+```sql
+DROP DATABASE db_name;
+```
+
+重命名数据库：
+
+```sql
+RENAME TABLE old_db.table TO new_db.table;
+```
+
+## 六、Table操作
 
 创建Table：
 
@@ -216,8 +161,81 @@ ALTER TABLE table_name;
 ADD COLUMN column_name column_definition;
 ```
 
-删除数据库：
+删除Table：
 
 ```sql
-DROP DATABASE db_name;
+DROP TABLE IF EXISTS db.table1, db.table2, db.table3;
+```
+
+重命名Table：
+
+```sql
+RENAME TABLE db.table TO db.new_table;
+```
+
+## 七、允许远程连接：
+
+进入配置文件：
+
+```bash
+sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
+```
+
+找到以下内容，注释掉IP绑定：
+
+```
+# Instead of skip-networking the default is now to listen only on
+# localhost which is more compatible and is not less secure.
+# bind-address          = 127.0.0.1
+# mysqlx-bind-address   = 127.0.0.1
+```
+
+然后进入MySQL，创建可以允许远程连接的用户：
+
+```sql
+CREATE USER 'user_name'@'remote_login_server_ip' IDENTIFIED BY 'user_password';
+```
+
+你也可以更改当前的用户：
+
+```sql
+RENAME USER 'user_name'@'localhost' TO 'user_name'@'remote_login_server_ip';
+```
+
+## 八、更改密码协议
+
+查看当前密码协议：
+
+```sql
+SHOW VARIABLES LIKE 'validate_password%';
+```
+
+更改当前密码协议：
+
+```sql
+SET GLOBAL validate_password.policy=LOW;
+```
+
+更改用户密码：
+
+```sql
+ALTER USER 'user_name'@'localhost' IDENTIFIED BY 'new_password';
+```
+
+## 九、禁用ONLY_FULL_GROUP_BY
+
+进入配置文件：
+
+```bash
+sudo vim /etc/mysql/my.cnf
+```
+
+添加或修改以下内容：
+
+```
+!includedir /etc/mysql/conf.d/
+!includedir /etc/mysql/mysql.conf.d/
+
+[mysqld]
+sql_mode = "STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION"
 ```
