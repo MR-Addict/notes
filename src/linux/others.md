@@ -88,5 +88,4 @@ bash脚本出现^M错误：
 
 ```bash
 sed -i 's/\r//' $yourfile
-cat -e $yourfile
 ```

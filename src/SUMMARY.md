@@ -10,7 +10,11 @@
   - [使用wiringpi](rpi/wiringpi.md)
   - [使用powershell](rpi/powershell.md)
   - [配置oh-my-posh](rpi/oh-my-posh.md)
-  - [其他配置及常用命令](rpi/others.md)
+
+- [Linux](linux/intro.md)
+  - [Linux的Swap空间](linux/swap.md)
+  - [Linux用户和用户组](linux/users.md)
+  - [其他配置及常用命令](linux/others.md)
 
 - [Openwrt](openwrt/intro.md)
   - [使用vim](openwrt/vim.md)
@@ -25,7 +29,6 @@
   - [使用Apache2](tutorial/apache2.md)
   - [使用Clash内核](tutorial/clash.md)
   - [使用GitHub Actions](tutorial/github-actions.md)
-  - [使用Linux用户和用户组](tutorial/users.md)
 
 - [编程](programme/intro.md)
   - [SQL](programme/sql/intro.md)
