@@ -12,6 +12,11 @@
   - [配置oh-my-posh](rpi/oh-my-posh.md)
   - [其他配置及常用命令](rpi/others.md)
 
+- [Openwrt](openwrt/intro.md)
+  - [使用vim](openwrt/vim.md)
+  - [使用init](openwrt/init.md)
+  - [使用uhttpd](openwrt/uhttpd.md)
+
 - [教程](tutorial/intro.md)
   - [使用Git](tutorial/git.md)
   - [使用Nginx](tutorial/nginx.md)

@@ -26,7 +26,7 @@ sudo useradd -m -s /bin/bash -c "test-user" test
 sudo passwd test
 ```
 
-更改文件或者问价夹所有者：
+更改文件或者文件夹所有者：
 
 ```bash
 sudo chmod $user:$user $filename_or_folder
