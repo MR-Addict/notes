@@ -28,6 +28,7 @@
   - [使用Docker](tutorial/docker.md)
   - [使用Apache2](tutorial/apache2.md)
   - [使用Clash内核](tutorial/clash.md)
+  - [使用Wireguard](tutorial/wireguard.md)
   - [使用GitHub Actions](tutorial/github-actions.md)
 
 - [编程](programme/intro.md)
