@@ -36,8 +36,6 @@ PrivateKey = your_private_key
 Address = 10.0.0.1/24
 ListenPort = 51820
 SaveConfig = true
-PostUp = iptables -A FORWARD -i wg0 -j ACCEPT && iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-PostDown = iptables -D FORWARD -i wg0 -j ACCEPT && iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
 
 [Peer]
 PublicKey = client_public_key
@@ -83,7 +81,7 @@ Address = 10.0.0.2/24
 PublicKey = server_public_key
 Endpoint = server_ip:51820
 AllowedIPs = 10.0.0.0/24
-PersistentKeepalive = 30
+PersistentKeepalive = 25
 ```
 
 ## 四、向服务器添加客户端的公钥
@@ -106,16 +104,22 @@ sudo wg set wg0 peer client_public_key allowed-ips 10.0.0.2
 
 ### 允许端口转发
 
-输入以下命令查看你的ipv4是否允许转发：
+进入配置文件：
 
 ```bash
-cat /proc/sys/net/ipv4/ip_forward
+sudo vim /etc/sysctl.conf
 ```
 
-如果不是1，输入以下命令允许转发：
+取消注释以下内容：
+
+```
+net.ipv4.ip_forward=1
+```
+
+重启或者输入以下命令生效端口转发：
 
 ```bash
-sudo sysctl -w net.ipv4.ip_forward=1
+sudo sysctl -p
 ```
 
 ### 打开防火墙
