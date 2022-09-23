@@ -36,6 +36,8 @@ PrivateKey = your_private_key
 Address = 10.0.0.1/24
 ListenPort = 51820
 SaveConfig = true
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT && iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT && iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
 
 [Peer]
 PublicKey = client_public_key
