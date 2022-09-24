@@ -78,7 +78,7 @@ sudo vim /etc/wireguard/wg0.conf
 [Interface]
 PrivateKey = client_private_key
 Address = 10.0.0.2/24
-DNS = 10.0.0.1
+DNS = 114.114.114.114, 223.5.5.5
 
 [Peer]
 PublicKey = server_public_key
