@@ -19,12 +19,12 @@ opkg install uhttpd
 vim /etc/config/uhttpd
 ```
 
-添加以下内容：
+在已有模板后添加以下内容：
 
 ```
-config uhttpd 'main'
+config uhttpd 'profile'
     option listen_http '8080'
-    option home '/root/public'
+    option home '/root/profile'
 ```
 
 ## 三、重启uhttpd

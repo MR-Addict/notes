@@ -15,7 +15,7 @@ opkg install vim-full vim-runtime
 vim /usr/share/vim/vimrc
 ```
 
-添加以下内容：
+你可以覆盖添加以下内容或者自行配置已有功能：
 
 ```
 syntax on
