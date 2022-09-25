@@ -20,6 +20,7 @@
   - [使用vim](openwrt/vim.md)
   - [使用init](openwrt/init.md)
   - [使用uhttpd](openwrt/uhttpd.md)
+  - [其他常用命令](openwrt/others.md)
 
 - [教程](tutorial/intro.md)
   - [使用Git](tutorial/git.md)
