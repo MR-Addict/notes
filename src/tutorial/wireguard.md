@@ -162,3 +162,25 @@ ping 10.0.0.1
 ```bash
 sudo tcpdump -envi wg0
 ```
+
+## 七、设置开机自启
+
+```bash
+sudo systemctl enable wg-quick@wg0
+```
+
+```bash
+sudo systemctl start wg-quick@wg0
+```
+
+```bash
+systemctl status wg-quick@wg0
+```
+
+```bash
+sudo systemctl stop wg-quick@wg0
+```
+
+```bash
+sudo systemctl disable wg-quick@wg0
+```
