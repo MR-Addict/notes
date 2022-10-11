@@ -130,7 +130,7 @@ vim ~/.docker/config.json
 
 nginx容器模板：
 
-```
+```yml
 version: '3'
 services:
   notes:
@@ -143,6 +143,67 @@ services:
       - /home/ubuntu/Projects/Notes/book:/usr/share/nginx/html
       - /home/ubuntu/Projects/Notes/docker/certs:/etc/nginx/certs
       - /home/ubuntu/Projects/Notes/docker/conf.d:/etc/nginx/conf.d
+```
+
+wg-easy模板：
+
+```yml
+version: "3"
+services:
+  wg-easy:
+    environment:
+      - WG_HOST=[change-this]
+      - PASSWORD=[change-this]
+      - WG_DEFAULT_DNS=1.1.1.1
+      - WG_MTU=1420
+
+    image: weejewel/wg-easy
+    container_name: wg-easy
+    volumes:
+      - ./data:/etc/wireguard
+    ports:
+      - 51820:51820/udp
+      - 51821:51821/tcp
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    sysctls:
+      - net.ipv4.ip_forward=1
+      - net.ipv4.conf.all.src_valid_mark=1
+```
+
+nextcloud模板：
+
+```yml
+version: "3"
+
+services:
+  nextcloud:
+    container_name: nextcloud-app
+    image: nextcloud:latest
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=nextcloud
+    volumes:
+      - ./data:/var/www/html
+
+  mysql:
+    image: mysql:8.0
+    container_name: nextcloud-db
+    restart: unless-stopped
+    environment:
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=nextcloud
+      - MYSQL_ROOT_PASSWORD=nextcloud
+    volumes:
+      - ./db:/var/lib/mysql
 ```
 
 ## 五、编译推送镜像

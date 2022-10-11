@@ -99,7 +99,7 @@ cat publickey
 
 ```bash
 sudo wg set wg0 peer client_public_key allowed-ips 10.0.0.2
-````
+```
 
 你也可以直接在服务端的配置文件中添加`Peer`。
 

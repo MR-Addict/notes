@@ -118,6 +118,9 @@ server {
   listen 443 ssl;
   server_name mraddict.top;
 
+  client_max_body_size 0;
+  underscores_in_headers on;
+
   ssl_certificate  /etc/nginx/certs/mraddict.top/mraddict.top_bundle.crt;
   ssl_certificate_key /etc/nginx/certs/mraddict.top/mraddict.top.key;
   ssl_session_timeout 5m;
@@ -126,8 +129,58 @@ server {
   ssl_prefer_server_ciphers on;
 
   location / {
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    add_header Front-End-Https on;
+    proxy_headers_hash_max_size 512;
+    proxy_headers_hash_bucket_size 64;
+    proxy_buffering off;
+    proxy_redirect off;
+    proxy_max_temp_file_size 0;
+
     root /var/www/book;
     index index.html
+  }
+}
+```
+
+nginx基于SSL签证的反向代理：
+
+```
+server{
+  listen 80;
+  server_name cloud.mraddict.top;
+  return 301 https://$host$request_uri;
+}
+
+server {
+  listen 443 ssl;
+  server_name cloud.mraddict.top;
+
+  client_max_body_size 0;
+  underscores_in_headers on;
+
+  ssl_certificate  /etc/nginx/certs/cloud.mraddict.top/cloud.mraddict.top_bundle.crt;
+  ssl_certificate_key /etc/nginx/certs/cloud.mraddict.top/cloud.mraddict.top.key;
+  ssl_session_timeout 5m;
+  ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+  ssl_protocols TLSv1.2 TLSv1.3;
+  ssl_prefer_server_ciphers on;
+
+  location / {
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    add_header Front-End-Https on;
+    proxy_headers_hash_max_size 512;
+    proxy_headers_hash_bucket_size 64;
+    proxy_buffering off;
+    proxy_redirect off;
+    proxy_max_temp_file_size 0;
+    proxy_pass http://localhost:8080;
   }
 }
 ```
