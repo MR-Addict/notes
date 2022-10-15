@@ -89,3 +89,9 @@ bash脚本出现^M错误：
 ```bash
 sed -i 's/\r//' $yourfile
 ```
+
+使用python运行http服务：
+
+```bash
+python -m http.server 8080 --directory public
+```
