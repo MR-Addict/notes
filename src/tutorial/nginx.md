@@ -100,7 +100,7 @@ server{
   server_name mraddict.top;
   location / {
     root /var/www/book;
-    index index.html
+    index index.html;
   }
 }
 ```
@@ -141,7 +141,7 @@ server {
     proxy_max_temp_file_size 0;
 
     root /var/www/book;
-    index index.html
+    index index.html;
   }
 }
 ```
