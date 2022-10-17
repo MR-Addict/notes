@@ -16,6 +16,9 @@
   - [Linux用户和用户组](linux/users.md)
   - [其他配置及常用命令](linux/others.md)
 
+- [React](react/intro.md)
+  - [Tailwind](react/tailwind.md)
+
 - [Openwrt](openwrt/intro.md)
   - [使用vim](openwrt/vim.md)
   - [使用init](openwrt/init.md)
