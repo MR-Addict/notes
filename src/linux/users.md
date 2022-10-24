@@ -29,7 +29,7 @@ sudo passwd test
 更改文件或者文件夹所有者：
 
 ```bash
-sudo chmod $user:$user $filename_or_folder
+sudo chown $user:$user $filename_or_folder
 ```
 
 登录其他用户：
