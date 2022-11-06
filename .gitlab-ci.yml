@@ -5,14 +5,18 @@ stages:
 pages:
   stage: build
   tags:
-    - HIPAA
+    - Ubuntu
   script:
     # - powershell -command "Invoke-WebRequest -Uri https://github.com/rust-lang/mdBook/releases/download/v0.4.18/mdbook-v0.4.18-x86_64-pc-windows-msvc.zip -OutFile mdbook.zip"
     # - powershell -command "Invoke-WebRequest -Uri https://github.com/tommilligan/mdbook-admonish/releases/download/v1.7.0/mdbook-admonish-v1.7.0-x86_64-pc-windows-msvc.zip -OutFile mdbook-admonish.zip"
     # - powershell -command " Expand-Archive ./mdbook-admonish.zip ./assets"
     # - powershell -command " Expand-Archive ./mdbook.zip ./assets"
-    # - ./assets/mdbook-admonish.exe install --css-dir assets .
-    - ./assets/mdbook.exe build -d public
+    # - ./assets/mdbook-admonish install --css-dir assets .
+    - chmod u+x ./assets/mdbook
+    - chmod u+x ./assets/mdbook-admonish
+    - sudo mv ./assets/mdbook /usr/local/bin
+    - sudo mv ./assets/mdbook-admonish /usr/local/bin
+    - mdbook build -d public
   artifacts:
     paths:
       - public
