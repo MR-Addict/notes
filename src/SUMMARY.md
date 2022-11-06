@@ -27,6 +27,7 @@
 
 - [教程](tutorial/intro.md)
   - [使用Git](tutorial/git.md)
+  - [使用Node](tutorial/node.md)
   - [使用Nginx](tutorial/nginx.md)
   - [使用MySQL](tutorial/mysql.md)
   - [使用Docker](tutorial/docker.md)
