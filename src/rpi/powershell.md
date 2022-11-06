@@ -52,7 +52,6 @@ sudo vim $PROFILE
 添加以下内容：
 
 ```
-# Set Aliases
 # Function
 function la_fun { Get-ChildItem -Force }
 function git_clean_fun { git restore . && git clean -f }
