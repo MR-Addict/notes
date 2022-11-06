@@ -53,15 +53,19 @@ sudo vim $PROFILE
 
 ```
 # Set Aliases
-Set-Alias -Name ls -Value Get-ChildItem
+# Function
+function la_fun { Get-ChildItem -Force }
+function git_clean_fun { git restore . && git clean -f }
+
+# Set Alias
+Set-Alias -Name vim -Value nvim
 Set-Alias -Name ll -Value Get-ChildItem
-Set-Alias -Name la -Value Get-ChildItem
+Set-Alias -Name la -Value la_fun
+Set-Alias -Name htop -Value ntop
+Set-Alias -Name git-clean -Value git_clean_fun
 
-# Import Modules
-Import-Module -Name Terminal-Icons
-
-# Init oh-my-posh
-oh-my-posh --init --shell pwsh --config /home/pi/.poshthemes/paradox.omp.json | Invoke-Expression
+# Oh-My-Posh
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/paradox.omp.json" | Invoke-Expression
 ```
 
 ## 三、使用Powershell：

@@ -18,9 +18,6 @@ alias cpu-temp="vcgencmd measure_temp"
 alias eeprom-update="sudo rpi-eeprom-update -a"
 alias apt-update="sudo apt-get update && sudo apt-get upgrade -y"
 alias apt-clean="sudo apt-get autoremove -y && sudo apt-get clean -y"
-
-alias autologin="/home/pi/Projects/Autologin/autologin.sh"
-alias autorun="pwsh -File /home/pi/Projects/Autorun/autorun.ps1"
 ```
 
 ```admonish warning
