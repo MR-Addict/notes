@@ -6,7 +6,13 @@
 
 ## 一、安装Node
 
-2022.11.6最新的稳定版本为18，更新的版本请参考以上官方文档：
+最新的稳定版本16：
+
+```bash
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - && sudo apt-get install -y nodejs
+```
+
+最新的稳定版本18：
 
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install -y nodejs
