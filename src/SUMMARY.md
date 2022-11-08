@@ -31,6 +31,7 @@
   - [使用Nginx](tutorial/nginx.md)
   - [使用MySQL](tutorial/mysql.md)
   - [使用Docker](tutorial/docker.md)
+  - [使用Adguard](tutorial/adguard.md)
   - [使用Apache2](tutorial/apache2.md)
   - [使用Clash内核](tutorial/clash.md)
   - [使用Wireguard](tutorial/wireguard.md)

@@ -206,6 +206,24 @@ services:
       - ./db:/var/lib/mysql
 ```
 
+Adguard模板：
+
+```yml
+version: '2'
+services:
+  adguard:
+    image: adguard/adguardhome
+    container_name: adguard
+    restart: unless-stopped
+    ports:
+      - 53:53/tcp
+      - 53:53/udp
+      - 3000:3000/tcp
+    volumes:
+      - /home/cael/projects/adguard/data/work:/opt/adguardhome/work
+      - /home/cael/projects/adguard/data/conf:/opt/adguardhome/conf
+```
+
 ## 五、编译推送镜像
 
 登录dockerhub，输入token：
