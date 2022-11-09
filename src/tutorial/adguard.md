@@ -96,10 +96,10 @@ sudo docker-compose up -d
 Anti-Ad黑名单：
 
 ```
-https://anti-ad.net/anti-ad-for-dnsmasq.conf
 https://anti-ad.net/easylist.txt
 https://anti-ad.net/adguard.txt
 https://anti-ad.net/domains.txt
+https://anti-ad.net/anti-ad-for-dnsmasq.conf
 ```
 
 通用黑名单：
@@ -129,8 +129,8 @@ https://secure.fanboy.co.nz/fanboy-cookiemonster.txt
 通用黑名单：
 
 ```
+https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/aio.txt
 https://adaway.org/hosts.txt
 https://v.firebog.net/hosts/AdguardDNS.txt
 https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
-https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/aio.txt
 ```
