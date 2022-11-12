@@ -1,0 +1,296 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>使用Wireguard - 我的笔记</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="我的笔记(方便施展Copy+Paste魔法)">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href=".././assets/mdbook-admonish.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../intro.html">我的笔记</a></li><li class="chapter-item expanded "><a href="../rpi/intro.html"><strong aria-hidden="true">1.</strong> 树莓派</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rpi/vim.html"><strong aria-hidden="true">1.1.</strong> 配置vim</a></li><li class="chapter-item expanded "><a href="../rpi/ssh.html"><strong aria-hidden="true">1.2.</strong> 使用ssh</a></li><li class="chapter-item expanded "><a href="../rpi/aliases.html"><strong aria-hidden="true">1.3.</strong> 配置alias</a></li><li class="chapter-item expanded "><a href="../rpi/crontab.html"><strong aria-hidden="true">1.4.</strong> 使用crontab</a></li><li class="chapter-item expanded "><a href="../rpi/wiringpi.html"><strong aria-hidden="true">1.5.</strong> 使用wiringpi</a></li><li class="chapter-item expanded "><a href="../rpi/powershell.html"><strong aria-hidden="true">1.6.</strong> 使用powershell</a></li><li class="chapter-item expanded "><a href="../rpi/oh-my-posh.html"><strong aria-hidden="true">1.7.</strong> 配置oh-my-posh</a></li></ol></li><li class="chapter-item expanded "><a href="../linux/intro.html"><strong aria-hidden="true">2.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../linux/swap.html"><strong aria-hidden="true">2.1.</strong> Linux的Swap空间</a></li><li class="chapter-item expanded "><a href="../linux/users.html"><strong aria-hidden="true">2.2.</strong> Linux用户和用户组</a></li><li class="chapter-item expanded "><a href="../linux/others.html"><strong aria-hidden="true">2.3.</strong> 其他配置及常用命令</a></li></ol></li><li class="chapter-item expanded "><a href="../react/intro.html"><strong aria-hidden="true">3.</strong> React</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../react/tailwind.html"><strong aria-hidden="true">3.1.</strong> Tailwind</a></li></ol></li><li class="chapter-item expanded "><a href="../openwrt/intro.html"><strong aria-hidden="true">4.</strong> Openwrt</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../openwrt/vim.html"><strong aria-hidden="true">4.1.</strong> 使用vim</a></li><li class="chapter-item expanded "><a href="../openwrt/init.html"><strong aria-hidden="true">4.2.</strong> 使用init</a></li><li class="chapter-item expanded "><a href="../openwrt/uhttpd.html"><strong aria-hidden="true">4.3.</strong> 使用uhttpd</a></li><li class="chapter-item expanded "><a href="../openwrt/others.html"><strong aria-hidden="true">4.4.</strong> 其他常用命令</a></li></ol></li><li class="chapter-item expanded "><a href="../tutorial/intro.html"><strong aria-hidden="true">5.</strong> 教程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tutorial/git.html"><strong aria-hidden="true">5.1.</strong> 使用Git</a></li><li class="chapter-item expanded "><a href="../tutorial/node.html"><strong aria-hidden="true">5.2.</strong> 使用Node</a></li><li class="chapter-item expanded "><a href="../tutorial/nginx.html"><strong aria-hidden="true">5.3.</strong> 使用Nginx</a></li><li class="chapter-item expanded "><a href="../tutorial/mysql.html"><strong aria-hidden="true">5.4.</strong> 使用MySQL</a></li><li class="chapter-item expanded "><a href="../tutorial/docker.html"><strong aria-hidden="true">5.5.</strong> 使用Docker</a></li><li class="chapter-item expanded "><a href="../tutorial/adguard.html"><strong aria-hidden="true">5.6.</strong> 使用Adguard</a></li><li class="chapter-item expanded "><a href="../tutorial/apache2.html"><strong aria-hidden="true">5.7.</strong> 使用Apache2</a></li><li class="chapter-item expanded "><a href="../tutorial/clash.html"><strong aria-hidden="true">5.8.</strong> 使用Clash内核</a></li><li class="chapter-item expanded "><a href="../tutorial/wireguard.html" class="active"><strong aria-hidden="true">5.9.</strong> 使用Wireguard</a></li><li class="chapter-item expanded "><a href="../tutorial/github-actions.html"><strong aria-hidden="true">5.10.</strong> 使用GitHub Actions</a></li></ol></li><li class="chapter-item expanded "><a href="../programme/intro.html"><strong aria-hidden="true">6.</strong> 编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programme/sql/intro.html"><strong aria-hidden="true">6.1.</strong> SQL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programme/sql/hello-world.html"><strong aria-hidden="true">6.1.1.</strong> HELLO-WORLD</a></li><li class="chapter-item "><a href="../programme/sql/select.html"><strong aria-hidden="true">6.1.2.</strong> SELECT用法</a></li><li class="chapter-item "><a href="../programme/sql/where.html"><strong aria-hidden="true">6.1.3.</strong> WHERE用法</a></li><li class="chapter-item "><a href="../programme/sql/and-or-not.html"><strong aria-hidden="true">6.1.4.</strong> AND-OR-NOT运算符</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">我的笔记</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://gitlab.com/mraddict/notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-gitlab"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="使用wireguard"><a class="header" href="#使用wireguard">使用Wireguard</a></h1>
+<pre><code class="language-admonish info">参考视频：[wireguard](https://www.youtube.com/watch?v=bVKNSf1p1d0)
+</code></pre>
+<h2 id="一安装wireguard"><a class="header" href="#一安装wireguard">一、安装wireguard</a></h2>
+<pre><code class="language-bash">sudo apt-get install wireguard -y
+</code></pre>
+<h2 id="二配置服务端"><a class="header" href="#二配置服务端">二、配置服务端</a></h2>
+<h3 id="配置公钥和私钥"><a class="header" href="#配置公钥和私钥">配置公钥和私钥</a></h3>
+<p>在服务器创建一对公钥和私钥：</p>
+<pre><code class="language-bash">wg genkey | tee private.key | wg pubkey &gt; public.key
+</code></pre>
+<h3 id="配置配置文件"><a class="header" href="#配置配置文件">配置配置文件</a></h3>
+<p>进入配置文件：</p>
+<pre><code class="language-bash">sudo vim /etc/wireguard/wg0.conf
+</code></pre>
+<p>添加以下配置：</p>
+<pre><code>[Interface]
+PrivateKey = your_private_key
+Address = 10.0.0.1/24
+ListenPort = 51820
+SaveConfig = true
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT &amp;&amp; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT &amp;&amp; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+
+[Peer]
+PublicKey = client_public_key
+AllowedIPs = 10.0.0.2/32
+</code></pre>
+<pre><code class="language-admonish warning">注意：请使用`ip route list table main default`命令将`eth0`更改为你的网卡
+
+例如如果返回结果是：
+
+&gt; default via 172.18.224.1 dev `enp4s0` proto dhcp src 172.18.224.100 metric 100
+
+则应该将eth0改为`enp4s0`
+</code></pre>
+<h2 id="三配置客户端"><a class="header" href="#三配置客户端">三、配置客户端</a></h2>
+<h3 id="配置公钥和私钥-1"><a class="header" href="#配置公钥和私钥-1">配置公钥和私钥</a></h3>
+<p>在客户端创建一对公钥和私钥：</p>
+<pre><code class="language-bash">wg genkey | tee private.key | wg pubkey &gt; public.key
+</code></pre>
+<h3 id="配置配置文件-1"><a class="header" href="#配置配置文件-1">配置配置文件</a></h3>
+<p>进入配置文件：</p>
+<pre><code class="language-bash">sudo vim /etc/wireguard/wg0.conf
+</code></pre>
+<p>添加以下配置：</p>
+<pre><code>[Interface]
+PrivateKey = client_private_key
+Address = 10.0.0.2/24
+DNS = 114.114.114.114, 223.5.5.5
+
+[Peer]
+PublicKey = server_public_key
+Endpoint = server_ip:51820
+AllowedIPs = 0.0.0.0/0
+PersistentKeepalive = 25
+</code></pre>
+<h2 id="四向服务器添加客户端的公钥"><a class="header" href="#四向服务器添加客户端的公钥">四、向服务器添加客户端的公钥</a></h2>
+<p>获得客户端的公钥：</p>
+<pre><code class="language-bash">cat publickey
+</code></pre>
+<p>添加到客户端当中：</p>
+<pre><code class="language-bash">sudo wg set wg0 peer client_public_key allowed-ips 10.0.0.2
+</code></pre>
+<p>你也可以直接在服务端的配置文件中添加<code>Peer</code>。</p>
+<h2 id="五防火墙设置"><a class="header" href="#五防火墙设置">五、防火墙设置</a></h2>
+<h3 id="允许端口转发"><a class="header" href="#允许端口转发">允许端口转发</a></h3>
+<p>进入配置文件：</p>
+<pre><code class="language-bash">sudo vim /etc/sysctl.conf
+</code></pre>
+<p>取消注释以下内容：</p>
+<pre><code>net.ipv4.ip_forward=1
+</code></pre>
+<p>重启或者输入以下命令生效端口转发：</p>
+<pre><code class="language-bash">sudo sysctl -p
+</code></pre>
+<h3 id="打开防火墙"><a class="header" href="#打开防火墙">打开防火墙</a></h3>
+<p>输入以下命令查看防火墙是否启动：</p>
+<pre><code class="language-bash">sudo ufw status
+</code></pre>
+<p>如果防火墙已经启动，你可以输入以下命令开启防火墙：</p>
+<pre><code class="language-bash">ufw allow 51820/udp
+</code></pre>
+<pre><code class="language-admonish warning">注意：如果你是在VPS上搭建wireguard，那么记得在你的服务商后台面板开启相应的`51820的UDP端口`
+</code></pre>
+<h2 id="六启动服务"><a class="header" href="#六启动服务">六、启动服务</a></h2>
+<p>在服务端和客户端都输入以下命令：</p>
+<pre><code class="language-bash">wg-quick up wg0
+</code></pre>
+<p>在客户端输入以下命令发送流量：</p>
+<pre><code class="language-bash">ping 10.0.0.1
+</code></pre>
+<p>然后在服务端输入以下命令查看流量：</p>
+<pre><code class="language-bash">sudo tcpdump -envi wg0
+</code></pre>
+<h2 id="七设置开机自启"><a class="header" href="#七设置开机自启">七、设置开机自启</a></h2>
+<pre><code class="language-bash">sudo systemctl enable wg-quick@wg0
+</code></pre>
+<pre><code class="language-bash">sudo systemctl start wg-quick@wg0
+</code></pre>
+<pre><code class="language-bash">systemctl status wg-quick@wg0
+</code></pre>
+<pre><code class="language-bash">sudo systemctl stop wg-quick@wg0
+</code></pre>
+<pre><code class="language-bash">sudo systemctl disable wg-quick@wg0
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../tutorial/clash.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../tutorial/github-actions.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../tutorial/clash.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../tutorial/github-actions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
