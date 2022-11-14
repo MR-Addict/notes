@@ -224,6 +224,55 @@ services:
       - /home/cael/projects/adguard/data/conf:/opt/adguardhome/conf
 ```
 
+VSCode模板：
+
+```yml
+version: "2.1"
+services:
+  ide:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: ide
+    environment:
+      - PUID=1538
+      - PGID=1538
+      - TZ=Asia/Shanghai
+      - PASSWORD=password
+      - SUDO_PASSWORD=password
+      - DEFAULT_WORKSPACE=/config/workspace
+    volumes:
+      - ./config:/config
+    ports:
+      - 8443:8443
+    restart: unless-stopped
+  http:
+    image: nginx:latest
+    container_name: http
+    restart: unless-stopped
+    ports:
+      - 5555:80
+    volumes:
+      - ./config/workspace:/usr/share/nginx/html
+```
+
+Home Assistant：
+
+```yml
+version: "3"
+services:
+  home:
+    image: lscr.io/linuxserver/homeassistant:latest
+    container_name: home
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./config:/config
+    ports:
+      - 8123:8123
+    restart: unless-stopped
+```
+
 ## 五、编译推送镜像
 
 登录dockerhub，输入token：
