@@ -39,7 +39,11 @@
 
 - [编程](programme/intro.md)
   - [SQL](programme/sql/intro.md)
-    - [HELLO-WORLD](programme/sql/hello-world.md)
+    - [Hello World](programme/sql/hello-world.md)
     - [SELECT用法](programme/sql/select.md)
     - [WHERE用法](programme/sql/where.md)
     - [AND-OR-NOT运算符](programme/sql/and-or-not.md)
+  - [Lua](programme/lua/intro.md)
+    - [Hello World](programme/lua/hello-world.md)
+    - [变量](programme/lua/variable.md)
+    - [运算符](programme/lua/operator.md)
