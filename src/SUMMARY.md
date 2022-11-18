@@ -47,3 +47,8 @@
     - [Hello World](programme/lua/hello-world.md)
     - [变量](programme/lua/variable.md)
     - [运算符](programme/lua/operator.md)
+    - [循环](programme/lua/while.md)
+    - [函数](programme/lua/function.md)
+    - [Math](programme/lua/math.md)
+    - [Table](programme/lua/table.md)
+    - [Class](programme/lua/class.md)

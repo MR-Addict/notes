@@ -6,14 +6,6 @@
 
 你可以到GitHub下载[Clash内核](https://github.com/Dreamacro/clash/releases)。如果你是**树莓派4B 32位操作系统**，那么你应该下载对应armv7版本的[clash-linux-armv7-v1.11.0.gz](https://github.com/Dreamacro/clash/releases/download/v1.11.0/clash-linux-armv7-v1.11.0.gz)，如果是**树莓派4B 64位操作系统**，那么你应该下载对应armv7版本的[clash-linux-armv8-v1.11.0.gz](https://github.com/Dreamacro/clash/releases/download/v1.11.0/clash-linux-armv8-v1.11.0.gz)。
 
-其他型号的树莓派可以通过以下命令查看树莓派的架构：
-
-```bash
-arch
-```
-
-![clash-release](images/clash-release.png)
-
 下载完成后解压文件，建议把文件名改为`clash`， 然后移动到`/usr/local/bin/clash`位置，同时给该文件以执行的权限：
 
 ```bash
@@ -214,5 +206,3 @@ external-controller: 127.0.0.1:9090
 ```
 
 然后在浏览器中输入[http://127.0.0.1:9090/ui](http://127.0.0.1:9090/ui)就可以看到Clash的控制面板了。
-
-![clash-dashboard](images/clash-dashboard.png)
