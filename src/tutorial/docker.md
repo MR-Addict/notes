@@ -128,7 +128,7 @@ vim ~/.docker/config.json
 
 ## 四、Docker-Compose模板
 
-nginx容器模板：
+### nginx容器模板
 
 ```yml
 version: '3'
@@ -145,7 +145,7 @@ services:
       - /home/ubuntu/Projects/Notes/docker/conf.d:/etc/nginx/conf.d
 ```
 
-wg-easy模板：
+### wg-easy模板
 
 ```yml
 version: "3"
@@ -173,7 +173,7 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
 ```
 
-nextcloud模板：
+### Nextcloud模板
 
 ```yml
 version: "3"
@@ -206,7 +206,7 @@ services:
       - ./db:/var/lib/mysql
 ```
 
-Adguard模板：
+### Adguard模板
 
 ```yml
 version: '2'
@@ -224,7 +224,7 @@ services:
       - /home/cael/projects/adguard/data/conf:/opt/adguardhome/conf
 ```
 
-VSCode模板：
+### VSCode模板
 
 ```yml
 version: "2.1"
@@ -254,17 +254,15 @@ services:
       - ./config/workspace:/usr/share/nginx/html
 ```
 
-Home Assistant：
+### Home Assistant
 
 ```yml
 version: "3"
 services:
   home:
-    image: lscr.io/linuxserver/homeassistant:latest
+    image: ghcr.io/home-assistant/home-assistant:stable
     container_name: home
     environment:
-      - PUID=1000
-      - PGID=1000
       - TZ=Asia/Shanghai
     volumes:
       - ./config:/config

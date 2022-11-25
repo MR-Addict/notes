@@ -16,9 +16,6 @@
   - [Linux用户和用户组](linux/users.md)
   - [其他配置及常用命令](linux/others.md)
 
-- [React](react/intro.md)
-  - [Tailwind](react/tailwind.md)
-
 - [Openwrt](openwrt/intro.md)
   - [使用vim](openwrt/vim.md)
   - [使用init](openwrt/init.md)
@@ -31,11 +28,19 @@
   - [使用Nginx](tutorial/nginx.md)
   - [使用MySQL](tutorial/mysql.md)
   - [使用Docker](tutorial/docker.md)
-  - [使用Adguard](tutorial/adguard.md)
   - [使用Apache2](tutorial/apache2.md)
   - [使用Clash内核](tutorial/clash.md)
   - [使用Wireguard](tutorial/wireguard.md)
   - [使用GitHub Actions](tutorial/github-actions.md)
+
+- [服务器搭建](server/intro.md)
+  - [搭建MQTT](server/mqtt.md)
+  - [搭建Adguard](server/adguard.md)
+  - [搭建NextCloud](server/nextcloud.md)
+  - [搭建Homeassistant](server/homeassistant.md)
+
+- [React](react/intro.md)
+  - [Tailwind](react/tailwind.md)
 
 - [编程](programme/intro.md)
   - [SQL](programme/sql/intro.md)
