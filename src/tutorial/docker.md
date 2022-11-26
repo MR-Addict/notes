@@ -128,7 +128,7 @@ vim ~/.docker/config.json
 
 ## 四、Docker-Compose模板
 
-### nginx容器模板
+### Nginx容器模板
 
 ```yml
 version: '3'

@@ -47,7 +47,9 @@ Github Action状态API：
 https://github.com/mr-addict/notes/actions/workflows/gh-pages.yml/badge.svg?branch=main
 ```
 
-## 二、部署mdbook模板
+## 二、部署模板
+
+### mdbook模板
 
 ```yml
 name: build
@@ -83,7 +85,7 @@ jobs:
           publish_dir: ./book
 ```
 
-## 三、部署hexo模板
+### hexo模板
 
 ```yml
 name: build
@@ -124,6 +126,37 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+```
+
+### docker容器模板
+
+```yaml
+name: docker
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: mraddict063/punch:latest
 ```
 
 ## 四、创建个人Actions-Runner

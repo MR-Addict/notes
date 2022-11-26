@@ -1,16 +1,15 @@
 name: server
 
-on: [workflow_dispatch]
-
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
+on:
+  workflow_run:
+    workflows: ["docker"]
+    types:
+      - completed
+  workflow_dispatch:
 
 jobs:
-  Deploy-To-Server:
-    runs-on: Ubuntu-Cloud
+  deploy:
+    runs-on: self-hosted
     steps:
       - name: SSH Action
         uses: appleboy/ssh-action@master
@@ -23,4 +22,6 @@ jobs:
           script: |
             cd /home/$USER/Projects/Notes
             git pull
-            mdbook build
+            docker-compose down
+            docker rmi mraddict063/notes
+            docker-compose up -d
