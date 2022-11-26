@@ -34,10 +34,12 @@
   - [使用GitHub Actions](tutorial/github-actions.md)
 
 - [服务器搭建](server/intro.md)
-  - [搭建MQTT](server/mqtt.md)
-  - [搭建Adguard](server/adguard.md)
-  - [搭建NextCloud](server/nextcloud.md)
-  - [搭建Homeassistant](server/homeassistant.md)
+  - [搭建MQTT服务器](server/mqtt.md)
+  - [搭建VSCode服务器](server/vscode.md)
+  - [搭建Adguard服务器](server/adguard.md)
+  - [搭建Wireguard服务器](server/wireguard.md)
+  - [搭建NextCloud服务器](server/nextcloud.md)
+  - [搭建Homeassistant服务器](server/homeassistant.md)
 
 - [React](react/intro.md)
   - [Tailwind](react/tailwind.md)

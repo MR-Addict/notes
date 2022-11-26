@@ -1,10 +1,10 @@
-# 使用Adguard
-
-## 一、释放服务器53端口
+# 使用Adguard服务器
 
 ```admonish info
 参考文档：[adguard](https://www.linuxuprising.com/2020/07/ubuntu-how-to-free-up-port-53-used-by.html)
 ```
+
+## 一、释放服务器53端口
 
 查看端口是否开放：
 
