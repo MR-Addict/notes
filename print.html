@@ -6,7 +6,6 @@
         <title>我的笔记</title>
         <meta name="robots" content="noindex" />
         <!-- Custom HTML head -->
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="我的笔记(方便施展Copy+Paste魔法)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -28,17 +27,17 @@
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="./assets/mdbook-admonish.css">
         <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -54,7 +53,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -66,7 +65,7 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+        <script>
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -79,7 +78,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">我的笔记</a></li><li class="chapter-item expanded "><a href="rpi/intro.html"><strong aria-hidden="true">1.</strong> 树莓派</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rpi/vim.html"><strong aria-hidden="true">1.1.</strong> 配置vim</a></li><li class="chapter-item expanded "><a href="rpi/ssh.html"><strong aria-hidden="true">1.2.</strong> 使用ssh</a></li><li class="chapter-item expanded "><a href="rpi/aliases.html"><strong aria-hidden="true">1.3.</strong> 配置alias</a></li><li class="chapter-item expanded "><a href="rpi/crontab.html"><strong aria-hidden="true">1.4.</strong> 使用crontab</a></li><li class="chapter-item expanded "><a href="rpi/wiringpi.html"><strong aria-hidden="true">1.5.</strong> 使用wiringpi</a></li><li class="chapter-item expanded "><a href="rpi/powershell.html"><strong aria-hidden="true">1.6.</strong> 使用powershell</a></li><li class="chapter-item expanded "><a href="rpi/oh-my-posh.html"><strong aria-hidden="true">1.7.</strong> 配置oh-my-posh</a></li></ol></li><li class="chapter-item expanded "><a href="linux/intro.html"><strong aria-hidden="true">2.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="linux/swap.html"><strong aria-hidden="true">2.1.</strong> Linux的Swap空间</a></li><li class="chapter-item expanded "><a href="linux/users.html"><strong aria-hidden="true">2.2.</strong> Linux用户和用户组</a></li><li class="chapter-item expanded "><a href="linux/others.html"><strong aria-hidden="true">2.3.</strong> 其他配置及常用命令</a></li></ol></li><li class="chapter-item expanded "><a href="react/intro.html"><strong aria-hidden="true">3.</strong> React</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="react/tailwind.html"><strong aria-hidden="true">3.1.</strong> Tailwind</a></li></ol></li><li class="chapter-item expanded "><a href="openwrt/intro.html"><strong aria-hidden="true">4.</strong> Openwrt</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="openwrt/vim.html"><strong aria-hidden="true">4.1.</strong> 使用vim</a></li><li class="chapter-item expanded "><a href="openwrt/init.html"><strong aria-hidden="true">4.2.</strong> 使用init</a></li><li class="chapter-item expanded "><a href="openwrt/uhttpd.html"><strong aria-hidden="true">4.3.</strong> 使用uhttpd</a></li><li class="chapter-item expanded "><a href="openwrt/others.html"><strong aria-hidden="true">4.4.</strong> 其他常用命令</a></li></ol></li><li class="chapter-item expanded "><a href="tutorial/intro.html"><strong aria-hidden="true">5.</strong> 教程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorial/git.html"><strong aria-hidden="true">5.1.</strong> 使用Git</a></li><li class="chapter-item expanded "><a href="tutorial/node.html"><strong aria-hidden="true">5.2.</strong> 使用Node</a></li><li class="chapter-item expanded "><a href="tutorial/nginx.html"><strong aria-hidden="true">5.3.</strong> 使用Nginx</a></li><li class="chapter-item expanded "><a href="tutorial/mysql.html"><strong aria-hidden="true">5.4.</strong> 使用MySQL</a></li><li class="chapter-item expanded "><a href="tutorial/docker.html"><strong aria-hidden="true">5.5.</strong> 使用Docker</a></li><li class="chapter-item expanded "><a href="tutorial/adguard.html"><strong aria-hidden="true">5.6.</strong> 使用Adguard</a></li><li class="chapter-item expanded "><a href="tutorial/apache2.html"><strong aria-hidden="true">5.7.</strong> 使用Apache2</a></li><li class="chapter-item expanded "><a href="tutorial/clash.html"><strong aria-hidden="true">5.8.</strong> 使用Clash内核</a></li><li class="chapter-item expanded "><a href="tutorial/wireguard.html"><strong aria-hidden="true">5.9.</strong> 使用Wireguard</a></li><li class="chapter-item expanded "><a href="tutorial/github-actions.html"><strong aria-hidden="true">5.10.</strong> 使用GitHub Actions</a></li></ol></li><li class="chapter-item expanded "><a href="programme/intro.html"><strong aria-hidden="true">6.</strong> 编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="programme/sql/intro.html"><strong aria-hidden="true">6.1.</strong> SQL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="programme/sql/hello-world.html"><strong aria-hidden="true">6.1.1.</strong> HELLO-WORLD</a></li><li class="chapter-item "><a href="programme/sql/select.html"><strong aria-hidden="true">6.1.2.</strong> SELECT用法</a></li><li class="chapter-item "><a href="programme/sql/where.html"><strong aria-hidden="true">6.1.3.</strong> WHERE用法</a></li><li class="chapter-item "><a href="programme/sql/and-or-not.html"><strong aria-hidden="true">6.1.4.</strong> AND-OR-NOT运算符</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">我的笔记</a></li><li class="chapter-item expanded "><a href="rpi/intro.html"><strong aria-hidden="true">1.</strong> 树莓派</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="rpi/vim.html"><strong aria-hidden="true">1.1.</strong> 配置vim</a></li><li class="chapter-item expanded "><a href="rpi/ssh.html"><strong aria-hidden="true">1.2.</strong> 使用ssh</a></li><li class="chapter-item expanded "><a href="rpi/aliases.html"><strong aria-hidden="true">1.3.</strong> 配置alias</a></li><li class="chapter-item expanded "><a href="rpi/crontab.html"><strong aria-hidden="true">1.4.</strong> 使用crontab</a></li><li class="chapter-item expanded "><a href="rpi/wiringpi.html"><strong aria-hidden="true">1.5.</strong> 使用wiringpi</a></li><li class="chapter-item expanded "><a href="rpi/powershell.html"><strong aria-hidden="true">1.6.</strong> 使用powershell</a></li><li class="chapter-item expanded "><a href="rpi/oh-my-posh.html"><strong aria-hidden="true">1.7.</strong> 配置oh-my-posh</a></li></ol></li><li class="chapter-item expanded "><a href="linux/intro.html"><strong aria-hidden="true">2.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="linux/swap.html"><strong aria-hidden="true">2.1.</strong> Linux的Swap空间</a></li><li class="chapter-item expanded "><a href="linux/users.html"><strong aria-hidden="true">2.2.</strong> Linux用户和用户组</a></li><li class="chapter-item expanded "><a href="linux/others.html"><strong aria-hidden="true">2.3.</strong> 其他配置及常用命令</a></li></ol></li><li class="chapter-item expanded "><a href="openwrt/intro.html"><strong aria-hidden="true">3.</strong> Openwrt</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="openwrt/vim.html"><strong aria-hidden="true">3.1.</strong> 使用vim</a></li><li class="chapter-item expanded "><a href="openwrt/init.html"><strong aria-hidden="true">3.2.</strong> 使用init</a></li><li class="chapter-item expanded "><a href="openwrt/uhttpd.html"><strong aria-hidden="true">3.3.</strong> 使用uhttpd</a></li><li class="chapter-item expanded "><a href="openwrt/others.html"><strong aria-hidden="true">3.4.</strong> 其他常用命令</a></li></ol></li><li class="chapter-item expanded "><a href="tutorial/intro.html"><strong aria-hidden="true">4.</strong> 教程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorial/git.html"><strong aria-hidden="true">4.1.</strong> 使用Git</a></li><li class="chapter-item expanded "><a href="tutorial/node.html"><strong aria-hidden="true">4.2.</strong> 使用Node</a></li><li class="chapter-item expanded "><a href="tutorial/nginx.html"><strong aria-hidden="true">4.3.</strong> 使用Nginx</a></li><li class="chapter-item expanded "><a href="tutorial/mysql.html"><strong aria-hidden="true">4.4.</strong> 使用MySQL</a></li><li class="chapter-item expanded "><a href="tutorial/docker.html"><strong aria-hidden="true">4.5.</strong> 使用Docker</a></li><li class="chapter-item expanded "><a href="tutorial/apache2.html"><strong aria-hidden="true">4.6.</strong> 使用Apache2</a></li><li class="chapter-item expanded "><a href="tutorial/clash.html"><strong aria-hidden="true">4.7.</strong> 使用Clash内核</a></li><li class="chapter-item expanded "><a href="tutorial/wireguard.html"><strong aria-hidden="true">4.8.</strong> 使用Wireguard</a></li><li class="chapter-item expanded "><a href="tutorial/github-actions.html"><strong aria-hidden="true">4.9.</strong> 使用GitHub Actions</a></li></ol></li><li class="chapter-item expanded "><a href="server/intro.html"><strong aria-hidden="true">5.</strong> 服务器搭建</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="server/mqtt.html"><strong aria-hidden="true">5.1.</strong> 搭建MQTT服务器</a></li><li class="chapter-item expanded "><a href="server/vscode.html"><strong aria-hidden="true">5.2.</strong> 搭建VSCode服务器</a></li><li class="chapter-item expanded "><a href="server/adguard.html"><strong aria-hidden="true">5.3.</strong> 搭建Adguard服务器</a></li><li class="chapter-item expanded "><a href="server/wireguard.html"><strong aria-hidden="true">5.4.</strong> 搭建Wireguard服务器</a></li><li class="chapter-item expanded "><a href="server/nextcloud.html"><strong aria-hidden="true">5.5.</strong> 搭建NextCloud服务器</a></li><li class="chapter-item expanded "><a href="server/homeassistant.html"><strong aria-hidden="true">5.6.</strong> 搭建Homeassistant服务器</a></li></ol></li><li class="chapter-item expanded "><a href="react/intro.html"><strong aria-hidden="true">6.</strong> React</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="react/tailwind.html"><strong aria-hidden="true">6.1.</strong> Tailwind</a></li></ol></li><li class="chapter-item expanded "><a href="programme/intro.html"><strong aria-hidden="true">7.</strong> 编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="programme/sql/intro.html"><strong aria-hidden="true">7.1.</strong> SQL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="programme/sql/hello-world.html"><strong aria-hidden="true">7.1.1.</strong> Hello World</a></li><li class="chapter-item "><a href="programme/sql/select.html"><strong aria-hidden="true">7.1.2.</strong> SELECT用法</a></li><li class="chapter-item "><a href="programme/sql/where.html"><strong aria-hidden="true">7.1.3.</strong> WHERE用法</a></li><li class="chapter-item "><a href="programme/sql/and-or-not.html"><strong aria-hidden="true">7.1.4.</strong> AND-OR-NOT运算符</a></li></ol></li><li class="chapter-item expanded "><a href="programme/lua/intro.html"><strong aria-hidden="true">7.2.</strong> Lua</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="programme/lua/hello-world.html"><strong aria-hidden="true">7.2.1.</strong> Hello World</a></li><li class="chapter-item "><a href="programme/lua/variable.html"><strong aria-hidden="true">7.2.2.</strong> 变量</a></li><li class="chapter-item "><a href="programme/lua/operator.html"><strong aria-hidden="true">7.2.3.</strong> 运算符</a></li><li class="chapter-item "><a href="programme/lua/while.html"><strong aria-hidden="true">7.2.4.</strong> 循环</a></li><li class="chapter-item "><a href="programme/lua/function.html"><strong aria-hidden="true">7.2.5.</strong> 函数</a></li><li class="chapter-item "><a href="programme/lua/math.html"><strong aria-hidden="true">7.2.6.</strong> Math</a></li><li class="chapter-item "><a href="programme/lua/table.html"><strong aria-hidden="true">7.2.7.</strong> Table</a></li><li class="chapter-item "><a href="programme/lua/class.html"><strong aria-hidden="true">7.2.8.</strong> Class</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -97,7 +96,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -131,7 +130,7 @@
                     </div>
                 </div>
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -585,31 +584,6 @@ rm ~/.poshthemes/themes.zip
 </code></pre>
 <p>使用python运行http服务：</p>
 <pre><code class="language-bash">python -m http.server 8080 --directory public
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="react"><a class="header" href="#react">React</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="tailwind"><a class="header" href="#tailwind">Tailwind</a></h1>
-<pre><code class="language-admonish info">官方文档：[tailwind](https://tailwindcss.com/docs/installation)
-</code></pre>
-<h2 id="一安装配置tailwind"><a class="header" href="#一安装配置tailwind">一、安装配置Tailwind</a></h2>
-<h3 id="安装tailwind"><a class="header" href="#安装tailwind">安装Tailwind</a></h3>
-<pre><code class="language-bash">npm install -D tailwindcss
-</code></pre>
-<h3 id="初始化配置文件"><a class="header" href="#初始化配置文件">初始化配置文件</a></h3>
-<pre><code class="language-bash">npx tailwindcss init
-</code></pre>
-<h3 id="将tailwindconfigjs中替换成以下配置"><a class="header" href="#将tailwindconfigjs中替换成以下配置">将tailwind.config.js中替换成以下配置</a></h3>
-<pre><code class="language-js">module.exports = {
-  content: [&quot;./src/**/*.{js,jsx,ts,tsx}&quot;, &quot;./index.html&quot;],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-</code></pre>
-<h3 id="在indexcss中添加以下内容"><a class="header" href="#在indexcss中添加以下内容">在index.css中添加以下内容</a></h3>
-<pre><code class="language-css">@tailwind base;
-@tailwind components;
-@tailwind utilities;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="openwrt"><a class="header" href="#openwrt">Openwrt</a></h1>
 <p>在使用openwrt固件有几点注意事项需要说明：</p>
@@ -1162,7 +1136,7 @@ Environment=&quot;NO_PROXY=localhost,127.0.0.1&quot;
 }
 </code></pre>
 <h2 id="四docker-compose模板"><a class="header" href="#四docker-compose模板">四、Docker-Compose模板</a></h2>
-<p>nginx容器模板：</p>
+<h3 id="nginx容器模板"><a class="header" href="#nginx容器模板">Nginx容器模板</a></h3>
 <pre><code class="language-yml">version: '3'
 services:
   notes:
@@ -1176,7 +1150,7 @@ services:
       - /home/ubuntu/Projects/Notes/docker/certs:/etc/nginx/certs
       - /home/ubuntu/Projects/Notes/docker/conf.d:/etc/nginx/conf.d
 </code></pre>
-<p>wg-easy模板：</p>
+<h3 id="wg-easy模板"><a class="header" href="#wg-easy模板">wg-easy模板</a></h3>
 <pre><code class="language-yml">version: &quot;3&quot;
 services:
   wg-easy:
@@ -1201,7 +1175,7 @@ services:
       - net.ipv4.ip_forward=1
       - net.ipv4.conf.all.src_valid_mark=1
 </code></pre>
-<p>nextcloud模板：</p>
+<h3 id="nextcloud模板"><a class="header" href="#nextcloud模板">Nextcloud模板</a></h3>
 <pre><code class="language-yml">version: &quot;3&quot;
 
 services:
@@ -1231,7 +1205,7 @@ services:
     volumes:
       - ./db:/var/lib/mysql
 </code></pre>
-<p>Adguard模板：</p>
+<h3 id="adguard模板"><a class="header" href="#adguard模板">Adguard模板</a></h3>
 <pre><code class="language-yml">version: '2'
 services:
   adguard:
@@ -1245,6 +1219,47 @@ services:
     volumes:
       - /home/cael/projects/adguard/data/work:/opt/adguardhome/work
       - /home/cael/projects/adguard/data/conf:/opt/adguardhome/conf
+</code></pre>
+<h3 id="vscode模板"><a class="header" href="#vscode模板">VSCode模板</a></h3>
+<pre><code class="language-yml">version: &quot;2.1&quot;
+services:
+  ide:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: ide
+    environment:
+      - PUID=1538
+      - PGID=1538
+      - TZ=Asia/Shanghai
+      - PASSWORD=password
+      - SUDO_PASSWORD=password
+      - DEFAULT_WORKSPACE=/config/workspace
+    volumes:
+      - ./config:/config
+    ports:
+      - 8443:8443
+    restart: unless-stopped
+  http:
+    image: nginx:latest
+    container_name: http
+    restart: unless-stopped
+    ports:
+      - 5555:80
+    volumes:
+      - ./config/workspace:/usr/share/nginx/html
+</code></pre>
+<h3 id="home-assistant"><a class="header" href="#home-assistant">Home Assistant</a></h3>
+<pre><code class="language-yml">version: &quot;3&quot;
+services:
+  home:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    container_name: home
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./config:/config
+    ports:
+      - 8123:8123
+    restart: unless-stopped
 </code></pre>
 <h2 id="五编译推送镜像"><a class="header" href="#五编译推送镜像">五、编译推送镜像</a></h2>
 <p>登录dockerhub，输入token：</p>
@@ -1326,97 +1341,6 @@ services:
 <p>删除所有容器：</p>
 <pre><code class="language-bash">docker rm $(docker ps --filter status=exited -q)
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="使用adguard"><a class="header" href="#使用adguard">使用Adguard</a></h1>
-<h2 id="一释放服务器53端口"><a class="header" href="#一释放服务器53端口">一、释放服务器53端口</a></h2>
-<pre><code class="language-admonish info">参考文档：[adguard](https://www.linuxuprising.com/2020/07/ubuntu-how-to-free-up-port-53-used-by.html)
-</code></pre>
-<p>查看端口是否开放：</p>
-<pre><code class="language-bash">sudo lsof -i :53
-</code></pre>
-<p>进入配置DNS文件：</p>
-<pre><code class="language-bash">sudo vim /etc/systemd/resolved.conf
-</code></pre>
-<p>添加默认DNS为1.1.1.1，同时弃用DNS监听端口：</p>
-<pre><code>[Resolve]
-DNS=1.1.1.1
-#FallbackDNS=
-#Domains=
-#LLMNR=no
-#MulticastDNS=no
-#DNSSEC=no
-#DNSOverTLS=no
-#Cache=no-negative
-DNSStubListener=no
-#ReadEtcHosts=yes
-</code></pre>
-<p>创建链接：</p>
-<pre><code class="language-bash">sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
-</code></pre>
-<h2 id="二搭建adguard"><a class="header" href="#二搭建adguard">二、搭建Adguard</a></h2>
-<p>配置docker-compose：</p>
-<pre><code>version: '2'
-services:
-  adguard:
-    image: adguard/adguardhome
-    container_name: adguard
-    restart: unless-stopped
-    ports:
-      - 53:53/tcp
-      - 53:53/udp
-      - 3000:3000/tcp
-    volumes:
-      - /home/cael/projects/adguard/data/work:/opt/adguardhome/work
-      - /home/cael/projects/adguard/data/conf:/opt/adguardhome/conf
-</code></pre>
-<p>启动docker：</p>
-<pre><code class="language-bash">sudo docker-compose up -d
-</code></pre>
-<h2 id="三配置adguard"><a class="header" href="#三配置adguard">三、配置Adguard</a></h2>
-<h3 id="1-dns"><a class="header" href="#1-dns">1. DNS</a></h3>
-<p>国外常用DNS：</p>
-<pre><code>1.1.1.1
-8.8.8.8
-8.26.56.26
-199.85.126.10
-208.67.222.222
-</code></pre>
-<p>国内常用DNS：</p>
-<pre><code>223.5.5.5
-119.29.29.29
-180.76.76.76
-114.114.114.114
-</code></pre>
-<h3 id="2-广告过滤黑名单"><a class="header" href="#2-广告过滤黑名单">2. 广告过滤黑名单</a></h3>
-<h4 id="21-国内广告过滤黑名单"><a class="header" href="#21-国内广告过滤黑名单">2.1 国内广告过滤黑名单</a></h4>
-<p>Anti-Ad黑名单：</p>
-<pre><code>https://anti-ad.net/easylist.txt
-https://anti-ad.net/adguard.txt
-https://anti-ad.net/domains.txt
-https://anti-ad.net/anti-ad-for-dnsmasq.conf
-</code></pre>
-<p>通用黑名单：</p>
-<pre><code>https://cdn.jsdelivr.net/gh/o0HalfLife0o/list@master/ad-pc.txt
-https://raw.githubusercontent.com/o0HalfLife0o/list/master/ad-pc.txt
-https://cdn.jsdelivr.net/gh/o0HalfLife0o/list@master/ad-mo.txt
-https://raw.githubusercontent.com/o0HalfLife0o/list/master/ad-mo.txt
-https://cdn.jsdelivr.net/gh/o0HalfLife0o/list@master/ad.txt
-https://raw.githubusercontent.com/o0HalfLife0o/list/master/ad.txt
-https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts
-https://easylist-downloads.adblockplus.org/easylistchina.txt
-
-</code></pre>
-<h4 id="22-国外广告过滤黑名单"><a class="header" href="#22-国外广告过滤黑名单">2.2 国外广告过滤黑名单</a></h4>
-<p>Easylist黑名单：</p>
-<pre><code>https://easylist.to/easylist/easylist.txt
-https://easylist.to/easylist/easyprivacy.txt
-https://secure.fanboy.co.nz/fanboy-cookiemonster.txt
-</code></pre>
-<p>通用黑名单：</p>
-<pre><code>https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/aio.txt
-https://adaway.org/hosts.txt
-https://v.firebog.net/hosts/AdguardDNS.txt
-https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
-</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用apache2"><a class="header" href="#使用apache2">使用apache2</a></h1>
 <h2 id="一安装apache2"><a class="header" href="#一安装apache2">一、安装apache2</a></h2>
 <pre><code class="language-bash">sudo apt-get update
@@ -1473,10 +1397,6 @@ sudo apt-get install apache2 -y
 <h2 id="一下载clash"><a class="header" href="#一下载clash">一、下载Clash</a></h2>
 <p>在这里我们使用Clash作为科学上网的代理框架，为什么使用Clash呢，那是因为Clash内核支持各种Unix平台的各个架构；还支持各种代理协议，像Trojan、Vmess、Shadowsocks等等；以及强大的分流规则，可以非常方便地自定义各种规则。</p>
 <p>你可以到GitHub下载<a href="https://github.com/Dreamacro/clash/releases">Clash内核</a>。如果你是<strong>树莓派4B 32位操作系统</strong>，那么你应该下载对应armv7版本的<a href="https://github.com/Dreamacro/clash/releases/download/v1.11.0/clash-linux-armv7-v1.11.0.gz">clash-linux-armv7-v1.11.0.gz</a>，如果是<strong>树莓派4B 64位操作系统</strong>，那么你应该下载对应armv7版本的<a href="https://github.com/Dreamacro/clash/releases/download/v1.11.0/clash-linux-armv8-v1.11.0.gz">clash-linux-armv8-v1.11.0.gz</a>。</p>
-<p>其他型号的树莓派可以通过以下命令查看树莓派的架构：</p>
-<pre><code class="language-bash">arch
-</code></pre>
-<p><img src="tutorial/images/clash-release.png" alt="clash-release" /></p>
 <p>下载完成后解压文件，建议把文件名改为<code>clash</code>， 然后移动到<code>/usr/local/bin/clash</code>位置，同时给该文件以执行的权限：</p>
 <pre><code class="language-bash">wget https://github.com/Dreamacro/clash/releases/download/v1.10.6/clash-linux-armv7-v1.10.6.gz
 gunzip clash-linux-armv7-v1.10.6.gz
@@ -1593,7 +1513,6 @@ git checkout -b gh-pages origin/gh-pages
 external-controller: 127.0.0.1:9090
 </code></pre>
 <p>然后在浏览器中输入<a href="http://127.0.0.1:9090/ui">http://127.0.0.1:9090/ui</a>就可以看到Clash的控制面板了。</p>
-<p><img src="tutorial/images/clash-dashboard.png" alt="clash-dashboard" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用wireguard"><a class="header" href="#使用wireguard">使用Wireguard</a></h1>
 <pre><code class="language-admonish info">参考视频：[wireguard](https://www.youtube.com/watch?v=bVKNSf1p1d0)
 </code></pre>
@@ -1738,40 +1657,39 @@ jobs:
 <p>Github Action状态API：</p>
 <pre><code>https://github.com/mr-addict/notes/actions/workflows/gh-pages.yml/badge.svg?branch=main
 </code></pre>
-<h2 id="二部署mdbook模板"><a class="header" href="#二部署mdbook模板">二、部署mdbook模板</a></h2>
-<pre><code class="language-yml">name: build
+<h2 id="二部署模板"><a class="header" href="#二部署模板">二、部署模板</a></h2>
+<h3 id="mdbook模板"><a class="header" href="#mdbook模板">mdbook模板</a></h3>
+<pre><code class="language-yml">name: pages
 
 on:
   push:
     branches:
       - main
   pull_request:
+  workflow_dispatch:
 
 jobs:
-  Deploy-Github-Pages:
-    runs-on: ubuntu-20.04
+  build:
+    runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - name: Checkout current branch
+      - name: checkout current branch
         uses: actions/checkout@v3
-
-      - name: Setup mdBook
+      - name: setup mdBook
         uses: peaceiris/actions-mdbook@v1
         with:
-          mdbook-version: 'latest'
-
-      - name: Build book
+          mdbook-version: &quot;latest&quot;
+      - name: build book
         run: mdbook build
-
-      - name: Deploy
+      - name: push to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./book
 </code></pre>
-<h2 id="三部署hexo模板"><a class="header" href="#三部署hexo模板">三、部署hexo模板</a></h2>
+<h3 id="hexo模板"><a class="header" href="#hexo模板">hexo模板</a></h3>
 <pre><code class="language-yml">name: build
 
 on:
@@ -1811,6 +1729,34 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
 </code></pre>
+<h3 id="docker容器模板"><a class="header" href="#docker容器模板">docker容器模板</a></h3>
+<pre><code class="language-yaml">name: docker
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: mraddict063/punch:latest
+</code></pre>
 <h2 id="四创建个人actions-runner"><a class="header" href="#四创建个人actions-runner">四、创建个人Actions-Runner</a></h2>
 <h3 id="部署runner"><a class="header" href="#部署runner">部署Runner</a></h3>
 <p>可以参照Github，这边跳过。</p>
@@ -1833,10 +1779,381 @@ jobs:
 <p>注销任务：</p>
 <pre><code class="language-bash">sudo ./svc.sh uninstall
 </code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="host-docker-servers"><a class="header" href="#host-docker-servers">Host Docker Servers</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="搭建mqtt服务器"><a class="header" href="#搭建mqtt服务器">搭建MQTT服务器</a></h1>
+<h2 id="一配置docker容器"><a class="header" href="#一配置docker容器">一、配置Docker容器</a></h2>
+<pre><code class="language-yaml">version: &quot;3&quot;
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    restart: unless-stopped
+    volumes:
+      - ./data/config:/mosquitto/config
+      - ./data/log:/mosquitto/log
+    ports:
+      - 1883:1883
+</code></pre>
+<h2 id="二添加配置文件"><a class="header" href="#二添加配置文件">二、添加配置文件</a></h2>
+<p>注意，先不要启动docker容器，在当前文件夹下创建映射的文件夹：</p>
+<pre><code class="language-bash">mkdir -p data/config
+</code></pre>
+<p>然后添加配置文件：</p>
+<pre><code class="language-bash">sudo vim mosquitto.conf
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code>persistence true
+persistence_location /mosquitto/data/
+log_dest file /mosquitto/log/mosquitto.log
+listener 1883
+
+#allow_anonymous false
+#password_file /mosquitto/config/password.txt
+</code></pre>
+<p>然后启动Docker容器：</p>
+<pre><code class="language-bash">docker-compose up -d
+</code></pre>
+<h2 id="三添加用户"><a class="header" href="#三添加用户">三、添加用户</a></h2>
+<p>进入正在运行的容器：</p>
+<pre><code class="language-bash">docker exec -it mosquitto sh
+</code></pre>
+<p>创建一个用户：</p>
+<pre><code class="language-bash">mosquitto_passwd -c /mosquitto/config/password.txt cael
+</code></pre>
+<p>退出Docker容器：</p>
+<pre><code class="language-bash">exit
+</code></pre>
+<p>修改配置文件，将配置文件的最后两行取消注释：</p>
+<pre><code>persistence true
+persistence_location /mosquitto/data/
+log_dest file /mosquitto/log/mosquitto.log
+listener 1883
+
+allow_anonymous false
+password_file /mosquitto/config/password.txt
+</code></pre>
+<p>最后重启容器：</p>
+<pre><code class="language-bash">docker-compose restart
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="搭建vscode服务器"><a class="header" href="#搭建vscode服务器">搭建VSCode服务器</a></h1>
+<p>配置Dcocker容器：</p>
+<pre><code class="language-yaml">version: &quot;2.1&quot;
+services:
+  ide:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: ide
+    environment:
+      - PUID=1538
+      - PGID=1538
+      - TZ=Asia/Shanghai
+      - PASSWORD=password
+      - SUDO_PASSWORD=password
+      - DEFAULT_WORKSPACE=/config/workspace
+    volumes:
+      - ./config:/config
+    ports:
+      - 8443:8443
+    restart: unless-stopped
+  http:
+    image: nginx:latest
+    container_name: http
+    restart: unless-stopped
+    ports:
+      - 5555:80
+    volumes:
+      - ./config/workspace:/usr/share/nginx/html
+</code></pre>
+<p>启动容器：</p>
+<pre><code class="language-bash">docker-compose up -d
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="使用adguard服务器"><a class="header" href="#使用adguard服务器">使用Adguard服务器</a></h1>
+<pre><code class="language-admonish info">参考文档：[adguard](https://www.linuxuprising.com/2020/07/ubuntu-how-to-free-up-port-53-used-by.html)
+</code></pre>
+<h2 id="一释放服务器53端口"><a class="header" href="#一释放服务器53端口">一、释放服务器53端口</a></h2>
+<p>查看端口是否开放：</p>
+<pre><code class="language-bash">sudo lsof -i :53
+</code></pre>
+<p>进入配置DNS文件：</p>
+<pre><code class="language-bash">sudo vim /etc/systemd/resolved.conf
+</code></pre>
+<p>添加默认DNS为1.1.1.1，同时弃用DNS监听端口：</p>
+<pre><code>[Resolve]
+DNS=1.1.1.1
+#FallbackDNS=
+#Domains=
+#LLMNR=no
+#MulticastDNS=no
+#DNSSEC=no
+#DNSOverTLS=no
+#Cache=no-negative
+DNSStubListener=no
+#ReadEtcHosts=yes
+</code></pre>
+<p>创建链接：</p>
+<pre><code class="language-bash">sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+</code></pre>
+<h2 id="二搭建adguard"><a class="header" href="#二搭建adguard">二、搭建Adguard</a></h2>
+<p>配置docker-compose：</p>
+<pre><code>version: '2'
+services:
+  adguard:
+    image: adguard/adguardhome
+    container_name: adguard
+    restart: unless-stopped
+    ports:
+      - 53:53/tcp
+      - 53:53/udp
+      - 3000:3000/tcp
+    volumes:
+      - /home/cael/projects/adguard/data/work:/opt/adguardhome/work
+      - /home/cael/projects/adguard/data/conf:/opt/adguardhome/conf
+</code></pre>
+<p>启动docker：</p>
+<pre><code class="language-bash">sudo docker-compose up -d
+</code></pre>
+<h2 id="三配置adguard"><a class="header" href="#三配置adguard">三、配置Adguard</a></h2>
+<h3 id="1-dns"><a class="header" href="#1-dns">1. DNS</a></h3>
+<p>国外常用DNS：</p>
+<pre><code>1.1.1.1
+8.8.8.8
+8.26.56.26
+199.85.126.10
+208.67.222.222
+</code></pre>
+<p>国内常用DNS：</p>
+<pre><code>223.5.5.5
+119.29.29.29
+180.76.76.76
+114.114.114.114
+</code></pre>
+<h3 id="2-广告过滤黑名单"><a class="header" href="#2-广告过滤黑名单">2. 广告过滤黑名单</a></h3>
+<h4 id="21-国内广告过滤黑名单"><a class="header" href="#21-国内广告过滤黑名单">2.1 国内广告过滤黑名单</a></h4>
+<p>Anti-Ad黑名单：</p>
+<pre><code>https://anti-ad.net/easylist.txt
+https://anti-ad.net/adguard.txt
+https://anti-ad.net/domains.txt
+https://anti-ad.net/anti-ad-for-dnsmasq.conf
+</code></pre>
+<p>通用黑名单：</p>
+<pre><code>https://cdn.jsdelivr.net/gh/o0HalfLife0o/list@master/ad-pc.txt
+https://raw.githubusercontent.com/o0HalfLife0o/list/master/ad-pc.txt
+https://cdn.jsdelivr.net/gh/o0HalfLife0o/list@master/ad-mo.txt
+https://raw.githubusercontent.com/o0HalfLife0o/list/master/ad-mo.txt
+https://cdn.jsdelivr.net/gh/o0HalfLife0o/list@master/ad.txt
+https://raw.githubusercontent.com/o0HalfLife0o/list/master/ad.txt
+https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts
+https://easylist-downloads.adblockplus.org/easylistchina.txt
+
+</code></pre>
+<h4 id="22-国外广告过滤黑名单"><a class="header" href="#22-国外广告过滤黑名单">2.2 国外广告过滤黑名单</a></h4>
+<p>Easylist黑名单：</p>
+<pre><code>https://easylist.to/easylist/easylist.txt
+https://easylist.to/easylist/easyprivacy.txt
+https://secure.fanboy.co.nz/fanboy-cookiemonster.txt
+</code></pre>
+<p>通用黑名单：</p>
+<pre><code>https://raw.githubusercontent.com/hl2guide/All-in-One-Customized-Adblock-List/master/aio.txt
+https://adaway.org/hosts.txt
+https://v.firebog.net/hosts/AdguardDNS.txt
+https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="搭建wireguard服务器"><a class="header" href="#搭建wireguard服务器">搭建Wireguard服务器</a></h1>
+<p>配置Docker容器：</p>
+<pre><code class="language-yaml">version: &quot;3&quot;
+services:
+  wg-easy:
+    environment:
+      - WG_HOST=[change-this]
+      - PASSWORD=[change-this]
+      - WG_DEFAULT_DNS=1.1.1.1
+      - WG_MTU=1420
+
+    image: weejewel/wg-easy
+    container_name: wg-easy
+    volumes:
+      - ./data:/etc/wireguard
+    ports:
+      - 51820:51820/udp
+      - 51821:51821/tcp
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    sysctls:
+      - net.ipv4.ip_forward=1
+      - net.ipv4.conf.all.src_valid_mark=1
+</code></pre>
+<p>启动容器：</p>
+<pre><code class="language-bash">docker-compose up -d
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="搭建nextcloud服务器"><a class="header" href="#搭建nextcloud服务器">搭建NextCloud服务器</a></h1>
+<h2 id="一配置docker容器-1"><a class="header" href="#一配置docker容器-1">一、配置Docker容器</a></h2>
+<pre><code class="language-yaml">version: &quot;3&quot;
+
+services:
+  nextcloud:
+    container_name: nextcloud-app
+    image: nextcloud:latest
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=nextcloud
+    volumes:
+      - ./data:/var/www/html
+
+  mysql:
+    image: mysql:8.0
+    container_name: nextcloud-db
+    restart: unless-stopped
+    environment:
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=nextcloud
+      - MYSQL_ROOT_PASSWORD=nextcloud
+    volumes:
+      - ./db:/var/lib/mysql
+</code></pre>
+<p>启动容器：</p>
+<pre><code class="language-bash">docker-compose up -d
+</code></pre>
+<h2 id="二修改配置文件"><a class="header" href="#二修改配置文件">二、修改配置文件</a></h2>
+<pre><code class="language-bash">sudo vim data/config/config.php
+</code></pre>
+<p>在secret下添加信任域名<strong>trusted_domains</strong>：</p>
+<pre><code class="language-php">&lt;?php
+$CONFIG = array (
+  # some config
+  'secret' =&gt; '......................',
+  'trusted_domains' =&gt;
+  array (
+    0 =&gt; 'cloud.mraddict.one'
+    1 =&gt; 'localhost',
+  ),
+  # some other config
+);
+</code></pre>
+<p>最后重启容器：</p>
+<pre><code class="language-bash">docker-compose restart
+</code></pre>
+<h2 id="三配置nginx"><a class="header" href="#三配置nginx">三、配置Nginx</a></h2>
+<p>如果你是使用Nginx的反向代理，下面是参考配置：</p>
+<pre><code>server{
+  listen 80;
+  server_name cloud.mraddict.top;
+  return 301 https://$host$request_uri;
+}
+
+server {
+  listen 443 ssl http2;
+  listen [::]:443 ssl http2;
+  server_name cloud.mraddict.one;
+
+  client_max_body_size 0;
+  underscores_in_headers on;
+
+  ssl_certificate  /etc/nginx/certs/cloudflare/mraddict.one/mraddict.one.cert.pem;
+  ssl_certificate_key /etc/nginx/certs/cloudflare/mraddict.one/mraddict.one.key.pem;
+
+  location / {
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_headers_hash_max_size 512;
+    proxy_headers_hash_bucket_size 64;
+    proxy_buffering off;
+    proxy_redirect off;
+    proxy_max_temp_file_size 0;
+    add_header Strict-Transport-Security &quot;max-age=15552000; includeSubdomains;&quot;;
+    add_header Front-End-Https on;
+    proxy_pass http://localhost:8080;
+  }
+
+  location /.well-known/carddav {
+    return 301 $scheme://$host/remote.php/dav;
+  }
+
+  location /.well-known/caldav {
+    return 301 $scheme://$host/remote.php/dav;
+  }
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="搭建home-assistant服务器"><a class="header" href="#搭建home-assistant服务器">搭建Home assistant服务器</a></h1>
+<h2 id="一配置docker容器-2"><a class="header" href="#一配置docker容器-2">一、配置Docker容器</a></h2>
+<p>使用以下<strong>docker-compose.yaml</strong>：</p>
+<pre><code class="language-yaml">version: &quot;3&quot;
+services:
+  home:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    container_name: home
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./config:/config
+    ports:
+      - 8123:8123
+    restart: unless-stopped
+</code></pre>
+<p>启动容器：</p>
+<pre><code class="language-bash">docker-compose up -d
+</code></pre>
+<h2 id="二修改配置文件-1"><a class="header" href="#二修改配置文件-1">二、修改配置文件</a></h2>
+<p>使用以下命令查看Gateway：</p>
+<pre><code class="language-bash">docker network inspect home_default|grep '&quot;Gateway&quot;: '|awk -F&quot;\&quot;&quot; '{print $4}'
+</code></pre>
+<p>然后进入配置文件：</p>
+<pre><code class="language-bash">vim config/configuration.yaml
+</code></pre>
+<p>在末尾添加以下内容，注意将<strong>trusted_proxies</strong>修改为查询的网关：</p>
+<pre><code class="language-yaml">http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.24.0.1
+</code></pre>
+<p>最后重启容器：</p>
+<pre><code class="language-bash">docker-compose restart
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="react"><a class="header" href="#react">React</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tailwind"><a class="header" href="#tailwind">Tailwind</a></h1>
+<pre><code class="language-admonish info">官方文档：[tailwind](https://tailwindcss.com/docs/installation)
+</code></pre>
+<h2 id="一安装配置tailwind"><a class="header" href="#一安装配置tailwind">一、安装配置Tailwind</a></h2>
+<h3 id="安装tailwind"><a class="header" href="#安装tailwind">安装Tailwind</a></h3>
+<pre><code class="language-bash">npm install -D tailwindcss
+</code></pre>
+<h3 id="初始化配置文件"><a class="header" href="#初始化配置文件">初始化配置文件</a></h3>
+<pre><code class="language-bash">npx tailwindcss init
+</code></pre>
+<h3 id="将tailwindconfigjs中替换成以下配置"><a class="header" href="#将tailwindconfigjs中替换成以下配置">将tailwind.config.js中替换成以下配置</a></h3>
+<pre><code class="language-js">module.exports = {
+  content: [&quot;./src/**/*.{js,jsx,ts,tsx}&quot;, &quot;./index.html&quot;],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+</code></pre>
+<h3 id="在indexcss中添加以下内容"><a class="header" href="#在indexcss中添加以下内容">在index.css中添加以下内容</a></h3>
+<pre><code class="language-css">@tailwind base;
+@tailwind components;
+@tailwind utilities;
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="编程笔记"><a class="header" href="#编程笔记">编程笔记</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sql笔记"><a class="header" href="#sql笔记">SQL笔记</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hello-world"><a class="header" href="#hello-world">HELLO WORLD</a></h1>
-<h2 id="一知识点"><a class="header" href="#一知识点">一、知识点</a></h2>
+<h2 id="一示例"><a class="header" href="#一示例">一、示例</a></h2>
+<pre><code class="language-sql">USE sql_store;
+
+SELECT *
+FROM customers
+-- WHERE customer_id = 1
+ORDER BY first_name
+</code></pre>
+<h2 id="二知识点"><a class="header" href="#二知识点">二、知识点</a></h2>
 <ul>
 <li><code>USE</code>使用DB</li>
 <li><code>SELECT</code>选择Column</li>
@@ -1845,23 +2162,8 @@ jobs:
 <li><code>ORDER BY</code>排序</li>
 <li><code>--</code>注释</li>
 </ul>
-<h2 id="二示例"><a class="header" href="#二示例">二、示例</a></h2>
-<pre><code class="language-sql">USE sql_store;
-
-SELECT *
-FROM customers
--- WHERE customer_id = 1
-ORDER BY first_name
-</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="select用法"><a class="header" href="#select用法">SELECT用法</a></h1>
-<h2 id="一知识点-1"><a class="header" href="#一知识点-1">一、知识点</a></h2>
-<ul>
-<li>SELECT可以有多个参数筛选列</li>
-<li>SELECT可以换行</li>
-<li>SELECT可以使用别名<code>AS</code></li>
-<li>SELECT可以使用四则运算和括号产生新的列</li>
-</ul>
-<h2 id="二示例-1"><a class="header" href="#二示例-1">二、示例</a></h2>
+<h2 id="一示例-1"><a class="header" href="#一示例-1">一、示例</a></h2>
 <pre><code class="language-sql">USE sql_store;
 
 SELECT
@@ -1872,13 +2174,15 @@ SELECT
 FROM customers
 ORDER BY points
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="where用法"><a class="header" href="#where用法">WHERE用法</a></h1>
-<h2 id="一知识点-2"><a class="header" href="#一知识点-2">一、知识点</a></h2>
+<h2 id="二知识点-1"><a class="header" href="#二知识点-1">二、知识点</a></h2>
 <ul>
-<li>WHERE可以使用逻辑运算符</li>
-<li>SQL的时间格式是<code>YYYY-MM-DD HH-MM-SS</code></li>
+<li>SELECT可以有多个参数筛选列</li>
+<li>SELECT可以换行</li>
+<li>SELECT可以使用别名<code>AS</code></li>
+<li>SELECT可以使用四则运算和括号产生新的列</li>
 </ul>
-<h2 id="二示例-2"><a class="header" href="#二示例-2">二、示例</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="where用法"><a class="header" href="#where用法">WHERE用法</a></h1>
+<h2 id="一示例-2"><a class="header" href="#一示例-2">一、示例</a></h2>
 <pre><code class="language-sql">USE sql_store;
 
 SELECT *
@@ -1888,13 +2192,13 @@ FROM customers
 -- WHERE state != 'VA'
 WHERE birth_date &gt; '1990-01-01'
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="and-or-not运算符"><a class="header" href="#and-or-not运算符">AND-OR-NOT运算符</a></h1>
-<h2 id="一知识点-3"><a class="header" href="#一知识点-3">一、知识点</a></h2>
+<h2 id="二知识点-2"><a class="header" href="#二知识点-2">二、知识点</a></h2>
 <ul>
-<li>逻辑运算符AND优先级更高</li>
-<li>逻辑运算符可以通过括号改变运算顺序</li>
+<li>WHERE可以使用逻辑运算符</li>
+<li>SQL的时间格式是<code>YYYY-MM-DD HH-MM-SS</code></li>
 </ul>
-<h2 id="二示例-3"><a class="header" href="#二示例-3">二、示例</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="and-or-not运算符"><a class="header" href="#and-or-not运算符">AND-OR-NOT运算符</a></h1>
+<h2 id="一示例-3"><a class="header" href="#一示例-3">一、示例</a></h2>
 <pre><code class="language-sql">USE sql_store;
 
 SELECT *
@@ -1903,6 +2207,306 @@ FROM customers
 -- WHERE points &gt; 3000 OR birth_date &gt; '1990-01-01'
 -- WHERE birth_date &gt; '1990-01-01' OR (points &gt; 1000 AND state = 'VA')
 WHERE NOT (birth_date &gt; '1990-01-01' OR points &gt; 1000)
+</code></pre>
+<h2 id="二知识点-3"><a class="header" href="#二知识点-3">二、知识点</a></h2>
+<ul>
+<li>逻辑运算符AND优先级更高</li>
+<li>逻辑运算符可以通过括号改变运算顺序</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lua"><a class="header" href="#lua">Lua</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hello-world-1"><a class="header" href="#hello-world-1">Hello world</a></h1>
+<h2 id="示例"><a class="header" href="#示例">示例</a></h2>
+<p>print输出：</p>
+<pre><code class="language-lua">print(&quot;Hello world&quot;)
+</code></pre>
+<p>标准输出：</p>
+<pre><code class="language-lua">io.write(&quot;Size of string &quot;, #&quot;String&quot;, &quot;.\n&quot;)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="变量"><a class="header" href="#变量">变量</a></h1>
+<h2 id="一数字型number"><a class="header" href="#一数字型number">一、数字型Number</a></h2>
+<p>Lua数值的最大值：</p>
+<pre><code class="language-lua">print(9223372036854775807 + 1)
+</code></pre>
+<p>Lua数值的精度为13位：</p>
+<pre><code class="language-lua">print(1.9999999999999 + 0.00000000000001)
+</code></pre>
+<h2 id="二布尔型boolean"><a class="header" href="#二布尔型boolean">二、布尔型Boolean</a></h2>
+<pre><code class="language-lua">isLogin = true
+print(type(isLogin))
+</code></pre>
+<h2 id="三空型nil"><a class="header" href="#三空型nil">三、空型Nil</a></h2>
+<pre><code class="language-lua">print(type(madeupvar))
+</code></pre>
+<h2 id="四字符型string"><a class="header" href="#四字符型string">四、字符型String</a></h2>
+<p>字符拼接：</p>
+<pre><code class="language-lua">age = 15
+name = &quot;cael&quot;
+print('Hello ' .. name .. &quot;, you are're &quot; .. age .. &quot; now.&quot;)
+</code></pre>
+<p>多行字符：</p>
+<pre><code class="language-lua">longString = [[
+This is a multi line string,
+which you can print as many as lines you want.
+]]
+print(longString)
+</code></pre>
+<p>字符长度：</p>
+<pre><code class="language-lua">local quote = &quot;I changed my password everywhere to 'incorrect.' That way when I forget it,it always reminds me, 'Your password is incorrect.'&quot;
+io.write(&quot;Quote Length : &quot;, string.len(quote), &quot;\n&quot;)
+</code></pre>
+<p>字符替换：</p>
+<pre><code class="language-lua">local quote = &quot;I changed my password everywhere to 'incorrect.' That way when I forget it,it always reminds me, 'Your password is incorrect.'&quot;
+io.write(&quot;Replace I with me : &quot;, string.gsub(quote, &quot;I&quot;, &quot;me&quot;), &quot;\n&quot;)
+</code></pre>
+<p>查找字符：</p>
+<pre><code class="language-lua">local quote = &quot;I changed my password everywhere to 'incorrect.' That way when I forget it,it always reminds me, 'Your password is incorrect.'&quot;
+io.write(&quot;Index of password : &quot;, string.find(quote, &quot;password&quot;), &quot;\n&quot;)
+</code></pre>
+<p>字符大写或小写：</p>
+<pre><code class="language-lua">local quote = &quot;I changed my password everywhere to 'incorrect.' That way when I forget it,it always reminds me, 'Your password is incorrect.'&quot;
+io.write(&quot;Quote Upper : &quot;, string.upper(quote), &quot;\n&quot;)
+io.write(&quot;Quote Lower : &quot;, string.lower(quote), &quot;\n&quot;)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="运算符"><a class="header" href="#运算符">运算符</a></h1>
+<h2 id="一四则运算符"><a class="header" href="#一四则运算符">一、四则运算符</a></h2>
+<pre><code class="language-lua">io.write(&quot;5 + 3 = &quot;, 5 + 3, &quot;\n&quot;)
+io.write(&quot;5 - 3 = &quot;, 5 - 3, &quot;\n&quot;)
+io.write(&quot;5 * 3 = &quot;, 5 * 3, &quot;\n&quot;)
+io.write(&quot;5 / 3 = &quot;, 5 / 3, &quot;\n&quot;)
+io.write(&quot;5.2 % 3 = &quot;, 5 % 3, &quot;\n&quot;)
+</code></pre>
+<h2 id="二关系运算符"><a class="header" href="#二关系运算符">二、关系运算符</a></h2>
+<pre><code class="language-lua">local age = 13
+if age &lt; 16 then
+  io.write(&quot;You can go to school&quot;, &quot;\n&quot;)
+elseif (age &gt;= 16) and (age &lt; 18) then
+  io.write(&quot;You can drive&quot;, &quot;\n&quot;)
+else
+  io.write(&quot;You can vote&quot;, &quot;\n&quot;)
+end
+</code></pre>
+<h2 id="三逻辑运算符"><a class="header" href="#三逻辑运算符">三、逻辑运算符</a></h2>
+<p>或运算符：</p>
+<pre><code class="language-lua">local age = 13
+if (age &lt; 14) or (age &gt; 67) then io.write(&quot;You shouldn't work\n&quot;) end
+</code></pre>
+<p>且运算符：</p>
+<pre><code class="language-lua">local canVote = age &gt; 18 and true or false
+io.write(&quot;Can I Vote : &quot;, tostring(canVote), &quot;\n&quot;)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="循环"><a class="header" href="#循环">循环</a></h1>
+<h2 id="一while循环"><a class="header" href="#一while循环">一、while循环</a></h2>
+<pre><code class="language-lua">local i = 1
+while (i &lt;= 10) do
+  io.write(i)
+  i = i + 1
+  if i == 8 then break end
+end
+</code></pre>
+<h2 id="二repeat循环"><a class="header" href="#二repeat循环">二、repeat循环</a></h2>
+<pre><code class="language-lua">repeat
+  io.write(&quot;Enter your guess : &quot;)
+  local guess = io.read()
+until tonumber(guess) == 15
+</code></pre>
+<h2 id="三for循环"><a class="header" href="#三for循环">三、for循环</a></h2>
+<p>简单循环：</p>
+<pre><code class="language-lua">for i = 1, 10, 1 do
+  io.write(i)
+end
+print()
+</code></pre>
+<p>遍历循环：</p>
+<pre><code class="language-lua">local months = {
+  &quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;,
+  &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot;
+}
+for key, value in pairs(months) do
+  io.write(key, &quot;:&quot;, value, &quot;\n&quot;)
+end
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="函数"><a class="header" href="#函数">函数</a></h1>
+<h2 id="一基本用法"><a class="header" href="#一基本用法">一、基本用法</a></h2>
+<pre><code class="language-lua">local function getSum(num1, num2)
+  return num1 + num2
+end
+print(string.format(&quot;5 + 2 = %d&quot;, getSum(5, 2)))
+</code></pre>
+<h2 id="二多个返回值"><a class="header" href="#二多个返回值">二、多个返回值</a></h2>
+<pre><code class="language-lua">local function splitStr(theString)
+
+  local stringTable = {}
+  local i = 1
+  for str in string.gmatch(theString, &quot;[^%s]+&quot;) do
+    stringTable[i] = str
+    i = i + 1
+  end
+  return stringTable, i
+end
+
+local splitStrTable, numOfStr = splitStr(&quot;The Turtle&quot;)
+for j = 1, numOfStr do
+  print(string.format(&quot;%d : %s&quot;, j, splitStrTable[j]))
+end
+</code></pre>
+<h2 id="三参数数目未知"><a class="header" href="#三参数数目未知">三、参数数目未知</a></h2>
+<pre><code class="language-lua">local function getSumMore(...)
+  local sum = 0
+  for key, value in pairs { ... } do
+    sum = sum + value
+  end
+  return sum
+end
+
+io.write(&quot;Sum : &quot;, getSumMore(1, 2, 3, 4, 5, 6), &quot;\n&quot;)
+</code></pre>
+<h2 id="四函数变量"><a class="header" href="#四函数变量">四、函数变量</a></h2>
+<pre><code class="language-lua">local doubleIt = function(x) return x * 2 end
+print(doubleIt(4))
+</code></pre>
+<h2 id="五函数闭包"><a class="header" href="#五函数闭包">五、函数闭包</a></h2>
+<pre><code class="language-lua">local function outerFunc()
+  local i = 0
+  return function()
+    i = i + 1
+    return i
+  end
+end
+
+local getI = outerFunc()
+print(getI())
+print(getI())
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="math"><a class="header" href="#math">Math</a></h1>
+<h2 id="一常用函数"><a class="header" href="#一常用函数">一、常用函数</a></h2>
+<p>示例：</p>
+<pre><code class="language-lua">io.write(&quot;floor(2.345) : &quot;, math.floor(2.345), &quot;\n&quot;)
+io.write(&quot;ceil(2.345) : &quot;, math.ceil(2.345), &quot;\n&quot;)
+io.write(&quot;max(2, 3) : &quot;, math.max(2, 3), &quot;\n&quot;)
+io.write(&quot;min(2, 3) : &quot;, math.min(2, 3), &quot;\n&quot;)
+io.write(&quot;sqrt(64) : &quot;, math.sqrt(64), &quot;\n&quot;)
+</code></pre>
+<p>输出：</p>
+<pre><code>floor(2.345) : 2
+ceil(2.345) : 3
+max(2, 3) : 3
+min(2, 3) : 2
+sqrt(64) : 8
+</code></pre>
+<h2 id="二random函数"><a class="header" href="#二random函数">二、Random函数</a></h2>
+<p>随机生成0-1的随机数：</p>
+<pre><code class="language-lua">io.write(&quot;math.random() : &quot;, math.random(), &quot;\n&quot;)
+</code></pre>
+<p>随机生成1-10的随机数：</p>
+<pre><code class="language-lua">io.write(&quot;math.random(10) : &quot;, math.random(10), &quot;\n&quot;)
+</code></pre>
+<p>浮点数格式化：</p>
+<pre><code class="language-lua">print(string.format(&quot;Pi = %.5f&quot;, math.pi))
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="table"><a class="header" href="#table">Table</a></h1>
+<h2 id="一基础用法"><a class="header" href="#一基础用法">一、基础用法</a></h2>
+<p>通过索引获取Table，下标从1开始：</p>
+<pre><code class="language-lua">local aTable = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+print(aTable[1])
+</code></pre>
+<p>将Table转换为字符：</p>
+<pre><code class="language-lua">local aTable = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+print(table.concat(aTable, &quot;, &quot;))
+</code></pre>
+<p>去除Table的某个元素：</p>
+<pre><code class="language-lua">local aTable = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+print(table.concat(aTable, &quot;, &quot;))
+table.remove(aTable, 1)
+print(table.concat(aTable, &quot;, &quot;))
+</code></pre>
+<p>在Table中插入某个元素：</p>
+<pre><code class="language-lua">
+local aTable = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+print(table.concat(aTable, &quot;, &quot;))
+table.insert(aTable, 1)
+print(table.concat(aTable, &quot;, &quot;))
+</code></pre>
+<p>给table排序：</p>
+<pre><code class="language-lua">local aTable = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }
+print(table.concat(aTable, &quot;, &quot;))
+table.sort(aTable, function(a, b) return a &gt; b end)
+print(table.concat(aTable, &quot;, &quot;))
+</code></pre>
+<h2 id="二二维table"><a class="header" href="#二二维table">二、二维Table</a></h2>
+<pre><code class="language-lua">local aMultiTable = {}
+for i = 0, 9 do
+  aMultiTable[i] = {}
+  for j = 0, 9 do
+    aMultiTable[i][j] = tostring(i) .. tostring(j)
+  end
+end
+for i = 0, 9 do
+  for j = 0, 9 do
+    io.write(aMultiTable[i][j], &quot; , &quot;)
+  end
+  print()
+end
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="class"><a class="header" href="#class">Class</a></h1>
+<h2 id="一class基础"><a class="header" href="#一class基础">一、Class基础</a></h2>
+<pre><code class="language-lua">Animal = { height = 0, weight = 0, name = &quot;No Name&quot;, sound = &quot;No Sound&quot; }
+function Animal:new(height, weight, name, sound)
+  setmetatable({}, Animal)
+  self.height = height
+  self.weight = weight
+  self.name = name
+  self.sound = sound
+  return self
+end
+
+function Animal:toString()
+  local animalStr = string.format(&quot;%s weighs %.1f lbs, is %.1f in tall and says %s&quot;,
+    self.name, self.weight, self.height, self.sound)
+  return animalStr
+end
+
+local spot = Animal:new(10, 15, &quot;Spot&quot;, &quot;Roof&quot;)
+print(spot:toString())
+</code></pre>
+<h2 id="二class继承"><a class="header" href="#二class继承">二、Class继承</a></h2>
+<pre><code class="language-lua">Animal = { height = 0, weight = 0, name = &quot;No Name&quot;, sound = &quot;No Sound&quot; }
+function Animal:new(height, weight, name, sound)
+  setmetatable({}, Animal)
+  self.height = height
+  self.weight = weight
+  self.name = name
+  self.sound = sound
+  return self
+end
+
+function Animal:toString()
+  local animalStr = string.format(&quot;%s weighs %.1f lbs, is %.1f in tall and says %s&quot;,
+    self.name, self.weight, self.height, self.sound)
+  return animalStr
+end
+
+local spot = Animal:new(10, 15, &quot;Spot&quot;, &quot;Roof&quot;)
+print(spot:toString())
+
+Cat = Animal:new()
+function Cat:new(height, weight, name, sound, favFood)
+  setmetatable({}, Cat)
+  self.height = height
+  self.weight = weight
+  self.name = name
+  self.sound = sound
+  self.favFood = favFood
+  return self
+end
+
+function Cat:toString()
+  local catStr = string.format(&quot;%s weighs %.1f lbs, is %.1f in tall, says %s and loves %s&quot;,
+    self.name, self.weight, self.height, self.sound, self.favFood)
+  return catStr
+end
+
+local fluffy = Cat:new(10, 15, &quot;Fluffy&quot;, &quot;Meow&quot;, &quot;Tuna&quot;)
+print(fluffy:toString())
 </code></pre>
 
                     </main>
@@ -1919,26 +2523,26 @@ WHERE NOT (birth_date &gt; '1990-01-01' OR points &gt; 1000)
 
         </div>
 
-        <script type="text/javascript">
+        <script>
             window.playground_line_numbers = true;
         </script>
-        <script type="text/javascript">
+        <script>
             window.playground_copyable = true;
         </script>
-        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
-        <script src="editor.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
-        <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
-        <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="ace.js"></script>
+        <script src="editor.js"></script>
+        <script src="mode-rust.js"></script>
+        <script src="theme-dawn.js"></script>
+        <script src="theme-tomorrow_night.js"></script>
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
-        <script type="text/javascript">
+        <script>
         window.addEventListener('load', function() {
             MathJax.Hub.Register.StartupHook('End', function() {
                 window.setTimeout(window.print, 100);
