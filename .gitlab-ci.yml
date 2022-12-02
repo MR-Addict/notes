@@ -1,7 +1,18 @@
 stages:
   - build
 
-#Runtime platform arch=amd64 os=linux pid=7468 revision=32fc1585 version=15.2.1
+pages:
+  stage: build
+  tags:
+    - Ubuntu
+  script:
+    - mdbook build
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+
 server:
   stage: build
   tags:

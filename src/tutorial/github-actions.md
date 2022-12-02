@@ -52,32 +52,30 @@ https://github.com/mr-addict/notes/actions/workflows/gh-pages.yml/badge.svg?bran
 ### mdbook模板
 
 ```yml
-name: build
+name: pages
 
 on:
   push:
     branches:
       - main
   pull_request:
+  workflow_dispatch:
 
 jobs:
-  Deploy-Github-Pages:
-    runs-on: ubuntu-20.04
+  build:
+    runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - name: Checkout current branch
+      - name: checkout current branch
         uses: actions/checkout@v3
-
-      - name: Setup mdBook
+      - name: setup mdBook
         uses: peaceiris/actions-mdbook@v1
         with:
-          mdbook-version: 'latest'
-
-      - name: Build book
+          mdbook-version: "latest"
+      - name: build book
         run: mdbook build
-
-      - name: Deploy
+      - name: push to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:

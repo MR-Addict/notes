@@ -5,10 +5,11 @@ on:
     workflows: ["docker"]
     types:
       - completed
+  pull_request:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  server:
     runs-on: self-hosted
     steps:
       - name: SSH Action
