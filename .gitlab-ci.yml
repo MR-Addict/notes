@@ -9,7 +9,7 @@ pages:
     - mdbook build
   artifacts:
     paths:
-      - public
+      - book
   only:
     - main
 
