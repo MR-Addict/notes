@@ -1,4 +1,4 @@
-# WHERE用法
+# WHERE
 
 ## 一、示例
 
@@ -15,5 +15,5 @@ WHERE birth_date > '1990-01-01'
 
 ## 二、知识点
 
-- WHERE可以使用逻辑运算符
-- SQL的时间格式是`YYYY-MM-DD HH-MM-SS`
+- WHERE 可以使用逻辑运算符
+- SQL 的时间格式是`YYYY-MM-DD HH-MM-SS`

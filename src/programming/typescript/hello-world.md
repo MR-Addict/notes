@@ -1,12 +1,12 @@
 # Hello world
 
-## 一、安装typescript
+## 一、安装 typescript
 
 ```bash
 npm install -g typescript
 ```
 
-## 二、配置ts解释器
+## 二、配置 ts 解释器
 
 生成配置文件：
 
@@ -29,6 +29,9 @@ tsc --init
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true
   }
 }
 ```
