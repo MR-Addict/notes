@@ -19,5 +19,5 @@
 
 | Package         | Version |
 | :-------------- | :------ |
-| mdbook          | 0.4.27  |
+| mdbook          | 0.4.21  |
 | mdbook-admonish | 1.8.0   |
