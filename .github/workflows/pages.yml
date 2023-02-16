@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  pages:
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
@@ -16,14 +16,12 @@ jobs:
       - name: checkout current branch
         uses: actions/checkout@v3
       - name: setup mdbook
-        uses: jontze/action-mdbook@v2
-        with:
-          token: ${{secrets.GITHUB_TOKEN}}
-          use-admonish: true
-      - name: build book
         run: |
-          mdbook-admonish install .
-          mdbook build
+          cp assets/mdbook /usr/local/bin
+          cp assets/mdbook-admonish /usr/local/bin
+          chmod u+x /usr/local/bin/mdbook*
+      - name: build book
+        run: mdbook build
       - name: deploy to vercel
         uses: amondnet/vercel-action@v25
         with:
