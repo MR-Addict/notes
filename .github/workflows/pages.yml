@@ -22,7 +22,7 @@ jobs:
           use-admonish: true
       - name: build book
         run: |
-          mdbook-admonish install
+          mdbook-admonish install .
           mdbook build
       - name: deploy to vercel
         uses: amondnet/vercel-action@v25
