@@ -3,8 +3,11 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>搭建Adguard服务器 - 我的笔记</title>
+        <title>搭建 Adguard 服务器 - 我的笔记</title>
+
+
         <!-- Custom HTML head -->
+        
         <meta name="description" content="我的笔记(方便施展Copy+Paste魔法)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -15,9 +18,11 @@
         <link rel="stylesheet" href="../css/general.css">
         <link rel="stylesheet" href="../css/chrome.css">
         <link rel="stylesheet" href="../css/print.css" media="print">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="../fonts/fonts.css">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="../highlight.css">
         <link rel="stylesheet" href="../tomorrow-night.css">
@@ -25,10 +30,12 @@
 
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href=".././assets/mdbook-admonish.css">
+
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../";
@@ -77,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../intro.html">我的笔记</a></li><li class="chapter-item expanded "><a href="../rpi/intro.html"><strong aria-hidden="true">1.</strong> 树莓派</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rpi/vim.html"><strong aria-hidden="true">1.1.</strong> 配置vim</a></li><li class="chapter-item expanded "><a href="../rpi/ssh.html"><strong aria-hidden="true">1.2.</strong> 使用ssh</a></li><li class="chapter-item expanded "><a href="../rpi/aliases.html"><strong aria-hidden="true">1.3.</strong> 配置alias</a></li><li class="chapter-item expanded "><a href="../rpi/crontab.html"><strong aria-hidden="true">1.4.</strong> 使用crontab</a></li><li class="chapter-item expanded "><a href="../rpi/wiringpi.html"><strong aria-hidden="true">1.5.</strong> 使用wiringpi</a></li><li class="chapter-item expanded "><a href="../rpi/powershell.html"><strong aria-hidden="true">1.6.</strong> 使用powershell</a></li><li class="chapter-item expanded "><a href="../rpi/oh-my-posh.html"><strong aria-hidden="true">1.7.</strong> 配置oh-my-posh</a></li></ol></li><li class="chapter-item expanded "><a href="../linux/intro.html"><strong aria-hidden="true">2.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../linux/swap.html"><strong aria-hidden="true">2.1.</strong> Linux的Swap空间</a></li><li class="chapter-item expanded "><a href="../linux/users.html"><strong aria-hidden="true">2.2.</strong> Linux用户和用户组</a></li><li class="chapter-item expanded "><a href="../linux/others.html"><strong aria-hidden="true">2.3.</strong> 其他配置及常用命令</a></li></ol></li><li class="chapter-item expanded "><a href="../openwrt/intro.html"><strong aria-hidden="true">3.</strong> Openwrt</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../openwrt/vim.html"><strong aria-hidden="true">3.1.</strong> 使用vim</a></li><li class="chapter-item expanded "><a href="../openwrt/init.html"><strong aria-hidden="true">3.2.</strong> 使用init</a></li><li class="chapter-item expanded "><a href="../openwrt/uhttpd.html"><strong aria-hidden="true">3.3.</strong> 使用uhttpd</a></li><li class="chapter-item expanded "><a href="../openwrt/others.html"><strong aria-hidden="true">3.4.</strong> 其他常用命令</a></li></ol></li><li class="chapter-item expanded "><a href="../tutorial/intro.html"><strong aria-hidden="true">4.</strong> 教程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tutorial/git.html"><strong aria-hidden="true">4.1.</strong> 使用Git</a></li><li class="chapter-item expanded "><a href="../tutorial/node.html"><strong aria-hidden="true">4.2.</strong> 使用Node</a></li><li class="chapter-item expanded "><a href="../tutorial/nginx.html"><strong aria-hidden="true">4.3.</strong> 使用Nginx</a></li><li class="chapter-item expanded "><a href="../tutorial/mysql.html"><strong aria-hidden="true">4.4.</strong> 使用MySQL</a></li><li class="chapter-item expanded "><a href="../tutorial/docker.html"><strong aria-hidden="true">4.5.</strong> 使用Docker</a></li><li class="chapter-item expanded "><a href="../tutorial/apache2.html"><strong aria-hidden="true">4.6.</strong> 使用Apache2</a></li><li class="chapter-item expanded "><a href="../tutorial/clash.html"><strong aria-hidden="true">4.7.</strong> 使用Clash内核</a></li><li class="chapter-item expanded "><a href="../tutorial/wireguard.html"><strong aria-hidden="true">4.8.</strong> 使用Wireguard</a></li><li class="chapter-item expanded "><a href="../tutorial/github-actions.html"><strong aria-hidden="true">4.9.</strong> 使用GitHub Actions</a></li></ol></li><li class="chapter-item expanded "><a href="../server/intro.html"><strong aria-hidden="true">5.</strong> 服务器搭建</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../server/mqtt.html"><strong aria-hidden="true">5.1.</strong> 搭建MQTT服务器</a></li><li class="chapter-item expanded "><a href="../server/vscode.html"><strong aria-hidden="true">5.2.</strong> 搭建VSCode服务器</a></li><li class="chapter-item expanded "><a href="../server/adguard.html" class="active"><strong aria-hidden="true">5.3.</strong> 搭建Adguard服务器</a></li><li class="chapter-item expanded "><a href="../server/wireguard.html"><strong aria-hidden="true">5.4.</strong> 搭建Wireguard服务器</a></li><li class="chapter-item expanded "><a href="../server/nextcloud.html"><strong aria-hidden="true">5.5.</strong> 搭建NextCloud服务器</a></li><li class="chapter-item expanded "><a href="../server/homeassistant.html"><strong aria-hidden="true">5.6.</strong> 搭建Homeassistant服务器</a></li></ol></li><li class="chapter-item expanded "><a href="../react/intro.html"><strong aria-hidden="true">6.</strong> React</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../react/tailwind.html"><strong aria-hidden="true">6.1.</strong> Tailwind</a></li></ol></li><li class="chapter-item expanded "><a href="../programme/intro.html"><strong aria-hidden="true">7.</strong> 编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programme/sql/intro.html"><strong aria-hidden="true">7.1.</strong> SQL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programme/sql/hello-world.html"><strong aria-hidden="true">7.1.1.</strong> Hello World</a></li><li class="chapter-item "><a href="../programme/sql/select.html"><strong aria-hidden="true">7.1.2.</strong> SELECT用法</a></li><li class="chapter-item "><a href="../programme/sql/where.html"><strong aria-hidden="true">7.1.3.</strong> WHERE用法</a></li><li class="chapter-item "><a href="../programme/sql/and-or-not.html"><strong aria-hidden="true">7.1.4.</strong> AND-OR-NOT运算符</a></li></ol></li><li class="chapter-item expanded "><a href="../programme/lua/intro.html"><strong aria-hidden="true">7.2.</strong> Lua</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programme/lua/hello-world.html"><strong aria-hidden="true">7.2.1.</strong> Hello World</a></li><li class="chapter-item "><a href="../programme/lua/variable.html"><strong aria-hidden="true">7.2.2.</strong> 变量</a></li><li class="chapter-item "><a href="../programme/lua/operator.html"><strong aria-hidden="true">7.2.3.</strong> 运算符</a></li><li class="chapter-item "><a href="../programme/lua/while.html"><strong aria-hidden="true">7.2.4.</strong> 循环</a></li><li class="chapter-item "><a href="../programme/lua/function.html"><strong aria-hidden="true">7.2.5.</strong> 函数</a></li><li class="chapter-item "><a href="../programme/lua/math.html"><strong aria-hidden="true">7.2.6.</strong> Math</a></li><li class="chapter-item "><a href="../programme/lua/table.html"><strong aria-hidden="true">7.2.7.</strong> Table</a></li><li class="chapter-item "><a href="../programme/lua/class.html"><strong aria-hidden="true">7.2.8.</strong> Class</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../intro.html">我的笔记</a></li><li class="chapter-item expanded "><a href="../rpi/intro.html"><strong aria-hidden="true">1.</strong> 树莓派</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../rpi/vim.html"><strong aria-hidden="true">1.1.</strong> 配置 vim</a></li><li class="chapter-item expanded "><a href="../rpi/ssh.html"><strong aria-hidden="true">1.2.</strong> 使用 ssh</a></li><li class="chapter-item expanded "><a href="../rpi/aliases.html"><strong aria-hidden="true">1.3.</strong> 配置 alias</a></li><li class="chapter-item expanded "><a href="../rpi/crontab.html"><strong aria-hidden="true">1.4.</strong> 使用 crontab</a></li><li class="chapter-item expanded "><a href="../rpi/wiringpi.html"><strong aria-hidden="true">1.5.</strong> 使用 wiringpi</a></li><li class="chapter-item expanded "><a href="../rpi/powershell.html"><strong aria-hidden="true">1.6.</strong> 使用 powershell</a></li><li class="chapter-item expanded "><a href="../rpi/oh-my-posh.html"><strong aria-hidden="true">1.7.</strong> 配置 oh-my-posh</a></li></ol></li><li class="chapter-item expanded "><a href="../linux/intro.html"><strong aria-hidden="true">2.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../linux/swap.html"><strong aria-hidden="true">2.1.</strong> Linux 的 Swap 空间</a></li><li class="chapter-item expanded "><a href="../linux/users.html"><strong aria-hidden="true">2.2.</strong> Linux 用户和用户组</a></li><li class="chapter-item expanded "><a href="../linux/others.html"><strong aria-hidden="true">2.3.</strong> 其他配置及常用命令</a></li></ol></li><li class="chapter-item expanded "><a href="../openwrt/intro.html"><strong aria-hidden="true">3.</strong> Openwrt</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../openwrt/vim.html"><strong aria-hidden="true">3.1.</strong> 使用 vim</a></li><li class="chapter-item expanded "><a href="../openwrt/init.html"><strong aria-hidden="true">3.2.</strong> 使用 init</a></li><li class="chapter-item expanded "><a href="../openwrt/uhttpd.html"><strong aria-hidden="true">3.3.</strong> 使用 uhttpd</a></li><li class="chapter-item expanded "><a href="../openwrt/others.html"><strong aria-hidden="true">3.4.</strong> 其他常用命令</a></li></ol></li><li class="chapter-item expanded "><a href="../tutorial/intro.html"><strong aria-hidden="true">4.</strong> 教程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tutorial/git.html"><strong aria-hidden="true">4.1.</strong> 使用 Git</a></li><li class="chapter-item expanded "><a href="../tutorial/node.html"><strong aria-hidden="true">4.2.</strong> 使用 Node</a></li><li class="chapter-item expanded "><a href="../tutorial/nginx.html"><strong aria-hidden="true">4.3.</strong> 使用 Nginx</a></li><li class="chapter-item expanded "><a href="../tutorial/mysql.html"><strong aria-hidden="true">4.4.</strong> 使用 MySQL</a></li><li class="chapter-item expanded "><a href="../tutorial/docker.html"><strong aria-hidden="true">4.5.</strong> 使用 Docker</a></li><li class="chapter-item expanded "><a href="../tutorial/apache2.html"><strong aria-hidden="true">4.6.</strong> 使用 Apache2</a></li><li class="chapter-item expanded "><a href="../tutorial/clash.html"><strong aria-hidden="true">4.7.</strong> 使用 Clash 内核</a></li><li class="chapter-item expanded "><a href="../tutorial/wireguard.html"><strong aria-hidden="true">4.8.</strong> 使用 Wireguard</a></li><li class="chapter-item expanded "><a href="../tutorial/github-actions.html"><strong aria-hidden="true">4.9.</strong> 使用 GitHub Actions</a></li></ol></li><li class="chapter-item expanded "><a href="../server/intro.html"><strong aria-hidden="true">5.</strong> 服务器搭建</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../server/mqtt.html"><strong aria-hidden="true">5.1.</strong> 搭建 MQTT 服务器</a></li><li class="chapter-item expanded "><a href="../server/vscode.html"><strong aria-hidden="true">5.2.</strong> 搭建 VSCode 服务器</a></li><li class="chapter-item expanded "><a href="../server/adguard.html" class="active"><strong aria-hidden="true">5.3.</strong> 搭建 Adguard 服务器</a></li><li class="chapter-item expanded "><a href="../server/wireguard.html"><strong aria-hidden="true">5.4.</strong> 搭建 Wireguard 服务器</a></li><li class="chapter-item expanded "><a href="../server/nextcloud.html"><strong aria-hidden="true">5.5.</strong> 搭建 NextCloud 服务器</a></li><li class="chapter-item expanded "><a href="../server/homeassistant.html"><strong aria-hidden="true">5.6.</strong> 搭建 Homeassistant 服务器</a></li></ol></li><li class="chapter-item expanded "><a href="../react/intro.html"><strong aria-hidden="true">6.</strong> React</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../react/tailwind.html"><strong aria-hidden="true">6.1.</strong> Tailwind</a></li></ol></li><li class="chapter-item expanded "><a href="../programming/intro.html"><strong aria-hidden="true">7.</strong> 编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../programming/sql/intro.html"><strong aria-hidden="true">7.1.</strong> SQL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/sql/hello-world.html"><strong aria-hidden="true">7.1.1.</strong> Hello World</a></li><li class="chapter-item "><a href="../programming/sql/select.html"><strong aria-hidden="true">7.1.2.</strong> SELECT</a></li><li class="chapter-item "><a href="../programming/sql/where.html"><strong aria-hidden="true">7.1.3.</strong> WHERE</a></li><li class="chapter-item "><a href="../programming/sql/and-or-not.html"><strong aria-hidden="true">7.1.4.</strong> AND-OR-NOT</a></li></ol></li><li class="chapter-item expanded "><a href="../programming/lua/intro.html"><strong aria-hidden="true">7.2.</strong> Lua</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/lua/hello-world.html"><strong aria-hidden="true">7.2.1.</strong> Hello World</a></li><li class="chapter-item "><a href="../programming/lua/variable.html"><strong aria-hidden="true">7.2.2.</strong> 变量</a></li><li class="chapter-item "><a href="../programming/lua/operator.html"><strong aria-hidden="true">7.2.3.</strong> 运算符</a></li><li class="chapter-item "><a href="../programming/lua/while.html"><strong aria-hidden="true">7.2.4.</strong> 循环</a></li><li class="chapter-item "><a href="../programming/lua/function.html"><strong aria-hidden="true">7.2.5.</strong> 函数</a></li><li class="chapter-item "><a href="../programming/lua/math.html"><strong aria-hidden="true">7.2.6.</strong> Math</a></li><li class="chapter-item "><a href="../programming/lua/table.html"><strong aria-hidden="true">7.2.7.</strong> Table</a></li><li class="chapter-item "><a href="../programming/lua/class.html"><strong aria-hidden="true">7.2.8.</strong> Class</a></li></ol></li><li class="chapter-item expanded "><a href="../programming/typescript/intro.html"><strong aria-hidden="true">7.3.</strong> Typescript</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/typescript/hello-world.html"><strong aria-hidden="true">7.3.1.</strong> Hello World</a></li><li class="chapter-item "><a href="../programming/typescript/types.html"><strong aria-hidden="true">7.3.2.</strong> Types</a></li><li class="chapter-item "><a href="../programming/typescript/function.html"><strong aria-hidden="true">7.3.3.</strong> Function</a></li><li class="chapter-item "><a href="../programming/typescript/object.html"><strong aria-hidden="true">7.3.4.</strong> Object</a></li><li class="chapter-item "><a href="../programming/typescript/aliases.html"><strong aria-hidden="true">7.3.5.</strong> Aliases</a></li><li class="chapter-item "><a href="../programming/typescript/union.html"><strong aria-hidden="true">7.3.6.</strong> Union</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -85,7 +92,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -115,6 +122,7 @@
                         <a href="https://gitlab.com/mraddict/notes" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-gitlab"></i>
                         </a>
+
                     </div>
                 </div>
 
@@ -128,6 +136,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
@@ -238,9 +247,11 @@ https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
                             <a rel="prev" href="../server/vscode.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
+
                             <a rel="next" href="../server/wireguard.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
@@ -250,6 +261,7 @@ https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
                     <a rel="prev" href="../server/vscode.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
+
                     <a rel="next" href="../server/wireguard.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
@@ -257,24 +269,33 @@ https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
 
         </div>
 
+
+
         <script>
             window.playground_line_numbers = true;
         </script>
+
         <script>
             window.playground_copyable = true;
         </script>
+
         <script src="../ace.js"></script>
         <script src="../editor.js"></script>
         <script src="../mode-rust.js"></script>
         <script src="../theme-dawn.js"></script>
         <script src="../theme-tomorrow_night.js"></script>
+
         <script src="../elasticlunr.min.js"></script>
         <script src="../mark.min.js"></script>
         <script src="../searcher.js"></script>
+
         <script src="../clipboard.min.js"></script>
         <script src="../highlight.js"></script>
         <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
+
+
+    </div>
     </body>
 </html>
