@@ -14,6 +14,7 @@
 
 - [https://notes.mraddict.top](https://notes.mraddict.top)
 - [https://notes.mraddict.vercel.app](https://notes.mraddict.vercel.app)
+- [https://mr-addict.github.io/notes](https://mr-addict.github.io/notes)
 
 ## 2. 版本
 

@@ -25,7 +25,7 @@
   - [使用 uhttpd](openwrt/uhttpd.md)
   - [其他常用命令](openwrt/others.md)
 
-- [教程](tutorial/intro.md)
+- [学习教程](tutorial/intro.md)
 
   - [使用 Git](tutorial/git.md)
   - [使用 Node](tutorial/node.md)
@@ -50,7 +50,7 @@
 
   - [Tailwind](react/tailwind.md)
 
-- [编程](programming/intro.md)
+- [编程语言](programming/intro.md)
   - [SQL](programming/sql/intro.md)
     - [Hello World](programming/sql/hello-world.md)
     - [SELECT](programming/sql/select.md)
