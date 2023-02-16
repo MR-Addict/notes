@@ -15,14 +15,12 @@ jobs:
     steps:
       - name: checkout current branch
         uses: actions/checkout@v3
-      - name: setup mdBook
-        uses: peaceiris/actions-mdbook@v1
+      - uses: jontze/action-mdbook@v2
         with:
-          mdbook-version: "latest"
-      - name: build book
-        run: mdbook build
+          token: ${{secrets.GITHUB_TOKEN}}
+          use-admonish: true
       - name: deploy to vercel
-        uses: amondnet/vercel-action@v20
+        uses: amondnet/vercel-action@25
         with:
           vercel-args: --prod
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
