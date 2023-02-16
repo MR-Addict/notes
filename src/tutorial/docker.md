@@ -1,61 +1,61 @@
-# 使用Docker
+# 使用 Docker
 
 ```admonish info
 官方文档：[docker](https://docs.docker.com/engine/install/ubuntu/)
 ```
 
-## 一、安装Docker
+## 一、安装 Docker
 
-安装前建议先卸载旧版本的Docker：
+安装前建议先卸载旧版本的 Docker：
 
 ```bash
 sudo apt-get remove docker docker-engine docker.io containerd runc
 ```
 
-### 方法一：偷懒式安装Docker
+### 方法一：偷懒式安装 Docker
 
 ```bash
 sudo apt install docker.io
 ```
 
-### 方法二：将Docker添加到apt源中再安装
+### 方法二：将 Docker 添加到 apt 源中再安装
 
-更新apt并且安装相关依赖：
+更新 apt 并且安装相关依赖：
 
 ```bash
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg lsb-release
 ```
 
-添加Docker的GPG密钥：
+添加 Docker 的 GPG 密钥：
 
 ```bash
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
 
-添加Docker源地址：
+添加 Docker 源地址：
 
 ```bash
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-安装Docker：
+安装 Docker：
 
 ```bash
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
-添加当前用户到docker用户组：
+添加当前用户到 docker 用户组：
 
 ```bash
 sudo usermod -aG docker $(whoami)
 ```
 
-## 二、安装Docker-Compose
+## 二、安装 Docker-Compose
 
-前往GitHub下载对应的[Docker-Compose](https://github.com/docker/compose/releases)
+前往 GitHub 下载对应的[Docker-Compose](https://github.com/docker/compose/releases)
 
 ```bash
 wget https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64
@@ -63,11 +63,11 @@ sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 sudo chmod u+x /usr/local/bin/docker-compose
 ```
 
-## 三、配置Docker
+## 三、配置 Docker
 
-### 配置log
+### 配置 log
 
-进入Docker配置文件：
+进入 Docker 配置文件：
 
 ```bash
 sudo vim /etc/docker/daemon.json
@@ -80,7 +80,7 @@ sudo vim /etc/docker/daemon.json
   "log-driver": "json-file",
   "log-opts": {
     "max-size": "10m",
-    "max-file": "3" 
+    "max-file": "3"
   }
 }
 ```
@@ -126,154 +126,9 @@ vim ~/.docker/config.json
 }
 ```
 
-## 四、Docker-Compose模板
+## 四、编译推送镜像
 
-### Nginx容器模板
-
-```yml
-version: '3'
-services:
-  notes:
-    image: nginx:latest
-    container_name: notes
-    restart: unless-stopped
-    ports:
-      - 80:80
-    volumes:
-      - /home/ubuntu/Projects/Notes/book:/usr/share/nginx/html
-      - /home/ubuntu/Projects/Notes/docker/certs:/etc/nginx/certs
-      - /home/ubuntu/Projects/Notes/docker/conf.d:/etc/nginx/conf.d
-```
-
-### wg-easy模板
-
-```yml
-version: "3"
-services:
-  wg-easy:
-    environment:
-      - WG_HOST=[change-this]
-      - PASSWORD=[change-this]
-      - WG_DEFAULT_DNS=1.1.1.1
-      - WG_MTU=1420
-
-    image: weejewel/wg-easy
-    container_name: wg-easy
-    volumes:
-      - ./data:/etc/wireguard
-    ports:
-      - 51820:51820/udp
-      - 51821:51821/tcp
-    restart: unless-stopped
-    cap_add:
-      - NET_ADMIN
-      - SYS_MODULE
-    sysctls:
-      - net.ipv4.ip_forward=1
-      - net.ipv4.conf.all.src_valid_mark=1
-```
-
-### Nextcloud模板
-
-```yml
-version: "3"
-
-services:
-  nextcloud:
-    container_name: nextcloud-app
-    image: nextcloud:latest
-    restart: unless-stopped
-    ports:
-      - 8080:80
-    environment:
-      - MYSQL_HOST=mysql
-      - MYSQL_DATABASE=nextcloud
-      - MYSQL_USER=nextcloud
-      - MYSQL_PASSWORD=nextcloud
-    volumes:
-      - ./data:/var/www/html
-
-  mysql:
-    image: mysql:8.0
-    container_name: nextcloud-db
-    restart: unless-stopped
-    environment:
-      - MYSQL_DATABASE=nextcloud
-      - MYSQL_USER=nextcloud
-      - MYSQL_PASSWORD=nextcloud
-      - MYSQL_ROOT_PASSWORD=nextcloud
-    volumes:
-      - ./db:/var/lib/mysql
-```
-
-### Adguard模板
-
-```yml
-version: '2'
-services:
-  adguard:
-    image: adguard/adguardhome
-    container_name: adguard
-    restart: unless-stopped
-    ports:
-      - 53:53/tcp
-      - 53:53/udp
-      - 3000:3000/tcp
-    volumes:
-      - /home/cael/projects/adguard/data/work:/opt/adguardhome/work
-      - /home/cael/projects/adguard/data/conf:/opt/adguardhome/conf
-```
-
-### VSCode模板
-
-```yml
-version: "2.1"
-services:
-  ide:
-    image: lscr.io/linuxserver/code-server:latest
-    container_name: ide
-    environment:
-      - PUID=1538
-      - PGID=1538
-      - TZ=Asia/Shanghai
-      - PASSWORD=password
-      - SUDO_PASSWORD=password
-      - DEFAULT_WORKSPACE=/config/workspace
-    volumes:
-      - ./config:/config
-    ports:
-      - 8443:8443
-    restart: unless-stopped
-  http:
-    image: nginx:latest
-    container_name: http
-    restart: unless-stopped
-    ports:
-      - 5555:80
-    volumes:
-      - ./config/workspace:/usr/share/nginx/html
-```
-
-### Home Assistant
-
-```yml
-version: "3"
-services:
-  home:
-    image: ghcr.io/home-assistant/home-assistant:stable
-    container_name: home
-    environment:
-      - TZ=Asia/Shanghai
-    volumes:
-      - ./config:/config
-    ports:
-      - 8123:8123
-    restart: unless-stopped
-```
-
-## 五、编译推送镜像
-
-登录dockerhub，输入token：
+登录 dockerhub，输入 token：
 
 ```bash
 docker login -u <dockrhub_username>
@@ -307,7 +162,7 @@ docker commit <existing_image> <dockerhub_username>/<dockerhub_repo_name>
 docker push <dockerhub_username>/<dockerhub_repo_name>
 ```
 
-## 六、Docker的镜像操作
+## 五、Docker 的镜像操作
 
 拉取镜像：
 
@@ -339,7 +194,7 @@ docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 docker system prune -a
 ```
 
-## 七、Docker的容器操作
+## 六、Docker 的容器操作
 
 显示正在运行的容器：
 
@@ -407,13 +262,13 @@ docker run -d -p 80:8080 ubuntu
 docker run -d -v /opt/mydata:/var/lib/mysql ubuntu
 ```
 
-docker-compose运行容器：
+docker-compose 运行容器：
 
 ```bash
 docker-compose up -d
 ```
 
-docker-compose删除容器：
+docker-compose 删除容器：
 
 ```bash
 docker-compose down
@@ -429,4 +284,149 @@ docker rm $container-name-or-id
 
 ```bash
 docker rm $(docker ps --filter status=exited -q)
+```
+
+## 七、Docker-Compose 模板
+
+### Nginx 容器模板
+
+```yml
+version: "3"
+services:
+  notes:
+    image: nginx:latest
+    container_name: notes
+    restart: unless-stopped
+    ports:
+      - 80:80
+    volumes:
+      - /home/ubuntu/Projects/Notes/book:/usr/share/nginx/html
+      - /home/ubuntu/Projects/Notes/docker/certs:/etc/nginx/certs
+      - /home/ubuntu/Projects/Notes/docker/conf.d:/etc/nginx/conf.d
+```
+
+### wg-easy 模板
+
+```yml
+version: "3"
+services:
+  wg-easy:
+    environment:
+      - WG_HOST=[change-this]
+      - PASSWORD=[change-this]
+      - WG_DEFAULT_DNS=1.1.1.1
+      - WG_MTU=1420
+
+    image: weejewel/wg-easy
+    container_name: wg-easy
+    volumes:
+      - ./data:/etc/wireguard
+    ports:
+      - 51820:51820/udp
+      - 51821:51821/tcp
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    sysctls:
+      - net.ipv4.ip_forward=1
+      - net.ipv4.conf.all.src_valid_mark=1
+```
+
+### Nextcloud 模板
+
+```yml
+version: "3"
+
+services:
+  nextcloud:
+    container_name: nextcloud-app
+    image: nextcloud:latest
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=nextcloud
+    volumes:
+      - ./data:/var/www/html
+
+  mysql:
+    image: mysql:8.0
+    container_name: nextcloud-db
+    restart: unless-stopped
+    environment:
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=nextcloud
+      - MYSQL_ROOT_PASSWORD=nextcloud
+    volumes:
+      - ./db:/var/lib/mysql
+```
+
+### Adguard 模板
+
+```yml
+version: "2"
+services:
+  adguard:
+    image: adguard/adguardhome
+    container_name: adguard
+    restart: unless-stopped
+    ports:
+      - 53:53/tcp
+      - 53:53/udp
+      - 3000:3000/tcp
+    volumes:
+      - /home/cael/projects/adguard/data/work:/opt/adguardhome/work
+      - /home/cael/projects/adguard/data/conf:/opt/adguardhome/conf
+```
+
+### VSCode 模板
+
+```yml
+version: "2.1"
+services:
+  ide:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: ide
+    environment:
+      - PUID=1538
+      - PGID=1538
+      - TZ=Asia/Shanghai
+      - PASSWORD=password
+      - SUDO_PASSWORD=password
+      - DEFAULT_WORKSPACE=/config/workspace
+    volumes:
+      - ./config:/config
+    ports:
+      - 8443:8443
+    restart: unless-stopped
+  http:
+    image: nginx:latest
+    container_name: http
+    restart: unless-stopped
+    ports:
+      - 5555:80
+    volumes:
+      - ./config/workspace:/usr/share/nginx/html
+```
+
+### Home Assistant
+
+```yml
+version: "3"
+services:
+  home:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    container_name: home
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./config:/config
+    ports:
+      - 8123:8123
+    restart: unless-stopped
 ```
