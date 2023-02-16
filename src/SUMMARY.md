@@ -2,16 +2,6 @@
 
 [我的笔记](intro.md)
 
-- [树莓派](rpi/intro.md)
-
-  - [配置 vim](rpi/vim.md)
-  - [使用 ssh](rpi/ssh.md)
-  - [配置 alias](rpi/aliases.md)
-  - [使用 crontab](rpi/crontab.md)
-  - [使用 wiringpi](rpi/wiringpi.md)
-  - [使用 powershell](rpi/powershell.md)
-  - [配置 oh-my-posh](rpi/oh-my-posh.md)
-
 - [Linux](linux/intro.md)
 
   - [Linux 的 Swap 空间](linux/swap.md)
@@ -24,6 +14,20 @@
   - [使用 init](openwrt/init.md)
   - [使用 uhttpd](openwrt/uhttpd.md)
   - [其他常用命令](openwrt/others.md)
+
+- [前后端](web/intro.md)
+
+  - [配置 Tailwind](web/tailwind.md)
+
+- [树莓派](rpi/intro.md)
+
+  - [配置 vim](rpi/vim.md)
+  - [使用 ssh](rpi/ssh.md)
+  - [配置 alias](rpi/aliases.md)
+  - [使用 crontab](rpi/crontab.md)
+  - [使用 wiringpi](rpi/wiringpi.md)
+  - [使用 powershell](rpi/powershell.md)
+  - [配置 oh-my-posh](rpi/oh-my-posh.md)
 
 - [学习教程](tutorial/intro.md)
 
@@ -45,10 +49,6 @@
   - [搭建 Wireguard 服务器](server/wireguard.md)
   - [搭建 NextCloud 服务器](server/nextcloud.md)
   - [搭建 Homeassistant 服务器](server/homeassistant.md)
-
-- [React](react/intro.md)
-
-  - [Tailwind](react/tailwind.md)
 
 - [编程语言](programming/intro.md)
   - [SQL](programming/sql/intro.md)

@@ -1,12 +1,12 @@
-# Tailwind
+# 配置 Tailwind
 
 ```admonish info
 官方文档：[tailwind](https://tailwindcss.com/docs/installation)
 ```
 
-## 一、安装配置Tailwind
+## 一、安装配置 Tailwind
 
-### 安装Tailwind
+### 安装 Tailwind
 
 ```bash
 npm install -D tailwindcss
@@ -18,7 +18,7 @@ npm install -D tailwindcss
 npx tailwindcss init
 ```
 
-### 将tailwind.config.js中替换成以下配置
+### 将 tailwind.config.js 中替换成以下配置
 
 ```js
 module.exports = {
@@ -27,10 +27,10 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
 ```
 
-### 在index.css中添加以下内容
+### 在 index.css 中添加以下内容
 
 ```css
 @tailwind base;
