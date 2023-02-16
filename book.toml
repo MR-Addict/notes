@@ -23,6 +23,7 @@ copy-fonts = true
 no-section-label = false
 git-repository-icon = "fa-gitlab"
 git-repository-url = "https://gitlab.com/mraddict/notes"
+additional-css = ['.\.\mdbook-admonish.css']
 
 [output.html.print]
 enable = true
