@@ -4,7 +4,14 @@
   <img src="https://github.com/MR-Addict/notes/actions/workflows/pages.yml/badge.svg?branch=main"/>
 </h1>
 
-## 1. 简介
+## 1. 版本
+
+| Package         | Version |
+| :-------------- | :------ |
+| mdbook          | 0.4.21  |
+| mdbook-admonish | 1.8.0   |
+
+## 2. 简介
 
 本项目基于 mdbook 框架，主要是用作笔记的功能，记录一些重要的内容，以方便我在不同的机器上使用 **Copy+Paste** 魔法。
 
@@ -15,10 +22,3 @@
 - [https://notes.mraddict.top](https://notes.mraddict.top)
 - [https://notes.mraddict.vercel.app](https://notes.mraddict.vercel.app)
 - [https://mr-addict.github.io/notes](https://mr-addict.github.io/notes)
-
-## 2. 版本
-
-| Package         | Version |
-| :-------------- | :------ |
-| mdbook          | 0.4.21  |
-| mdbook-admonish | 1.8.0   |
