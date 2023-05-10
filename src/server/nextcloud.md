@@ -1,6 +1,6 @@
-# 搭建NextCloud服务器
+# 搭建 NextCloud 服务器
 
-## 一、配置Docker容器
+## 一、配置 Docker 容器
 
 ```yaml
 version: "3"
@@ -45,7 +45,7 @@ docker-compose up -d
 sudo vim data/config/config.php
 ```
 
-在secret下添加信任域名**trusted_domains**：
+在 secret 下添加信任域名**trusted_domains**：
 
 ```php
 <?php
@@ -67,9 +67,9 @@ $CONFIG = array (
 docker-compose restart
 ```
 
-## 三、配置Nginx
+## 三、配置 Nginx
 
-如果你是使用Nginx的反向代理，下面是参考配置：
+如果你是使用 Nginx 的反向代理，下面是参考配置：
 
 ```
 server{

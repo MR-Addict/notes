@@ -2,7 +2,7 @@
 
 ## 示例
 
-print输出：
+print 输出：
 
 ```lua
 print("Hello world")

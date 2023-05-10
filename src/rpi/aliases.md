@@ -1,6 +1,6 @@
-# 配置alias
+# 配置 alias
 
-进入bash_aliaes配置文件
+进入 bash_aliaes 配置文件
 
 ```bash
 vim ~/.bash_aliases

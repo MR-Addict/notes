@@ -15,10 +15,6 @@
   - [使用 uhttpd](openwrt/uhttpd.md)
   - [其他常用命令](openwrt/others.md)
 
-- [前后端](web/intro.md)
-
-  - [配置 Tailwind](web/tailwind.md)
-
 - [树莓派](rpi/intro.md)
 
   - [配置 vim](rpi/vim.md)

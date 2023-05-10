@@ -1,6 +1,6 @@
-# 搭建Wireguard服务器
+# 搭建 Wireguard 服务器
 
-配置Docker容器：
+配置 Docker 容器：
 
 ```yaml
 version: "3"

@@ -1,6 +1,6 @@
 # 循环
 
-## 一、while循环
+## 一、while 循环
 
 ```lua
 local i = 1
@@ -11,7 +11,7 @@ while (i <= 10) do
 end
 ```
 
-## 二、repeat循环
+## 二、repeat 循环
 
 ```lua
 repeat
@@ -20,7 +20,7 @@ repeat
 until tonumber(guess) == 15
 ```
 
-## 三、for循环
+## 三、for 循环
 
 简单循环：
 
@@ -42,4 +42,3 @@ for key, value in pairs(months) do
   io.write(key, ":", value, "\n")
 end
 ```
-

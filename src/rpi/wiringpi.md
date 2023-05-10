@@ -1,12 +1,12 @@
-# 使用wiringpi
+# 使用 wiringpi
 
 ```admonish info
 官方文档：[wiringpi](http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b)
 ```
 
-## 一、安装wiringpi
+## 一、安装 wiringpi
 
-安装wiringpi：
+安装 wiringpi：
 
 ```bash
 cd /tmp
@@ -22,20 +22,20 @@ gpio -v
 
 ## 二、基础命令
 
-查看GPIO状态：
+查看 GPIO 状态：
 
 ```bash
 gpio readall
 ```
 
-设置GPIO 14号引脚为输出，并且输出高电平：
+设置 GPIO 14 号引脚为输出，并且输出高电平：
 
 ```bash
 gpio mode 15 out
 gpio write 15 1
 ```
 
-还原GPIO 14状态：
+还原 GPIO 14 状态：
 
 ```bash
 gpio write 15 0
@@ -44,7 +44,7 @@ gpio mode 15 in
 
 ## 三、调用<wiringpi.h>
 
-我们写一个fan.c的程序，该程序用于控制树莓派的GPIO 14。
+我们写一个 fan.c 的程序，该程序用于控制树莓派的 GPIO 14。
 
 ```c
 #include <signal.h>

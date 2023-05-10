@@ -12,7 +12,7 @@ opkg update
 cat /proc/cpuinfo
 ```
 
-查看已连接的WiFi设备：
+查看已连接的 WiFi 设备：
 
 ```bash
 cat /tmp/dhcp.leases

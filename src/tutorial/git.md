@@ -1,8 +1,8 @@
-# 使用git
+# 使用 git
 
-## 一、配置git
+## 一、配置 git
 
-进入git配置文件：
+进入 git 配置文件：
 
 ```bash
 vim ~/.gitconfig
@@ -41,7 +41,7 @@ git commit -m "First commit"
 git remote add github https://github.com/MR-Addict/Doc-Share.git
 ```
 
-更改默认分支名为main：
+更改默认分支名为 main：
 
 ```bash
 git branch -M main

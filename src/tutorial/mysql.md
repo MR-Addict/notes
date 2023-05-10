@@ -1,32 +1,32 @@
-# 使用MySQL
+# 使用 MySQL
 
 ```admonish info
 Digital Ocean参考文档：[MySQL](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04)
 ```
 
-## 一、使用MySQL
+## 一、使用 MySQL
 
-更新apt库：
+更新 apt 库：
 
 ```bash
 sudo apt-get update
 ```
 
-安装MySQL：
+安装 MySQL：
 
 ```bash
 sudo apt-get install mysql-server -y
 ```
 
-## 二、配置MySQL
+## 二、配置 MySQL
 
-首先先登录MySQL：
+首先先登录 MySQL：
 
 ```bash
 sudo mysql
 ```
 
-然后更改root密码：
+然后更改 root 密码：
 
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_new_password';
@@ -40,7 +40,7 @@ sudo mysql_secure_installation
 
 ## 三、创建新用户
 
-进入mysql：
+进入 mysql：
 
 ```bash
 sudo mysql -u root -p
@@ -128,9 +128,9 @@ DROP DATABASE db_name;
 RENAME TABLE old_db.table TO new_db.table;
 ```
 
-## 六、Table操作
+## 六、Table 操作
 
-创建Table：
+创建 Table：
 
 ```sql
 CREATE TABLE books(
@@ -142,7 +142,7 @@ CREATE TABLE books(
 );
 ```
 
-显示Table框架：
+显示 Table 框架：
 
 ```sql
 DESCRIBE books;
@@ -161,13 +161,13 @@ ALTER TABLE table_name;
 ADD COLUMN column_name column_definition;
 ```
 
-删除Table：
+删除 Table：
 
 ```sql
 DROP TABLE IF EXISTS db.table1, db.table2, db.table3;
 ```
 
-重命名Table：
+重命名 Table：
 
 ```sql
 RENAME TABLE db.table TO db.new_table;
@@ -181,7 +181,7 @@ RENAME TABLE db.table TO db.new_table;
 sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
 
-找到以下内容，注释掉IP绑定：
+找到以下内容，注释掉 IP 绑定：
 
 ```
 # Instead of skip-networking the default is now to listen only on
@@ -190,7 +190,7 @@ sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
 # mysqlx-bind-address   = 127.0.0.1
 ```
 
-然后进入MySQL，创建可以允许远程连接的用户：
+然后进入 MySQL，创建可以允许远程连接的用户：
 
 ```sql
 CREATE USER 'user_name'@'remote_login_server_ip' IDENTIFIED BY 'user_password';
@@ -222,7 +222,7 @@ SET GLOBAL validate_password.policy=LOW;
 ALTER USER 'user_name'@'localhost' IDENTIFIED BY 'new_password';
 ```
 
-## 九、禁用ONLY_FULL_GROUP_BY
+## 九、禁用 ONLY_FULL_GROUP_BY
 
 进入配置文件：
 

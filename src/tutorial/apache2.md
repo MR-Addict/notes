@@ -1,16 +1,15 @@
-# 使用apache2
+# 使用 apache2
 
-## 一、安装apache2
+## 一、安装 apache2
 
 ```bash
 sudo apt-get update
 sudo apt-get install apache2 -y
 ```
 
-打开apache2默认地址查看默认的网页内容[http://localhost](http://localhost)。
+打开 apache2 默认地址查看默认的网页内容[http://localhost](http://localhost)。
 
-
-## 二、配置apache2
+## 二、配置 apache2
 
 首先准备好一个网页，然后我们需要对网页进行一些配置。这里我已我的笔记网页为例`/home/pi/Projects/Notes/book`。
 
@@ -31,7 +30,7 @@ sudo vim /etc/apache2/sites-available/note.conf
 </VirtualHost>
 ```
 
-然后进入apache的配置文件给该目录以权限：
+然后进入 apache 的配置文件给该目录以权限：
 
 ```bash
 sudo vim /etc/apache2/apache2.conf
@@ -47,9 +46,9 @@ sudo vim /etc/apache2/apache2.conf
 </Directory>
 ```
 
-## 三、使用apache2
+## 三、使用 apache2
 
-首先我们需要关闭默认的apache网页：
+首先我们需要关闭默认的 apache 网页：
 
 ```bash
 sudo a2dissite 000-default.conf
@@ -61,7 +60,7 @@ sudo a2dissite 000-default.conf
 sudo a2ensite notes.conf
 ```
 
-最后重新启动apache：
+最后重新启动 apache：
 
 ```bash
 sudo systemctl reload apache2
@@ -69,25 +68,25 @@ sudo systemctl reload apache2
 
 然后我们就可以通过默认网址访问我们的网页了[http://localhost](http://localhost)。
 
-查看apche2服务：
+查看 apche2 服务：
 
 ```bash
 sudo systemctl status apache2
 ```
 
-停止apache2服务：
+停止 apache2 服务：
 
 ```bash
 sudo systemctl stop apache2
 ```
 
-注销apache2服务：
+注销 apache2 服务：
 
 ```bash
 sudo systemctl disable apache2
 ```
 
-注册apache2服务：
+注册 apache2 服务：
 
 ```bash
 sudo systemctl enable apache2

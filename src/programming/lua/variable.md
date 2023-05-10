@@ -1,33 +1,33 @@
 # 变量
 
-## 一、数字型Number
+## 一、数字型 Number
 
-Lua数值的最大值：
+Lua 数值的最大值：
 
 ```lua
 print(9223372036854775807 + 1)
 ```
 
-Lua数值的精度为13位：
+Lua 数值的精度为 13 位：
 
 ```lua
 print(1.9999999999999 + 0.00000000000001)
 ```
 
-## 二、布尔型Boolean
+## 二、布尔型 Boolean
 
 ```lua
 isLogin = true
 print(type(isLogin))
 ```
 
-## 三、空型Nil
+## 三、空型 Nil
 
 ```lua
 print(type(madeupvar))
 ```
 
-## 四、字符型String
+## 四、字符型 String
 
 字符拼接：
 

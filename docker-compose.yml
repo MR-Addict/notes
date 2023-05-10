@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   notes:
     image: mraddict063/notes

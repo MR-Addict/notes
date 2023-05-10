@@ -1,10 +1,10 @@
-# 使用Wireguard
+# 使用 Wireguard
 
 ```admonish info
 参考视频：[wireguard](https://www.youtube.com/watch?v=bVKNSf1p1d0)
 ```
 
-## 一、安装wireguard
+## 一、安装 wireguard
 
 ```bash
 sudo apt-get install wireguard -y

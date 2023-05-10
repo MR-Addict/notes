@@ -1,6 +1,6 @@
-# 搭建Home assistant服务器
+# 搭建 Home assistant 服务器
 
-## 一、配置Docker容器
+## 一、配置 Docker 容器
 
 使用以下**docker-compose.yaml**：
 
@@ -27,7 +27,7 @@ docker-compose up -d
 
 ## 二、修改配置文件
 
-使用以下命令查看Gateway：
+使用以下命令查看 Gateway：
 
 ```bash
 docker network inspect home_default|grep '"Gateway": '|awk -F"\"" '{print $4}'

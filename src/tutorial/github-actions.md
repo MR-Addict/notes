@@ -1,4 +1,4 @@
-# 使用GitHub Actions
+# 使用 GitHub Actions
 
 ## 一、基本模板
 
@@ -41,7 +41,7 @@ jobs:
         run: echo $PSVersionTable
 ```
 
-Github Action状态API：
+Github Action 状态 API：
 
 ```
 https://github.com/mr-addict/notes/actions/workflows/gh-pages.yml/badge.svg?branch=main
@@ -49,7 +49,7 @@ https://github.com/mr-addict/notes/actions/workflows/gh-pages.yml/badge.svg?bran
 
 ## 二、部署模板
 
-### mdbook模板
+### mdbook 模板
 
 ```yml
 name: pages
@@ -83,7 +83,7 @@ jobs:
           publish_dir: ./book
 ```
 
-### hexo模板
+### hexo 模板
 
 ```yml
 name: build
@@ -104,7 +104,7 @@ jobs:
       - name: Setup nodejs
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: "16"
 
       - name: Cache npm dependencies
         uses: actions/cache@v3.0.4
@@ -126,7 +126,7 @@ jobs:
           publish_dir: ./public
 ```
 
-### docker容器模板
+### docker 容器模板
 
 ```yaml
 name: docker
@@ -157,19 +157,19 @@ jobs:
           tags: mraddict063/punch:latest
 ```
 
-## 四、创建个人Actions-Runner
+## 三、创建个人 Actions-Runner
 
-### 部署Runner
+### 部署 Runner
 
-可以参照Github，这边跳过。
+可以参照 Github，这边跳过。
 
-运行Runner：
+运行 Runner：
 
 ```bash
 ./run.sh
 ```
 
-### 将Actions Runner注册为开机自启任务
+### 将 Actions Runner 注册为开机自启任务
 
 注册任务：
 

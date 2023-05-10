@@ -1,10 +1,10 @@
-# 使用uhttp
+# 使用 uhttp
 
 ```admonish info
 官方文档：[uhttp](https://openwrt.org/docs/guide-user/services/webserver/uhttpd)
 ```
 
-## 一、安装uhttpd
+## 一、安装 uhttpd
 
 ```bash
 opkg update
@@ -27,7 +27,7 @@ config uhttpd 'profile'
     option home '/root/profile'
 ```
 
-## 三、重启uhttpd
+## 三、重启 uhttpd
 
 ```bash
 /etc/init.d/uhttpd restart

@@ -1,14 +1,14 @@
-# 使用Powershell
+# 使用 Powershell
 
 ```admonish info
 官方文档：[powershell](https://docs.microsoft.com/en-us/powershell/scripting/install/install-raspbian?view=powershell-7.2)
 ```
 
-## 一、安装Powershell
+## 一、安装 Powershell
 
-32位和64位系统的唯一的区别就是32位需要安装依赖，而64位不需要。
+32 位和 64 位系统的唯一的区别就是 32 位需要安装依赖，而 64 位不需要。
 
-### 32位操作系统
+### 32 位操作系统
 
 安装依赖：
 
@@ -17,7 +17,7 @@ sudo apt-get update
 sudo apt-get install '^libssl1.0.[0-9]$' libunwind8 -y
 ```
 
-下载解压文件，在我写此文档时powershell最新版本是7.2.5，你可以前往官网下载更新的[版本](https://github.com/PowerShell/PowerShell/releases)：
+下载解压文件，在我写此文档时 powershell 最新版本是 7.2.5，你可以前往官网下载更新的[版本](https://github.com/PowerShell/PowerShell/releases)：
 
 ```bash
 wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.5/powershell-7.2.5-linux-arm32.tar.gz
@@ -25,7 +25,7 @@ mkdir ~/Powershell
 tar -xvf ./powershell-7.2.5-linux-arm32.tar.gz -C ~/Powershell
 ```
 
-### 64位操作系统
+### 64 位操作系统
 
 直接下载解压文件：
 
@@ -35,7 +35,7 @@ mkdir ~/Powershell
 tar -xvf ./powershell-7.2.5-linux-arm64.tar.gz -C ~/Powershell
 ```
 
-## 二、配置Powershell：
+## 二、配置 Powershell：
 
 添加快捷设置：
 
@@ -67,9 +67,9 @@ Set-Alias -Name git-clean -Value git_clean_fun
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/paradox.omp.json" | Invoke-Expression
 ```
 
-## 三、使用Powershell：
+## 三、使用 Powershell：
 
-在终端中输入以下命令启动powershell：
+在终端中输入以下命令启动 powershell：
 
 ```bash
 pwsh

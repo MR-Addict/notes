@@ -1,6 +1,6 @@
 # 其他配置及常用命令
 
-查看系统CPU：
+查看系统 CPU：
 
 ```bash
 htop
@@ -30,7 +30,7 @@ kill $id
 sudo fc-cache -fv
 ```
 
-更新树莓派eeprom：
+更新树莓派 eeprom：
 
 ```bash
 sudo rpi-eeprom-update -a
@@ -42,19 +42,19 @@ sudo rpi-eeprom-update -a
 vcgencmd measure_temp
 ```
 
-使用pip-review更新pip
+使用 pip-review 更新 pip
 
 ```bash
 pip-review --interactive
 ```
 
-安静启动Telegram
+安静启动 Telegram
 
 ```bash
 Telegram --startintray
 ```
 
-解压tar压缩包：
+解压 tar 压缩包：
 
 ```bash
 tar -xvf your/tar/gz/file
@@ -72,25 +72,25 @@ sudo update-alternatives --config editor
 netstat --tcp --listening --programs --numeric
 ```
 
-配置WiFi：
+配置 WiFi：
 
 ```bash
 sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-设置用户默认shell：
+设置用户默认 shell：
 
 ```bash
 sudo usermod --shell /bin/bash $USER
 ```
 
-bash脚本出现^M错误：
+bash 脚本出现^M 错误：
 
 ```bash
 sed -i 's/\r//' $yourfile
 ```
 
-使用python运行http服务：
+使用 python 运行 http 服务：
 
 ```bash
 python -m http.server 8080 --directory public

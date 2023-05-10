@@ -1,6 +1,6 @@
 # Class
 
-## 一、Class基础
+## 一、Class 基础
 
 ```lua
 Animal = { height = 0, weight = 0, name = "No Name", sound = "No Sound" }
@@ -23,7 +23,7 @@ local spot = Animal:new(10, 15, "Spot", "Roof")
 print(spot:toString())
 ```
 
-## 二、Class继承
+## 二、Class 继承
 
 ```lua
 Animal = { height = 0, weight = 0, name = "No Name", sound = "No Sound" }

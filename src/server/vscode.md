@@ -1,6 +1,6 @@
-# 搭建VSCode服务器
+# 搭建 VSCode 服务器
 
-配置Dcocker容器：
+配置 Dcocker 容器：
 
 ```yaml
 version: "2.1"

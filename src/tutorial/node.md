@@ -1,18 +1,18 @@
-# 使用Node
+# 使用 Node
 
 ```admonish info
 官方文档：[node](https://github.com/nodesource/distributions/blob/master/README.md)
 ```
 
-## 一、安装Node
+## 一、安装 Node
 
-最新的稳定版本16：
+最新的稳定版本 16：
 
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - && sudo apt-get install -y nodejs
 ```
 
-最新的稳定版本18：
+最新的稳定版本 18：
 
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install -y nodejs
@@ -20,25 +20,25 @@ curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-ge
 
 ## 二、安装常用包
 
-安装最新的npm：
+安装最新的 npm：
 
 ```bash
 npm install -g npm@latest
 ```
 
-安装最新的yarn：
+安装最新的 yarn：
 
 ```bash
 npm install -g yarn@latest
 ```
 
-安装最新的nodemon：
+安装最新的 nodemon：
 
 ```bash
 npm install -g nodemon@latest
 ```
 
-安装最新的hexo：
+安装最新的 hexo：
 
 ```bash
 npm install -g hexo-cli@latest

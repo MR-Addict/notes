@@ -1,6 +1,6 @@
-# 搭建MQTT服务器
+# 搭建 MQTT 服务器
 
-## 一、配置Docker容器
+## 一、配置 Docker 容器
 
 ```yaml
 version: "3"
@@ -18,7 +18,7 @@ services:
 
 ## 二、添加配置文件
 
-注意，先不要启动docker容器，在当前文件夹下创建映射的文件夹：
+注意，先不要启动 docker 容器，在当前文件夹下创建映射的文件夹：
 
 ```bash
 mkdir -p data/config
@@ -42,7 +42,7 @@ listener 1883
 #password_file /mosquitto/config/password.txt
 ```
 
-然后启动Docker容器：
+然后启动 Docker 容器：
 
 ```bash
 docker-compose up -d
@@ -62,7 +62,7 @@ docker exec -it mosquitto sh
 mosquitto_passwd -c /mosquitto/config/password.txt cael
 ```
 
-退出Docker容器：
+退出 Docker 容器：
 
 ```bash
 exit

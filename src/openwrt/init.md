@@ -1,10 +1,10 @@
-# 使用init
+# 使用 init
 
 ```admonish info
 官方文档：[init](https://openwrt.org/docs/techref/initscripts)
 ```
 
-## 一、配置init服务
+## 一、配置 init 服务
 
 进入配置文件：
 
@@ -25,7 +25,7 @@ start() {
     echo start
 }
 
-# commands to kill application 
+# commands to kill application
 stop() {
     echo stop
 }
@@ -42,7 +42,7 @@ boot() {
 chmod u+x /etc/init.d/your_service
 ```
 
-## 二、使用init服务
+## 二、使用 init 服务
 
 运行脚本：
 

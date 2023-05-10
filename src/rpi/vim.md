@@ -1,14 +1,14 @@
-# 配置vim
+# 配置 vim
 
-## 一、安装vim
+## 一、安装 vim
 
 ```bash
 sudo apt-get install vim -y
 ```
 
-## 二、配置vim
+## 二、配置 vim
 
-进入vim配置文件：
+进入 vim 配置文件：
 
 ```bash
 vim ~/.vimrc
@@ -40,7 +40,7 @@ let &t_EI = "\e[2 q"
 注意：本配置只在pi用户下有效，如果你想在root也有效需要重新配置
 ```
 
-## 三、使用vim
+## 三、使用 vim
 
 ### 命令类
 
@@ -106,7 +106,7 @@ o
 
 ### 快捷键类
 
-----
+---
 
 删除：
 

@@ -22,15 +22,15 @@ min(2, 3) : 2
 sqrt(64) : 8
 ```
 
-## 二、Random函数
+## 二、Random 函数
 
-随机生成0-1的随机数：
+随机生成 0-1 的随机数：
 
 ```lua
 io.write("math.random() : ", math.random(), "\n")
 ```
 
-随机生成1-10的随机数：
+随机生成 1-10 的随机数：
 
 ```lua
 io.write("math.random(10) : ", math.random(10), "\n")

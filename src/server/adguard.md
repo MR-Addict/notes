@@ -1,10 +1,10 @@
-# 使用Adguard服务器
+# 使用 Adguard 服务器
 
 ```admonish info
 参考文档：[adguard](https://www.linuxuprising.com/2020/07/ubuntu-how-to-free-up-port-53-used-by.html)
 ```
 
-## 一、释放服务器53端口
+## 一、释放服务器 53 端口
 
 查看端口是否开放：
 
@@ -12,13 +12,13 @@
 sudo lsof -i :53
 ```
 
-进入配置DNS文件：
+进入配置 DNS 文件：
 
 ```bash
 sudo vim /etc/systemd/resolved.conf
 ```
 
-添加默认DNS为1.1.1.1，同时弃用DNS监听端口：
+添加默认 DNS 为 1.1.1.1，同时弃用 DNS 监听端口：
 
 ```
 [Resolve]
@@ -40,12 +40,12 @@ DNSStubListener=no
 sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 ```
 
-## 二、搭建Adguard
+## 二、搭建 Adguard
 
-配置docker-compose：
+配置 docker-compose：
 
-```
-version: '2'
+```yaml
+version: "2"
 services:
   adguard:
     image: adguard/adguardhome
@@ -60,17 +60,17 @@ services:
       - /home/cael/projects/adguard/data/conf:/opt/adguardhome/conf
 ```
 
-启动docker：
+启动 docker：
 
 ```bash
 sudo docker-compose up -d
 ```
 
-## 三、配置Adguard
+## 三、配置 Adguard
 
 ### 1. DNS
 
-国外常用DNS：
+国外常用 DNS：
 
 ```
 1.1.1.1
@@ -80,7 +80,7 @@ sudo docker-compose up -d
 208.67.222.222
 ```
 
-国内常用DNS：
+国内常用 DNS：
 
 ```
 223.5.5.5
@@ -93,7 +93,7 @@ sudo docker-compose up -d
 
 #### 2.1 国内广告过滤黑名单
 
-Anti-Ad黑名单：
+Anti-Ad 黑名单：
 
 ```
 https://anti-ad.net/easylist.txt
@@ -118,7 +118,7 @@ https://easylist-downloads.adblockplus.org/easylistchina.txt
 
 #### 2.2 国外广告过滤黑名单
 
-Easylist黑名单：
+Easylist 黑名单：
 
 ```
 https://easylist.to/easylist/easylist.txt
