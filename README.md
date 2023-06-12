@@ -1,8 +1,4 @@
-<h1>
-  我的笔记👻
-  <img src="https://github.com/MR-Addict/notes/actions/workflows/docker.yml/badge.svg?branch=main"/>
-  <img src="https://github.com/MR-Addict/notes/actions/workflows/pages.yml/badge.svg?branch=main"/>
-</h1>
+# 我的笔记 👻 ![docker](https://github.com/MR-Addict/notes/actions/workflows/docker.yml/badge.svg) ![pages](https://github.com/MR-Addict/notes/actions/workflows/pages.yml/badge.svg)
 
 ## 1. 版本
 

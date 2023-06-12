@@ -29,6 +29,7 @@
 
   - [使用 Git](tutorial/git.md)
   - [使用 Node](tutorial/node.md)
+  - [使用 V2ray](tutorial/v2ray.md)
   - [使用 Nginx](tutorial/nginx.md)
   - [使用 MySQL](tutorial/mysql.md)
   - [使用 Docker](tutorial/docker.md)
