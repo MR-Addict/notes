@@ -8,38 +8,38 @@
 
 最新的稳定版本 16：
 
-```bash
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - && sudo apt-get install -y nodejs
+```sh
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E sh - && sudo apt-get install -y nodejs
 ```
 
 最新的稳定版本 18：
 
-```bash
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install -y nodejs
+```sh
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E sh - && sudo apt-get install -y nodejs
 ```
 
 ## 二、安装常用包
 
 安装最新的 npm：
 
-```bash
+```sh
 npm install -g npm@latest
 ```
 
 安装最新的 yarn：
 
-```bash
+```sh
 npm install -g yarn@latest
 ```
 
 安装最新的 nodemon：
 
-```bash
+```sh
 npm install -g nodemon@latest
 ```
 
 安装最新的 hexo：
 
-```bash
+```sh
 npm install -g hexo-cli@latest
 ```

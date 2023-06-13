@@ -8,7 +8,7 @@
 
 安装 wiringpi：
 
-```bash
+```sh
 cd /tmp
 wget https://project-downloads.drogon.net/wiringpi-latest.deb
 sudo dpkg -i wiringpi-latest.deb
@@ -16,7 +16,7 @@ sudo dpkg -i wiringpi-latest.deb
 
 测试是否安成功：
 
-```bash
+```sh
 gpio -v
 ```
 
@@ -24,20 +24,20 @@ gpio -v
 
 查看 GPIO 状态：
 
-```bash
+```sh
 gpio readall
 ```
 
 设置 GPIO 14 号引脚为输出，并且输出高电平：
 
-```bash
+```sh
 gpio mode 15 out
 gpio write 15 1
 ```
 
 还原 GPIO 14 状态：
 
-```bash
+```sh
 gpio write 15 0
 gpio mode 15 in
 ```
@@ -77,12 +77,12 @@ int main(void) {
 
 编译代码：
 
-```bash
+```sh
 gcc -Wall -o fan fan.c -lwiringPi
 ```
 
 执行代码：
 
-```bash
+```sh
 ./fan
 ```

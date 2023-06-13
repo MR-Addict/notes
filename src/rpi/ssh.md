@@ -10,19 +10,19 @@
 
 生成密钥，一路回车选择默认选项就好了：
 
-```bash
+```sh
 ssh-keygen -t rsa -b 2048 -f piserver -C "piserver-ssh-key"
 ```
 
 配置服务器，将公钥放到服务器上：
 
-```bash
+```sh
 cat piserver.pub >> ~/.ssh/authorized_keys
 ```
 
 配置连接端：
 
-```bash
+```sh
 vim ~/.ssh/config
 ```
 
@@ -40,18 +40,18 @@ Host piserver
 
 从服务器复制文件，服务器路径为`/home/pi/Projects/hello.py`，客户端路径为当前路径：
 
-```bash
+```sh
 scp pi@192.168.1.1:Projects/hello.py .
 ```
 
 向客户端传输文件，服务器路径为`/home/pi/Projects`，客户端路径为当前路径：
 
-```bash
+```sh
 scp hello.py pi@192.168.1.1:Projects
 ```
 
 复制整个文件夹到服务器，服务器路径为`/home/pi/Pictures`，客户端路径为当前路径：
 
-```bash
+```sh
 scp -r Images pi@192.168.1.3:Pictures
 ```

@@ -8,7 +8,7 @@
 
 下载完成后解压文件，建议把文件名改为`clash`， 然后移动到`/usr/local/bin/clash`位置，同时给该文件以执行的权限：
 
-```bash
+```sh
 wget https://github.com/Dreamacro/clash/releases/download/v1.10.6/clash-linux-armv7-v1.10.6.gz
 gunzip clash-linux-armv7-v1.10.6.gz
 rm -rf clash-linux-armv7-v1.10.6.gz
@@ -21,7 +21,7 @@ sudo chmod a+x /usr/local/bin/clash
 
 Clash 配置文件的默认路径是`~/.config/clash`，如果你的 Home 目录不存在相应文件夹就需要你自己创建，然后把你机场提供的配置文件放到该文件下就可以了，Clash 配置文件的默认名称应该是`config.yaml`。
 
-```bash
+```sh
 mkdir ~/.config/clash
 mv your/clash/config/file config.yaml
 mv config.yaml ~/.config/clash
@@ -33,7 +33,7 @@ mv config.yaml ~/.config/clash
 
 首先我们需要添加几个环境变量：
 
-```bash
+```sh
 sudo vim /etc/environment
 ```
 
@@ -55,7 +55,7 @@ export no_proxy="localhost, 127.0.0.1, *edu.cn"
 
 进入 sudo 配置文件：
 
-```bash
+```sh
 sudo visudo
 ```
 
@@ -69,7 +69,7 @@ Defaults env_keep+="http_proxy https_proxy no_proxy"
 
 进入 apt 配置文件：
 
-```bash
+```sh
 sudo vim /etc/apt/apt.conf.d/10proxy
 ```
 
@@ -83,13 +83,13 @@ Acquire::http::Proxy "http://127.0.0.1:7890/";
 
 进入 git 配置文件：
 
-```bash
+```sh
 vim ~/.gitconfig
 ```
 
 然后添加以下内容：
 
-```bash
+```sh
 [http]
   proxy=http://127.0.0.1:7890
 [https]
@@ -100,7 +100,7 @@ vim ~/.gitconfig
 
 进入 pip 配置文件：
 
-```bash
+```sh
 vim ~/.config/pip/pip.conf
 ```
 
@@ -118,7 +118,7 @@ vim ~/.config/pip/pip.conf
 
 进入 npm 配置文件：
 
-```bash
+```sh
 vim ~/.npmrc
 ```
 
@@ -134,7 +134,7 @@ https-proxy=http://127.0.0.1:7890
 
 进入 cargo 配置文件：
 
-```bash
+```sh
 vim ~/.cargo/config
 ```
 
@@ -175,7 +175,7 @@ INFO[0000] SOCKS proxy listening at: [::]:7891
 
 输入以下命令可以打开 crontab：
 
-```bash
+```sh
 crontab -e
 ```
 
@@ -191,7 +191,7 @@ GitHub 上有很多优秀的有关 Clash Dashboard 的项目，这些项目可�
 
 从 GitHub 上克隆[Clash Dashbaord](https://github.com/Dreamacro/clash-dashboard.git)到 Clash 的默认配置文件夹下。
 
-```bash
+```sh
 cd ~/.config/clash
 git clone https://github.com/Dreamacro/clash-dashboard.git
 cd ~/.config/clash/clash-dashboard

@@ -8,13 +8,13 @@
 
 安装前建议先卸载旧版本的 Docker：
 
-```bash
+```sh
 sudo apt-get remove docker docker-engine docker.io containerd runc
 ```
 
 ### 方法一：偷懒式安装 Docker
 
-```bash
+```sh
 sudo apt install docker.io
 ```
 
@@ -22,34 +22,34 @@ sudo apt install docker.io
 
 更新 apt 并且安装相关依赖：
 
-```bash
+```sh
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg lsb-release
 ```
 
 添加 Docker 的 GPG 密钥：
 
-```bash
+```sh
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
 
 添加 Docker 源地址：
 
-```bash
+```sh
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
 安装 Docker：
 
-```bash
+```sh
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
 添加当前用户到 docker 用户组：
 
-```bash
+```sh
 sudo usermod -aG docker $(whoami)
 ```
 
@@ -57,7 +57,7 @@ sudo usermod -aG docker $(whoami)
 
 前往 GitHub 下载对应的[Docker-Compose](https://github.com/docker/compose/releases)
 
-```bash
+```sh
 wget https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64
 sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 sudo chmod u+x /usr/local/bin/docker-compose
@@ -69,7 +69,7 @@ sudo chmod u+x /usr/local/bin/docker-compose
 
 进入 Docker 配置文件：
 
-```bash
+```sh
 sudo vim /etc/docker/daemon.json
 ```
 
@@ -89,7 +89,7 @@ sudo vim /etc/docker/daemon.json
 
 进入配置文件：
 
-```bash
+```sh
 sudo systemctl edit docker.service
 ```
 
@@ -106,7 +106,7 @@ Environment="NO_PROXY=localhost,127.0.0.1"
 
 进入配置文件：
 
-```bash
+```sh
 vim ~/.docker/config.json
 ```
 
@@ -130,7 +130,7 @@ vim ~/.docker/config.json
 
 登录 dockerhub，输入 token：
 
-```bash
+```sh
 docker login -u <dockrhub_username>
 ```
 
@@ -138,13 +138,13 @@ docker login -u <dockrhub_username>
 
 编译镜像：
 
-```bash
+```sh
 docker build -t <dockerhub_username>/<dockerhub_repo_name> .
 ```
 
 推送镜像：
 
-```bash
+```sh
 docker push <dockerhub_username>/<dockerhub_repo_name>
 ```
 
@@ -152,13 +152,13 @@ docker push <dockerhub_username>/<dockerhub_repo_name>
 
 提交变更：
 
-```bash
+```sh
 docker commit <existing_image> <dockerhub_username>/<dockerhub_repo_name>
 ```
 
 推送镜像：
 
-```bash
+```sh
 docker push <dockerhub_username>/<dockerhub_repo_name>
 ```
 
@@ -166,31 +166,31 @@ docker push <dockerhub_username>/<dockerhub_repo_name>
 
 拉取镜像：
 
-```bash
+```sh
 docker pull ubuntu
 ```
 
 显示已有镜像：
 
-```bash
+```sh
 docker images
 ```
 
 删除镜像：
 
-```bash
+```sh
 docker rmi ubuntu
 ```
 
 删除无用镜像：
 
-```bash
+```sh
 docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 ```
 
 删除所有无用的镜像、容器、网络和存储器：
 
-```bash
+```sh
 docker system prune -a
 ```
 
@@ -198,91 +198,91 @@ docker system prune -a
 
 显示正在运行的容器：
 
-```bash
+```sh
 docker ps
 ```
 
 显示所有容器：
 
-```bash
+```sh
 docker ps -a
 ```
 
 停止正在运行的容器：
 
-```bash
+```sh
 docker stop ubuntu
 ```
 
 重启某个容器：
 
-```bash
+```sh
 docker restart ubuntu
 ```
 
 从镜像运行容器：
 
-```bash
+```sh
 docker run ubuntu
 ```
 
 后台运行某个容器：
 
-```bash
+```sh
 docker run -d ubuntu
 ```
 
 运行某个版本的容器：
 
-```bash
+```sh
 docker run -d ubuntu:18
 ```
 
 运行结束后自动删除容器：
 
-```bash
+```sh
 docker run -d -rm ubuntu
 ```
 
 运行可交互容器：
 
-```bash
+```sh
 docker run -it ubuntu
 ```
 
 端口映射：
 
-```bash
+```sh
 docker run -d -p 80:8080 ubuntu
 ```
 
 文件映射：
 
-```bash
+```sh
 docker run -d -v /opt/mydata:/var/lib/mysql ubuntu
 ```
 
 docker-compose 运行容器：
 
-```bash
+```sh
 docker-compose up -d
 ```
 
 docker-compose 删除容器：
 
-```bash
+```sh
 docker-compose down
 ```
 
 删除容器：
 
-```bash
+```sh
 docker rm $container-name-or-id
 ```
 
 删除所有容器：
 
-```bash
+```sh
 docker rm $(docker ps --filter status=exited -q)
 ```
 

@@ -4,7 +4,7 @@
 
 新建配置文件：
 
-```bash
+```sh
 vim .github/workflows/demo.yml
 ```
 
@@ -165,7 +165,7 @@ jobs:
 
 运行 Runner：
 
-```bash
+```sh
 ./run.sh
 ```
 
@@ -173,30 +173,30 @@ jobs:
 
 注册任务：
 
-```bash
+```sh
 sudo ./svc.sh install
 ```
 
 启动任务：
 
-```bash
+```sh
 sudo ./svc.sh start
 ```
 
 查看状态：
 
-```bash
+```sh
 sudo ./svc.sh status
 ```
 
 停止任务：
 
-```bash
+```sh
 sudo ./svc.sh stop
 ```
 
 注销任务：
 
-```bash
+```sh
 sudo ./svc.sh uninstall
 ```

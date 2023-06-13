@@ -1,9 +1,9 @@
 # 配置 alias
 
-进入 bash_aliaes 配置文件
+进入 sh_aliaes 配置文件
 
-```bash
-vim ~/.bash_aliases
+```sh
+vim ~/.sh_aliases
 ```
 
 添加以下内容：

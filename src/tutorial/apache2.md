@@ -2,7 +2,7 @@
 
 ## 一、安装 apache2
 
-```bash
+```sh
 sudo apt-get update
 sudo apt-get install apache2 -y
 ```
@@ -15,7 +15,7 @@ sudo apt-get install apache2 -y
 
 新建配置文件：
 
-```bash
+```sh
 sudo vim /etc/apache2/sites-available/note.conf
 ```
 
@@ -32,7 +32,7 @@ sudo vim /etc/apache2/sites-available/note.conf
 
 然后进入 apache 的配置文件给该目录以权限：
 
-```bash
+```sh
 sudo vim /etc/apache2/apache2.conf
 ```
 
@@ -50,19 +50,19 @@ sudo vim /etc/apache2/apache2.conf
 
 首先我们需要关闭默认的 apache 网页：
 
-```bash
+```sh
 sudo a2dissite 000-default.conf
 ```
 
 然后激活我们的网页：
 
-```bash
+```sh
 sudo a2ensite notes.conf
 ```
 
 最后重新启动 apache：
 
-```bash
+```sh
 sudo systemctl reload apache2
 ```
 
@@ -70,24 +70,24 @@ sudo systemctl reload apache2
 
 查看 apche2 服务：
 
-```bash
+```sh
 sudo systemctl status apache2
 ```
 
 停止 apache2 服务：
 
-```bash
+```sh
 sudo systemctl stop apache2
 ```
 
 注销 apache2 服务：
 
-```bash
+```sh
 sudo systemctl disable apache2
 ```
 
 注册 apache2 服务：
 
-```bash
+```sh
 sudo systemctl enable apache2
 ```

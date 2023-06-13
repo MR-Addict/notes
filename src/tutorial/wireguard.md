@@ -6,7 +6,7 @@
 
 ## 一、安装 wireguard
 
-```bash
+```sh
 sudo apt-get install wireguard -y
 ```
 
@@ -16,7 +16,7 @@ sudo apt-get install wireguard -y
 
 在服务器创建一对公钥和私钥：
 
-```bash
+```sh
 wg genkey | tee private.key | wg pubkey > public.key
 ```
 
@@ -24,7 +24,7 @@ wg genkey | tee private.key | wg pubkey > public.key
 
 进入配置文件：
 
-```bash
+```sh
 sudo vim /etc/wireguard/wg0.conf
 ```
 
@@ -60,7 +60,7 @@ AllowedIPs = 10.0.0.2/32
 
 在客户端创建一对公钥和私钥：
 
-```bash
+```sh
 wg genkey | tee private.key | wg pubkey > public.key
 ```
 
@@ -68,7 +68,7 @@ wg genkey | tee private.key | wg pubkey > public.key
 
 进入配置文件：
 
-```bash
+```sh
 sudo vim /etc/wireguard/wg0.conf
 ```
 
@@ -91,13 +91,13 @@ PersistentKeepalive = 25
 
 获得客户端的公钥：
 
-```bash
+```sh
 cat publickey
 ```
 
 添加到客户端当中：
 
-```bash
+```sh
 sudo wg set wg0 peer client_public_key allowed-ips 10.0.0.2
 ```
 
@@ -109,7 +109,7 @@ sudo wg set wg0 peer client_public_key allowed-ips 10.0.0.2
 
 进入配置文件：
 
-```bash
+```sh
 sudo vim /etc/sysctl.conf
 ```
 
@@ -121,7 +121,7 @@ net.ipv4.ip_forward=1
 
 重启或者输入以下命令生效端口转发：
 
-```bash
+```sh
 sudo sysctl -p
 ```
 
@@ -129,13 +129,13 @@ sudo sysctl -p
 
 输入以下命令查看防火墙是否启动：
 
-```bash
+```sh
 sudo ufw status
 ```
 
 如果防火墙已经启动，你可以输入以下命令开启防火墙：
 
-```bash
+```sh
 ufw allow 51820/udp
 ```
 
@@ -147,40 +147,40 @@ ufw allow 51820/udp
 
 在服务端和客户端都输入以下命令：
 
-```bash
+```sh
 wg-quick up wg0
 ```
 
 在客户端输入以下命令发送流量：
 
-```bash
+```sh
 ping 10.0.0.1
 ```
 
 然后在服务端输入以下命令查看流量：
 
-```bash
+```sh
 sudo tcpdump -envi wg0
 ```
 
 ## 七、设置开机自启
 
-```bash
+```sh
 sudo systemctl enable wg-quick@wg0
 ```
 
-```bash
+```sh
 sudo systemctl start wg-quick@wg0
 ```
 
-```bash
+```sh
 systemctl status wg-quick@wg0
 ```
 
-```bash
+```sh
 sudo systemctl stop wg-quick@wg0
 ```
 
-```bash
+```sh
 sudo systemctl disable wg-quick@wg0
 ```

@@ -6,7 +6,7 @@
 
 ## 一、安装 uhttpd
 
-```bash
+```sh
 opkg update
 opkg install uhttpd
 ```
@@ -15,7 +15,7 @@ opkg install uhttpd
 
 进入配置文件：
 
-```bash
+```sh
 vim /etc/config/uhttpd
 ```
 
@@ -29,6 +29,6 @@ config uhttpd 'profile'
 
 ## 三、重启 uhttpd
 
-```bash
+```sh
 /etc/init.d/uhttpd restart
 ```

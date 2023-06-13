@@ -21,7 +21,7 @@ curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install
 安装 V2ray：
 
 ```sh
-sudo bash install-release.sh
+sudo sh install-release.sh
 ```
 
 开启自启动 V2ray：
@@ -136,7 +136,7 @@ server {
 
   location /ray {
     proxy_redirect off;
-    proxy_pass http://127.0.0.1:10000;
+    proxy_pass http://127.0.0.1:1000;
     proxy_http_version 1.1;
     proxy_set_header Upgrade $http_upgrade;
     proxy_set_header Connection "upgrade";
@@ -173,6 +173,12 @@ sudo vim /etc/systemd/system/v2ray.service
 
 ```
 Environment=V2RAY_VMESS_AEAD_FORCED=false
+```
+
+重启 Service 生效：
+
+```sh
+sudo systemctl daemon-reload
 ```
 
 ## 五、配置客户端

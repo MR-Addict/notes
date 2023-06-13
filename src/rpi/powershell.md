@@ -12,14 +12,14 @@
 
 安装依赖：
 
-```bash
+```sh
 sudo apt-get update
 sudo apt-get install '^libssl1.0.[0-9]$' libunwind8 -y
 ```
 
 下载解压文件，在我写此文档时 powershell 最新版本是 7.2.5，你可以前往官网下载更新的[版本](https://github.com/PowerShell/PowerShell/releases)：
 
-```bash
+```sh
 wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.5/powershell-7.2.5-linux-arm32.tar.gz
 mkdir ~/Powershell
 tar -xvf ./powershell-7.2.5-linux-arm32.tar.gz -C ~/Powershell
@@ -29,7 +29,7 @@ tar -xvf ./powershell-7.2.5-linux-arm32.tar.gz -C ~/Powershell
 
 直接下载解压文件：
 
-```bash
+```sh
 wget https://github.com/PowerShell/PowerShell/releases/download/v7.2.5/powershell-7.2.5-linux-arm64.tar.gz
 mkdir ~/Powershell
 tar -xvf ./powershell-7.2.5-linux-arm64.tar.gz -C ~/Powershell
@@ -39,13 +39,13 @@ tar -xvf ./powershell-7.2.5-linux-arm64.tar.gz -C ~/Powershell
 
 添加快捷设置：
 
-```bash
+```sh
 sudo ~/Powershell/pwsh -command 'New-Item -ItemType SymbolicLink -Path "/usr/bin/pwsh" -Target "$PSHOME/pwsh" -Force'
 ```
 
 进入配置文件：
 
-```bash
+```sh
 sudo vim $PROFILE
 ```
 
@@ -71,6 +71,6 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/paradox.omp.json" | Invoke-
 
 在终端中输入以下命令启动 powershell：
 
-```bash
+```sh
 pwsh
 ```

@@ -8,13 +8,13 @@
 
 查看端口是否开放：
 
-```bash
+```sh
 sudo lsof -i :53
 ```
 
 进入配置 DNS 文件：
 
-```bash
+```sh
 sudo vim /etc/systemd/resolved.conf
 ```
 
@@ -36,7 +36,7 @@ DNSStubListener=no
 
 创建链接：
 
-```bash
+```sh
 sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 ```
 
@@ -62,7 +62,7 @@ services:
 
 启动 docker：
 
-```bash
+```sh
 sudo docker-compose up -d
 ```
 

@@ -8,25 +8,25 @@
 
 查看运行内存和交换空间：
 
-```bash
+```sh
 free
 ```
 
 查看 swap 所在分区：
 
-```bash
+```sh
 swapon
 ```
 
 卸载 swap 分区：
 
-```bash
+```sh
 swapoff $swap_location
 ```
 
 删除 swap 分区：
 
-```bash
+```sh
 sudo rm $swap_location
 ```
 
@@ -34,31 +34,31 @@ sudo rm $swap_location
 
 创建空文件：
 
-```bash
+```sh
 sudo dd if=/dev/zero of=/swap bs=1M count=2048 status=progress
 ```
 
 给予权限：
 
-```bash
+```sh
 sudo chmod 600 /swap
 ```
 
 格式化 swap 分区：
 
-```bash
+```sh
 sudo mkswap /swap
 ```
 
 挂载 swap 分区：
 
-```bash
+```sh
 sudo swapon /swap
 ```
 
 持久化分区：
 
-```bash
+```sh
 sudo vim /etc/fstab
 ```
 

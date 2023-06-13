@@ -8,13 +8,13 @@ Digital Ocean参考文档：[MySQL](https://www.digitalocean.com/community/tutor
 
 更新 apt 库：
 
-```bash
+```sh
 sudo apt-get update
 ```
 
 安装 MySQL：
 
-```bash
+```sh
 sudo apt-get install mysql-server -y
 ```
 
@@ -22,7 +22,7 @@ sudo apt-get install mysql-server -y
 
 首先先登录 MySQL：
 
-```bash
+```sh
 sudo mysql
 ```
 
@@ -34,7 +34,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_new
 
 然后退出运行安装脚本：
 
-```bash
+```sh
 sudo mysql_secure_installation
 ```
 
@@ -42,7 +42,7 @@ sudo mysql_secure_installation
 
 进入 mysql：
 
-```bash
+```sh
 sudo mysql -u root -p
 ```
 
@@ -66,7 +66,7 @@ FLUSH PRIVILEGES;
 
 退出然后登录新用户：
 
-```bash
+```sh
 sudo mysql -u user_name -p
 ```
 
@@ -177,7 +177,7 @@ RENAME TABLE db.table TO db.new_table;
 
 进入配置文件：
 
-```bash
+```sh
 sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
 
@@ -226,7 +226,7 @@ ALTER USER 'user_name'@'localhost' IDENTIFIED BY 'new_password';
 
 进入配置文件：
 
-```bash
+```sh
 sudo vim /etc/mysql/my.cnf
 ```
 

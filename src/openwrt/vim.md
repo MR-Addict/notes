@@ -2,7 +2,7 @@
 
 ## 一、安装 vim
 
-```bash
+```sh
 opkg update
 opkg install vim-full vim-runtime
 ```
@@ -11,7 +11,7 @@ opkg install vim-full vim-runtime
 
 进入配置文件
 
-```bash
+```sh
 vim /usr/share/vim/vimrc
 ```
 

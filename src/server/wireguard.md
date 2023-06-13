@@ -30,6 +30,6 @@ services:
 
 启动容器：
 
-```bash
+```sh
 docker-compose up -d
 ```

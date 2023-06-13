@@ -8,7 +8,7 @@
 
 进入配置文件：
 
-```bash
+```sh
 vim /etc/init.d/your_service
 ```
 
@@ -38,7 +38,7 @@ boot() {
 
 给予执行权限：
 
-```bash
+```sh
 chmod u+x /etc/init.d/your_service
 ```
 
@@ -46,18 +46,18 @@ chmod u+x /etc/init.d/your_service
 
 运行脚本：
 
-```bash
+```sh
 /etc/init.d/your_service start
 ```
 
 开机自启任务：
 
-```bash
+```sh
 /etc/init.d/your_service enable
 ```
 
 关闭开机自启：
 
-```bash
+```sh
 /etc/init.d/your_service disable
 ```

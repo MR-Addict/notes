@@ -4,43 +4,43 @@
 
 查看当前用户：
 
-```bash
+```sh
 whoami
 ```
 
 查看所有用户：
 
-```bash
+```sh
 cat /etc/passwd
 ```
 
 添加新用户：
 
-```bash
-sudo useradd -m -s /bin/bash -c "test-user" test
+```sh
+sudo useradd -m -s /bin/sh -c "test-user" test
 ```
 
 更改用户密码：
 
-```bash
+```sh
 sudo passwd test
 ```
 
 更改文件或者文件夹所有者：
 
-```bash
+```sh
 sudo chown $user:$user $filename_or_folder
 ```
 
 登录其他用户：
 
-```bash
+```sh
 su test
 ```
 
 删除用户：
 
-```bash
+```sh
 sudo userdel test
 ```
 
@@ -48,24 +48,24 @@ sudo userdel test
 
 查看所有用户组：
 
-```bash
+```sh
 cat /etc/group
 ```
 
 添加用户到其他用户组：
 
-```bash
+```sh
 sudo usermod -aG sudo test
 ```
 
 添加新用户组：
 
-```bash
+```sh
 sudo groupadd test
 ```
 
 删除用户组：
 
-```bash
+```sh
 sudo groupdel test
 ```

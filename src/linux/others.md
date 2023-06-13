@@ -2,96 +2,96 @@
 
 查看系统 CPU：
 
-```bash
+```sh
 htop
 ```
 
 查看系统存储空间：
 
-```bash
+```sh
 df -h
 ```
 
 查看系统进程：
 
-```bash
+```sh
 ps -A
 ```
 
 结束某个进程：
 
-```bash
+```sh
 kill $id
 ```
 
 安装字体：
 
-```bash
+```sh
 sudo fc-cache -fv
 ```
 
 更新树莓派 eeprom：
 
-```bash
+```sh
 sudo rpi-eeprom-update -a
 ```
 
 查看树莓派温度：
 
-```bash
+```sh
 vcgencmd measure_temp
 ```
 
 使用 pip-review 更新 pip
 
-```bash
+```sh
 pip-review --interactive
 ```
 
 安静启动 Telegram
 
-```bash
+```sh
 Telegram --startintray
 ```
 
 解压 tar 压缩包：
 
-```bash
+```sh
 tar -xvf your/tar/gz/file
 ```
 
 设置默认编辑器：
 
-```bash
+```sh
 sudo update-alternatives --config editor
 ```
 
 查看系统内部端口使用情况：
 
-```bash
+```sh
 netstat --tcp --listening --programs --numeric
 ```
 
 配置 WiFi：
 
-```bash
+```sh
 sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
 设置用户默认 shell：
 
-```bash
-sudo usermod --shell /bin/bash $USER
+```sh
+sudo usermod --shell /bin/sh $USER
 ```
 
-bash 脚本出现^M 错误：
+sh 脚本出现^M 错误：
 
-```bash
+```sh
 sed -i 's/\r//' $yourfile
 ```
 
 使用 python 运行 http 服务：
 
-```bash
+```sh
 python -m http.server 8080 --directory public
 ```

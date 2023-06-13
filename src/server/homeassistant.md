@@ -21,7 +21,7 @@ services:
 
 启动容器：
 
-```bash
+```sh
 docker-compose up -d
 ```
 
@@ -29,13 +29,13 @@ docker-compose up -d
 
 使用以下命令查看 Gateway：
 
-```bash
+```sh
 docker network inspect home_default|grep '"Gateway": '|awk -F"\"" '{print $4}'
 ```
 
 然后进入配置文件：
 
-```bash
+```sh
 vim config/configuration.yaml
 ```
 
@@ -50,6 +50,6 @@ http:
 
 最后重启容器：
 
-```bash
+```sh
 docker-compose restart
 ```

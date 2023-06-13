@@ -2,7 +2,7 @@
 
 ## 一、安装 typescript
 
-```bash
+```sh
 npm install -g typescript
 ```
 
@@ -10,7 +10,7 @@ npm install -g typescript
 
 生成配置文件：
 
-```bash
+```sh
 tsc --init
 ```
 
@@ -47,6 +47,6 @@ console.log(message);
 
 编译文件：
 
-```bash
+```sh
 tsc
 ```

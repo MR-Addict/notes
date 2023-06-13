@@ -4,31 +4,31 @@
 
 更新 apt 源：
 
-```bash
+```sh
 sudo apt-get update
 ```
 
 安装 nginx：
 
-```bash
+```sh
 sudo apt-get install nginx
 ```
 
 使能 nginx：
 
-```bash
+```sh
 sudo systemctl enable nginx
 ```
 
 启动 nginx：
 
-```bash
+```sh
 sudo systemctl start nginx
 ```
 
 查看 nginx 状态：
 
-```bash
+```sh
 sudo systemctl status nginx
 ```
 
@@ -38,7 +38,7 @@ sudo systemctl status nginx
 
 首先我们需要准备一个可用的静态网站，这里我就使用我 GitHub 上基于 mdbook 的项目，你也可以使用自己的网站：
 
-```bash
+```sh
 git clone https://github.com/mr-addict/Doc-Share.git
 cd Doc-Share
 mdbook build
@@ -46,7 +46,7 @@ mdbook build
 
 运行`mdbook build`后会在当前文件夹自动编译出一个 book 文件夹，也即是我的网页内容，然后我们需要把这个网页放到 ngixn 默认的网页目录下`/var/www/`
 
-```bash
+```sh
 sudo cp -r /home/ubuntu/Doc-Share/book /var/www/
 ```
 
@@ -61,13 +61,13 @@ sites-available 文件夹用于放置所有的网站配置，sites-enabled 文�
 
 首先我们在 sites-available 中新建一个文件：
 
-```bash
+```sh
 sudo vim /etc/nginx/sites-availale/notes.conf
 ```
 
 然后添加以下内容：
 
-```bash
+```sh
 server {
     listen 80;
     listen [::]:80;
@@ -80,13 +80,13 @@ server {
 
 完成配置后我们可以通过链接的命令，将 sites-available 中的配置文件链接到 sites-enabled 文件夹中：
 
-```bash
+```sh
 sudo ln -sf /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
 ```
 
 最后我们重新启动一下 nginx 就可以在本地 80 端口[http://localhost](http://localhost)正常访问我们的网页内容了：
 
-```bash
+```sh
 sudo systemctl restart nginx
 ```
 

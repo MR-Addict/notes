@@ -4,7 +4,7 @@
 
 进入 corntab 配置文件：
 
-```bash
+```sh
 crontab -e
 ```
 
@@ -20,7 +20,7 @@ Select an editor.  To change later, run 'select-editor'.
 
 你也可以在后面更改默认的编辑器：
 
-```bash
+```sh
 select-editor
 ```
 
@@ -37,7 +37,7 @@ select-editor
 
 查看已有任务：
 
-```bash
+```sh
 crontab -l
 ```
 

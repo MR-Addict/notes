@@ -2,7 +2,7 @@
 
 ## 一、安装 vim
 
-```bash
+```sh
 sudo apt-get install vim -y
 ```
 
@@ -10,7 +10,7 @@ sudo apt-get install vim -y
 
 进入 vim 配置文件：
 
-```bash
+```sh
 vim ~/.vimrc
 ```
 

@@ -35,13 +35,13 @@ services:
 
 启动容器：
 
-```bash
+```sh
 docker-compose up -d
 ```
 
 ## 二、修改配置文件
 
-```bash
+```sh
 sudo vim data/config/config.php
 ```
 
@@ -63,7 +63,7 @@ $CONFIG = array (
 
 最后重启容器：
 
-```bash
+```sh
 docker-compose restart
 ```
 

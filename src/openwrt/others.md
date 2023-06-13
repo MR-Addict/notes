@@ -2,18 +2,18 @@
 
 更新包：
 
-```bash
+```sh
 opkg update
 ```
 
 查看系统信息：
 
-```bash
+```sh
 cat /proc/cpuinfo
 ```
 
 查看已连接的 WiFi 设备：
 
-```bash
+```sh
 cat /tmp/dhcp.leases
 ```

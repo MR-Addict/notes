@@ -20,13 +20,13 @@ services:
 
 注意，先不要启动 docker 容器，在当前文件夹下创建映射的文件夹：
 
-```bash
+```sh
 mkdir -p data/config
 ```
 
 然后添加配置文件：
 
-```bash
+```sh
 sudo vim mosquitto.conf
 ```
 
@@ -44,7 +44,7 @@ listener 1883
 
 然后启动 Docker 容器：
 
-```bash
+```sh
 docker-compose up -d
 ```
 
@@ -52,19 +52,19 @@ docker-compose up -d
 
 进入正在运行的容器：
 
-```bash
+```sh
 docker exec -it mosquitto sh
 ```
 
 创建一个用户：
 
-```bash
+```sh
 mosquitto_passwd -c /mosquitto/config/password.txt cael
 ```
 
 退出 Docker 容器：
 
-```bash
+```sh
 exit
 ```
 
@@ -82,6 +82,6 @@ password_file /mosquitto/config/password.txt
 
 最后重启容器：
 
-```bash
+```sh
 docker-compose restart
 ```
