@@ -152,40 +152,40 @@
 </div>
 <h2 id="一安装-docker"><a class="header" href="#一安装-docker">一、安装 Docker</a></h2>
 <p>安装前建议先卸载旧版本的 Docker：</p>
-<pre><code class="language-bash">sudo apt-get remove docker docker-engine docker.io containerd runc
+<pre><code class="language-sh">sudo apt-get remove docker docker-engine docker.io containerd runc
 </code></pre>
 <h3 id="方法一偷懒式安装-docker"><a class="header" href="#方法一偷懒式安装-docker">方法一：偷懒式安装 Docker</a></h3>
-<pre><code class="language-bash">sudo apt install docker.io
+<pre><code class="language-sh">sudo apt install docker.io
 </code></pre>
 <h3 id="方法二将-docker-添加到-apt-源中再安装"><a class="header" href="#方法二将-docker-添加到-apt-源中再安装">方法二：将 Docker 添加到 apt 源中再安装</a></h3>
 <p>更新 apt 并且安装相关依赖：</p>
-<pre><code class="language-bash">sudo apt-get update
+<pre><code class="language-sh">sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg lsb-release
 </code></pre>
 <p>添加 Docker 的 GPG 密钥：</p>
-<pre><code class="language-bash">sudo mkdir -p /etc/apt/keyrings
+<pre><code class="language-sh">sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 </code></pre>
 <p>添加 Docker 源地址：</p>
-<pre><code class="language-bash">echo &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+<pre><code class="language-sh">echo &quot;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
 </code></pre>
 <p>安装 Docker：</p>
-<pre><code class="language-bash">sudo apt-get update
+<pre><code class="language-sh">sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 </code></pre>
 <p>添加当前用户到 docker 用户组：</p>
-<pre><code class="language-bash">sudo usermod -aG docker $(whoami)
+<pre><code class="language-sh">sudo usermod -aG docker $(whoami)
 </code></pre>
 <h2 id="二安装-docker-compose"><a class="header" href="#二安装-docker-compose">二、安装 Docker-Compose</a></h2>
 <p>前往 GitHub 下载对应的<a href="https://github.com/docker/compose/releases">Docker-Compose</a></p>
-<pre><code class="language-bash">wget https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64
+<pre><code class="language-sh">wget https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64
 sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 sudo chmod u+x /usr/local/bin/docker-compose
 </code></pre>
 <h2 id="三配置-docker"><a class="header" href="#三配置-docker">三、配置 Docker</a></h2>
 <h3 id="配置-log"><a class="header" href="#配置-log">配置 log</a></h3>
 <p>进入 Docker 配置文件：</p>
-<pre><code class="language-bash">sudo vim /etc/docker/daemon.json
+<pre><code class="language-sh">sudo vim /etc/docker/daemon.json
 </code></pre>
 <p>添加以下内容：</p>
 <pre><code>{
@@ -198,7 +198,7 @@ sudo chmod u+x /usr/local/bin/docker-compose
 </code></pre>
 <h3 id="服务器配置代理"><a class="header" href="#服务器配置代理">服务器配置代理</a></h3>
 <p>进入配置文件：</p>
-<pre><code class="language-bash">sudo systemctl edit docker.service
+<pre><code class="language-sh">sudo systemctl edit docker.service
 </code></pre>
 <p>添加以下内容：</p>
 <pre><code>[Service]
@@ -208,7 +208,7 @@ Environment=&quot;NO_PROXY=localhost,127.0.0.1&quot;
 </code></pre>
 <h3 id="容器配置代理"><a class="header" href="#容器配置代理">容器配置代理</a></h3>
 <p>进入配置文件：</p>
-<pre><code class="language-bash">vim ~/.docker/config.json
+<pre><code class="language-sh">vim ~/.docker/config.json
 </code></pre>
 <p>添加以下内容：</p>
 <pre><code>{
@@ -225,83 +225,83 @@ Environment=&quot;NO_PROXY=localhost,127.0.0.1&quot;
 </code></pre>
 <h2 id="四编译推送镜像"><a class="header" href="#四编译推送镜像">四、编译推送镜像</a></h2>
 <p>登录 dockerhub，输入 token：</p>
-<pre><code class="language-bash">docker login -u &lt;dockrhub_username&gt;
+<pre><code class="language-sh">docker login -u &lt;dockrhub_username&gt;
 </code></pre>
 <h3 id="初次编译"><a class="header" href="#初次编译">初次编译</a></h3>
 <p>编译镜像：</p>
-<pre><code class="language-bash">docker build -t &lt;dockerhub_username&gt;/&lt;dockerhub_repo_name&gt; .
+<pre><code class="language-sh">docker build -t &lt;dockerhub_username&gt;/&lt;dockerhub_repo_name&gt; .
 </code></pre>
 <p>推送镜像：</p>
-<pre><code class="language-bash">docker push &lt;dockerhub_username&gt;/&lt;dockerhub_repo_name&gt;
+<pre><code class="language-sh">docker push &lt;dockerhub_username&gt;/&lt;dockerhub_repo_name&gt;
 </code></pre>
 <h3 id="推送已有镜像"><a class="header" href="#推送已有镜像">推送已有镜像</a></h3>
 <p>提交变更：</p>
-<pre><code class="language-bash">docker commit &lt;existing_image&gt; &lt;dockerhub_username&gt;/&lt;dockerhub_repo_name&gt;
+<pre><code class="language-sh">docker commit &lt;existing_image&gt; &lt;dockerhub_username&gt;/&lt;dockerhub_repo_name&gt;
 </code></pre>
 <p>推送镜像：</p>
-<pre><code class="language-bash">docker push &lt;dockerhub_username&gt;/&lt;dockerhub_repo_name&gt;
+<pre><code class="language-sh">docker push &lt;dockerhub_username&gt;/&lt;dockerhub_repo_name&gt;
 </code></pre>
 <h2 id="五docker-的镜像操作"><a class="header" href="#五docker-的镜像操作">五、Docker 的镜像操作</a></h2>
 <p>拉取镜像：</p>
-<pre><code class="language-bash">docker pull ubuntu
+<pre><code class="language-sh">docker pull ubuntu
 </code></pre>
 <p>显示已有镜像：</p>
-<pre><code class="language-bash">docker images
+<pre><code class="language-sh">docker images
 </code></pre>
 <p>删除镜像：</p>
-<pre><code class="language-bash">docker rmi ubuntu
+<pre><code class="language-sh">docker rmi ubuntu
 </code></pre>
 <p>删除无用镜像：</p>
-<pre><code class="language-bash">docker rmi $(docker images --filter &quot;dangling=true&quot; -q --no-trunc)
+<pre><code class="language-sh">docker rmi $(docker images --filter &quot;dangling=true&quot; -q --no-trunc)
 </code></pre>
 <p>删除所有无用的镜像、容器、网络和存储器：</p>
-<pre><code class="language-bash">docker system prune -a
+<pre><code class="language-sh">docker system prune -a
 </code></pre>
 <h2 id="六docker-的容器操作"><a class="header" href="#六docker-的容器操作">六、Docker 的容器操作</a></h2>
 <p>显示正在运行的容器：</p>
-<pre><code class="language-bash">docker ps
+<pre><code class="language-sh">docker ps
 </code></pre>
 <p>显示所有容器：</p>
-<pre><code class="language-bash">docker ps -a
+<pre><code class="language-sh">docker ps -a
 </code></pre>
 <p>停止正在运行的容器：</p>
-<pre><code class="language-bash">docker stop ubuntu
+<pre><code class="language-sh">docker stop ubuntu
 </code></pre>
 <p>重启某个容器：</p>
-<pre><code class="language-bash">docker restart ubuntu
+<pre><code class="language-sh">docker restart ubuntu
 </code></pre>
 <p>从镜像运行容器：</p>
-<pre><code class="language-bash">docker run ubuntu
+<pre><code class="language-sh">docker run ubuntu
 </code></pre>
 <p>后台运行某个容器：</p>
-<pre><code class="language-bash">docker run -d ubuntu
+<pre><code class="language-sh">docker run -d ubuntu
 </code></pre>
 <p>运行某个版本的容器：</p>
-<pre><code class="language-bash">docker run -d ubuntu:18
+<pre><code class="language-sh">docker run -d ubuntu:18
 </code></pre>
 <p>运行结束后自动删除容器：</p>
-<pre><code class="language-bash">docker run -d -rm ubuntu
+<pre><code class="language-sh">docker run -d -rm ubuntu
 </code></pre>
 <p>运行可交互容器：</p>
-<pre><code class="language-bash">docker run -it ubuntu
+<pre><code class="language-sh">docker run -it ubuntu
 </code></pre>
 <p>端口映射：</p>
-<pre><code class="language-bash">docker run -d -p 80:8080 ubuntu
+<pre><code class="language-sh">docker run -d -p 80:8080 ubuntu
 </code></pre>
 <p>文件映射：</p>
-<pre><code class="language-bash">docker run -d -v /opt/mydata:/var/lib/mysql ubuntu
+<pre><code class="language-sh">docker run -d -v /opt/mydata:/var/lib/mysql ubuntu
 </code></pre>
 <p>docker-compose 运行容器：</p>
-<pre><code class="language-bash">docker-compose up -d
+<pre><code class="language-sh">docker-compose up -d
 </code></pre>
 <p>docker-compose 删除容器：</p>
-<pre><code class="language-bash">docker-compose down
+<pre><code class="language-sh">docker-compose down
 </code></pre>
 <p>删除容器：</p>
-<pre><code class="language-bash">docker rm $container-name-or-id
+<pre><code class="language-sh">docker rm $container-name-or-id
 </code></pre>
 <p>删除所有容器：</p>
-<pre><code class="language-bash">docker rm $(docker ps --filter status=exited -q)
+<pre><code class="language-sh">docker rm $(docker ps --filter status=exited -q)
 </code></pre>
 <h2 id="七docker-compose-模板"><a class="header" href="#七docker-compose-模板">七、Docker-Compose 模板</a></h2>
 <h3 id="nginx-容器模板"><a class="header" href="#nginx-容器模板">Nginx 容器模板</a></h3>

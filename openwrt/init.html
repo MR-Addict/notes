@@ -152,7 +152,7 @@
 </div>
 <h2 id="一配置-init-服务"><a class="header" href="#一配置-init-服务">一、配置 init 服务</a></h2>
 <p>进入配置文件：</p>
-<pre><code class="language-bash">vim /etc/init.d/your_service
+<pre><code class="language-sh">vim /etc/init.d/your_service
 </code></pre>
 <p>添加服务内容：</p>
 <pre><code>#!/bin/sh /etc/rc.common
@@ -176,17 +176,17 @@ boot() {
 }
 </code></pre>
 <p>给予执行权限：</p>
-<pre><code class="language-bash">chmod u+x /etc/init.d/your_service
+<pre><code class="language-sh">chmod u+x /etc/init.d/your_service
 </code></pre>
 <h2 id="二使用-init-服务"><a class="header" href="#二使用-init-服务">二、使用 init 服务</a></h2>
 <p>运行脚本：</p>
-<pre><code class="language-bash">/etc/init.d/your_service start
+<pre><code class="language-sh">/etc/init.d/your_service start
 </code></pre>
 <p>开机自启任务：</p>
-<pre><code class="language-bash">/etc/init.d/your_service enable
+<pre><code class="language-sh">/etc/init.d/your_service enable
 </code></pre>
 <p>关闭开机自启：</p>
-<pre><code class="language-bash">/etc/init.d/your_service disable
+<pre><code class="language-sh">/etc/init.d/your_service disable
 </code></pre>
 
                     </main>

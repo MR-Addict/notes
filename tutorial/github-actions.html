@@ -143,7 +143,7 @@
                         <h1 id="使用-github-actions"><a class="header" href="#使用-github-actions">使用 GitHub Actions</a></h1>
 <h2 id="一基本模板"><a class="header" href="#一基本模板">一、基本模板</a></h2>
 <p>新建配置文件：</p>
-<pre><code class="language-bash">vim .github/workflows/demo.yml
+<pre><code class="language-sh">vim .github/workflows/demo.yml
 </code></pre>
 <p>然后添加以下内容：</p>
 <pre><code class="language-yml">name: build
@@ -282,23 +282,23 @@ jobs:
 <h3 id="部署-runner"><a class="header" href="#部署-runner">部署 Runner</a></h3>
 <p>可以参照 Github，这边跳过。</p>
 <p>运行 Runner：</p>
-<pre><code class="language-bash">./run.sh
+<pre><code class="language-sh">./run.sh
 </code></pre>
 <h3 id="将-actions-runner-注册为开机自启任务"><a class="header" href="#将-actions-runner-注册为开机自启任务">将 Actions Runner 注册为开机自启任务</a></h3>
 <p>注册任务：</p>
-<pre><code class="language-bash">sudo ./svc.sh install
+<pre><code class="language-sh">sudo ./svc.sh install
 </code></pre>
 <p>启动任务：</p>
-<pre><code class="language-bash">sudo ./svc.sh start
+<pre><code class="language-sh">sudo ./svc.sh start
 </code></pre>
 <p>查看状态：</p>
-<pre><code class="language-bash">sudo ./svc.sh status
+<pre><code class="language-sh">sudo ./svc.sh status
 </code></pre>
 <p>停止任务：</p>
-<pre><code class="language-bash">sudo ./svc.sh stop
+<pre><code class="language-sh">sudo ./svc.sh stop
 </code></pre>
 <p>注销任务：</p>
-<pre><code class="language-bash">sudo ./svc.sh uninstall
+<pre><code class="language-sh">sudo ./svc.sh uninstall
 </code></pre>
 
                     </main>

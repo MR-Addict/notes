@@ -143,7 +143,7 @@
                         <h1 id="使用-git"><a class="header" href="#使用-git">使用 git</a></h1>
 <h2 id="一配置-git"><a class="header" href="#一配置-git">一、配置 git</a></h2>
 <p>进入 git 配置文件：</p>
-<pre><code class="language-bash">vim ~/.gitconfig
+<pre><code class="language-sh">vim ~/.gitconfig
 </code></pre>
 <p>然后添加以下内容：</p>
 <pre><code>[user]
@@ -160,64 +160,64 @@
 </code></pre>
 <h2 id="二首次提交模板"><a class="header" href="#二首次提交模板">二、首次提交模板</a></h2>
 <p>添加基本内容：</p>
-<pre><code class="language-bash">git init
+<pre><code class="language-sh">git init
 echo &quot;# Test&quot; &gt; README.md
 git add README.md
 git commit -m &quot;First commit&quot;
 </code></pre>
 <p>添加远程仓库链接：</p>
-<pre><code class="language-bash">git remote add github https://github.com/MR-Addict/Doc-Share.git
+<pre><code class="language-sh">git remote add github https://github.com/MR-Addict/Doc-Share.git
 </code></pre>
 <p>更改默认分支名为 main：</p>
-<pre><code class="language-bash">git branch -M main
+<pre><code class="language-sh">git branch -M main
 </code></pre>
 <p>推送提交到远程仓库：</p>
-<pre><code class="language-bash">git push -u github main
+<pre><code class="language-sh">git push -u github main
 </code></pre>
 <h2 id="三常用命令"><a class="header" href="#三常用命令">三、常用命令</a></h2>
 <p>查看提交记录：</p>
-<pre><code class="language-bash">git log
+<pre><code class="language-sh">git log
 </code></pre>
 <p>查看当前状态：</p>
-<pre><code class="language-bash">git status
+<pre><code class="language-sh">git status
 </code></pre>
 <p>设置全局用户名：</p>
-<pre><code class="language-bash">git config --global user.name MR-Addict
+<pre><code class="language-sh">git config --global user.name MR-Addict
 </code></pre>
 <p>配置全局用户邮箱：</p>
-<pre><code class="language-bash">git config --global user.email 2750417853@qq.com
+<pre><code class="language-sh">git config --global user.email 2750417853@qq.com
 </code></pre>
 <p>回退版本：</p>
-<pre><code class="language-bash">git reset --hard $hash_value_of_last_commit
+<pre><code class="language-sh">git reset --hard $hash_value_of_last_commit
 </code></pre>
 <p>查看本地配置：</p>
-<pre><code class="language-bash">git config --list
+<pre><code class="language-sh">git config --list
 </code></pre>
 <p>查看全局配置：</p>
-<pre><code class="language-bash">git config --global --list
+<pre><code class="language-sh">git config --global --list
 </code></pre>
 <p>编辑全局配置：</p>
-<pre><code class="language-bash">git config --global --edit
+<pre><code class="language-sh">git config --global --edit
 </code></pre>
 <p>保存系统登录验证：</p>
-<pre><code class="language-bash">git config --system credential.helper store
+<pre><code class="language-sh">git config --system credential.helper store
 </code></pre>
 <p>重置系统登录验证：</p>
-<pre><code class="language-bash">git config --system --unset credential.helper
+<pre><code class="language-sh">git config --system --unset credential.helper
 </code></pre>
 <p>只拉取不提交：</p>
-<pre><code class="language-bash">git config --global pull.ff only
+<pre><code class="language-sh">git config --global pull.ff only
 </code></pre>
 <p>设置本地默认分支：</p>
-<pre><code class="language-bash">git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/$branch_name
+<pre><code class="language-sh">git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/$branch_name
 </code></pre>
 <p>删除本地和远程分支：</p>
-<pre><code class="language-bash">git branch -D $branch_name
+<pre><code class="language-sh">git branch -D $branch_name
 </code></pre>
-<pre><code class="language-bash">git push --delete $branch_name
+<pre><code class="language-sh">git push --delete $branch_name
 </code></pre>
 <p>重置所有内容，并且删除新文件：</p>
-<pre><code class="language-bash">git restore . &amp;&amp; git clean -f
+<pre><code class="language-sh">git restore . &amp;&amp; git clean -f
 </code></pre>
 
                     </main>

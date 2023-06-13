@@ -143,38 +143,38 @@
                         <h1 id="使用-linux-用户和用户组"><a class="header" href="#使用-linux-用户和用户组">使用 Linux 用户和用户组</a></h1>
 <h2 id="一管理用户"><a class="header" href="#一管理用户">一、管理用户</a></h2>
 <p>查看当前用户：</p>
-<pre><code class="language-bash">whoami
+<pre><code class="language-sh">whoami
 </code></pre>
 <p>查看所有用户：</p>
-<pre><code class="language-bash">cat /etc/passwd
+<pre><code class="language-sh">cat /etc/passwd
 </code></pre>
 <p>添加新用户：</p>
-<pre><code class="language-bash">sudo useradd -m -s /bin/bash -c &quot;test-user&quot; test
+<pre><code class="language-sh">sudo useradd -m -s /bin/sh -c &quot;test-user&quot; test
 </code></pre>
 <p>更改用户密码：</p>
-<pre><code class="language-bash">sudo passwd test
+<pre><code class="language-sh">sudo passwd test
 </code></pre>
 <p>更改文件或者文件夹所有者：</p>
-<pre><code class="language-bash">sudo chown $user:$user $filename_or_folder
+<pre><code class="language-sh">sudo chown $user:$user $filename_or_folder
 </code></pre>
 <p>登录其他用户：</p>
-<pre><code class="language-bash">su test
+<pre><code class="language-sh">su test
 </code></pre>
 <p>删除用户：</p>
-<pre><code class="language-bash">sudo userdel test
+<pre><code class="language-sh">sudo userdel test
 </code></pre>
 <h2 id="二管理用户组"><a class="header" href="#二管理用户组">二、管理用户组</a></h2>
 <p>查看所有用户组：</p>
-<pre><code class="language-bash">cat /etc/group
+<pre><code class="language-sh">cat /etc/group
 </code></pre>
 <p>添加用户到其他用户组：</p>
-<pre><code class="language-bash">sudo usermod -aG sudo test
+<pre><code class="language-sh">sudo usermod -aG sudo test
 </code></pre>
 <p>添加新用户组：</p>
-<pre><code class="language-bash">sudo groupadd test
+<pre><code class="language-sh">sudo groupadd test
 </code></pre>
 <p>删除用户组：</p>
-<pre><code class="language-bash">sudo groupdel test
+<pre><code class="language-sh">sudo groupdel test
 </code></pre>
 
                     </main>

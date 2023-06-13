@@ -172,10 +172,10 @@ services:
       - ./db:/var/lib/mysql
 </code></pre>
 <p>启动容器：</p>
-<pre><code class="language-bash">docker-compose up -d
+<pre><code class="language-sh">docker-compose up -d
 </code></pre>
 <h2 id="二修改配置文件"><a class="header" href="#二修改配置文件">二、修改配置文件</a></h2>
-<pre><code class="language-bash">sudo vim data/config/config.php
+<pre><code class="language-sh">sudo vim data/config/config.php
 </code></pre>
 <p>在 secret 下添加信任域名<strong>trusted_domains</strong>：</p>
 <pre><code class="language-php">&lt;?php
@@ -191,7 +191,7 @@ $CONFIG = array (
 );
 </code></pre>
 <p>最后重启容器：</p>
-<pre><code class="language-bash">docker-compose restart
+<pre><code class="language-sh">docker-compose restart
 </code></pre>
 <h2 id="三配置-nginx"><a class="header" href="#三配置-nginx">三、配置 Nginx</a></h2>
 <p>如果你是使用 Nginx 的反向代理，下面是参考配置：</p>

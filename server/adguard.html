@@ -152,10 +152,10 @@
 </div>
 <h2 id="一释放服务器-53-端口"><a class="header" href="#一释放服务器-53-端口">一、释放服务器 53 端口</a></h2>
 <p>查看端口是否开放：</p>
-<pre><code class="language-bash">sudo lsof -i :53
+<pre><code class="language-sh">sudo lsof -i :53
 </code></pre>
 <p>进入配置 DNS 文件：</p>
-<pre><code class="language-bash">sudo vim /etc/systemd/resolved.conf
+<pre><code class="language-sh">sudo vim /etc/systemd/resolved.conf
 </code></pre>
 <p>添加默认 DNS 为 1.1.1.1，同时弃用 DNS 监听端口：</p>
 <pre><code>[Resolve]
@@ -171,7 +171,7 @@ DNSStubListener=no
 #ReadEtcHosts=yes
 </code></pre>
 <p>创建链接：</p>
-<pre><code class="language-bash">sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+<pre><code class="language-sh">sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 </code></pre>
 <h2 id="二搭建-adguard"><a class="header" href="#二搭建-adguard">二、搭建 Adguard</a></h2>
 <p>配置 docker-compose：</p>
@@ -190,7 +190,7 @@ services:
       - /home/cael/projects/adguard/data/conf:/opt/adguardhome/conf
 </code></pre>
 <p>启动 docker：</p>
-<pre><code class="language-bash">sudo docker-compose up -d
+<pre><code class="language-sh">sudo docker-compose up -d
 </code></pre>
 <h2 id="三配置-adguard"><a class="header" href="#三配置-adguard">三、配置 Adguard</a></h2>
 <h3 id="1-dns"><a class="header" href="#1-dns">1. DNS</a></h3>

@@ -151,12 +151,12 @@
 </div>
 </div>
 <h2 id="一安装-uhttpd"><a class="header" href="#一安装-uhttpd">一、安装 uhttpd</a></h2>
-<pre><code class="language-bash">opkg update
+<pre><code class="language-sh">opkg update
 opkg install uhttpd
 </code></pre>
 <h2 id="二基本配置模板"><a class="header" href="#二基本配置模板">二、基本配置模板</a></h2>
 <p>进入配置文件：</p>
-<pre><code class="language-bash">vim /etc/config/uhttpd
+<pre><code class="language-sh">vim /etc/config/uhttpd
 </code></pre>
 <p>在已有模板后添加以下内容：</p>
 <pre><code>config uhttpd 'profile'
@@ -164,7 +164,7 @@ opkg install uhttpd
     option home '/root/profile'
 </code></pre>
 <h2 id="三重启-uhttpd"><a class="header" href="#三重启-uhttpd">三、重启 uhttpd</a></h2>
-<pre><code class="language-bash">/etc/init.d/uhttpd restart
+<pre><code class="language-sh">/etc/init.d/uhttpd restart
 </code></pre>
 
                     </main>

@@ -152,24 +152,24 @@
 </div>
 <h2 id="一使用-mysql"><a class="header" href="#一使用-mysql">一、使用 MySQL</a></h2>
 <p>更新 apt 库：</p>
-<pre><code class="language-bash">sudo apt-get update
+<pre><code class="language-sh">sudo apt-get update
 </code></pre>
 <p>安装 MySQL：</p>
-<pre><code class="language-bash">sudo apt-get install mysql-server -y
+<pre><code class="language-sh">sudo apt-get install mysql-server -y
 </code></pre>
 <h2 id="二配置-mysql"><a class="header" href="#二配置-mysql">二、配置 MySQL</a></h2>
 <p>首先先登录 MySQL：</p>
-<pre><code class="language-bash">sudo mysql
+<pre><code class="language-sh">sudo mysql
 </code></pre>
 <p>然后更改 root 密码：</p>
 <pre><code class="language-sql">ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_new_password';
 </code></pre>
 <p>然后退出运行安装脚本：</p>
-<pre><code class="language-bash">sudo mysql_secure_installation
+<pre><code class="language-sh">sudo mysql_secure_installation
 </code></pre>
 <h2 id="三创建新用户"><a class="header" href="#三创建新用户">三、创建新用户</a></h2>
 <p>进入 mysql：</p>
-<pre><code class="language-bash">sudo mysql -u root -p
+<pre><code class="language-sh">sudo mysql -u root -p
 </code></pre>
 <p>创建新用户：</p>
 <pre><code class="language-sql">CREATE USER 'user_name'@'localhost' IDENTIFIED WITH mysql_native_password BY 'user_password';
@@ -181,7 +181,7 @@
 <pre><code class="language-sql">FLUSH PRIVILEGES;
 </code></pre>
 <p>退出然后登录新用户：</p>
-<pre><code class="language-bash">sudo mysql -u user_name -p
+<pre><code class="language-sh">sudo mysql -u user_name -p
 </code></pre>
 <h2 id="四用户操作"><a class="header" href="#四用户操作">四、用户操作</a></h2>
 <p>查看所有用户：</p>
@@ -240,7 +240,7 @@ ADD COLUMN column_name column_definition;
 </code></pre>
 <h2 id="七允许远程连接"><a class="header" href="#七允许远程连接">七、允许远程连接：</a></h2>
 <p>进入配置文件：</p>
-<pre><code class="language-bash">sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
+<pre><code class="language-sh">sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
 </code></pre>
 <p>找到以下内容，注释掉 IP 绑定：</p>
 <pre><code># Instead of skip-networking the default is now to listen only on
@@ -266,7 +266,7 @@ ADD COLUMN column_name column_definition;
 </code></pre>
 <h2 id="九禁用-only_full_group_by"><a class="header" href="#九禁用-only_full_group_by">九、禁用 ONLY_FULL_GROUP_BY</a></h2>
 <p>进入配置文件：</p>
-<pre><code class="language-bash">sudo vim /etc/mysql/my.cnf
+<pre><code class="language-sh">sudo vim /etc/mysql/my.cnf
 </code></pre>
 <p>添加或修改以下内容：</p>
 <pre><code>!includedir /etc/mysql/conf.d/

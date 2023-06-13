@@ -156,10 +156,10 @@ services:
 </code></pre>
 <h2 id="二添加配置文件"><a class="header" href="#二添加配置文件">二、添加配置文件</a></h2>
 <p>注意，先不要启动 docker 容器，在当前文件夹下创建映射的文件夹：</p>
-<pre><code class="language-bash">mkdir -p data/config
+<pre><code class="language-sh">mkdir -p data/config
 </code></pre>
 <p>然后添加配置文件：</p>
-<pre><code class="language-bash">sudo vim mosquitto.conf
+<pre><code class="language-sh">sudo vim mosquitto.conf
 </code></pre>
 <p>然后添加以下内容：</p>
 <pre><code>persistence true
@@ -171,17 +171,17 @@ listener 1883
 #password_file /mosquitto/config/password.txt
 </code></pre>
 <p>然后启动 Docker 容器：</p>
-<pre><code class="language-bash">docker-compose up -d
+<pre><code class="language-sh">docker-compose up -d
 </code></pre>
 <h2 id="三添加用户"><a class="header" href="#三添加用户">三、添加用户</a></h2>
 <p>进入正在运行的容器：</p>
-<pre><code class="language-bash">docker exec -it mosquitto sh
+<pre><code class="language-sh">docker exec -it mosquitto sh
 </code></pre>
 <p>创建一个用户：</p>
-<pre><code class="language-bash">mosquitto_passwd -c /mosquitto/config/password.txt cael
+<pre><code class="language-sh">mosquitto_passwd -c /mosquitto/config/password.txt cael
 </code></pre>
 <p>退出 Docker 容器：</p>
-<pre><code class="language-bash">exit
+<pre><code class="language-sh">exit
 </code></pre>
 <p>修改配置文件，将配置文件的最后两行取消注释：</p>
 <pre><code>persistence true
@@ -193,7 +193,7 @@ allow_anonymous false
 password_file /mosquitto/config/password.txt
 </code></pre>
 <p>最后重启容器：</p>
-<pre><code class="language-bash">docker-compose restart
+<pre><code class="language-sh">docker-compose restart
 </code></pre>
 
                     </main>

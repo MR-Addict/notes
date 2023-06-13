@@ -142,14 +142,14 @@
                     <main>
                         <h1 id="使用-apache2"><a class="header" href="#使用-apache2">使用 apache2</a></h1>
 <h2 id="一安装-apache2"><a class="header" href="#一安装-apache2">一、安装 apache2</a></h2>
-<pre><code class="language-bash">sudo apt-get update
+<pre><code class="language-sh">sudo apt-get update
 sudo apt-get install apache2 -y
 </code></pre>
 <p>打开 apache2 默认地址查看默认的网页内容<a href="http://localhost">http://localhost</a>。</p>
 <h2 id="二配置-apache2"><a class="header" href="#二配置-apache2">二、配置 apache2</a></h2>
 <p>首先准备好一个网页，然后我们需要对网页进行一些配置。这里我已我的笔记网页为例<code>/home/pi/Projects/Notes/book</code>。</p>
 <p>新建配置文件：</p>
-<pre><code class="language-bash">sudo vim /etc/apache2/sites-available/note.conf
+<pre><code class="language-sh">sudo vim /etc/apache2/sites-available/note.conf
 </code></pre>
 <p>添加以下内容：</p>
 <pre><code>&lt;VirtualHost *:80&gt;
@@ -160,7 +160,7 @@ sudo apt-get install apache2 -y
 &lt;/VirtualHost&gt;
 </code></pre>
 <p>然后进入 apache 的配置文件给该目录以权限：</p>
-<pre><code class="language-bash">sudo vim /etc/apache2/apache2.conf
+<pre><code class="language-sh">sudo vim /etc/apache2/apache2.conf
 </code></pre>
 <p>添加以下内容：</p>
 <pre><code>&lt;Directory &quot;/home/pi/Projects/Notes/book&quot;&gt;
@@ -171,26 +171,26 @@ sudo apt-get install apache2 -y
 </code></pre>
 <h2 id="三使用-apache2"><a class="header" href="#三使用-apache2">三、使用 apache2</a></h2>
 <p>首先我们需要关闭默认的 apache 网页：</p>
-<pre><code class="language-bash">sudo a2dissite 000-default.conf
+<pre><code class="language-sh">sudo a2dissite 000-default.conf
 </code></pre>
 <p>然后激活我们的网页：</p>
-<pre><code class="language-bash">sudo a2ensite notes.conf
+<pre><code class="language-sh">sudo a2ensite notes.conf
 </code></pre>
 <p>最后重新启动 apache：</p>
-<pre><code class="language-bash">sudo systemctl reload apache2
+<pre><code class="language-sh">sudo systemctl reload apache2
 </code></pre>
 <p>然后我们就可以通过默认网址访问我们的网页了<a href="http://localhost">http://localhost</a>。</p>
 <p>查看 apche2 服务：</p>
-<pre><code class="language-bash">sudo systemctl status apache2
+<pre><code class="language-sh">sudo systemctl status apache2
 </code></pre>
 <p>停止 apache2 服务：</p>
-<pre><code class="language-bash">sudo systemctl stop apache2
+<pre><code class="language-sh">sudo systemctl stop apache2
 </code></pre>
 <p>注销 apache2 服务：</p>
-<pre><code class="language-bash">sudo systemctl disable apache2
+<pre><code class="language-sh">sudo systemctl disable apache2
 </code></pre>
 <p>注册 apache2 服务：</p>
-<pre><code class="language-bash">sudo systemctl enable apache2
+<pre><code class="language-sh">sudo systemctl enable apache2
 </code></pre>
 
                     </main>

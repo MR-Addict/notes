@@ -143,7 +143,7 @@
                         <h1 id="使用-crontab"><a class="header" href="#使用-crontab">使用 crontab</a></h1>
 <h2 id="一配置-crontab"><a class="header" href="#一配置-crontab">一、配置 crontab</a></h2>
 <p>进入 corntab 配置文件：</p>
-<pre><code class="language-bash">crontab -e
+<pre><code class="language-sh">crontab -e
 </code></pre>
 <p>如果你是第一次使用，crontab 可能需要你选择默认的编辑器，这边我一般会选择 vim 作为我的编辑器，因此输入 2：</p>
 <pre><code>Select an editor.  To change later, run 'select-editor'.
@@ -153,7 +153,7 @@
   4. /bin/ed
 </code></pre>
 <p>你也可以在后面更改默认的编辑器：</p>
-<pre><code class="language-bash">select-editor
+<pre><code class="language-sh">select-editor
 </code></pre>
 <p>默认编辑器选择完后就会进入编辑界面，在文件末尾添加以下内容：</p>
 <pre><code>30 23 * * 0-5 sudo /usr/sbin/shutdown -h now
@@ -164,7 +164,7 @@
 @reboot echo 'ds3231 0x68' | sudo tee /sys/class/i2c-adapter/i2c-1/new_device &amp;&amp; sudo hwclock -s
 </code></pre>
 <p>查看已有任务：</p>
-<pre><code class="language-bash">crontab -l
+<pre><code class="language-sh">crontab -l
 </code></pre>
 <h2 id="二contab-语法"><a class="header" href="#二contab-语法">二、contab 语法</a></h2>
 <p>基本格式：</p>

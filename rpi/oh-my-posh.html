@@ -153,15 +153,15 @@
 <h2 id="一安装字体"><a class="header" href="#一安装字体">一、安装字体</a></h2>
 <p>首先你需要安装一个<a href="https://github.com/ryanoasis/nerd-fonts/releases">Nerd 字体</a>才能正常显示 oh-my-posh，推荐安装<a href="https://github.com/ryanoasis/nerd-fonts/releases/download/2.2.0-RC/Hack.zip">Hack 字体</a>。</p>
 <p>树莓派需要先安装一个 font-manager，然后选择需要安装的字体就好了。</p>
-<pre><code class="language-bash">sudo apt install font-manager
+<pre><code class="language-sh">sudo apt install font-manager
 </code></pre>
 <h2 id="二安装-oh-my-posh"><a class="header" href="#二安装-oh-my-posh">二、安装 oh-my-posh</a></h2>
 <p>首先前往<a href="https://github.com/JanDeDobbeleer/oh-my-posh/releases">oh-my-posh 官方</a>地址下载对应的版本，如果是树莓派 64 位就下载<a href="https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v8.6.0/posh-linux-arm64">posh-linux-arm64</a>。</p>
-<pre><code class="language-bash">sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-arm64 -O /usr/local/bin/oh-my-posh
+<pre><code class="language-sh">sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-arm64 -O /usr/local/bin/oh-my-posh
 sudo chmod +x /usr/local/bin/oh-my-posh
 </code></pre>
 <p>安装主题：</p>
-<pre><code class="language-bash">mkdir ~/.poshthemes
+<pre><code class="language-sh">mkdir ~/.poshthemes
 wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip
 unzip ~/.poshthemes/themes.zip -d ~/.poshthemes
 sudo chmod u+rw ~/.poshthemes/*.omp.*
@@ -169,13 +169,13 @@ rm ~/.poshthemes/themes.zip
 </code></pre>
 <h2 id="三配置终端"><a class="header" href="#三配置终端">三、配置终端</a></h2>
 <p>进入配置文件：</p>
-<pre><code class="language-bash">sudo vim ~/.bashrc
+<pre><code class="language-sh">sudo vim ~/.shrc
 </code></pre>
 <p>在最后添加以下内容：</p>
-<pre><code class="language-bash">eval &quot;$(oh-my-posh --init --shell bash --config /home/pi/.poshthemes/paradox.omp.json)&quot;
+<pre><code class="language-sh">eval &quot;$(oh-my-posh --init --shell sh --config /home/pi/.poshthemes/paradox.omp.json)&quot;
 </code></pre>
 <p>如果是 powershell，应该进入<code>$PROFILE</code>，然后添加以下内容：</p>
-<pre><code class="language-bash">oh-my-posh --init --shell pwsh --config /home/pi/.poshthemes/paradox.omp.json | Invoke-Expression
+<pre><code class="language-sh">oh-my-posh --init --shell pwsh --config /home/pi/.poshthemes/paradox.omp.json | Invoke-Expression
 </code></pre>
 <p>最后重新启动终端就可以正常使用了。</p>
 

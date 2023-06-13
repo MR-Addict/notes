@@ -152,32 +152,32 @@
 </div>
 <h2 id="一基本操作"><a class="header" href="#一基本操作">一、基本操作</a></h2>
 <p>查看运行内存和交换空间：</p>
-<pre><code class="language-bash">free
+<pre><code class="language-sh">free
 </code></pre>
 <p>查看 swap 所在分区：</p>
-<pre><code class="language-bash">swapon
+<pre><code class="language-sh">swapon
 </code></pre>
 <p>卸载 swap 分区：</p>
-<pre><code class="language-bash">swapoff $swap_location
+<pre><code class="language-sh">swapoff $swap_location
 </code></pre>
 <p>删除 swap 分区：</p>
-<pre><code class="language-bash">sudo rm $swap_location
+<pre><code class="language-sh">sudo rm $swap_location
 </code></pre>
 <h2 id="二创建和挂载-swap-分区"><a class="header" href="#二创建和挂载-swap-分区">二、创建和挂载 swap 分区</a></h2>
 <p>创建空文件：</p>
-<pre><code class="language-bash">sudo dd if=/dev/zero of=/swap bs=1M count=2048 status=progress
+<pre><code class="language-sh">sudo dd if=/dev/zero of=/swap bs=1M count=2048 status=progress
 </code></pre>
 <p>给予权限：</p>
-<pre><code class="language-bash">sudo chmod 600 /swap
+<pre><code class="language-sh">sudo chmod 600 /swap
 </code></pre>
 <p>格式化 swap 分区：</p>
-<pre><code class="language-bash">sudo mkswap /swap
+<pre><code class="language-sh">sudo mkswap /swap
 </code></pre>
 <p>挂载 swap 分区：</p>
-<pre><code class="language-bash">sudo swapon /swap
+<pre><code class="language-sh">sudo swapon /swap
 </code></pre>
 <p>持久化分区：</p>
-<pre><code class="language-bash">sudo vim /etc/fstab
+<pre><code class="language-sh">sudo vim /etc/fstab
 </code></pre>
 <p>末尾添加以下内容：</p>
 <pre><code>/swap none swap sw 0 0

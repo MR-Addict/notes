@@ -157,14 +157,14 @@ services:
     restart: unless-stopped
 </code></pre>
 <p>启动容器：</p>
-<pre><code class="language-bash">docker-compose up -d
+<pre><code class="language-sh">docker-compose up -d
 </code></pre>
 <h2 id="二修改配置文件"><a class="header" href="#二修改配置文件">二、修改配置文件</a></h2>
 <p>使用以下命令查看 Gateway：</p>
-<pre><code class="language-bash">docker network inspect home_default|grep '&quot;Gateway&quot;: '|awk -F&quot;\&quot;&quot; '{print $4}'
+<pre><code class="language-sh">docker network inspect home_default|grep '&quot;Gateway&quot;: '|awk -F&quot;\&quot;&quot; '{print $4}'
 </code></pre>
 <p>然后进入配置文件：</p>
-<pre><code class="language-bash">vim config/configuration.yaml
+<pre><code class="language-sh">vim config/configuration.yaml
 </code></pre>
 <p>在末尾添加以下内容，注意将<strong>trusted_proxies</strong>修改为查询的网关：</p>
 <pre><code class="language-yaml">http:
@@ -173,7 +173,7 @@ services:
     - 172.24.0.1
 </code></pre>
 <p>最后重启容器：</p>
-<pre><code class="language-bash">docker-compose restart
+<pre><code class="language-sh">docker-compose restart
 </code></pre>
 
                     </main>

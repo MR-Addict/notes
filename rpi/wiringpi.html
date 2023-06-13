@@ -152,23 +152,23 @@
 </div>
 <h2 id="一安装-wiringpi"><a class="header" href="#一安装-wiringpi">一、安装 wiringpi</a></h2>
 <p>安装 wiringpi：</p>
-<pre><code class="language-bash">cd /tmp
+<pre><code class="language-sh">cd /tmp
 wget https://project-downloads.drogon.net/wiringpi-latest.deb
 sudo dpkg -i wiringpi-latest.deb
 </code></pre>
 <p>测试是否安成功：</p>
-<pre><code class="language-bash">gpio -v
+<pre><code class="language-sh">gpio -v
 </code></pre>
 <h2 id="二基础命令"><a class="header" href="#二基础命令">二、基础命令</a></h2>
 <p>查看 GPIO 状态：</p>
-<pre><code class="language-bash">gpio readall
+<pre><code class="language-sh">gpio readall
 </code></pre>
 <p>设置 GPIO 14 号引脚为输出，并且输出高电平：</p>
-<pre><code class="language-bash">gpio mode 15 out
+<pre><code class="language-sh">gpio mode 15 out
 gpio write 15 1
 </code></pre>
 <p>还原 GPIO 14 状态：</p>
-<pre><code class="language-bash">gpio write 15 0
+<pre><code class="language-sh">gpio write 15 0
 gpio mode 15 in
 </code></pre>
 <h2 id="三调用wiringpih"><a class="header" href="#三调用wiringpih">三、调用&lt;wiringpi.h&gt;</a></h2>
@@ -201,10 +201,10 @@ int main(void) {
 }
 </code></pre>
 <p>编译代码：</p>
-<pre><code class="language-bash">gcc -Wall -o fan fan.c -lwiringPi
+<pre><code class="language-sh">gcc -Wall -o fan fan.c -lwiringPi
 </code></pre>
 <p>执行代码：</p>
-<pre><code class="language-bash">./fan
+<pre><code class="language-sh">./fan
 </code></pre>
 
                     </main>

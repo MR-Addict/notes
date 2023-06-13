@@ -151,16 +151,16 @@
 </div>
 </div>
 <h2 id="一安装-wireguard"><a class="header" href="#一安装-wireguard">一、安装 wireguard</a></h2>
-<pre><code class="language-bash">sudo apt-get install wireguard -y
+<pre><code class="language-sh">sudo apt-get install wireguard -y
 </code></pre>
 <h2 id="二配置服务端"><a class="header" href="#二配置服务端">二、配置服务端</a></h2>
 <h3 id="配置公钥和私钥"><a class="header" href="#配置公钥和私钥">配置公钥和私钥</a></h3>
 <p>在服务器创建一对公钥和私钥：</p>
-<pre><code class="language-bash">wg genkey | tee private.key | wg pubkey &gt; public.key
+<pre><code class="language-sh">wg genkey | tee private.key | wg pubkey &gt; public.key
 </code></pre>
 <h3 id="配置配置文件"><a class="header" href="#配置配置文件">配置配置文件</a></h3>
 <p>进入配置文件：</p>
-<pre><code class="language-bash">sudo vim /etc/wireguard/wg0.conf
+<pre><code class="language-sh">sudo vim /etc/wireguard/wg0.conf
 </code></pre>
 <p>添加以下配置：</p>
 <pre><code>[Interface]
@@ -192,11 +192,11 @@ AllowedIPs = 10.0.0.2/32
 <h2 id="三配置客户端"><a class="header" href="#三配置客户端">三、配置客户端</a></h2>
 <h3 id="配置公钥和私钥-1"><a class="header" href="#配置公钥和私钥-1">配置公钥和私钥</a></h3>
 <p>在客户端创建一对公钥和私钥：</p>
-<pre><code class="language-bash">wg genkey | tee private.key | wg pubkey &gt; public.key
+<pre><code class="language-sh">wg genkey | tee private.key | wg pubkey &gt; public.key
 </code></pre>
 <h3 id="配置配置文件-1"><a class="header" href="#配置配置文件-1">配置配置文件</a></h3>
 <p>进入配置文件：</p>
-<pre><code class="language-bash">sudo vim /etc/wireguard/wg0.conf
+<pre><code class="language-sh">sudo vim /etc/wireguard/wg0.conf
 </code></pre>
 <p>添加以下配置：</p>
 <pre><code>[Interface]
@@ -212,29 +212,29 @@ PersistentKeepalive = 25
 </code></pre>
 <h2 id="四向服务器添加客户端的公钥"><a class="header" href="#四向服务器添加客户端的公钥">四、向服务器添加客户端的公钥</a></h2>
 <p>获得客户端的公钥：</p>
-<pre><code class="language-bash">cat publickey
+<pre><code class="language-sh">cat publickey
 </code></pre>
 <p>添加到客户端当中：</p>
-<pre><code class="language-bash">sudo wg set wg0 peer client_public_key allowed-ips 10.0.0.2
+<pre><code class="language-sh">sudo wg set wg0 peer client_public_key allowed-ips 10.0.0.2
 </code></pre>
 <p>你也可以直接在服务端的配置文件中添加<code>Peer</code>。</p>
 <h2 id="五防火墙设置"><a class="header" href="#五防火墙设置">五、防火墙设置</a></h2>
 <h3 id="允许端口转发"><a class="header" href="#允许端口转发">允许端口转发</a></h3>
 <p>进入配置文件：</p>
-<pre><code class="language-bash">sudo vim /etc/sysctl.conf
+<pre><code class="language-sh">sudo vim /etc/sysctl.conf
 </code></pre>
 <p>取消注释以下内容：</p>
 <pre><code>net.ipv4.ip_forward=1
 </code></pre>
 <p>重启或者输入以下命令生效端口转发：</p>
-<pre><code class="language-bash">sudo sysctl -p
+<pre><code class="language-sh">sudo sysctl -p
 </code></pre>
 <h3 id="打开防火墙"><a class="header" href="#打开防火墙">打开防火墙</a></h3>
 <p>输入以下命令查看防火墙是否启动：</p>
-<pre><code class="language-bash">sudo ufw status
+<pre><code class="language-sh">sudo ufw status
 </code></pre>
 <p>如果防火墙已经启动，你可以输入以下命令开启防火墙：</p>
-<pre><code class="language-bash">ufw allow 51820/udp
+<pre><code class="language-sh">ufw allow 51820/udp
 </code></pre>
 <div id="admonition-warning-1" class="admonition warning">
 <div class="admonition-title">
@@ -247,24 +247,24 @@ PersistentKeepalive = 25
 </div>
 <h2 id="六启动服务"><a class="header" href="#六启动服务">六、启动服务</a></h2>
 <p>在服务端和客户端都输入以下命令：</p>
-<pre><code class="language-bash">wg-quick up wg0
+<pre><code class="language-sh">wg-quick up wg0
 </code></pre>
 <p>在客户端输入以下命令发送流量：</p>
-<pre><code class="language-bash">ping 10.0.0.1
+<pre><code class="language-sh">ping 10.0.0.1
 </code></pre>
 <p>然后在服务端输入以下命令查看流量：</p>
-<pre><code class="language-bash">sudo tcpdump -envi wg0
+<pre><code class="language-sh">sudo tcpdump -envi wg0
 </code></pre>
 <h2 id="七设置开机自启"><a class="header" href="#七设置开机自启">七、设置开机自启</a></h2>
-<pre><code class="language-bash">sudo systemctl enable wg-quick@wg0
+<pre><code class="language-sh">sudo systemctl enable wg-quick@wg0
 </code></pre>
-<pre><code class="language-bash">sudo systemctl start wg-quick@wg0
+<pre><code class="language-sh">sudo systemctl start wg-quick@wg0
 </code></pre>
-<pre><code class="language-bash">systemctl status wg-quick@wg0
+<pre><code class="language-sh">systemctl status wg-quick@wg0
 </code></pre>
-<pre><code class="language-bash">sudo systemctl stop wg-quick@wg0
+<pre><code class="language-sh">sudo systemctl stop wg-quick@wg0
 </code></pre>
-<pre><code class="language-bash">sudo systemctl disable wg-quick@wg0
+<pre><code class="language-sh">sudo systemctl disable wg-quick@wg0
 </code></pre>
 
                     </main>

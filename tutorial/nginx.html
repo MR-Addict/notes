@@ -143,29 +143,29 @@
                         <h1 id="使用-nginx"><a class="header" href="#使用-nginx">使用 nginx</a></h1>
 <h2 id="一安装-nginx"><a class="header" href="#一安装-nginx">一、安装 nginx</a></h2>
 <p>更新 apt 源：</p>
-<pre><code class="language-bash">sudo apt-get update
+<pre><code class="language-sh">sudo apt-get update
 </code></pre>
 <p>安装 nginx：</p>
-<pre><code class="language-bash">sudo apt-get install nginx
+<pre><code class="language-sh">sudo apt-get install nginx
 </code></pre>
 <p>使能 nginx：</p>
-<pre><code class="language-bash">sudo systemctl enable nginx
+<pre><code class="language-sh">sudo systemctl enable nginx
 </code></pre>
 <p>启动 nginx：</p>
-<pre><code class="language-bash">sudo systemctl start nginx
+<pre><code class="language-sh">sudo systemctl start nginx
 </code></pre>
 <p>查看 nginx 状态：</p>
-<pre><code class="language-bash">sudo systemctl status nginx
+<pre><code class="language-sh">sudo systemctl status nginx
 </code></pre>
 <h2 id="二使用-nginx"><a class="header" href="#二使用-nginx">二、使用 nginx</a></h2>
 <h3 id="准备网站资源"><a class="header" href="#准备网站资源">准备网站资源</a></h3>
 <p>首先我们需要准备一个可用的静态网站，这里我就使用我 GitHub 上基于 mdbook 的项目，你也可以使用自己的网站：</p>
-<pre><code class="language-bash">git clone https://github.com/mr-addict/Doc-Share.git
+<pre><code class="language-sh">git clone https://github.com/mr-addict/Doc-Share.git
 cd Doc-Share
 mdbook build
 </code></pre>
 <p>运行<code>mdbook build</code>后会在当前文件夹自动编译出一个 book 文件夹，也即是我的网页内容，然后我们需要把这个网页放到 ngixn 默认的网页目录下<code>/var/www/</code></p>
-<pre><code class="language-bash">sudo cp -r /home/ubuntu/Doc-Share/book /var/www/
+<pre><code class="language-sh">sudo cp -r /home/ubuntu/Doc-Share/book /var/www/
 </code></pre>
 <h3 id="配置网站"><a class="header" href="#配置网站">配置网站</a></h3>
 <p>然后我们需要配置一下 nginx 的配置文件，nginx 将配置文件放在了两个文件夹下，分别是：</p>
@@ -175,10 +175,10 @@ mdbook build
 </ul>
 <p>sites-available 文件夹用于放置所有的网站配置，sites-enabled 文件夹用于放置所有正在使用的网站配置。</p>
 <p>首先我们在 sites-available 中新建一个文件：</p>
-<pre><code class="language-bash">sudo vim /etc/nginx/sites-availale/notes.conf
+<pre><code class="language-sh">sudo vim /etc/nginx/sites-availale/notes.conf
 </code></pre>
 <p>然后添加以下内容：</p>
-<pre><code class="language-bash">server {
+<pre><code class="language-sh">server {
     listen 80;
     listen [::]:80;
     location / {
@@ -188,10 +188,10 @@ mdbook build
 }
 </code></pre>
 <p>完成配置后我们可以通过链接的命令，将 sites-available 中的配置文件链接到 sites-enabled 文件夹中：</p>
-<pre><code class="language-bash">sudo ln -sf /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
+<pre><code class="language-sh">sudo ln -sf /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
 </code></pre>
 <p>最后我们重新启动一下 nginx 就可以在本地 80 端口<a href="http://localhost">http://localhost</a>正常访问我们的网页内容了：</p>
-<pre><code class="language-bash">sudo systemctl restart nginx
+<pre><code class="language-sh">sudo systemctl restart nginx
 </code></pre>
 <h2 id="三nginx-模板"><a class="header" href="#三nginx-模板">三、nginx 模板</a></h2>
 <p>nginx 基本配置模板：</p>

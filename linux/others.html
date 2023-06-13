@@ -142,52 +142,52 @@
                     <main>
                         <h1 id="其他配置及常用命令"><a class="header" href="#其他配置及常用命令">其他配置及常用命令</a></h1>
 <p>查看系统 CPU：</p>
-<pre><code class="language-bash">htop
+<pre><code class="language-sh">htop
 </code></pre>
 <p>查看系统存储空间：</p>
-<pre><code class="language-bash">df -h
+<pre><code class="language-sh">df -h
 </code></pre>
 <p>查看系统进程：</p>
-<pre><code class="language-bash">ps -A
+<pre><code class="language-sh">ps -A
 </code></pre>
 <p>结束某个进程：</p>
-<pre><code class="language-bash">kill $id
+<pre><code class="language-sh">kill $id
 </code></pre>
 <p>安装字体：</p>
-<pre><code class="language-bash">sudo fc-cache -fv
+<pre><code class="language-sh">sudo fc-cache -fv
 </code></pre>
 <p>更新树莓派 eeprom：</p>
-<pre><code class="language-bash">sudo rpi-eeprom-update -a
+<pre><code class="language-sh">sudo rpi-eeprom-update -a
 </code></pre>
 <p>查看树莓派温度：</p>
-<pre><code class="language-bash">vcgencmd measure_temp
+<pre><code class="language-sh">vcgencmd measure_temp
 </code></pre>
 <p>使用 pip-review 更新 pip</p>
-<pre><code class="language-bash">pip-review --interactive
+<pre><code class="language-sh">pip-review --interactive
 </code></pre>
 <p>安静启动 Telegram</p>
-<pre><code class="language-bash">Telegram --startintray
+<pre><code class="language-sh">Telegram --startintray
 </code></pre>
 <p>解压 tar 压缩包：</p>
-<pre><code class="language-bash">tar -xvf your/tar/gz/file
+<pre><code class="language-sh">tar -xvf your/tar/gz/file
 </code></pre>
 <p>设置默认编辑器：</p>
-<pre><code class="language-bash">sudo update-alternatives --config editor
+<pre><code class="language-sh">sudo update-alternatives --config editor
 </code></pre>
 <p>查看系统内部端口使用情况：</p>
-<pre><code class="language-bash">netstat --tcp --listening --programs --numeric
+<pre><code class="language-sh">netstat --tcp --listening --programs --numeric
 </code></pre>
 <p>配置 WiFi：</p>
-<pre><code class="language-bash">sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
+<pre><code class="language-sh">sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
 </code></pre>
 <p>设置用户默认 shell：</p>
-<pre><code class="language-bash">sudo usermod --shell /bin/bash $USER
+<pre><code class="language-sh">sudo usermod --shell /bin/sh $USER
 </code></pre>
-<p>bash 脚本出现^M 错误：</p>
-<pre><code class="language-bash">sed -i 's/\r//' $yourfile
+<p>sh 脚本出现^M 错误：</p>
+<pre><code class="language-sh">sed -i 's/\r//' $yourfile
 </code></pre>
 <p>使用 python 运行 http 服务：</p>
-<pre><code class="language-bash">python -m http.server 8080 --directory public
+<pre><code class="language-sh">python -m http.server 8080 --directory public
 </code></pre>
 
                     </main>
