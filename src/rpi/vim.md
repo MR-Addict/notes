@@ -1,12 +1,12 @@
-# 配置 vim
+# 使用 Vim
 
-## 一、安装 vim
+## 一、安装 Vim
 
 ```sh
 sudo apt-get install vim -y
 ```
 
-## 二、配置 vim
+## 二、配置 Vim
 
 进入 vim 配置文件：
 

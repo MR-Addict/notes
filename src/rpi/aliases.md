@@ -1,4 +1,4 @@
-# 配置 alias
+# 配置 Alias
 
 进入 sh_aliaes 配置文件
 

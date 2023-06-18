@@ -1,13 +1,13 @@
-# 使用 vim
+# 使用 Vim
 
-## 一、安装 vim
+## 一、安装 Vim
 
 ```sh
 opkg update
 opkg install vim-full vim-runtime
 ```
 
-## 二、配置 vim
+## 二、配置 Vim
 
 进入配置文件
 

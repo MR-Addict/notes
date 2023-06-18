@@ -1,4 +1,4 @@
-# 搭建 Home assistant 服务器
+# 搭建 Home Assistant 服务器
 
 ## 一、配置 Docker 容器
 
@@ -52,4 +52,34 @@ http:
 
 ```sh
 docker-compose restart
+```
+
+## 三、配置 Nginx 反向代理
+
+```
+server{
+  listen 80;
+  listen [::]:80;
+  server_name home.mraddict.one;
+  return 301 https://$host$request_uri;
+}
+
+server {
+  listen 443 ssl;
+  listen [::]:443 ssl;
+  server_name home.mraddict.one;
+
+  ssl_certificate  /etc/nginx/certs/cloudflare/mraddict.one/mraddict.one.cert.pem;
+  ssl_certificate_key /etc/nginx/certs/cloudflare/mraddict.one/mraddict.one.key.pem;
+
+  location / {
+    proxy_pass http://localhost:8123;
+    proxy_buffering off;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+  }
+}
 ```

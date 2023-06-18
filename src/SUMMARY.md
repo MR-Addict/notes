@@ -10,20 +10,20 @@
 
 - [Openwrt](openwrt/intro.md)
 
-  - [使用 vim](openwrt/vim.md)
-  - [使用 init](openwrt/init.md)
-  - [使用 uhttpd](openwrt/uhttpd.md)
+  - [使用 Vim](openwrt/vim.md)
+  - [使用 Init](openwrt/init.md)
+  - [使用 Uhttpd](openwrt/uhttpd.md)
   - [其他常用命令](openwrt/others.md)
 
 - [树莓派](rpi/intro.md)
 
-  - [配置 vim](rpi/vim.md)
-  - [使用 ssh](rpi/ssh.md)
-  - [配置 alias](rpi/aliases.md)
-  - [使用 crontab](rpi/crontab.md)
-  - [使用 wiringpi](rpi/wiringpi.md)
-  - [使用 powershell](rpi/powershell.md)
-  - [配置 oh-my-posh](rpi/oh-my-posh.md)
+  - [使用 Vim](rpi/vim.md)
+  - [使用 SSH](rpi/ssh.md)
+  - [配置 Alias](rpi/aliases.md)
+  - [使用 Crontab](rpi/crontab.md)
+  - [使用 Wiringpi](rpi/wiringpi.md)
+  - [使用 Powershell](rpi/powershell.md)
+  - [使用 Oh-my-posh](rpi/oh-my-posh.md)
 
 - [学习教程](tutorial/intro.md)
 
@@ -43,9 +43,11 @@
   - [搭建 MQTT 服务器](server/mqtt.md)
   - [搭建 VSCode 服务器](server/vscode.md)
   - [搭建 Adguard 服务器](server/adguard.md)
+  - [搭建 Mongodb 数据库](server/mongodb.md)
+  - [搭建 Pocketbase 数据库](server/pocketbase.md)
   - [搭建 Wireguard 服务器](server/wireguard.md)
   - [搭建 NextCloud 服务器](server/nextcloud.md)
-  - [搭建 Homeassistant 服务器](server/homeassistant.md)
+  - [搭建 Home Assistant 服务器](server/homeassistant.md)
 
 - [编程语言](programming/intro.md)
   - [SQL](programming/sql/intro.md)

@@ -79,8 +79,8 @@ server{
 }
 
 server {
-  listen 443 ssl http2;
-  listen [::]:443 ssl http2;
+  listen 443 ssl;
+  listen [::]:443 ssl;
   server_name cloud.mraddict.one;
 
   client_max_body_size 0;

@@ -1,4 +1,4 @@
-# 使用 Oh-My-Posh
+# 使用 Oh-my-posh
 
 ```admonish info
 官方文档：[oh-my-posh](https://ohmyposh.dev/docs)

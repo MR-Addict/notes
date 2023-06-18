@@ -1,4 +1,4 @@
-# 使用 wiringpi
+# 使用 Wiringpi
 
 ```admonish info
 官方文档：[wiringpi](http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b)

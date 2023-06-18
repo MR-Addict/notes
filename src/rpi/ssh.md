@@ -1,12 +1,14 @@
-# 使用 ssh
+# 使用 SSH
 
-## 一、使用 puttygen
+## 一、通过 Puttygen 使用 SSH
+
+直接参考以下文章即可，这里不做详细介绍了：
 
 ```admonish info
-直接参考以下文章：[How to generate public and private ssh key using putty](https://docs.oracle.com/en/cloud/paas/goldengate-cloud/tutorial-change-private-key-format/)
+参考文章：[How to generate public and private ssh key using putty](https://docs.oracle.com/en/cloud/paas/goldengate-cloud/tutorial-change-private-key-format/)
 ```
 
-## 二、使用 ssh-keygen
+## 二、使用 ssh-keygen 配置 SSH 密钥
 
 生成密钥，一路回车选择默认选项就好了：
 
@@ -36,7 +38,7 @@ Host piserver
      IdentityFile ~/ssh-private-key/piserver
 ```
 
-## 三、使用 ssh 复制文件
+## 三、使用 scp 复制文件
 
 从服务器复制文件，服务器路径为`/home/pi/Projects/hello.py`，客户端路径为当前路径：
 
