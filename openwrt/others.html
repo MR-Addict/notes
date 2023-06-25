@@ -150,6 +150,15 @@
 <p>查看已连接的 WiFi 设备：</p>
 <pre><code class="language-sh">cat /tmp/dhcp.leases
 </code></pre>
+<p>查看主机 ip 地址：</p>
+<pre><code class="language-sh">ip r|grep 'default' | awk '{print $7}'
+</code></pre>
+<p>查看主机网关地址：</p>
+<pre><code class="language-sh">ip r|grep 'default' | awk '{print $3}'
+</code></pre>
+<p>删除某个进程：</p>
+<pre><code class="language-sh">kill $(ps|awk '/[m]qtt/{print $1}')
+</code></pre>
 
                     </main>
 
