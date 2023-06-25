@@ -4,7 +4,7 @@ COPY assets/mdbook-admonish /usr/local/bin
 WORKDIR /app
 COPY . .
 RUN chmod u+x /usr/local/bin/mdbook*
-RUN mdbook build -d public
+RUN mdbook build
 
 FROM nginx:stable-alpine
-COPY --from=builder /app/public /usr/share/nginx/html
+COPY --from=builder /app/book /usr/share/nginx/html

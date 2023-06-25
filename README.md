@@ -2,10 +2,10 @@
 
 ## 1. 版本
 
-| Package         | Version |
-| :-------------- | :------ |
-| mdbook          | 0.4.21  |
-| mdbook-admonish | 1.8.0   |
+| Package         | Version | Repository                                                 |
+| :-------------- | :------ | :--------------------------------------------------------- |
+| mdbook          | 0.4.28  | [仓库地址](https://github.com/rust-lang/mdBook)            |
+| mdbook-admonish | 1.9.0   | [仓库地址](https://github.com/tommilligan/mdbook-admonish) |
 
 ## 2. 简介
 
