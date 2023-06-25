@@ -55,7 +55,7 @@ gpio mode 15 in
 int isLoop = 1;
 
 void breakLoop(int signal) {
-    isloop = 0;
+    isLoop = 0;
 }
 
 int main(void) {
@@ -67,7 +67,7 @@ int main(void) {
     pinMode(Fan, OUTPUT);
     digitalWrite(Fan, HIGH);
 
-    while (isloop);
+    while (isLoop);
 
     digitalWrite(Fan, LOW);
     pinMode(Fan, INPUT);

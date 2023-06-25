@@ -17,3 +17,21 @@ cat /proc/cpuinfo
 ```sh
 cat /tmp/dhcp.leases
 ```
+
+查看主机 ip 地址：
+
+```sh
+ip r|grep 'default' | awk '{print $7}'
+```
+
+查看主机网关地址：
+
+```sh
+ip r|grep 'default' | awk '{print $3}'
+```
+
+删除某个进程：
+
+```sh
+kill $(ps|awk '/[m]qtt/{print $1}')
+```

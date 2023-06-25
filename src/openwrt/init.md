@@ -27,7 +27,7 @@ start() {
 
 # commands to kill application
 stop() {
-    echo stop
+    ps | awk '/[y]our_service/{print $1}'
 }
 
 # start application after boot
