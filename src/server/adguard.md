@@ -1,7 +1,7 @@
 # 使用 Adguard 服务器
 
 ```admonish info
-参考文档：[adguard](https://www.linuxuprising.com/2020/07/ubuntu-how-to-free-up-port-53-used-by.html)
+参考文档：[释放服务器 53 端口](https://www.linuxuprising.com/2020/07/ubuntu-how-to-free-up-port-53-used-by.html)
 ```
 
 ## 一、释放服务器 53 端口

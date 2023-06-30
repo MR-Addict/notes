@@ -14,6 +14,7 @@ alias ll="ls -l"
 alias reboot="sudo reboot"
 alias shutdown="sudo shutdown -h now"
 
+alias git restore . && git clean -f
 alias cpu-temp="vcgencmd measure_temp"
 alias eeprom-update="sudo rpi-eeprom-update -a"
 alias apt-update="sudo apt-get update && sudo apt-get upgrade -y"

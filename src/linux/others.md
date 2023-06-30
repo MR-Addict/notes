@@ -95,3 +95,9 @@ sed -i 's/\r//' $yourfile
 ```sh
 python -m http.server 8080 --directory public
 ```
+
+设置时区：
+
+```sh
+sudo timedatectl set-timezone Asia/Shanghai
+```

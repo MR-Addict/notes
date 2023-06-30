@@ -19,7 +19,7 @@
 
   - [使用 Vim](rpi/vim.md)
   - [使用 SSH](rpi/ssh.md)
-  - [配置 Alias](rpi/aliases.md)
+  - [使用 Alias](rpi/aliases.md)
   - [使用 Crontab](rpi/crontab.md)
   - [使用 Wiringpi](rpi/wiringpi.md)
   - [使用 Powershell](rpi/powershell.md)
