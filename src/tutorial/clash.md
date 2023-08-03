@@ -147,6 +147,41 @@ vim ~/.cargo/config
   proxy=http://127.0.0.1:7890
 ```
 
+### 为 docker 配置代理
+
+新建 docker 配置文件夹：
+
+```sh
+sudo mkdir -p /etc/systemd/system/docker.service.d
+```
+
+新建 docker 代理配置文件：
+
+```sh
+sudo vim /etc/systemd/system/docker.service.d/proxy.conf
+```
+
+添加以下配置：
+
+```sh
+[Service]
+Environment="NO_PROXY="localhost,127.0.0.1"
+Environment="HTTP_PROXY=http://127.0.0.1:7890"
+Environment="HTTPS_PROXY=http://127.0.0.1:7890"
+```
+
+重启 serive 配置文件：
+
+```sh
+sudo systemctl daemon-reload
+```
+
+重启 docker：
+
+```sh
+sudo systemctl restart docker.service
+```
+
 ## 四、使用 Clash
 
 配置完成后需要重启树莓派让配置生效，这样配置才能生效。理论上这样一波配置后，大部分终端应用都可以正常使用了，如果你有其他的终端应用可自行参考相关文档进行配置。
