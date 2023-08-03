@@ -1764,6 +1764,25 @@ https-proxy=http://127.0.0.1:7890
 [https]
   proxy=http://127.0.0.1:7890
 </code></pre>
+<h3 id="为-docker-配置代理"><a class="header" href="#为-docker-配置代理">为 docker 配置代理</a></h3>
+<p>新建 docker 配置文件夹：</p>
+<pre><code class="language-sh">sudo mkdir -p /etc/systemd/system/docker.service.d
+</code></pre>
+<p>新建 docker 代理配置文件：</p>
+<pre><code class="language-sh">sudo vim /etc/systemd/system/docker.service.d/proxy.conf
+</code></pre>
+<p>添加以下配置：</p>
+<pre><code class="language-sh">[Service]
+Environment=&quot;NO_PROXY=&quot;localhost,127.0.0.1&quot;
+Environment=&quot;HTTP_PROXY=http://127.0.0.1:7890&quot;
+Environment=&quot;HTTPS_PROXY=http://127.0.0.1:7890&quot;
+</code></pre>
+<p>重启 serive 配置文件：</p>
+<pre><code class="language-sh">sudo systemctl daemon-reload
+</code></pre>
+<p>重启 docker：</p>
+<pre><code class="language-sh">sudo systemctl restart docker.service
+</code></pre>
 <h2 id="四使用-clash"><a class="header" href="#四使用-clash">四、使用 Clash</a></h2>
 <p>配置完成后需要重启树莓派让配置生效，这样配置才能生效。理论上这样一波配置后，大部分终端应用都可以正常使用了，如果你有其他的终端应用可自行参考相关文档进行配置。</p>
 <p>重启之后在终端中输入 clash，如果输出类似以下内容那么就说明 Clash 启动成功了。</p>
