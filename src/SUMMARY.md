@@ -41,6 +41,7 @@
 - [服务器搭建](server/intro.md)
 
   - [搭建 MQTT 服务器](server/mqtt.md)
+  - [搭建 Drone 服务器](server/drone.md)
   - [搭建 VSCode 服务器](server/vscode.md)
   - [搭建 Adguard 服务器](server/adguard.md)
   - [搭建 Mongodb 数据库](server/mongodb.md)
