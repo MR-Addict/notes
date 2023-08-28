@@ -2170,7 +2170,7 @@ password_file /mosquitto/config/password.txt
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-drone-ci-服务器"><a class="header" href="#使用-drone-ci-服务器">使用 Drone CI 服务器</a></h1>
 <p>Drone CI 是一个基于 go 的 CI 工具，配合 Github 或者 Gitlab 等可以实现方便的持续部署。</p>
 <h2 id="一配置-docker-容器-1"><a class="header" href="#一配置-docker-容器-1">一、配置 Docker 容器</a></h2>
-<p>使用以下<strong>docker-compose.yaml</strong>：</p>
+<h3 id="部署-server"><a class="header" href="#部署-server">部署 Server</a></h3>
 <pre><code class="language-yaml">version: &quot;3&quot;
 services:
   drone-server:
@@ -2186,26 +2186,52 @@ services:
       - DRONE_USER_CREATE=username:MR-Addict,admin:true
 
       - DRONE_RPC_SECRET=e0c4fab16337ae0c7faa3706379ccac9
-      - DRONE_GITHUB_CLIENT_ID=97b3184516ee77d0b3a7
-      - DRONE_GITHUB_CLIENT_SECRET=ae9b7b2cfd2f4f0ea38d2fa1c0b2f44b60327ab5
+      - DRONE_GITHUB_CLIENT_ID=github_client_id
+      - DRONE_GITHUB_CLIENT_SECRET=github_client_secret
     volumes:
       - ./data:/data
-
+</code></pre>
+<h3 id="部署-runner-1"><a class="header" href="#部署-runner-1">部署 Runner</a></h3>
+<h4 id="1-docker-runner"><a class="header" href="#1-docker-runner">1. Docker Runner</a></h4>
+<pre><code class="language-yaml">version: &quot;3&quot;
+services:
   drone-runner:
     image: drone/drone-runner-docker
     restart: unless-stopped
     environment:
       - DRONE_RPC_PROTO=https
-      - DRONE_RUNNER_CAPACITY=2
       - DRONE_RPC_HOST=drone.mraddict.top
       - DRONE_RPC_SECRET=e0c4fab16337ae0c7faa3706379ccac9
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    depends_on:
-      - drone-server
 </code></pre>
 <p>启动容器：</p>
 <pre><code class="language-sh">docker-compose up -d
+</code></pre>
+<h4 id="2-exec-runner"><a class="header" href="#2-exec-runner">2. Exec Runner</a></h4>
+<p>安装 runner：</p>
+<pre><code class="language-sh">curl -L https://github.com/drone-runners/drone-runner-exec/releases/latest/download/drone_runner_exec_linux_amd64.tar.gz | tar zx
+sudo install -t /usr/local/bin drone-runner-exec
+</code></pre>
+<p>添加配置文件：</p>
+<pre><code class="language-sh">sudo vim /etc/drone-runner-exec/config
+</code></pre>
+<p>配置文件内容：</p>
+<pre><code>DRONE_RPC_PROTO=https
+DRONE_RPC_HOST=drone.mraddict.top
+DRONE_RPC_SECRET=e0c4fab16337ae0c7faa3706379ccac9
+</code></pre>
+<p>安装自启服务：</p>
+<pre><code class="language-sh">sudo drone-runner-exec service install --config=&quot;/home/ubuntu/projects/drone/client/config&quot;
+</code></pre>
+<p>启动服务：</p>
+<pre><code class="language-sh">sudo drone-runner-exec service start
+</code></pre>
+<p>关闭服务：</p>
+<pre><code class="language-sh">sudo drone-runner-exec service stop
+</code></pre>
+<p>卸载自启服务：</p>
+<pre><code class="language-sh">sudo drone-runner-exec service uninstall
 </code></pre>
 <h2 id="二配置-nginx-反向代理"><a class="header" href="#二配置-nginx-反向代理">二、配置 Nginx 反向代理</a></h2>
 <pre><code>server{
