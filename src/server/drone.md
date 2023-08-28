@@ -4,7 +4,7 @@ Drone CI 是一个基于 go 的 CI 工具，配合 Github 或者 Gitlab 等可�
 
 ## 一、配置 Docker 容器
 
-使用以下**docker-compose.yaml**：
+### 部署 Server
 
 ```yaml
 version: "3"
@@ -22,29 +22,81 @@ services:
       - DRONE_USER_CREATE=username:MR-Addict,admin:true
 
       - DRONE_RPC_SECRET=e0c4fab16337ae0c7faa3706379ccac9
-      - DRONE_GITHUB_CLIENT_ID=97b3184516ee77d0b3a7
-      - DRONE_GITHUB_CLIENT_SECRET=ae9b7b2cfd2f4f0ea38d2fa1c0b2f44b60327ab5
+      - DRONE_GITHUB_CLIENT_ID=github_client_id
+      - DRONE_GITHUB_CLIENT_SECRET=github_client_secret
     volumes:
       - ./data:/data
+```
 
+### 部署 Runner
+
+#### 1. Docker Runner
+
+```yaml
+version: "3"
+services:
   drone-runner:
     image: drone/drone-runner-docker
     restart: unless-stopped
     environment:
       - DRONE_RPC_PROTO=https
-      - DRONE_RUNNER_CAPACITY=2
       - DRONE_RPC_HOST=drone.mraddict.top
       - DRONE_RPC_SECRET=e0c4fab16337ae0c7faa3706379ccac9
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    depends_on:
-      - drone-server
 ```
 
 启动容器：
 
 ```sh
 docker-compose up -d
+```
+
+#### 2. Exec Runner
+
+安装 runner：
+
+```sh
+curl -L https://github.com/drone-runners/drone-runner-exec/releases/latest/download/drone_runner_exec_linux_amd64.tar.gz | tar zx
+sudo install -t /usr/local/bin drone-runner-exec
+```
+
+添加配置文件：
+
+```sh
+sudo vim /etc/drone-runner-exec/config
+```
+
+配置文件内容：
+
+```
+DRONE_RPC_PROTO=https
+DRONE_RPC_HOST=drone.mraddict.top
+DRONE_RPC_SECRET=e0c4fab16337ae0c7faa3706379ccac9
+```
+
+安装自启服务：
+
+```sh
+sudo drone-runner-exec service install --config="/home/ubuntu/projects/drone/client/config"
+```
+
+启动服务：
+
+```sh
+sudo drone-runner-exec service start
+```
+
+关闭服务：
+
+```sh
+sudo drone-runner-exec service stop
+```
+
+卸载自启服务：
+
+```sh
+sudo drone-runner-exec service uninstall
 ```
 
 ## 二、配置 Nginx 反向代理
