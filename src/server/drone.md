@@ -28,6 +28,12 @@ services:
       - ./data:/data
 ```
 
+启动容器：
+
+```sh
+docker-compose up -d
+```
+
 ### 部署 Runner
 
 #### 1. Docker Runner
@@ -35,7 +41,7 @@ services:
 ```yaml
 version: "3"
 services:
-  drone-runner:
+  drone-runner-docker:
     image: drone/drone-runner-docker
     restart: unless-stopped
     environment:
@@ -52,7 +58,27 @@ services:
 docker-compose up -d
 ```
 
-#### 2. Exec Runner
+#### 2. SSH Runner
+
+```yaml
+version: "3"
+services:
+  drone-runner-ssh:
+    image: drone/drone-runner-ssh
+    restart: unless-stopped
+    environment:
+      - DRONE_RPC_PROTO=https
+      - DRONE_RPC_HOST=drone.mraddict.top
+      - DRONE_RPC_SECRET=e0c4fab16337ae0c7faa3706379ccac9
+```
+
+启动容器：
+
+```sh
+docker-compose up -d
+```
+
+#### 3. Exec Runner
 
 安装 runner：
 
