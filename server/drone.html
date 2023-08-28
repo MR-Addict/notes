@@ -174,11 +174,14 @@ services:
     volumes:
       - ./data:/data
 </code></pre>
+<p>启动容器：</p>
+<pre><code class="language-sh">docker-compose up -d
+</code></pre>
 <h3 id="部署-runner"><a class="header" href="#部署-runner">部署 Runner</a></h3>
 <h4 id="1-docker-runner"><a class="header" href="#1-docker-runner">1. Docker Runner</a></h4>
 <pre><code class="language-yaml">version: &quot;3&quot;
 services:
-  drone-runner:
+  drone-runner-docker:
     image: drone/drone-runner-docker
     restart: unless-stopped
     environment:
@@ -191,7 +194,21 @@ services:
 <p>启动容器：</p>
 <pre><code class="language-sh">docker-compose up -d
 </code></pre>
-<h4 id="2-exec-runner"><a class="header" href="#2-exec-runner">2. Exec Runner</a></h4>
+<h4 id="2-ssh-runner"><a class="header" href="#2-ssh-runner">2. SSH Runner</a></h4>
+<pre><code class="language-yaml">version: &quot;3&quot;
+services:
+  drone-runner-ssh:
+    image: drone/drone-runner-ssh
+    restart: unless-stopped
+    environment:
+      - DRONE_RPC_PROTO=https
+      - DRONE_RPC_HOST=drone.mraddict.top
+      - DRONE_RPC_SECRET=e0c4fab16337ae0c7faa3706379ccac9
+</code></pre>
+<p>启动容器：</p>
+<pre><code class="language-sh">docker-compose up -d
+</code></pre>
+<h4 id="3-exec-runner"><a class="header" href="#3-exec-runner">3. Exec Runner</a></h4>
 <p>安装 runner：</p>
 <pre><code class="language-sh">curl -L https://github.com/drone-runners/drone-runner-exec/releases/latest/download/drone_runner_exec_linux_amd64.tar.gz | tar zx
 sudo install -t /usr/local/bin drone-runner-exec
