@@ -15,6 +15,8 @@ services:
     ports:
       - 8000:80
     environment:
+      - TZ=Asia/Shanghai
+      - DRONE_CRON_INTERVAL=1m
       - DRONE_SERVER_PROTO=https
       - DRONE_SERVER_HOST=drone.mraddict.top
 

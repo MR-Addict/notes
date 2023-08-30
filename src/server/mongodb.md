@@ -16,8 +16,8 @@ services:
     volumes:
       - ./data:/data/db
     environment:
-      MONGO_INITDB_ROOT_USERNAME: your_username
-      MONGO_INITDB_ROOT_PASSWORD: your_password
+      - MONGO_INITDB_ROOT_USERNAME=your_username
+      - MONGO_INITDB_ROOT_PASSWORD=your_password
 ```
 
 启动容器：
