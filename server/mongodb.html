@@ -164,8 +164,8 @@ services:
     volumes:
       - ./data:/data/db
     environment:
-      MONGO_INITDB_ROOT_USERNAME: your_username
-      MONGO_INITDB_ROOT_PASSWORD: your_password
+      - MONGO_INITDB_ROOT_USERNAME=your_username
+      - MONGO_INITDB_ROOT_PASSWORD=your_password
 </code></pre>
 <p>启动容器：</p>
 <pre><code class="language-sh">docker-compose up -d
