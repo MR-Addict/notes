@@ -154,3 +154,62 @@ server {
   }
 }
 ```
+
+## 三、Drone CI 样例
+
+```yaml
+kind: pipeline
+type: docker
+name: default
+
+clone:
+  disable: true
+
+steps:
+  - name: ssh
+    image: appleboy/drone-ssh
+    settings:
+      host:
+        from_secret: ssh_host
+      username:
+        from_secret: ssh_username
+      key:
+        from_secret: ssh_key
+      script:
+        - cd /home/ubuntu/projects/punch
+        - git pull
+        - docker-compose down
+        - docker rmi mraddict063/punch-next
+        - docker build -t mraddict063/punch-next .
+        - docker image prune -f --filter label=stage=builder
+        - docker-compose up -d
+
+trigger:
+  branch:
+    - main
+  event:
+    - push
+    - cron
+```
+
+> 注意：
+> 请谨慎允许 pull request 使用 CI，这样会容易暴露自己设置的 secret
+
+## 四、如何使用 cron
+
+用 drone 提供的 UI 设置定时任务只能设置几个基本的时段，非常不方便，更加灵活的方式是用直接调用 API。
+
+下面是 curl 的示例，**DRONE_TOKEN** 可以在个人中心找到，把 **USER** 和 **REPO** 换成你自己的项目：
+
+```sh
+curl -X POST https://drone.example.com/api/repos/USER/REPO/cron \
+-H "Authorization: Bearer DRONE_TOKEN" \
+-H "Content-Type: application/json" \
+--data '{"name": "default", "expr": "0 0 */10 * * *", "branch": "main" }'
+```
+
+> 注意：
+>
+> - 你需要修改时区保证时间的一致性，环境变量是 **TZ=Asia/Shanghai**
+> - drone 默认的 cron 检查间隔是一小时，非常不准确，环境变量是 **DRONE_CRON_INTERVAL=1m**
+> - drone 使用的 cron 表达式是 **6 位**的，包含秒，和常规 5 位的 linux 系统 cron 不太一样
