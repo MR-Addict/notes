@@ -1,4 +1,4 @@
-# Liunx 的 Swap 空间
+# Swap 空间
 
 ```admonish info
 参考视频：[swap](https://www.youtube.com/watch?v=HSbBl31ohjE)

@@ -4,8 +4,9 @@
 
 - [Linux](linux/intro.md)
 
-  - [Linux 的 Swap 空间](linux/swap.md)
-  - [Linux 用户和用户组](linux/users.md)
+  - [Swap 空间](linux/swap.md)
+  - [用户和用户组](linux/users.md)
+  - [Systemd 使用方法](linux/systemd.md)
   - [其他配置及常用命令](linux/others.md)
 
 - [Openwrt](openwrt/intro.md)

@@ -1,8 +1,0 @@
-version: "3"
-services:
-  notes:
-    image: mraddict063/notes
-    container_name: notes
-    restart: unless-stopped
-    ports:
-      - 8081:80
