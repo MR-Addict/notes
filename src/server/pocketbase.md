@@ -9,7 +9,6 @@ version: "3"
 services:
   pocketbase:
     image: ghcr.io/muchobien/pocketbase:latest
-    container_name: pocketbase
     restart: unless-stopped
     ports:
       - 8090:8090

@@ -3,11 +3,10 @@
 配置 Dcocker 容器：
 
 ```yaml
-version: "2.1"
+version: "3"
 services:
   ide:
     image: lscr.io/linuxserver/code-server:latest
-    container_name: ide
     environment:
       - PUID=1538
       - PGID=1538
@@ -20,9 +19,9 @@ services:
     ports:
       - 8443:8443
     restart: unless-stopped
+
   http:
     image: nginx:latest
-    container_name: http
     restart: unless-stopped
     ports:
       - 5555:80

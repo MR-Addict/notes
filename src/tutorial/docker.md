@@ -295,7 +295,6 @@ version: "3"
 services:
   notes:
     image: nginx:latest
-    container_name: notes
     restart: unless-stopped
     ports:
       - 80:80
@@ -311,20 +310,18 @@ services:
 version: "3"
 services:
   wg-easy:
-    environment:
-      - WG_HOST=[change-this]
-      - PASSWORD=[change-this]
-      - WG_DEFAULT_DNS=1.1.1.1
-      - WG_MTU=1420
-
+    restart: unless-stopped
     image: weejewel/wg-easy
-    container_name: wg-easy
     volumes:
       - ./data:/etc/wireguard
     ports:
       - 51820:51820/udp
       - 51821:51821/tcp
-    restart: unless-stopped
+    environment:
+      - WG_HOST=[change-this]
+      - PASSWORD=[change-this]
+      - WG_DEFAULT_DNS=1.1.1.1
+      - WG_MTU=1420
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
@@ -340,7 +337,6 @@ version: "3"
 
 services:
   nextcloud:
-    container_name: nextcloud-app
     image: nextcloud:latest
     restart: unless-stopped
     ports:
@@ -355,7 +351,6 @@ services:
 
   mysql:
     image: mysql:8.0
-    container_name: nextcloud-db
     restart: unless-stopped
     environment:
       - MYSQL_DATABASE=nextcloud
@@ -369,11 +364,10 @@ services:
 ### Adguard 模板
 
 ```yml
-version: "2"
+version: "3"
 services:
   adguard:
     image: adguard/adguardhome
-    container_name: adguard
     restart: unless-stopped
     ports:
       - 53:53/tcp
@@ -387,11 +381,11 @@ services:
 ### VSCode 模板
 
 ```yml
-version: "2.1"
+version: "3"
 services:
   ide:
     image: lscr.io/linuxserver/code-server:latest
-    container_name: ide
+    restart: unless-stopped
     environment:
       - PUID=1538
       - PGID=1538
@@ -403,10 +397,9 @@ services:
       - ./config:/config
     ports:
       - 8443:8443
-    restart: unless-stopped
+
   http:
     image: nginx:latest
-    container_name: http
     restart: unless-stopped
     ports:
       - 5555:80
@@ -421,7 +414,6 @@ version: "3"
 services:
   home:
     image: ghcr.io/home-assistant/home-assistant:stable
-    container_name: home
     environment:
       - TZ=Asia/Shanghai
     volumes:

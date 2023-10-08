@@ -7,7 +7,6 @@ version: "3"
 services:
   mosquitto:
     image: eclipse-mosquitto
-    container_name: mosquitto
     restart: unless-stopped
     volumes:
       - ./data/config:/mosquitto/config

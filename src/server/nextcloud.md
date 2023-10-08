@@ -7,7 +7,6 @@ version: "3"
 
 services:
   nextcloud:
-    container_name: nextcloud-app
     image: nextcloud:latest
     restart: unless-stopped
     ports:
@@ -22,7 +21,6 @@ services:
 
   mysql:
     image: mysql:8.0
-    container_name: nextcloud-db
     restart: unless-stopped
     environment:
       - MYSQL_DATABASE=nextcloud

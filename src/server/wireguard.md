@@ -6,20 +6,18 @@
 version: "3"
 services:
   wg-easy:
-    environment:
-      - WG_HOST=[change-this]
-      - PASSWORD=[change-this]
-      - WG_DEFAULT_DNS=1.1.1.1
-      - WG_MTU=1420
-
     image: weejewel/wg-easy
-    container_name: wg-easy
+    restart: unless-stopped
     volumes:
       - ./data:/etc/wireguard
     ports:
       - 51820:51820/udp
       - 51821:51821/tcp
-    restart: unless-stopped
+    environment:
+      - WG_HOST=[change-this]
+      - PASSWORD=[change-this]
+      - WG_DEFAULT_DNS=1.1.1.1
+      - WG_MTU=1420
     cap_add:
       - NET_ADMIN
       - SYS_MODULE

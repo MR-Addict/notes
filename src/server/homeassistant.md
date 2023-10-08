@@ -9,7 +9,6 @@ version: "3"
 services:
   home:
     image: ghcr.io/home-assistant/home-assistant:stable
-    container_name: home
     environment:
       - TZ=Asia/Shanghai
     volumes:
