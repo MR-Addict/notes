@@ -1599,7 +1599,6 @@ Environment=&quot;NO_PROXY=localhost,127.0.0.1&quot;
 services:
   notes:
     image: nginx:latest
-    container_name: notes
     restart: unless-stopped
     ports:
       - 80:80
@@ -1612,20 +1611,18 @@ services:
 <pre><code class="language-yml">version: &quot;3&quot;
 services:
   wg-easy:
-    environment:
-      - WG_HOST=[change-this]
-      - PASSWORD=[change-this]
-      - WG_DEFAULT_DNS=1.1.1.1
-      - WG_MTU=1420
-
+    restart: unless-stopped
     image: weejewel/wg-easy
-    container_name: wg-easy
     volumes:
       - ./data:/etc/wireguard
     ports:
       - 51820:51820/udp
       - 51821:51821/tcp
-    restart: unless-stopped
+    environment:
+      - WG_HOST=[change-this]
+      - PASSWORD=[change-this]
+      - WG_DEFAULT_DNS=1.1.1.1
+      - WG_MTU=1420
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
@@ -1638,7 +1635,6 @@ services:
 
 services:
   nextcloud:
-    container_name: nextcloud-app
     image: nextcloud:latest
     restart: unless-stopped
     ports:
@@ -1653,7 +1649,6 @@ services:
 
   mysql:
     image: mysql:8.0
-    container_name: nextcloud-db
     restart: unless-stopped
     environment:
       - MYSQL_DATABASE=nextcloud
@@ -1664,11 +1659,10 @@ services:
       - ./db:/var/lib/mysql
 </code></pre>
 <h3 id="adguard-模板"><a class="header" href="#adguard-模板">Adguard 模板</a></h3>
-<pre><code class="language-yml">version: &quot;2&quot;
+<pre><code class="language-yml">version: &quot;3&quot;
 services:
   adguard:
     image: adguard/adguardhome
-    container_name: adguard
     restart: unless-stopped
     ports:
       - 53:53/tcp
@@ -1679,11 +1673,11 @@ services:
       - /home/cael/projects/adguard/data/conf:/opt/adguardhome/conf
 </code></pre>
 <h3 id="vscode-模板"><a class="header" href="#vscode-模板">VSCode 模板</a></h3>
-<pre><code class="language-yml">version: &quot;2.1&quot;
+<pre><code class="language-yml">version: &quot;3&quot;
 services:
   ide:
     image: lscr.io/linuxserver/code-server:latest
-    container_name: ide
+    restart: unless-stopped
     environment:
       - PUID=1538
       - PGID=1538
@@ -1695,10 +1689,9 @@ services:
       - ./config:/config
     ports:
       - 8443:8443
-    restart: unless-stopped
+
   http:
     image: nginx:latest
-    container_name: http
     restart: unless-stopped
     ports:
       - 5555:80
@@ -1710,7 +1703,6 @@ services:
 services:
   home:
     image: ghcr.io/home-assistant/home-assistant:stable
-    container_name: home
     environment:
       - TZ=Asia/Shanghai
     volumes:
@@ -2217,7 +2209,6 @@ jobs:
 services:
   mosquitto:
     image: eclipse-mosquitto
-    container_name: mosquitto
     restart: unless-stopped
     volumes:
       - ./data/config:/mosquitto/config
@@ -2432,11 +2423,10 @@ trigger:
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="搭建-vscode-服务器"><a class="header" href="#搭建-vscode-服务器">搭建 VSCode 服务器</a></h1>
 <p>配置 Dcocker 容器：</p>
-<pre><code class="language-yaml">version: &quot;2.1&quot;
+<pre><code class="language-yaml">version: &quot;3&quot;
 services:
   ide:
     image: lscr.io/linuxserver/code-server:latest
-    container_name: ide
     environment:
       - PUID=1538
       - PGID=1538
@@ -2449,9 +2439,9 @@ services:
     ports:
       - 8443:8443
     restart: unless-stopped
+
   http:
     image: nginx:latest
-    container_name: http
     restart: unless-stopped
     ports:
       - 5555:80
@@ -2481,37 +2471,28 @@ services:
 <p>添加默认 DNS 为 1.1.1.1，同时弃用 DNS 监听端口：</p>
 <pre><code>[Resolve]
 DNS=1.1.1.1
-#FallbackDNS=
-#Domains=
-#LLMNR=no
-#MulticastDNS=no
-#DNSSEC=no
-#DNSOverTLS=no
-#Cache=no-negative
 DNSStubListener=no
-#ReadEtcHosts=yes
 </code></pre>
 <p>创建链接：</p>
 <pre><code class="language-sh">sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 </code></pre>
 <h2 id="二搭建-adguard"><a class="header" href="#二搭建-adguard">二、搭建 Adguard</a></h2>
 <p>配置 docker-compose：</p>
-<pre><code class="language-yaml">version: &quot;2&quot;
+<pre><code class="language-yaml">version: &quot;3&quot;
 services:
   adguard:
     image: adguard/adguardhome
-    container_name: adguard
     restart: unless-stopped
     ports:
       - 53:53/tcp
       - 53:53/udp
-      - 3000:3000/tcp
+      - 5353:3000/tcp
     volumes:
-      - /home/cael/projects/adguard/data/work:/opt/adguardhome/work
-      - /home/cael/projects/adguard/data/conf:/opt/adguardhome/conf
+      - ./data/work:/opt/adguardhome/work
+      - ./data/conf:/opt/adguardhome/conf
 </code></pre>
 <p>启动 docker：</p>
-<pre><code class="language-sh">sudo docker-compose up -d
+<pre><code class="language-sh">docker-compose up -d
 </code></pre>
 <h2 id="三配置-adguard"><a class="header" href="#三配置-adguard">三、配置 Adguard</a></h2>
 <h3 id="1-dns"><a class="header" href="#1-dns">1. DNS</a></h3>
@@ -2596,7 +2577,6 @@ services:
 services:
   pocketbase:
     image: ghcr.io/muchobien/pocketbase:latest
-    container_name: pocketbase
     restart: unless-stopped
     ports:
       - 8090:8090
@@ -2656,20 +2636,18 @@ server {
 <pre><code class="language-yaml">version: &quot;3&quot;
 services:
   wg-easy:
-    environment:
-      - WG_HOST=[change-this]
-      - PASSWORD=[change-this]
-      - WG_DEFAULT_DNS=1.1.1.1
-      - WG_MTU=1420
-
     image: weejewel/wg-easy
-    container_name: wg-easy
+    restart: unless-stopped
     volumes:
       - ./data:/etc/wireguard
     ports:
       - 51820:51820/udp
       - 51821:51821/tcp
-    restart: unless-stopped
+    environment:
+      - WG_HOST=[change-this]
+      - PASSWORD=[change-this]
+      - WG_DEFAULT_DNS=1.1.1.1
+      - WG_MTU=1420
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
@@ -2686,7 +2664,6 @@ services:
 
 services:
   nextcloud:
-    container_name: nextcloud-app
     image: nextcloud:latest
     restart: unless-stopped
     ports:
@@ -2701,7 +2678,6 @@ services:
 
   mysql:
     image: mysql:8.0
-    container_name: nextcloud-db
     restart: unless-stopped
     environment:
       - MYSQL_DATABASE=nextcloud
@@ -2783,7 +2759,6 @@ server {
 services:
   home:
     image: ghcr.io/home-assistant/home-assistant:stable
-    container_name: home
     environment:
       - TZ=Asia/Shanghai
     volumes:
