@@ -44,15 +44,20 @@ PublicKey = client_public_key
 AllowedIPs = 10.0.0.2/32
 ```
 
-```admonish warning
-注意：请使用`ip route list table main default`命令将`eth0`更改为你的网卡
+````admonish warning
+注意：请使用下面的命令查看你的默认网卡：
+
+```sh
+ip route list table main default
+```
 
 例如如果返回结果是：
 
 > default via 172.18.224.1 dev `enp4s0` proto dhcp src 172.18.224.100 metric 100
 
-则应该将eth0改为`enp4s0`
-```
+那么你需要将 eth0 改为`enp4s0`
+
+````
 
 ## 三、配置客户端
 

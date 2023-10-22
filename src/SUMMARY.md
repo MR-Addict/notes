@@ -9,7 +9,7 @@
   - [Systemd 使用方法](linux/systemd.md)
   - [其他配置及常用命令](linux/others.md)
 
-- [Openwrt](openwrt/intro.md)
+- [OpenWrt](openwrt/intro.md)
 
   - [使用 Vim](openwrt/vim.md)
   - [使用 Init](openwrt/init.md)
@@ -41,6 +41,7 @@
 
 - [服务器搭建](server/intro.md)
 
+  - [搭建 MC 服务器](server/minecraft.md)
   - [搭建 MQTT 服务器](server/mqtt.md)
   - [搭建 Drone 服务器](server/drone.md)
   - [搭建 VSCode 服务器](server/vscode.md)
