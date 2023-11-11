@@ -30,10 +30,10 @@ sudo vim /etc/wireguard/wg0.conf
 
 添加以下配置：
 
-```
+```conf
 [Interface]
 PrivateKey = your_private_key
-Address = 10.0.0.1/24
+Address = 10.0.0.1/32
 ListenPort = 51820
 SaveConfig = true
 PostUp = iptables -A FORWARD -i wg0 -j ACCEPT && iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
@@ -79,10 +79,10 @@ sudo vim /etc/wireguard/wg0.conf
 
 添加以下配置：
 
-```
+```conf
 [Interface]
 PrivateKey = client_private_key
-Address = 10.0.0.2/24
+Address = 10.0.0.2/32
 DNS = 114.114.114.114, 223.5.5.5
 
 [Peer]
