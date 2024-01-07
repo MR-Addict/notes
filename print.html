@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
-<html lang="zh-cn" class="sidebar-visible no-js light">
+<html lang="zh-cn" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>我的笔记</title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex">
 
 
         <!-- Custom HTML head -->
         
         <meta name="description" content="我的笔记(方便施展Copy+Paste魔法)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -35,12 +35,12 @@
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -65,24 +65,29 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
+            var body = document.querySelector('body');
             var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
@@ -92,15 +97,37 @@
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
                                 <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -158,7 +185,7 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="linux"><a class="header" href="#linux">Linux</a></h1>
 <p>一些关于 Linux 的使用笔记。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="swap-空间"><a class="header" href="#swap-空间">Swap 空间</a></h1>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="linux/swap.html#admonition-info"></a></p>
@@ -236,7 +263,7 @@
 <pre><code class="language-sh">sudo groupdel test
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="systemd-使用方法"><a class="header" href="#systemd-使用方法">Systemd 使用方法</a></h1>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="linux/systemd.html#admonition-info"></a></p>
@@ -417,7 +444,7 @@ let &amp;t_SI = &quot;\e[6 q&quot;
 let &amp;t_EI = &quot;\e[2 q&quot;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-init"><a class="header" href="#使用-init">使用 Init</a></h1>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="openwrt/init.html#admonition-info"></a></p>
@@ -465,7 +492,7 @@ boot() {
 <pre><code class="language-sh">/etc/init.d/your_service disable
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-uhttp"><a class="header" href="#使用-uhttp">使用 Uhttp</a></h1>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="openwrt/uhttpd.html#admonition-info"></a></p>
@@ -539,7 +566,7 @@ set smartindent
 let &amp;t_SI = &quot;\e[6 q&quot;
 let &amp;t_EI = &quot;\e[2 q&quot;
 </code></pre>
-<div id="admonition-warning" class="admonition warning">
+<div id="admonition-warning" class="admonition admonish-warning">
 <div class="admonition-title">
 <p>Warning</p>
 <p><a class="admonition-anchor-link" href="rpi/vim.html#admonition-warning"></a></p>
@@ -600,7 +627,7 @@ let &amp;t_EI = &quot;\e[2 q&quot;
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-ssh"><a class="header" href="#使用-ssh">使用 SSH</a></h1>
 <h2 id="一通过-puttygen-使用-ssh"><a class="header" href="#一通过-puttygen-使用-ssh">一、通过 Puttygen 使用 SSH</a></h2>
 <p>直接参考以下文章即可，这里不做详细介绍了：</p>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="rpi/ssh.html#admonition-info"></a></p>
@@ -652,7 +679,7 @@ alias eeprom-update=&quot;sudo rpi-eeprom-update -a&quot;
 alias apt-update=&quot;sudo apt-get update &amp;&amp; sudo apt-get upgrade -y&quot;
 alias apt-clean=&quot;sudo apt-get autoremove -y &amp;&amp; sudo apt-get clean -y&quot;
 </code></pre>
-<div id="admonition-warning" class="admonition warning">
+<div id="admonition-warning" class="admonition admonish-warning">
 <div class="admonition-title">
 <p>Warning</p>
 <p><a class="admonition-anchor-link" href="rpi/aliases.html#admonition-warning"></a></p>
@@ -706,7 +733,7 @@ alias apt-clean=&quot;sudo apt-get autoremove -y &amp;&amp; sudo apt-get clean -
 <tr><td style="text-align: center">/</td><td style="text-align: center">步数符</td></tr>
 <tr><td style="text-align: center">@reboot</td><td style="text-align: center">启动事件</td></tr>
 </tbody></table>
-</div><div id="admonition-info" class="admonition info">
+</div><div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="rpi/crontab.html#admonition-info"></a></p>
@@ -726,7 +753,7 @@ alias apt-clean=&quot;sudo apt-get autoremove -y &amp;&amp; sudo apt-get clean -
 </code></pre>
 <p>开机自动调用 wiringpi 打开风扇。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-wiringpi"><a class="header" href="#使用-wiringpi">使用 Wiringpi</a></h1>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="rpi/wiringpi.html#admonition-info"></a></p>
@@ -792,7 +819,7 @@ int main(void) {
 <pre><code class="language-sh">./fan
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-powershell"><a class="header" href="#使用-powershell">使用 Powershell</a></h1>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="rpi/powershell.html#admonition-info"></a></p>
@@ -846,7 +873,7 @@ oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH/paradox.omp.json&quot;
 <pre><code class="language-sh">pwsh
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-oh-my-posh"><a class="header" href="#使用-oh-my-posh">使用 Oh-my-posh</a></h1>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="rpi/oh-my-posh.html#admonition-info"></a></p>
@@ -966,7 +993,7 @@ git commit -m &quot;First commit&quot;
 <pre><code class="language-sh">git restore . &amp;&amp; git clean -f
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-node"><a class="header" href="#使用-node">使用 Node</a></h1>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="tutorial/node.html#admonition-info"></a></p>
@@ -996,7 +1023,7 @@ git commit -m &quot;First commit&quot;
 <pre><code class="language-sh">npm install -g hexo-cli@latest
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-v2ray"><a class="header" href="#使用-v2ray">使用 V2ray</a></h1>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="tutorial/v2ray.html#admonition-info"></a></p>
@@ -1122,7 +1149,7 @@ git commit -m &quot;First commit&quot;
 </code></pre>
 <h2 id="五配置客户端"><a class="header" href="#五配置客户端">五、配置客户端</a></h2>
 <p><strong>Clash</strong></p>
-<div id="admonition-info-1" class="admonition info">
+<div id="admonition-info-1" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="tutorial/v2ray.html#admonition-info-1"></a></p>
@@ -1152,7 +1179,7 @@ proxies:
     tls: true
 </code></pre>
 <p><strong>Shadowrocket</strong></p>
-<div id="admonition-info-2" class="admonition info">
+<div id="admonition-info-2" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="tutorial/v2ray.html#admonition-info-2"></a></p>
@@ -1285,7 +1312,7 @@ server {
 }
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-mysql"><a class="header" href="#使用-mysql">使用 MySQL</a></h1>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="tutorial/mysql.html#admonition-info"></a></p>
@@ -1420,7 +1447,7 @@ ADD COLUMN column_name column_definition;
 sql_mode = &quot;STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION&quot;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-docker"><a class="header" href="#使用-docker">使用 Docker</a></h1>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="tutorial/docker.html#admonition-info"></a></p>
@@ -1662,7 +1689,7 @@ mv config.yaml ~/.config/clash
 export https_proxy=&quot;http://127.0.0.1:7890&quot;
 export no_proxy=&quot;localhost, 127.0.0.1, *edu.cn&quot;
 </code></pre>
-<div id="admonition-warning" class="admonition warning">
+<div id="admonition-warning" class="admonition admonish-warning">
 <div class="admonition-title">
 <p>Warning</p>
 <p><a class="admonition-anchor-link" href="tutorial/clash.html#admonition-warning"></a></p>
@@ -1757,7 +1784,7 @@ INFO[0000] RESTful API listening at: 127.0.0.1:9090
 INFO[0000] SOCKS proxy listening at: [::]:7891
 </code></pre>
 <p>你可以更新一下系统或者打开浏览器测试一下 Google，如果可以访问你就可以愉快地玩耍了！</p>
-<div id="admonition-warning-1" class="admonition warning">
+<div id="admonition-warning-1" class="admonition admonish-warning">
 <div class="admonition-title">
 <p>Warning</p>
 <p><a class="admonition-anchor-link" href="tutorial/clash.html#admonition-warning-1"></a></p>
@@ -1788,7 +1815,7 @@ external-controller: 127.0.0.1:9090
 </code></pre>
 <p>然后在浏览器中输入<a href="http://127.0.0.1:9090/ui">http://127.0.0.1:9090/ui</a>就可以看到 Clash 的控制面板了。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-wireguard"><a class="header" href="#使用-wireguard">使用 Wireguard</a></h1>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="tutorial/wireguard.html#admonition-info"></a></p>
@@ -1822,7 +1849,7 @@ PostDown = iptables -D FORWARD -i wg0 -j ACCEPT &amp;&amp; iptables -t nat -D PO
 PublicKey = client_public_key
 AllowedIPs = 10.0.0.2/32
 </code></pre>
-<div id="admonition-warning" class="admonition warning">
+<div id="admonition-warning" class="admonition admonish-warning">
 <div class="admonition-title">
 <p>Warning</p>
 <p><a class="admonition-anchor-link" href="tutorial/wireguard.html#admonition-warning"></a></p>
@@ -1885,7 +1912,7 @@ PersistentKeepalive = 25
 <p>如果防火墙已经启动，你可以输入以下命令开启防火墙：</p>
 <pre><code class="language-sh">ufw allow 51820/udp
 </code></pre>
-<div id="admonition-warning-1" class="admonition warning">
+<div id="admonition-warning-1" class="admonition admonish-warning">
 <div class="admonition-title">
 <p>Warning</p>
 <p><a class="admonition-anchor-link" href="tutorial/wireguard.html#admonition-warning-1"></a></p>
@@ -2349,7 +2376,7 @@ services:
 <pre><code class="language-sh">docker-compose up -d
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-adguard-服务器"><a class="header" href="#使用-adguard-服务器">使用 Adguard 服务器</a></h1>
-<div id="admonition-info" class="admonition info">
+<div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
 <p>Info</p>
 <p><a class="admonition-anchor-link" href="server/adguard.html#admonition-info"></a></p>
