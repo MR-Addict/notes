@@ -16,13 +16,13 @@ use-default-preprocessors = true
 
 [output.html]
 default-theme = "Light"
-preferred-dark-theme = "Navy"
+preferred-dark-theme = "Ayu"
 curly-quotes = true
 mathjax-support = true
 copy-fonts = true
 no-section-label = false
-git-repository-icon = "fa-github"
 git-repository-url = "https://github.com/mr-addict/notes"
+edit-url-template = "https://github.com/mr-addict/notes/edit/main/{path}"
 additional-css = ["./assets/mdbook-admonish.css"]
 
 [output.html.print]
@@ -54,4 +54,4 @@ copy-js = true
 
 [preprocessor.admonish]
 command = "mdbook-admonish"
-assets_version = "2.0.0" # do not edit: managed by `mdbook-admonish install`
+assets_version = "3.0.2" # do not edit: managed by `mdbook-admonish install`
