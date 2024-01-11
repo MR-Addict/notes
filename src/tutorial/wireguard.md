@@ -1,9 +1,5 @@
 # 使用 Wireguard
 
-```admonish info
-参考视频：[wireguard](https://www.youtube.com/watch?v=bVKNSf1p1d0)
-```
-
 ## 一、安装 wireguard
 
 ```sh
@@ -189,3 +185,7 @@ sudo systemctl stop wg-quick@wg0
 ```sh
 sudo systemctl disable wg-quick@wg0
 ```
+
+## 八、参考视频
+
+{% embed youtube id="bVKNSf1p1d0" %}

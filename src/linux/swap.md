@@ -1,9 +1,5 @@
 # Swap 空间
 
-```admonish info
-参考视频：[swap](https://www.youtube.com/watch?v=HSbBl31ohjE)
-```
-
 ## 一、基本操作
 
 查看运行内存和交换空间：
@@ -67,3 +63,7 @@ sudo vim /etc/fstab
 ```
 /swap none swap sw 0 0
 ```
+
+## 三、参考视频
+
+{% embed youtube id="HSbBl31ohjE" %}
