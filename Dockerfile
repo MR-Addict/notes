@@ -1,8 +1,7 @@
 FROM ubuntu AS builder
-COPY assets/mdbook /usr/local/bin
-COPY assets/mdbook-admonish /usr/local/bin
 WORKDIR /app
 COPY . .
+COPY assets/bin/* /usr/local/bin
 RUN chmod u+x /usr/local/bin/mdbook*
 RUN mdbook build
 
