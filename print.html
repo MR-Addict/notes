@@ -182,8 +182,106 @@
 <p>本项目基于 <a href="https://github.com/rust-lang/mdBook">mdbook</a> 框架，主要是用作笔记的功能，记录一些重要的内容，以方便我在不同的机器上使用 Copy+Paste 魔法。</p>
 <p>因为是笔记的原因，所以我不会写得太详细，目的是达到我自己能看懂，并且里面很多的配置都是直接复制我的生产环境配置。</p>
 <p>非常荣幸你能看到我的笔记。</p>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="linux"><a class="header" href="#linux">Linux</a></h1>
 <p>一些关于 Linux 的使用笔记。</p>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="swap-空间"><a class="header" href="#swap-空间">Swap 空间</a></h1>
 <h2 id="一基本操作"><a class="header" href="#一基本操作">一、基本操作</a></h2>
 <p>查看运行内存和交换空间：</p>
@@ -223,9 +321,58 @@
   loading="lazy"
   name="YouTube"
   src="https://www.youtube.com/embed/HSbBl31ohjE"
-  style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 0.375rem"
+  style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 1rem"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 ></iframe>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="用户和用户组"><a class="header" href="#用户和用户组">用户和用户组</a></h1>
 <h2 id="一管理用户"><a class="header" href="#一管理用户">一、管理用户</a></h2>
 <p>查看当前用户：</p>
@@ -262,6 +409,55 @@
 <p>删除用户组：</p>
 <pre><code class="language-sh">sudo groupdel test
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="systemd-使用方法"><a class="header" href="#systemd-使用方法">Systemd 使用方法</a></h1>
 <div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
@@ -361,6 +557,55 @@ ExecStart=/path/to/app
 [Install]
 WantedBy=multi-user.target
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="其他配置及常用命令"><a class="header" href="#其他配置及常用命令">其他配置及常用命令</a></h1>
 <p>查看系统 CPU：</p>
 <pre><code class="language-sh">htop
@@ -413,8 +658,106 @@ WantedBy=multi-user.target
 <p>设置时区：</p>
 <pre><code class="language-sh">sudo timedatectl set-timezone Asia/Shanghai
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="openwrt"><a class="header" href="#openwrt">OpenWrt</a></h1>
 <p>一些关于 OpenWrt 的使用笔记。</p>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-vim"><a class="header" href="#使用-vim">使用 Vim</a></h1>
 <h2 id="一安装-vim"><a class="header" href="#一安装-vim">一、安装 Vim</a></h2>
 <pre><code class="language-sh">opkg update
@@ -443,6 +786,55 @@ set smartindent
 let &amp;t_SI = &quot;\e[6 q&quot;
 let &amp;t_EI = &quot;\e[2 q&quot;
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-init"><a class="header" href="#使用-init">使用 Init</a></h1>
 <div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
@@ -491,6 +883,55 @@ boot() {
 <p>关闭开机自启：</p>
 <pre><code class="language-sh">/etc/init.d/your_service disable
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-uhttp"><a class="header" href="#使用-uhttp">使用 Uhttp</a></h1>
 <div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
@@ -517,6 +958,55 @@ opkg install uhttpd
 <h2 id="三重启-uhttpd"><a class="header" href="#三重启-uhttpd">三、重启 uhttpd</a></h2>
 <pre><code class="language-sh">/etc/init.d/uhttpd restart
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="其他常用命令"><a class="header" href="#其他常用命令">其他常用命令</a></h1>
 <p>更新包：</p>
 <pre><code class="language-sh">opkg update
@@ -536,9 +1026,107 @@ opkg install uhttpd
 <p>删除某个进程：</p>
 <pre><code class="language-sh">kill $(ps|awk '/[m]qtt/{print $1}')
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="树莓派笔记"><a class="header" href="#树莓派笔记">树莓派笔记</a></h1>
 <p>本专题内容跟都是和树莓派相关，包括常用的命令、配置以及项目使用等等。</p>
 <p>同时笔记当中所有内容都是使用原生源，也就是说如果你是使用了国内源的话可能会出现一定程度上的不兼容。</p>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-vim-1"><a class="header" href="#使用-vim-1">使用 Vim</a></h1>
 <h2 id="一安装-vim-1"><a class="header" href="#一安装-vim-1">一、安装 Vim</a></h2>
 <pre><code class="language-sh">sudo apt-get install vim -y
@@ -624,6 +1212,55 @@ let &amp;t_EI = &quot;\e[2 q&quot;
 <p>清空整个文件：</p>
 <pre><code>:%d
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-ssh"><a class="header" href="#使用-ssh">使用 SSH</a></h1>
 <h2 id="一通过-puttygen-使用-ssh"><a class="header" href="#一通过-puttygen-使用-ssh">一、通过 Puttygen 使用 SSH</a></h2>
 <p>直接参考以下文章即可，这里不做详细介绍了：</p>
@@ -663,6 +1300,55 @@ let &amp;t_EI = &quot;\e[2 q&quot;
 <p>复制整个文件夹到服务器，服务器路径为<code>/home/pi/Pictures</code>，客户端路径为当前路径：</p>
 <pre><code class="language-sh">scp -r Images pi@192.168.1.3:Pictures
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="配置-alias"><a class="header" href="#配置-alias">配置 Alias</a></h1>
 <p>进入 sh_aliaes 配置文件</p>
 <pre><code class="language-sh">vim ~/.sh_aliases
@@ -688,6 +1374,55 @@ alias apt-clean=&quot;sudo apt-get autoremove -y &amp;&amp; sudo apt-get clean -
 <p>注意：注意：本配置只在pi用户下有效，如果你想在root也有效需要重新配置</p>
 </div>
 </div>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-crontab"><a class="header" href="#使用-crontab">使用 Crontab</a></h1>
 <h2 id="一配置-crontab"><a class="header" href="#一配置-crontab">一、配置 crontab</a></h2>
 <p>进入 corntab 配置文件：</p>
@@ -752,6 +1487,55 @@ alias apt-clean=&quot;sudo apt-get autoremove -y &amp;&amp; sudo apt-get clean -
 <pre><code>@reboot gpio mode 15 out &amp;&amp; gpio write 15 1
 </code></pre>
 <p>开机自动调用 wiringpi 打开风扇。</p>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-wiringpi"><a class="header" href="#使用-wiringpi">使用 Wiringpi</a></h1>
 <div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
@@ -818,6 +1602,55 @@ int main(void) {
 <p>执行代码：</p>
 <pre><code class="language-sh">./fan
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-powershell"><a class="header" href="#使用-powershell">使用 Powershell</a></h1>
 <div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
@@ -872,6 +1705,55 @@ oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH/paradox.omp.json&quot;
 <p>在终端中输入以下命令启动 powershell：</p>
 <pre><code class="language-sh">pwsh
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-oh-my-posh"><a class="header" href="#使用-oh-my-posh">使用 Oh-my-posh</a></h1>
 <div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
@@ -910,9 +1792,107 @@ rm ~/.poshthemes/themes.zip
 <pre><code class="language-sh">oh-my-posh --init --shell pwsh --config /home/pi/.poshthemes/paradox.omp.json | Invoke-Expression
 </code></pre>
 <p>最后重新启动终端就可以正常使用了。</p>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="学习教程"><a class="header" href="#学习教程">学习教程</a></h1>
 <p>这个专题主要就是折腾笔记，把一些瞎折腾的东西给搬过来。</p>
 <p>因此本专题操作上会有一定的难度，也有可能不成功。</p>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-git"><a class="header" href="#使用-git">使用 git</a></h1>
 <h2 id="一配置-git"><a class="header" href="#一配置-git">一、配置 git</a></h2>
 <p>进入 git 配置文件：</p>
@@ -992,6 +1972,55 @@ git commit -m &quot;First commit&quot;
 <p>重置所有内容，并且删除新文件：</p>
 <pre><code class="language-sh">git restore . &amp;&amp; git clean -f
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-node"><a class="header" href="#使用-node">使用 Node</a></h1>
 <div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
@@ -1022,6 +2051,55 @@ git commit -m &quot;First commit&quot;
 <p>安装最新的 hexo：</p>
 <pre><code class="language-sh">npm install -g hexo-cli@latest
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-v2ray"><a class="header" href="#使用-v2ray">使用 V2ray</a></h1>
 <div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
@@ -1192,6 +2270,55 @@ proxies:
 <img src="tutorial/images/v2ray-shadowrocket-1.png" alt="shadowrocket-1" width="400px">
 <p>其中选择 websocket 传输方式：</p>
 <img src="tutorial/images/v2ray-shadowrocket-2.png" alt="shadowrocket-2" width="400px">
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-nginx"><a class="header" href="#使用-nginx">使用 nginx</a></h1>
 <h2 id="一安装-nginx"><a class="header" href="#一安装-nginx">一、安装 nginx</a></h2>
 <p>更新 apt 源：</p>
@@ -1311,6 +2438,55 @@ server {
   }
 }
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-mysql"><a class="header" href="#使用-mysql">使用 MySQL</a></h1>
 <div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
@@ -1446,6 +2622,55 @@ ADD COLUMN column_name column_definition;
 [mysqld]
 sql_mode = &quot;STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION&quot;
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-docker"><a class="header" href="#使用-docker">使用 Docker</a></h1>
 <div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
@@ -1609,6 +2834,55 @@ Environment=&quot;NO_PROXY=localhost,127.0.0.1&quot;
 <p>删除所有容器：</p>
 <pre><code class="language-sh">docker rm $(docker ps --filter status=exited -q)
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-apache2"><a class="header" href="#使用-apache2">使用 apache2</a></h1>
 <h2 id="一安装-apache2"><a class="header" href="#一安装-apache2">一、安装 apache2</a></h2>
 <pre><code class="language-sh">sudo apt-get update
@@ -1661,6 +2935,55 @@ sudo apt-get install apache2 -y
 <p>注册 apache2 服务：</p>
 <pre><code class="language-sh">sudo systemctl enable apache2
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-clash-内核"><a class="header" href="#使用-clash-内核">使用 Clash 内核</a></h1>
 <h2 id="一下载-clash"><a class="header" href="#一下载-clash">一、下载 Clash</a></h2>
 <p>在这里我们使用 Clash 作为科学上网的代理框架，为什么使用 Clash 呢，那是因为 Clash 内核支持各种 Unix 平台的各个架构；还支持各种代理协议，像 Trojan、Vmess、Shadowsocks 等等；以及强大的分流规则，可以非常方便地自定义各种规则。</p>
@@ -1814,6 +3137,55 @@ git checkout -b gh-pages origin/gh-pages
 external-controller: 127.0.0.1:9090
 </code></pre>
 <p>然后在浏览器中输入<a href="http://127.0.0.1:9090/ui">http://127.0.0.1:9090/ui</a>就可以看到 Clash 的控制面板了。</p>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-wireguard"><a class="header" href="#使用-wireguard">使用 Wireguard</a></h1>
 <h2 id="一安装-wireguard"><a class="header" href="#一安装-wireguard">一、安装 wireguard</a></h2>
 <pre><code class="language-sh">sudo apt-get install wireguard -y
@@ -1939,9 +3311,58 @@ PersistentKeepalive = 25
   loading="lazy"
   name="YouTube"
   src="https://www.youtube.com/embed/bVKNSf1p1d0"
-  style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 0.375rem"
+  style="width: 100%; height: 100%; border: none; aspect-ratio: 16/9; border-radius: 1rem"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 ></iframe>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-github-actions"><a class="header" href="#使用-github-actions">使用 GitHub Actions</a></h1>
 <h2 id="一基本模板"><a class="header" href="#一基本模板">一、基本模板</a></h2>
 <p>新建配置文件：</p>
@@ -2102,8 +3523,106 @@ jobs:
 <p>注销任务：</p>
 <pre><code class="language-sh">sudo ./svc.sh uninstall
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="服务器搭建"><a class="header" href="#服务器搭建">服务器搭建</a></h1>
 <p>这里包含了各种基于 Docker 的服务器搭建教程，全部使用 docker-compose 管理，部分包含了 Nginx 反向代理的配置文件。</p>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="搭建-mc-服务器"><a class="header" href="#搭建-mc-服务器">搭建 MC 服务器</a></h1>
 <p>配置 Dcocker 容器：</p>
 <pre><code class="language-yaml">version: &quot;3&quot;
@@ -2127,6 +3646,55 @@ services:
 <p>启动容器：</p>
 <pre><code class="language-sh">docker-compose up -d
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="搭建-mqtt-服务器"><a class="header" href="#搭建-mqtt-服务器">搭建 MQTT 服务器</a></h1>
 <h2 id="一配置-docker-容器"><a class="header" href="#一配置-docker-容器">一、配置 Docker 容器</a></h2>
 <pre><code class="language-yaml">version: &quot;3&quot;
@@ -2181,6 +3749,55 @@ password_file /mosquitto/config/password.txt
 <p>最后重启容器：</p>
 <pre><code class="language-sh">docker-compose restart
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-drone-ci-服务器"><a class="header" href="#使用-drone-ci-服务器">使用 Drone CI 服务器</a></h1>
 <p>Drone CI 是一个基于 go 的 CI 工具，配合 Github 或者 Gitlab 等可以实现方便的持续部署。</p>
 <h2 id="一配置-docker-容器-1"><a class="header" href="#一配置-docker-容器-1">一、配置 Docker 容器</a></h2>
@@ -2345,6 +3962,55 @@ trigger:
 <li>drone 使用的 cron 表达式是 <strong>6 位</strong>的，包含秒，和常规 5 位的 linux 系统 cron 不太一样</li>
 </ul>
 </blockquote>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="搭建-vscode-服务器"><a class="header" href="#搭建-vscode-服务器">搭建 VSCode 服务器</a></h1>
 <p>配置 Dcocker 容器：</p>
 <pre><code class="language-yaml">version: &quot;3&quot;
@@ -2375,6 +4041,55 @@ services:
 <p>启动容器：</p>
 <pre><code class="language-sh">docker-compose up -d
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-adguard-服务器"><a class="header" href="#使用-adguard-服务器">使用 Adguard 服务器</a></h1>
 <div id="admonition-info" class="admonition admonish-info">
 <div class="admonition-title">
@@ -2464,6 +4179,55 @@ https://adaway.org/hosts.txt
 https://v.firebog.net/hosts/AdguardDNS.txt
 https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="搭建-mongodb-数据库"><a class="header" href="#搭建-mongodb-数据库">搭建 Mongodb 数据库</a></h1>
 <h2 id="一配置-docker-容器-2"><a class="header" href="#一配置-docker-容器-2">一、配置 Docker 容器</a></h2>
 <p>配置容器：</p>
@@ -2494,6 +4258,55 @@ services:
 <li>your_password</li>
 <li>your_server_ip_or_domain</li>
 </ul>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-pocketbase"><a class="header" href="#使用-pocketbase">使用 Pocketbase</a></h1>
 <h2 id="1-配置-docker-服务器"><a class="header" href="#1-配置-docker-服务器">1. 配置 Docker 服务器</a></h2>
 <p>配置容器：</p>
@@ -2555,6 +4368,55 @@ server {
 <ul>
 <li><a href="https://your_domain.com/_/">https://your_domain.com/_/</a></li>
 </ul>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="搭建-wireguard-服务器"><a class="header" href="#搭建-wireguard-服务器">搭建 Wireguard 服务器</a></h1>
 <p>配置 Docker 容器：</p>
 <pre><code class="language-yaml">version: &quot;3&quot;
@@ -2582,6 +4444,55 @@ services:
 <p>启动容器：</p>
 <pre><code class="language-sh">docker-compose up -d
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="搭建-nextcloud-服务器"><a class="header" href="#搭建-nextcloud-服务器">搭建 NextCloud 服务器</a></h1>
 <h2 id="一配置-docker-容器-3"><a class="header" href="#一配置-docker-容器-3">一、配置 Docker 容器</a></h2>
 <pre><code class="language-yaml">version: &quot;3&quot;
@@ -2676,6 +4587,55 @@ server {
   }
 }
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="搭建-home-assistant-服务器"><a class="header" href="#搭建-home-assistant-服务器">搭建 Home Assistant 服务器</a></h1>
 <h2 id="一配置-docker-容器-4"><a class="header" href="#一配置-docker-容器-4">一、配置 Docker 容器</a></h2>
 <p>使用以下<strong>docker-compose.yaml</strong>：</p>
@@ -2737,9 +4697,156 @@ server {
   }
 }
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="编程笔记"><a class="header" href="#编程笔记">编程笔记</a></h1>
 <p>我学习新的编程语言的一些简单笔记，不会很全。</p>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sql-笔记"><a class="header" href="#sql-笔记">SQL 笔记</a></h1>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hello-world"><a class="header" href="#hello-world">HELLO WORLD</a></h1>
 <h2 id="一示例"><a class="header" href="#一示例">一、示例</a></h2>
 <pre><code class="language-sql">USE sql_store;
@@ -2758,6 +4865,55 @@ ORDER BY first_name
 <li><code>ORDER BY</code>排序</li>
 <li><code>--</code>注释</li>
 </ul>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="select"><a class="header" href="#select">SELECT</a></h1>
 <h2 id="一示例-1"><a class="header" href="#一示例-1">一、示例</a></h2>
 <pre><code class="language-sql">USE sql_store;
@@ -2777,6 +4933,55 @@ ORDER BY points
 <li>SELECT 可以使用别名<code>AS</code></li>
 <li>SELECT 可以使用四则运算和括号产生新的列</li>
 </ul>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="where"><a class="header" href="#where">WHERE</a></h1>
 <h2 id="一示例-2"><a class="header" href="#一示例-2">一、示例</a></h2>
 <pre><code class="language-sql">USE sql_store;
@@ -2793,6 +4998,55 @@ WHERE birth_date &gt; '1990-01-01'
 <li>WHERE 可以使用逻辑运算符</li>
 <li>SQL 的时间格式是<code>YYYY-MM-DD HH-MM-SS</code></li>
 </ul>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="and-or-not"><a class="header" href="#and-or-not">AND-OR-NOT</a></h1>
 <h2 id="一示例-3"><a class="header" href="#一示例-3">一、示例</a></h2>
 <pre><code class="language-sql">USE sql_store;
@@ -2809,7 +5063,105 @@ WHERE NOT (birth_date &gt; '1990-01-01' OR points &gt; 1000)
 <li>逻辑运算符 AND 优先级更高</li>
 <li>逻辑运算符可以通过括号改变运算顺序</li>
 </ul>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lua"><a class="header" href="#lua">Lua</a></h1>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hello-world-1"><a class="header" href="#hello-world-1">Hello world</a></h1>
 <h2 id="示例"><a class="header" href="#示例">示例</a></h2>
 <p>print 输出：</p>
@@ -2818,6 +5170,55 @@ WHERE NOT (birth_date &gt; '1990-01-01' OR points &gt; 1000)
 <p>标准输出：</p>
 <pre><code class="language-lua">io.write(&quot;Size of string &quot;, #&quot;String&quot;, &quot;.\n&quot;)
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="变量"><a class="header" href="#变量">变量</a></h1>
 <h2 id="一数字型-number"><a class="header" href="#一数字型-number">一、数字型 Number</a></h2>
 <p>Lua 数值的最大值：</p>
@@ -2863,6 +5264,55 @@ io.write(&quot;Index of password : &quot;, string.find(quote, &quot;password&quo
 io.write(&quot;Quote Upper : &quot;, string.upper(quote), &quot;\n&quot;)
 io.write(&quot;Quote Lower : &quot;, string.lower(quote), &quot;\n&quot;)
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="运算符"><a class="header" href="#运算符">运算符</a></h1>
 <h2 id="一四则运算符"><a class="header" href="#一四则运算符">一、四则运算符</a></h2>
 <pre><code class="language-lua">io.write(&quot;5 + 3 = &quot;, 5 + 3, &quot;\n&quot;)
@@ -2890,6 +5340,55 @@ if (age &lt; 14) or (age &gt; 67) then io.write(&quot;You shouldn't work\n&quot;
 <pre><code class="language-lua">local canVote = age &gt; 18 and true or false
 io.write(&quot;Can I Vote : &quot;, tostring(canVote), &quot;\n&quot;)
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="循环"><a class="header" href="#循环">循环</a></h1>
 <h2 id="一while-循环"><a class="header" href="#一while-循环">一、while 循环</a></h2>
 <pre><code class="language-lua">local i = 1
@@ -2921,6 +5420,55 @@ for key, value in pairs(months) do
   io.write(key, &quot;:&quot;, value, &quot;\n&quot;)
 end
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="函数"><a class="header" href="#函数">函数</a></h1>
 <h2 id="一基本用法"><a class="header" href="#一基本用法">一、基本用法</a></h2>
 <pre><code class="language-lua">local function getSum(num1, num2)
@@ -2973,6 +5521,55 @@ local getI = outerFunc()
 print(getI())
 print(getI())
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="math"><a class="header" href="#math">Math</a></h1>
 <h2 id="一常用函数"><a class="header" href="#一常用函数">一、常用函数</a></h2>
 <p>示例：</p>
@@ -2999,6 +5596,55 @@ sqrt(64) : 8
 <p>浮点数格式化：</p>
 <pre><code class="language-lua">print(string.format(&quot;Pi = %.5f&quot;, math.pi))
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="table"><a class="header" href="#table">Table</a></h1>
 <h2 id="一基础用法"><a class="header" href="#一基础用法">一、基础用法</a></h2>
 <p>通过索引获取 Table，下标从 1 开始：</p>
@@ -3043,6 +5689,55 @@ for i = 0, 9 do
   print()
 end
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="class"><a class="header" href="#class">Class</a></h1>
 <h2 id="一class-基础"><a class="header" href="#一class-基础">一、Class 基础</a></h2>
 <pre><code class="language-lua">Animal = { height = 0, weight = 0, name = &quot;No Name&quot;, sound = &quot;No Sound&quot; }
@@ -3104,7 +5799,105 @@ end
 local fluffy = Cat:new(10, 15, &quot;Fluffy&quot;, &quot;Meow&quot;, &quot;Tuna&quot;)
 print(fluffy:toString())
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="typescript"><a class="header" href="#typescript">TypeScript</a></h1>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="hello-world-2"><a class="header" href="#hello-world-2">Hello world</a></h1>
 <h2 id="一安装-typescript"><a class="header" href="#一安装-typescript">一、安装 typescript</a></h2>
 <pre><code class="language-sh">npm install -g typescript
@@ -3140,6 +5933,55 @@ console.log(message);
 <p>编译文件：</p>
 <pre><code class="language-sh">tsc
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="types"><a class="header" href="#types">Types</a></h1>
 <h2 id="一built-in-types"><a class="header" href="#一built-in-types">一、Built-In Types</a></h2>
 <p>内置的一些数据类型，包括数字型，字符型，布尔型和任意型：</p>
@@ -3170,6 +6012,55 @@ user.forEach((item) =&gt; console.log(item));
 let mySize: Size = Size.Medium;
 console.log(mySize);
 </code></pre>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="function"><a class="header" href="#function">Function</a></h1>
 <h2 id="一示例-4"><a class="header" href="#一示例-4">一、示例</a></h2>
 <pre><code class="language-ts">function calculateTax(income: number, taxYear: number = 2022): number {
@@ -3184,6 +6075,55 @@ console.log(calculateTax(10_000, 2022));
 <li>函数参数可以指定类型</li>
 <li>函数参数可设置默认值</li>
 </ul>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="object"><a class="header" href="#object">Object</a></h1>
 <h2 id="一示例-5"><a class="header" href="#一示例-5">一、示例</a></h2>
 <pre><code class="language-ts">let employee: {
@@ -3203,6 +6143,55 @@ console.log(calculateTax(10_000, 2022));
 <li>对象的参数可以使用 <strong>readonly</strong> 设置为默认</li>
 <li>对象可以传入函数</li>
 </ul>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="type-aliases"><a class="header" href="#type-aliases">Type Aliases</a></h1>
 <h2 id="一示例-6"><a class="header" href="#一示例-6">一、示例</a></h2>
 <pre><code class="language-ts">type Employee = {
@@ -3223,6 +6212,55 @@ let employee: Employee = {
 <ul>
 <li>使用 <strong>type</strong> 声明对象的别名</li>
 </ul>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="union-type"><a class="header" href="#union-type">Union Type</a></h1>
 <h2 id="一示例-7"><a class="header" href="#一示例-7">一、示例</a></h2>
 <pre><code class="language-ts">function KgToLbs(weight: number | string): number {
@@ -3236,6 +6274,55 @@ console.log(KgToLbs(20));
 <li>使用 <strong>|</strong> 给变量两个范围</li>
 <li>使用 <strong>typeof</strong> 判断变量类型</li>
 </ul>
+<style>
+  .scroll-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 1.25rem;
+    right: calc(1.25rem + var(--page-padding));
+
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--icons);
+
+    z-index: 999;
+    cursor: pointer;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      right: calc(0.5rem + 90px + var(--page-padding));
+    }
+    .scroll-to-top:hover {
+      background-color: var(--icons-hover);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<p><button
+  type="button"
+  aria-label="scroll-top"
+  class="scroll-to-top hidden"
+  onclick="window.scroll({top: 0, behavior: 'smooth'})"
+>
+<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
+<path
+      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+    />
+</svg>
+</button></p>
 
                     </main>
 
