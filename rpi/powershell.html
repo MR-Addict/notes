@@ -265,12 +265,6 @@ oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH/paradox.omp.json&quot;
     }
   }
 </style>
-<script async defer>
-  window.addEventListener("scroll", () => {
-    const button = document.querySelector(".scroll-to-top");
-    button.classList.toggle("hidden", window.scrollY < 200);
-  });
-</script>
 <p><button
   type="button"
   aria-label="scroll-top"
@@ -283,6 +277,12 @@ oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH/paradox.omp.json&quot;
     />
 </svg>
 </button></p>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
 
                     </main>
 

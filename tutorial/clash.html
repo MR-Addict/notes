@@ -364,12 +364,6 @@ external-controller: 127.0.0.1:9090
     }
   }
 </style>
-<script async defer>
-  window.addEventListener("scroll", () => {
-    const button = document.querySelector(".scroll-to-top");
-    button.classList.toggle("hidden", window.scrollY < 200);
-  });
-</script>
 <p><button
   type="button"
   aria-label="scroll-top"
@@ -382,6 +376,12 @@ external-controller: 127.0.0.1:9090
     />
 </svg>
 </button></p>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
 
                     </main>
 

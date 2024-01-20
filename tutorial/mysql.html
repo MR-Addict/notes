@@ -346,12 +346,6 @@ sql_mode = &quot;STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVI
     }
   }
 </style>
-<script async defer>
-  window.addEventListener("scroll", () => {
-    const button = document.querySelector(".scroll-to-top");
-    button.classList.toggle("hidden", window.scrollY < 200);
-  });
-</script>
 <p><button
   type="button"
   aria-label="scroll-top"
@@ -364,6 +358,12 @@ sql_mode = &quot;STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVI
     />
 </svg>
 </button></p>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
 
                     </main>
 

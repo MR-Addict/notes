@@ -300,12 +300,6 @@ https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
     }
   }
 </style>
-<script async defer>
-  window.addEventListener("scroll", () => {
-    const button = document.querySelector(".scroll-to-top");
-    button.classList.toggle("hidden", window.scrollY < 200);
-  });
-</script>
 <p><button
   type="button"
   aria-label="scroll-top"
@@ -318,6 +312,12 @@ https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
     />
 </svg>
 </button></p>
+<script>
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
 
                     </main>
 
