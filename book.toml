@@ -51,7 +51,7 @@ heading-split-level = 3
 copy-js = true
 
 [preprocessor.embedify]
-scroll-to-top = true
+scroll-to-top.enable = true
 
 [preprocessor.admonish]
 command = "mdbook-admonish"
