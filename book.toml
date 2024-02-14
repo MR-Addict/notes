@@ -1,29 +1,25 @@
 [book]
 authors = ["MR-Addict"]
 description = "我的笔记(方便施展Copy+Paste魔法)"
-language = "zh-cn"
+language = "zh-CN"
 multilingual = false
 src = "src"
 title = "我的笔记"
 
-[rust]
-edition = "2021" # the default edition for code blocks
-
 [build]
 build-dir = "book"
 create-missing = false
-use-default-preprocessors = true
+use-default-preprocessors = false
 
 [output.html]
 default-theme = "Light"
 preferred-dark-theme = "Ayu"
 curly-quotes = true
-mathjax-support = true
-copy-fonts = true
+mathjax-support = false
 no-section-label = false
 git-repository-url = "https://github.com/mr-addict/notes"
 edit-url-template = "https://github.com/mr-addict/notes/edit/main/{path}"
-additional-css = ["./assets/css/mdbook-admonish.css"]
+additional-css = ["./assets/css/patch.css", "./assets/css/mdbook-admonish.css"]
 
 [output.html.print]
 enable = true
@@ -31,12 +27,6 @@ enable = true
 [output.html.fold]
 enable = true
 level = 1
-
-[output.html.playground]
-editable = true
-copyable = true
-copy-js = true
-line-numbers = true
 
 [output.html.search]
 enable = true
@@ -54,5 +44,4 @@ copy-js = true
 scroll-to-top.enable = true
 
 [preprocessor.admonish]
-command = "mdbook-admonish"
-assets_version = "3.0.2"    # do not edit: managed by `mdbook-admonish install`
+assets_version = "3.0.2"
