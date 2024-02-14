@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="zh-cn" class="light" dir="ltr">
+<html lang="zh-CN" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -30,10 +30,9 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./assets/css/patch.css">
         <link rel="stylesheet" href="./assets/css/mdbook-admonish.css">
 
-        <!-- MathJax -->
-        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </head>
     <body class="sidebar-visible no-js">
     <div id="body-container">
@@ -184,6 +183,9 @@
 <p>非常荣幸你能看到我的笔记。</p>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,39 +195,34 @@
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -235,6 +232,9 @@
 <p>一些关于 Linux 的使用笔记。</p>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -244,39 +244,34 @@
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -326,6 +321,9 @@
 ></iframe>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -335,39 +333,34 @@
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -411,6 +404,9 @@
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -420,39 +416,34 @@
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -559,6 +550,9 @@ WantedBy=multi-user.target
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -568,39 +562,34 @@ WantedBy=multi-user.target
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -660,6 +649,9 @@ WantedBy=multi-user.target
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -669,39 +661,34 @@ WantedBy=multi-user.target
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -711,6 +698,9 @@ WantedBy=multi-user.target
 <p>一些关于 OpenWrt 的使用笔记。</p>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -720,39 +710,34 @@ WantedBy=multi-user.target
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -788,6 +773,9 @@ let &amp;t_EI = &quot;\e[2 q&quot;
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -797,39 +785,34 @@ let &amp;t_EI = &quot;\e[2 q&quot;
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -885,6 +868,9 @@ boot() {
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -894,39 +880,34 @@ boot() {
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -960,6 +941,9 @@ opkg install uhttpd
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -969,39 +953,34 @@ opkg install uhttpd
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -1028,6 +1007,9 @@ opkg install uhttpd
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1037,39 +1019,34 @@ opkg install uhttpd
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -1080,6 +1057,9 @@ opkg install uhttpd
 <p>同时笔记当中所有内容都是使用原生源，也就是说如果你是使用了国内源的话可能会出现一定程度上的不兼容。</p>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1089,39 +1069,34 @@ opkg install uhttpd
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -1214,6 +1189,9 @@ let &amp;t_EI = &quot;\e[2 q&quot;
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1223,39 +1201,34 @@ let &amp;t_EI = &quot;\e[2 q&quot;
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -1302,6 +1275,9 @@ let &amp;t_EI = &quot;\e[2 q&quot;
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1311,39 +1287,34 @@ let &amp;t_EI = &quot;\e[2 q&quot;
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -1376,48 +1347,46 @@ alias apt-clean=&quot;sudo apt-get autoremove -y &amp;&amp; sudo apt-get clean -
 </div>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+<pre><code>position: fixed;
+padding: 0.75rem;
+bottom: 1.25rem;
+right: calc(1.25rem + var(--page-padding));
 
-    position: fixed;
-    padding: 0.75rem;
-    bottom: 1.25rem;
-    right: calc(1.25rem + var(--page-padding));
-
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
-    z-index: 999;
-    cursor: pointer;
-  }
-  .scroll-to-top.hidden {
-    display: none;
-  }
-  @media (min-width: 768px) {
-    .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
-    }
-    .scroll-to-top:hover {
-      background-color: var(--icons-hover);
-    }
-  }
-</style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+z-index: 999;
+cursor: pointer;
+color: #fff;
+border: none;
+border-radius: 50%;
+background-color: var(--icons);
+</code></pre>
+<p>}
+.scroll-to-top.hidden {
+display: none;
+}
+.scroll-to-top i {
+transform: translateY(-2px);
+}
+@media (min-width: 768px) {
+.scroll-to-top {
+bottom: 4rem;
+right: calc(1.25rem + 90px + var(–page-padding));
+}
+.scroll-to-top:hover {
+background-color: var(–icons-hover);
+}
+}
+</style></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -1489,6 +1458,9 @@ alias apt-clean=&quot;sudo apt-get autoremove -y &amp;&amp; sudo apt-get clean -
 <p>开机自动调用 wiringpi 打开风扇。</p>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1498,39 +1470,34 @@ alias apt-clean=&quot;sudo apt-get autoremove -y &amp;&amp; sudo apt-get clean -
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -1604,6 +1571,9 @@ int main(void) {
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1613,39 +1583,34 @@ int main(void) {
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -1707,6 +1672,9 @@ oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH/paradox.omp.json&quot;
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1716,39 +1684,34 @@ oh-my-posh init pwsh --config &quot;$env:POSH_THEMES_PATH/paradox.omp.json&quot;
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -1794,6 +1757,9 @@ rm ~/.poshthemes/themes.zip
 <p>最后重新启动终端就可以正常使用了。</p>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1803,39 +1769,34 @@ rm ~/.poshthemes/themes.zip
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -1846,6 +1807,9 @@ rm ~/.poshthemes/themes.zip
 <p>因此本专题操作上会有一定的难度，也有可能不成功。</p>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1855,39 +1819,34 @@ rm ~/.poshthemes/themes.zip
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -1974,6 +1933,9 @@ git commit -m &quot;First commit&quot;
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1983,39 +1945,34 @@ git commit -m &quot;First commit&quot;
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -2053,6 +2010,9 @@ git commit -m &quot;First commit&quot;
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2062,39 +2022,34 @@ git commit -m &quot;First commit&quot;
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -2272,48 +2227,46 @@ proxies:
 <img src="tutorial/images/v2ray-shadowrocket-2.png" alt="shadowrocket-2" width="400px">
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+<pre><code>position: fixed;
+padding: 0.75rem;
+bottom: 1.25rem;
+right: calc(1.25rem + var(--page-padding));
 
-    position: fixed;
-    padding: 0.75rem;
-    bottom: 1.25rem;
-    right: calc(1.25rem + var(--page-padding));
-
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
-    z-index: 999;
-    cursor: pointer;
-  }
-  .scroll-to-top.hidden {
-    display: none;
-  }
-  @media (min-width: 768px) {
-    .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
-    }
-    .scroll-to-top:hover {
-      background-color: var(--icons-hover);
-    }
-  }
-</style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+z-index: 999;
+cursor: pointer;
+color: #fff;
+border: none;
+border-radius: 50%;
+background-color: var(--icons);
+</code></pre>
+<p>}
+.scroll-to-top.hidden {
+display: none;
+}
+.scroll-to-top i {
+transform: translateY(-2px);
+}
+@media (min-width: 768px) {
+.scroll-to-top {
+bottom: 4rem;
+right: calc(1.25rem + 90px + var(–page-padding));
+}
+.scroll-to-top:hover {
+background-color: var(–icons-hover);
+}
+}
+</style></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -2440,6 +2393,9 @@ server {
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2449,39 +2405,34 @@ server {
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -2624,6 +2575,9 @@ sql_mode = &quot;STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVI
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2633,39 +2587,34 @@ sql_mode = &quot;STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVI
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -2836,6 +2785,9 @@ Environment=&quot;NO_PROXY=localhost,127.0.0.1&quot;
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2845,39 +2797,34 @@ Environment=&quot;NO_PROXY=localhost,127.0.0.1&quot;
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -2937,6 +2884,9 @@ sudo apt-get install apache2 -y
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2946,39 +2896,34 @@ sudo apt-get install apache2 -y
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -3139,6 +3084,9 @@ external-controller: 127.0.0.1:9090
 <p>然后在浏览器中输入<a href="http://127.0.0.1:9090/ui">http://127.0.0.1:9090/ui</a>就可以看到 Clash 的控制面板了。</p>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3148,39 +3096,34 @@ external-controller: 127.0.0.1:9090
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -3316,6 +3259,9 @@ PersistentKeepalive = 25
 ></iframe>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3325,39 +3271,34 @@ PersistentKeepalive = 25
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -3525,6 +3466,9 @@ jobs:
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3534,39 +3478,34 @@ jobs:
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -3576,6 +3515,9 @@ jobs:
 <p>这里包含了各种基于 Docker 的服务器搭建教程，全部使用 docker-compose 管理，部分包含了 Nginx 反向代理的配置文件。</p>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3585,39 +3527,34 @@ jobs:
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -3648,6 +3585,9 @@ services:
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3657,39 +3597,34 @@ services:
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -3751,6 +3686,9 @@ password_file /mosquitto/config/password.txt
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3760,39 +3698,34 @@ password_file /mosquitto/config/password.txt
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -3964,6 +3897,9 @@ trigger:
 </blockquote>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3973,39 +3909,34 @@ trigger:
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -4043,6 +3974,9 @@ services:
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4052,39 +3986,34 @@ services:
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -4181,6 +4110,9 @@ https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4190,39 +4122,34 @@ https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -4260,6 +4187,9 @@ services:
 </ul>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4269,39 +4199,34 @@ services:
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -4370,6 +4295,9 @@ server {
 </ul>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4379,39 +4307,34 @@ server {
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -4446,6 +4369,9 @@ services:
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4455,39 +4381,34 @@ services:
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -4589,6 +4510,9 @@ server {
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4598,39 +4522,34 @@ server {
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -4699,6 +4618,9 @@ server {
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4708,39 +4630,34 @@ server {
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -4750,6 +4667,9 @@ server {
 <p>我学习新的编程语言的一些简单笔记，不会很全。</p>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4759,39 +4679,34 @@ server {
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -4800,6 +4715,9 @@ server {
 <div style="break-before: page; page-break-before: always;"></div><h1 id="sql-笔记"><a class="header" href="#sql-笔记">SQL 笔记</a></h1>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4809,39 +4727,34 @@ server {
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -4867,6 +4780,9 @@ ORDER BY first_name
 </ul>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4876,39 +4792,34 @@ ORDER BY first_name
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -4935,6 +4846,9 @@ ORDER BY points
 </ul>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4944,39 +4858,34 @@ ORDER BY points
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -5000,6 +4909,9 @@ WHERE birth_date &gt; '1990-01-01'
 </ul>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5009,39 +4921,34 @@ WHERE birth_date &gt; '1990-01-01'
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -5065,6 +4972,9 @@ WHERE NOT (birth_date &gt; '1990-01-01' OR points &gt; 1000)
 </ul>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5074,39 +4984,34 @@ WHERE NOT (birth_date &gt; '1990-01-01' OR points &gt; 1000)
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -5115,6 +5020,9 @@ WHERE NOT (birth_date &gt; '1990-01-01' OR points &gt; 1000)
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lua"><a class="header" href="#lua">Lua</a></h1>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5124,39 +5032,34 @@ WHERE NOT (birth_date &gt; '1990-01-01' OR points &gt; 1000)
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -5172,6 +5075,9 @@ WHERE NOT (birth_date &gt; '1990-01-01' OR points &gt; 1000)
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5181,39 +5087,34 @@ WHERE NOT (birth_date &gt; '1990-01-01' OR points &gt; 1000)
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -5266,6 +5167,9 @@ io.write(&quot;Quote Lower : &quot;, string.lower(quote), &quot;\n&quot;)
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5275,39 +5179,34 @@ io.write(&quot;Quote Lower : &quot;, string.lower(quote), &quot;\n&quot;)
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -5342,6 +5241,9 @@ io.write(&quot;Can I Vote : &quot;, tostring(canVote), &quot;\n&quot;)
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5351,39 +5253,34 @@ io.write(&quot;Can I Vote : &quot;, tostring(canVote), &quot;\n&quot;)
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -5422,6 +5319,9 @@ end
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5431,39 +5331,34 @@ end
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -5523,6 +5418,9 @@ print(getI())
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5532,39 +5430,34 @@ print(getI())
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -5598,6 +5491,9 @@ sqrt(64) : 8
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5607,39 +5503,34 @@ sqrt(64) : 8
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -5691,6 +5582,9 @@ end
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5700,39 +5594,34 @@ end
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -5801,6 +5690,9 @@ print(fluffy:toString())
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5810,39 +5702,34 @@ print(fluffy:toString())
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -5851,6 +5738,9 @@ print(fluffy:toString())
 <div style="break-before: page; page-break-before: always;"></div><h1 id="typescript"><a class="header" href="#typescript">TypeScript</a></h1>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5860,39 +5750,34 @@ print(fluffy:toString())
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -5935,6 +5820,9 @@ console.log(message);
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5944,39 +5832,34 @@ console.log(message);
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -6014,6 +5897,9 @@ console.log(mySize);
 </code></pre>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6023,39 +5909,34 @@ console.log(mySize);
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -6077,6 +5958,9 @@ console.log(calculateTax(10_000, 2022));
 </ul>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6086,39 +5970,34 @@ console.log(calculateTax(10_000, 2022));
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -6145,6 +6024,9 @@ console.log(calculateTax(10_000, 2022));
 </ul>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6154,39 +6036,34 @@ console.log(calculateTax(10_000, 2022));
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -6214,6 +6091,9 @@ let employee: Employee = {
 </ul>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6223,39 +6103,34 @@ let employee: Employee = {
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -6276,6 +6151,9 @@ console.log(KgToLbs(20));
 </ul>
 <style>
   .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6285,39 +6163,34 @@ console.log(KgToLbs(20));
     bottom: 1.25rem;
     right: calc(1.25rem + var(--page-padding));
 
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    background-color: var(--icons);
-
     z-index: 999;
     cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--icons);
   }
   .scroll-to-top.hidden {
     display: none;
   }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
   @media (min-width: 768px) {
     .scroll-to-top {
-      right: calc(0.5rem + 90px + var(--page-padding));
+      bottom: 4rem;
+      right: calc(1.25rem + 90px + var(--page-padding));
     }
     .scroll-to-top:hover {
       background-color: var(--icons-hover);
     }
   }
 </style>
-<p><button
-  type="button"
-  aria-label="scroll-top"
-  class="scroll-to-top hidden"
-  onclick="window.scroll({top: 0, behavior: 'smooth'})"
->
-<svg height="18" width="18" fill="currentColor" viewBox="0 0 512 512">
-<path
-      d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
-    />
-</svg>
-</button></p>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
 <script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
@@ -6369,9 +6242,7 @@ console.log(KgToLbs(20));
 
         <script>
         window.addEventListener('load', function() {
-            MathJax.Hub.Register.StartupHook('End', function() {
-                window.setTimeout(window.print, 100);
-            });
+            window.setTimeout(window.print, 100);
         });
         </script>
 
