@@ -7,7 +7,7 @@
 
 
         <!-- Custom HTML head -->
-        
+        <script defer src="https://us.umami.is/script.js" data-website-id="f52c913a-274a-4472-bd16-83a430cb2900"></script>
         <meta name="description" content="我的笔记(方便施展Copy+Paste魔法)">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
@@ -179,9 +179,33 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="type-aliases"><a class="header" href="#type-aliases">Type Aliases</a></h1>
+                        <!-- Custom REPL Style -->
+<style>
+  .repl {
+    margin-block: 2rem;
+    position: relative;
+    isolation: isolate;
+  }
+  .repl iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .repl iframe.hide {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+  }
+</style>
+<h1 id="type-aliases"><a class="header" href="#type-aliases">Type Aliases</a></h1>
 <h2 id="一示例"><a class="header" href="#一示例">一、示例</a></h2>
-<pre><code class="language-ts">type Employee = {
+<div class="repl" data-id="deec383e-8813-4e8a-8ca4-a2c2922aa98d" data-readonly="false" data-lang="typescript">
+  <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
+</div>
+<pre><code class="language-typescript">type Employee = {
   readonly id: number;
   name: string;
   retire: (date: Date) =&gt; void;
@@ -194,6 +218,8 @@ let employee: Employee = {
     console.log(date);
   },
 };
+
+employee.retire(new Date());
 </code></pre>
 <h2 id="二知识点"><a class="header" href="#二知识点">二、知识点</a></h2>
 <ul>
@@ -243,6 +269,51 @@ let employee: Employee = {
   window.addEventListener("scroll", () => {
     const button = document.querySelector(".scroll-to-top");
     button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+<!-- Custom REPL Script -->
+<script>
+  document.querySelectorAll(".repl").forEach((replElement) => {
+    const iframeElement = replElement.querySelector("iframe");
+
+    const id = replElement.getAttribute("data-id");
+    const lang = replElement.getAttribute("data-lang");
+    const code = replElement.nextElementSibling.innerText.trim();
+    const readonly = replElement.getAttribute("data-readonly") === "true";
+    let theme = mapTheme(localStorage.getItem("mdbook-theme") || "light");
+
+    const postmessage = (msg) => iframeElement.contentWindow.postMessage({ repl: msg }, "*");
+
+    function mapTheme(bookTheme) {
+      return bookTheme === "light" || bookTheme === "rust" ? "light" : "dark";
+    }
+
+    window.addEventListener("message", (event) => {
+      const repl = event.data.repl;
+      if (event.source === window || !repl) return;
+
+      // if the id is empty, then it's the first time the iframe is loaded
+      if (repl.id === "") {
+        postmessage({ id, editor: { theme, lang, code, readonly, defaultCode: code } });
+        return;
+      }
+
+      if (repl.id !== id) return;
+
+      // update the iframe height
+      replElement.style.height = repl.dimensions.height + "px";
+      // show the iframe and hide the pre element
+      iframeElement.classList.remove("hide");
+      replElement.nextElementSibling.style.display = "none";
+    });
+
+    // listen to theme change
+    document.querySelectorAll("button[role='menuitem'].theme").forEach((btn) => {
+      btn.addEventListener("click", (event) => {
+        theme = mapTheme(event.target.id);
+        postmessage({ id, editor: { theme } });
+      });
+    });
   });
 </script>
 
