@@ -14,6 +14,8 @@ let employee: {
     console.log(date);
   },
 };
+
+employee.retire(new Date());
 ```
 
 ## 二、知识点
