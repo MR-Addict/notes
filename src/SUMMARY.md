@@ -37,6 +37,7 @@
   - [使用 Apache2](tutorial/apache2.md)
   - [使用 Clash 内核](tutorial/clash.md)
   - [使用 Wireguard](tutorial/wireguard.md)
+  - [使用 Transmission](tutorial/transmission.md)
   - [使用 GitHub Actions](tutorial/github-actions.md)
 
 - [服务器搭建](server/intro.md)
