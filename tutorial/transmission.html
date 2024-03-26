@@ -201,6 +201,18 @@
 <li><code>rpc-password</code>：密码，当 Transmission 重新启动时会将其加密</li>
 <li><code>rpc-whitelist-enabled</code>：是否启用白名单，我建议直接关闭</li>
 </ul>
+<p>修改缓存大小：</p>
+<pre><code class="language-sh">sudo vim /etc/sysctl.conf
+</code></pre>
+<p>在文件末尾添加：</p>
+<pre><code class="language-sh">net.core.rmem_max = 16777216
+net.core.wmem_max = 4194304
+</code></pre>
+<p>然后重新启动 Transmission 服务：</p>
+<pre><code class="language-sh">sudo systemctl start transmission-daemon
+</code></pre>
+<h2 id="三使用-transmission"><a class="header" href="#三使用-transmission">三、使用 Transmission</a></h2>
+<p>默认 Transmission 的 Web 界面端口是 <strong>9091</strong>，我们可以通过浏览器访问 <code>http://localhost:9091</code> 来使用。</p>
 <style>
   .scroll-to-top {
     font-size: 2.5rem;

@@ -642,6 +642,9 @@ WantedBy=multi-user.target
 <p>设置时区：</p>
 <pre><code class="language-sh">sudo timedatectl set-timezone Asia/Shanghai
 </code></pre>
+<p>sudo 免密码：</p>
+<pre><code class="language-sh">username ALL=(ALL) NOPASSWD: ALL
+</code></pre>
 <style>
   .scroll-to-top {
     font-size: 2.5rem;
@@ -3297,6 +3300,18 @@ PersistentKeepalive = 25
 <li><code>rpc-password</code>：密码，当 Transmission 重新启动时会将其加密</li>
 <li><code>rpc-whitelist-enabled</code>：是否启用白名单，我建议直接关闭</li>
 </ul>
+<p>修改缓存大小：</p>
+<pre><code class="language-sh">sudo vim /etc/sysctl.conf
+</code></pre>
+<p>在文件末尾添加：</p>
+<pre><code class="language-sh">net.core.rmem_max = 16777216
+net.core.wmem_max = 4194304
+</code></pre>
+<p>然后重新启动 Transmission 服务：</p>
+<pre><code class="language-sh">sudo systemctl start transmission-daemon
+</code></pre>
+<h2 id="三使用-transmission"><a class="header" href="#三使用-transmission">三、使用 Transmission</a></h2>
+<p>默认 Transmission 的 Web 界面端口是 <strong>9091</strong>，我们可以通过浏览器访问 <code>http://localhost:9091</code> 来使用。</p>
 <style>
   .scroll-to-top {
     font-size: 2.5rem;
@@ -5844,7 +5859,7 @@ print(fluffy:toString())
 </code></pre>
 <h2 id="三hello-world"><a class="header" href="#三hello-world">三、Hello-world</a></h2>
 <p>新建<code>src/hello.ts</code>，并替换以下内容：</p>
-<div class="repl" data-id="497b8c0b-c657-48ba-85b5-9be18cdcf159" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="3c6c4d50-395f-4fe9-9d49-dbcdf2a930b5" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">let message: string = &quot;Hello world!&quot;;
@@ -5968,7 +5983,7 @@ console.log(message);
 <h1 id="types"><a class="header" href="#types">Types</a></h1>
 <h2 id="一built-in-types"><a class="header" href="#一built-in-types">一、Built-In Types</a></h2>
 <p>内置的一些数据类型，包括数字型，字符型，布尔型和任意型：</p>
-<div class="repl" data-id="3c7266b7-9fbf-43a7-a344-25b0feb3a806" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="1d89a009-4504-4a61-9cb0-753c33a4649d" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">let sales: number = 123_456_789;
@@ -5980,7 +5995,7 @@ level = &quot;One&quot;;
 </code></pre>
 <h2 id="二array"><a class="header" href="#二array">二、Array</a></h2>
 <p>数组：</p>
-<div class="repl" data-id="426fb95d-4729-48e5-b1b3-f8d4394a76f9" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="3da87ad5-9494-4c58-ae95-c6a4a8a03fa0" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">let numbers: number[] = [1, 2, 3];
@@ -5988,7 +6003,7 @@ numbers.forEach((item) =&gt; console.log(item.toString()));
 </code></pre>
 <h2 id="三tuples"><a class="header" href="#三tuples">三、Tuples</a></h2>
 <p>用于自定义一个数组，具有给定的数据类型：</p>
-<div class="repl" data-id="4f92224d-4bcd-4bcf-af9f-4b190b310cde" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="cb63bcb5-f252-4478-9b24-a4ba82e21050" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">let user: [number, string] = [1, &quot;Cael&quot;];
@@ -5996,7 +6011,7 @@ user.forEach((item) =&gt; console.log(item));
 </code></pre>
 <h2 id="四enum"><a class="header" href="#四enum">四、Enum</a></h2>
 <p>Enum 用于将相关联的变量组合成一个数据<strong>自定义的</strong>类型：</p>
-<div class="repl" data-id="d481fce2-18c6-4961-be89-6af35ade84c6" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="4666a20a-1f13-4382-a5a1-a22635338f3f" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">const enum Size {
@@ -6121,7 +6136,7 @@ console.log(mySize);
 </style>
 <h1 id="function"><a class="header" href="#function">Function</a></h1>
 <h2 id="一示例-4"><a class="header" href="#一示例-4">一、示例</a></h2>
-<div class="repl" data-id="1d47ace5-a36c-4a3a-b96a-25b89207b74d" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="c3480c7a-dbf3-4836-8d8e-59da40d374df" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">function calculateTax(income: number, taxYear: number = 2022): number {
@@ -6250,7 +6265,7 @@ console.log(calculateTax(10_000, 2022));
 </style>
 <h1 id="object"><a class="header" href="#object">Object</a></h1>
 <h2 id="一示例-5"><a class="header" href="#一示例-5">一、示例</a></h2>
-<div class="repl" data-id="3e52a0a6-0c24-45bf-b264-ec9ca3cda18a" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="a6ee8089-afd6-4c6b-bd23-6fb6b81918c0" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">let employee: {
@@ -6386,7 +6401,7 @@ employee.retire(new Date());
 </style>
 <h1 id="type-aliases"><a class="header" href="#type-aliases">Type Aliases</a></h1>
 <h2 id="一示例-6"><a class="header" href="#一示例-6">一、示例</a></h2>
-<div class="repl" data-id="fd1f54c7-a483-468d-a3e7-af0cca62aedb" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="17423e24-44a1-42b1-80e6-73a7f23aef7a" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">type Employee = {
@@ -6523,7 +6538,7 @@ employee.retire(new Date());
 </style>
 <h1 id="union-type"><a class="header" href="#union-type">Union Type</a></h1>
 <h2 id="一示例-7"><a class="header" href="#一示例-7">一、示例</a></h2>
-<div class="repl" data-id="4775067a-de67-4177-b32b-489ec4c7e81a" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="bd3c4c71-f459-42a2-aec4-1d929c743530" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">function KgToLbs(weight: number | string): number {
