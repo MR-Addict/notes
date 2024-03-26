@@ -35,3 +35,26 @@ sudo vim /etc/transmission-daemon/settings.json
 - `rpc-username`：用户名
 - `rpc-password`：密码，当 Transmission 重新启动时会将其加密
 - `rpc-whitelist-enabled`：是否启用白名单，我建议直接关闭
+
+修改缓存大小：
+
+```sh
+sudo vim /etc/sysctl.conf
+```
+
+在文件末尾添加：
+
+```sh
+net.core.rmem_max = 16777216
+net.core.wmem_max = 4194304
+```
+
+然后重新启动 Transmission 服务：
+
+```sh
+sudo systemctl start transmission-daemon
+```
+
+## 三、使用 Transmission
+
+默认 Transmission 的 Web 界面端口是 **9091**，我们可以通过浏览器访问 `http://localhost:9091` 来使用。
