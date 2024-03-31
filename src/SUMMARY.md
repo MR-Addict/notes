@@ -14,6 +14,7 @@
   - [使用 Vim](openwrt/vim.md)
   - [使用 Init](openwrt/init.md)
   - [使用 Uhttpd](openwrt/uhttpd.md)
+  - [使用 Mosquitto](openwrt/mosquitto.md)
   - [其他常用命令](openwrt/others.md)
 
 - [树莓派](rpi/intro.md)
