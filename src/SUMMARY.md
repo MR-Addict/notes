@@ -49,6 +49,7 @@
   - [搭建 VSCode 服务器](server/vscode.md)
   - [搭建 Adguard 服务器](server/adguard.md)
   - [搭建 Mongodb 数据库](server/mongodb.md)
+  - [搭建 Speedtest 服务器](server/speedtest.md)
   - [搭建 Pocketbase 数据库](server/pocketbase.md)
   - [搭建 Wireguard 服务器](server/wireguard.md)
   - [搭建 NextCloud 服务器](server/nextcloud.md)
