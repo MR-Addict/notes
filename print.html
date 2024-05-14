@@ -1423,12 +1423,12 @@ let &amp;t_EI = &quot;\e[2 q&quot;
 <pre><code class="language-sh">vim ~/.sh_aliases
 </code></pre>
 <p>添加以下内容：</p>
-<pre><code>alias la=&quot;ls -a&quot;
+<pre><code class="language-sh">alias la=&quot;ls -a&quot;
 alias ll=&quot;ls -l&quot;
 alias reboot=&quot;sudo reboot&quot;
 alias shutdown=&quot;sudo shutdown -h now&quot;
 
-alias git restore . &amp;&amp; git clean -f
+alias git-clean=&quot;git restore . &amp;&amp; git clean -f&quot;
 alias cpu-temp=&quot;vcgencmd measure_temp&quot;
 alias eeprom-update=&quot;sudo rpi-eeprom-update -a&quot;
 alias apt-update=&quot;sudo apt-get update &amp;&amp; sudo apt-get upgrade -y&quot;
@@ -1495,7 +1495,7 @@ display: flex;
 <pre><code class="language-sh">crontab -e
 </code></pre>
 <p>如果你是第一次使用，crontab 可能需要你选择默认的编辑器，这边我一般会选择 vim 作为我的编辑器，因此输入 2：</p>
-<pre><code>Select an editor.  To change later, run 'select-editor'.
+<pre><code class="language-sh">Select an editor.  To change later, run 'select-editor'.
   1. /bin/nano        &lt;---- easiest
   2. /usr/bin/vim.basic
   3. /usr/bin/vim.tiny
@@ -1504,8 +1504,11 @@ display: flex;
 <p>你也可以在后面更改默认的编辑器：</p>
 <pre><code class="language-sh">select-editor
 </code></pre>
+<p>或者使用下面的命令直接更改默认编辑器：</p>
+<pre><code class="language-sh">sudo update-alternatives --set editor /usr/bin/vim.basic
+</code></pre>
 <p>默认编辑器选择完后就会进入编辑界面，在文件末尾添加以下内容：</p>
-<pre><code>30 23 * * 0-5 sudo /usr/sbin/shutdown -h now
+<pre><code class="language-sh">30 23 * * 0-5 sudo /usr/sbin/shutdown -h now
 
 @reboot /usr/local/bin/clash
 @reboot gpio mode 15 out &amp;&amp; gpio write 15 1
@@ -1517,7 +1520,7 @@ display: flex;
 </code></pre>
 <h2 id="二contab-语法"><a class="header" href="#二contab-语法">二、contab 语法</a></h2>
 <p>基本格式：</p>
-<pre><code>* * * * * [username] command(s)
+<pre><code class="language-sh">* * * * * [username] command(s)
 - - - - -
 | | | | |
 | | | | ----- Day of week  (0 - 7) (Sunday=0 or 7)
@@ -1544,13 +1547,13 @@ display: flex;
 </div>
 </div>
 <h2 id="三示例"><a class="header" href="#三示例">三、示例</a></h2>
-<pre><code>* */2 * * * root apt-get update &amp;&amp; apt-get upgrade -y
+<pre><code class="language-sh">* */2 * * * root apt-get update &amp;&amp; apt-get upgrade -y
 </code></pre>
 <p>每两小时自动更新 apt。</p>
-<pre><code>30 23 * * 0-5 sudo /usr/sbin/shutdown -h now
+<pre><code class="language-sh">30 23 * * 0-5 sudo /usr/sbin/shutdown -h now
 </code></pre>
 <p>周日到周五晚 23:30 自动关机，即跳过星期六。</p>
-<pre><code>@reboot gpio mode 15 out &amp;&amp; gpio write 15 1
+<pre><code class="language-sh">@reboot gpio mode 15 out &amp;&amp; gpio write 15 1
 </code></pre>
 <p>开机自动调用 wiringpi 打开风扇。</p>
 <style>
@@ -1951,8 +1954,8 @@ rm ~/.poshthemes/themes.zip
 </code></pre>
 <p>然后添加以下内容：</p>
 <pre><code>[user]
-    name=MR-Addict
-    email=2750417853@qq.com
+    name=Cael
+    email=MR-Addict@qq.com
 [http]
     proxy=http://127.0.0.1:7890
 [https]
@@ -1986,10 +1989,10 @@ git commit -m &quot;First commit&quot;
 <pre><code class="language-sh">git status
 </code></pre>
 <p>设置全局用户名：</p>
-<pre><code class="language-sh">git config --global user.name MR-Addict
+<pre><code class="language-sh">git config --global user.name Cael
 </code></pre>
 <p>配置全局用户邮箱：</p>
-<pre><code class="language-sh">git config --global user.email 2750417853@qq.com
+<pre><code class="language-sh">git config --global user.email MR-Addict@qq.com
 </code></pre>
 <p>回退版本：</p>
 <pre><code class="language-sh">git reset --hard $hash_value_of_last_commit
@@ -6029,7 +6032,7 @@ print(fluffy:toString())
 </code></pre>
 <h2 id="三hello-world"><a class="header" href="#三hello-world">三、Hello-world</a></h2>
 <p>新建<code>src/hello.ts</code>，并替换以下内容：</p>
-<div class="repl" data-id="0ea694ff-dcd4-4241-b149-c37f59fdbce1" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="d060fbe5-2659-4965-827d-306b2a0add7d" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">let message: string = &quot;Hello world!&quot;;
@@ -6153,7 +6156,7 @@ console.log(message);
 <h1 id="types"><a class="header" href="#types">Types</a></h1>
 <h2 id="一built-in-types"><a class="header" href="#一built-in-types">一、Built-In Types</a></h2>
 <p>内置的一些数据类型，包括数字型，字符型，布尔型和任意型：</p>
-<div class="repl" data-id="eff24a93-12ad-4fd4-ab92-eac540c2e3ce" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="3f97051c-b3e2-4972-82d5-a8f8c9e3b3b1" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">let sales: number = 123_456_789;
@@ -6165,7 +6168,7 @@ level = &quot;One&quot;;
 </code></pre>
 <h2 id="二array"><a class="header" href="#二array">二、Array</a></h2>
 <p>数组：</p>
-<div class="repl" data-id="bbd89be4-8ea5-4f41-af0b-5f807f76d25b" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="cd11f268-0c33-4181-a3dd-c3f2a54b62ae" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">let numbers: number[] = [1, 2, 3];
@@ -6173,7 +6176,7 @@ numbers.forEach((item) =&gt; console.log(item.toString()));
 </code></pre>
 <h2 id="三tuples"><a class="header" href="#三tuples">三、Tuples</a></h2>
 <p>用于自定义一个数组，具有给定的数据类型：</p>
-<div class="repl" data-id="c0c90073-55bd-41b3-bfe4-f7c7bb2bbc49" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="3670f092-fa75-428e-808c-070554b9fbb8" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">let user: [number, string] = [1, &quot;Cael&quot;];
@@ -6181,7 +6184,7 @@ user.forEach((item) =&gt; console.log(item));
 </code></pre>
 <h2 id="四enum"><a class="header" href="#四enum">四、Enum</a></h2>
 <p>Enum 用于将相关联的变量组合成一个数据<strong>自定义的</strong>类型：</p>
-<div class="repl" data-id="3189757f-f96d-41f0-a7bd-087dfe215be2" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="d4328aab-9485-4ac0-9053-0bf2b4b97232" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">const enum Size {
@@ -6306,7 +6309,7 @@ console.log(mySize);
 </style>
 <h1 id="function"><a class="header" href="#function">Function</a></h1>
 <h2 id="一示例-4"><a class="header" href="#一示例-4">一、示例</a></h2>
-<div class="repl" data-id="7fc1d9bb-5453-4160-8093-fde3f024a49b" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="362debae-fe06-4f29-b42e-19cf19d16e9e" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">function calculateTax(income: number, taxYear: number = 2022): number {
@@ -6435,7 +6438,7 @@ console.log(calculateTax(10_000, 2022));
 </style>
 <h1 id="object"><a class="header" href="#object">Object</a></h1>
 <h2 id="一示例-5"><a class="header" href="#一示例-5">一、示例</a></h2>
-<div class="repl" data-id="30dcf3fb-fe61-400f-935f-6434fd4f697b" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="7e30ab4b-347e-4537-91f1-2590b6890db2" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">let employee: {
@@ -6571,7 +6574,7 @@ employee.retire(new Date());
 </style>
 <h1 id="type-aliases"><a class="header" href="#type-aliases">Type Aliases</a></h1>
 <h2 id="一示例-6"><a class="header" href="#一示例-6">一、示例</a></h2>
-<div class="repl" data-id="f8dde240-79a4-46e7-9b4a-9f16119e6dbe" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="57843816-b912-4968-946b-7c04518479dc" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">type Employee = {
@@ -6708,7 +6711,7 @@ employee.retire(new Date());
 </style>
 <h1 id="union-type"><a class="header" href="#union-type">Union Type</a></h1>
 <h2 id="一示例-7"><a class="header" href="#一示例-7">一、示例</a></h2>
-<div class="repl" data-id="ce0db41e-e97b-4ef0-b965-fd9a3aca8b9f" data-readonly="false" data-lang="typescript">
+<div class="repl" data-id="a579203c-8b76-4e01-97ed-6d6d277f4b0c" data-readonly="false" data-lang="typescript">
   <iframe class="hide" loading="lazy" name="mdbook-typescript-repl" allow="clipboard-write" src="https://mr-addict.github.io/mdbook-repl/embed/"></iframe>
 </div>
 <pre><code class="language-typescript">function KgToLbs(weight: number | string): number {

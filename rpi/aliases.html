@@ -184,12 +184,12 @@
 <pre><code class="language-sh">vim ~/.sh_aliases
 </code></pre>
 <p>添加以下内容：</p>
-<pre><code>alias la=&quot;ls -a&quot;
+<pre><code class="language-sh">alias la=&quot;ls -a&quot;
 alias ll=&quot;ls -l&quot;
 alias reboot=&quot;sudo reboot&quot;
 alias shutdown=&quot;sudo shutdown -h now&quot;
 
-alias git restore . &amp;&amp; git clean -f
+alias git-clean=&quot;git restore . &amp;&amp; git clean -f&quot;
 alias cpu-temp=&quot;vcgencmd measure_temp&quot;
 alias eeprom-update=&quot;sudo rpi-eeprom-update -a&quot;
 alias apt-update=&quot;sudo apt-get update &amp;&amp; sudo apt-get upgrade -y&quot;
