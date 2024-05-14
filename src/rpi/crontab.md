@@ -10,7 +10,7 @@ crontab -e
 
 如果你是第一次使用，crontab 可能需要你选择默认的编辑器，这边我一般会选择 vim 作为我的编辑器，因此输入 2：
 
-```
+```sh
 Select an editor.  To change later, run 'select-editor'.
   1. /bin/nano        <---- easiest
   2. /usr/bin/vim.basic
@@ -24,9 +24,15 @@ Select an editor.  To change later, run 'select-editor'.
 select-editor
 ```
 
+或者使用下面的命令直接更改默认编辑器：
+
+```sh
+sudo update-alternatives --set editor /usr/bin/vim.basic
+```
+
 默认编辑器选择完后就会进入编辑界面，在文件末尾添加以下内容：
 
-```
+```sh
 30 23 * * 0-5 sudo /usr/sbin/shutdown -h now
 
 @reboot /usr/local/bin/clash
@@ -45,7 +51,7 @@ crontab -l
 
 基本格式：
 
-```
+```sh
 * * * * * [username] command(s)
 - - - - -
 | | | | |
@@ -72,19 +78,19 @@ crontab在线编辑器：[crontab.guru](https://crontab.guru)
 
 ## 三、示例
 
-```
+```sh
 * */2 * * * root apt-get update && apt-get upgrade -y
 ```
 
 每两小时自动更新 apt。
 
-```
+```sh
 30 23 * * 0-5 sudo /usr/sbin/shutdown -h now
 ```
 
 周日到周五晚 23:30 自动关机，即跳过星期六。
 
-```
+```sh
 @reboot gpio mode 15 out && gpio write 15 1
 ```
 

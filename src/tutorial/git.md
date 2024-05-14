@@ -12,8 +12,8 @@ vim ~/.gitconfig
 
 ```
 [user]
-    name=MR-Addict
-    email=2750417853@qq.com
+    name=Cael
+    email=MR-Addict@qq.com
 [http]
     proxy=http://127.0.0.1:7890
 [https]
@@ -70,13 +70,13 @@ git status
 设置全局用户名：
 
 ```sh
-git config --global user.name MR-Addict
+git config --global user.name Cael
 ```
 
 配置全局用户邮箱：
 
 ```sh
-git config --global user.email 2750417853@qq.com
+git config --global user.email MR-Addict@qq.com
 ```
 
 回退版本：
