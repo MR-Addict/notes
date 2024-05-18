@@ -1,8 +1,8 @@
 # 使用 Powershell
 
-```admonish info
-官方文档：[powershell](https://docs.microsoft.com/en-us/powershell/scripting/install/install-raspbian?view=powershell-7.2)
-```
+> 官方文档 📝:
+>
+> [Install PowerShell on Raspbian](https://docs.microsoft.com/en-us/powershell/scripting/install/install-raspbian?view=powershell-7.2)
 
 ## 一、安装 Powershell
 

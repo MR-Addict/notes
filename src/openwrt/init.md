@@ -1,8 +1,8 @@
 # 使用 Init
 
-```admonish info
-官方文档：[init](https://openwrt.org/docs/techref/initscripts)
-```
+> 官方文档 📝:
+>
+> [init](https://openwrt.org/docs/techref/initscripts)
 
 ## 一、配置 init 服务
 

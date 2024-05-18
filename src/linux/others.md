@@ -102,7 +102,7 @@ python -m http.server 8080 --directory public
 sudo timedatectl set-timezone Asia/Shanghai
 ```
 
-sudo 免密码：
+sudo visudo 免密码：
 
 ```sh
 username ALL=(ALL) NOPASSWD: ALL

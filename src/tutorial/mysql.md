@@ -1,8 +1,8 @@
 # 使用 MySQL
 
-```admonish info
-Digital Ocean参考文档：[MySQL](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04)
-```
+> 参考文档 📝:
+>
+> [MySQL](https://www.mysql.com/)
 
 ## 一、使用 MySQL
 

@@ -1,8 +1,8 @@
 # 使用 Docker
 
-```admonish info
-官方文档：[docker](https://docs.docker.com/engine/install/ubuntu/)
-```
+> 官方文档 📝:
+>
+> [docker](https://docs.docker.com/engine/install/ubuntu/)
 
 ## 一、安装 Docker
 

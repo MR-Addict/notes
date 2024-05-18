@@ -14,12 +14,12 @@ use-default-preprocessors = false
 [output.html]
 default-theme = "Light"
 preferred-dark-theme = "Ayu"
-curly-quotes = true
+smart-punctuation = true
 mathjax-support = false
 no-section-label = false
 git-repository-url = "https://github.com/mr-addict/notes"
 edit-url-template = "https://github.com/mr-addict/notes/edit/main/{path}"
-additional-css = ["./assets/css/patch.css", "./assets/css/mdbook-admonish.css"]
+additional-css = ["./assets/css/patch.css"]
 
 [output.html.print]
 enable = true
@@ -45,6 +45,3 @@ scroll-to-top.enable = true
 
 [preprocessor.repl]
 typescript.enable = true
-
-[preprocessor.admonish]
-assets_version = "3.0.2"

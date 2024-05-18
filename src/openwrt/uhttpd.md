@@ -1,8 +1,8 @@
 # 使用 Uhttp
 
-```admonish info
-官方文档：[uhttp](https://openwrt.org/docs/guide-user/services/webserver/uhttpd)
-```
+> 官方文档 📝:
+>
+> [uhttp](https://openwrt.org/docs/guide-user/services/webserver/uhttpd)
 
 ## 一、安装 uhttpd
 

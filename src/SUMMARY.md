@@ -2,11 +2,21 @@
 
 [我的笔记](intro.md)
 
+- [树莓派](rpi/intro.md)
+
+  - [使用 Wiringpi](rpi/wiringpi.md)
+  - [使用 Powershell](rpi/powershell.md)
+
 - [Linux](linux/intro.md)
 
-  - [Swap 空间](linux/swap.md)
-  - [用户和用户组](linux/users.md)
-  - [Systemd 使用方法](linux/systemd.md)
+  - [使用 Vim](linux/vim.md)
+  - [使用 SSH](linux/ssh.md)
+  - [使用 Alias](linux/aliases.md)
+  - [使用 Crontab](linux/crontab.md)
+  - [使用 Systemd](linux/systemd.md)
+  - [使用 Oh-my-posh](linux/oh-my-posh.md)
+  - [使用 Swap 交换空间](linux/swap.md)
+  - [使用 Linux 用户和用户组](linux/users.md)
   - [其他配置及常用命令](linux/others.md)
 
 - [OpenWrt](openwrt/intro.md)
@@ -16,16 +26,6 @@
   - [使用 Uhttpd](openwrt/uhttpd.md)
   - [使用 Mosquitto](openwrt/mosquitto.md)
   - [其他常用命令](openwrt/others.md)
-
-- [树莓派](rpi/intro.md)
-
-  - [使用 Vim](rpi/vim.md)
-  - [使用 SSH](rpi/ssh.md)
-  - [使用 Alias](rpi/aliases.md)
-  - [使用 Crontab](rpi/crontab.md)
-  - [使用 Wiringpi](rpi/wiringpi.md)
-  - [使用 Powershell](rpi/powershell.md)
-  - [使用 Oh-my-posh](rpi/oh-my-posh.md)
 
 - [学习教程](tutorial/intro.md)
 

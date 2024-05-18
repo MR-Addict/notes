@@ -1,8 +1,8 @@
 # 使用 Node
 
-```admonish info
-官方文档：[node](https://github.com/nodesource/distributions/blob/master/README.md)
-```
+> 官方文档 📝:
+>
+> [node](https://github.com/nodesource/distributions/blob/master/README.md)
 
 ## 一、安装 Node
 

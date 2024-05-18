@@ -1,8 +1,8 @@
 # Systemd 使用方法
 
-```admonish info
-参考文章：[systemd](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units)
-```
+> 参考文章 🎉：
+>
+> [systemd](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units)
 
 ## 一、常用命令
 

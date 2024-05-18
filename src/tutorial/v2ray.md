@@ -1,8 +1,8 @@
 # 使用 V2ray
 
-```admonish info
-参考教程[v2ray](https://www.linuxbabe.com/ubuntu/set-up-v2ray-proxy-server)
-```
+> 参考教程 📝:
+>
+> [V2ray](https://www.v2ray.com/)
 
 ## 一、在服务器上安装 V2ray
 
@@ -185,9 +185,9 @@ sudo systemctl daemon-reload
 
 **Clash**
 
-```admonish info
-参考教程[clash](https://v2xtls.org/深入理解clash配置文件)
-```
+> 参考教程 📝:
+>
+> [Clash](https://v2xtls.org/深入理解clash配置文件)
 
 如果你是使用 Clash，可以参考以下配置文件：
 
@@ -214,9 +214,9 @@ proxies:
 
 **Shadowrocket**
 
-```admonish info
-参考教程[shadowrocket](https://v2xtls.org/shadowrocket配置v2ray教程)
-```
+> 参考教程 📝:
+>
+> [Shadowrocket](https://v2xtls.org/shadowrocket配置v2ray教程)
 
 请参考以下配置：
 

@@ -40,20 +40,21 @@ PublicKey = client_public_key
 AllowedIPs = 10.0.0.2/32
 ```
 
-````admonish warning
-注意：请使用下面的命令查看你的默认网卡：
-
-```sh
-ip route list table main default
-```
-
-例如如果返回结果是：
-
+> 注意 💥：
+>
+> 使用下面的命令查看你的默认网卡：
+>
+> ```sh
+> ip route list table main default
+> ```
+>
+> 例如如果返回结果是：
+>
+> ```
 > default via 172.18.224.1 dev `enp4s0` proto dhcp src 172.18.224.100 metric 100
-
-那么你需要将 eth0 改为`enp4s0`
-
-````
+> ```
+>
+> 那么你需要将 eth0 改为`enp4s0`
 
 ## 三、配置客户端
 
@@ -140,9 +141,9 @@ sudo ufw status
 ufw allow 51820/udp
 ```
 
-```admonish warning
-注意：如果你是在VPS上搭建wireguard，那么记得在你的服务商后台面板开启相应的`51820的UDP端口`
-```
+> 注意 💥：
+>
+> 如果你的服务器是在 VPS 上搭建的，那么你需要在你的服务商后台面板开启相应的`51820的UDP端口`
 
 ## 六、启动服务
 
