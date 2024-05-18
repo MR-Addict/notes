@@ -61,7 +61,7 @@ crontab -l
 |    /    |  步数符  |
 | @reboot | 启动事件 |
 
-> Crontab 在线编辑器：🎉
+> Crontab 在线编辑器 🎉
 >
 > [crontab.guru](https://crontab.guru)
 

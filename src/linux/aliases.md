@@ -21,6 +21,6 @@ alias apt-update="sudo apt-get update && sudo apt-get dist-upgrade -y"
 alias apt-clean="sudo apt-get autoremove -y && sudo apt-get clean -y"
 ```
 
-> 注意 💥：
+> 注意 💥
 >
 > 本配置只在当前用户下有效，如果你想在 root 也有效需要重新配置

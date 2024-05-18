@@ -1,6 +1,6 @@
 # 使用 Uhttp
 
-> 官方文档 📝:
+> 官方文档 📝
 >
 > [uhttp](https://openwrt.org/docs/guide-user/services/webserver/uhttpd)
 

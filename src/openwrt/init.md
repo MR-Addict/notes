@@ -1,6 +1,6 @@
 # 使用 Init
 
-> 官方文档 📝:
+> 官方文档 📝
 >
 > [init](https://openwrt.org/docs/techref/initscripts)
 

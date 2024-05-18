@@ -1,6 +1,6 @@
 # Systemd 使用方法
 
-> 参考文章 🎉：
+> 参考文档 📝
 >
 > [systemd](https://www.digitalocean.com/community/tutorials/how-to-use-systemctl-to-manage-systemd-services-and-units)
 

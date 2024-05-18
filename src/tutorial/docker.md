@@ -1,6 +1,6 @@
 # 使用 Docker
 
-> 官方文档 📝:
+> 官方文档 📝
 >
 > [docker](https://docs.docker.com/engine/install/ubuntu/)
 

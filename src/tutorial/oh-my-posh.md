@@ -1,6 +1,6 @@
 # 使用 Oh-my-posh
 
-> 官方文档 📝：
+> 官方文档 📝
 >
 > [oh-my-posh](https://ohmyposh.dev/docs)
 

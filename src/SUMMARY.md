@@ -9,27 +9,26 @@
 
 - [Linux](linux/intro.md)
 
+  - [使用 Git](linux/git.md)
   - [使用 Vim](linux/vim.md)
   - [使用 SSH](linux/ssh.md)
   - [使用 Alias](linux/aliases.md)
   - [使用 Crontab](linux/crontab.md)
   - [使用 Systemd](linux/systemd.md)
-  - [使用 Oh-my-posh](linux/oh-my-posh.md)
   - [使用 Swap 交换空间](linux/swap.md)
   - [使用 Linux 用户和用户组](linux/users.md)
   - [其他配置及常用命令](linux/others.md)
 
 - [OpenWrt](openwrt/intro.md)
 
-  - [使用 Vim](openwrt/vim.md)
   - [使用 Init](openwrt/init.md)
+  - [使用 Vim](openwrt/vim.md)
   - [使用 Uhttpd](openwrt/uhttpd.md)
   - [使用 Mosquitto](openwrt/mosquitto.md)
   - [其他常用命令](openwrt/others.md)
 
 - [学习教程](tutorial/intro.md)
 
-  - [使用 Git](tutorial/git.md)
   - [使用 Node](tutorial/node.md)
   - [使用 V2ray](tutorial/v2ray.md)
   - [使用 Nginx](tutorial/nginx.md)
@@ -38,6 +37,7 @@
   - [使用 Apache2](tutorial/apache2.md)
   - [使用 Clash 内核](tutorial/clash.md)
   - [使用 Wireguard](tutorial/wireguard.md)
+  - [使用 Oh-my-posh](tutorial/oh-my-posh.md)
   - [使用 Transmission](tutorial/transmission.md)
   - [使用 GitHub Actions](tutorial/github-actions.md)
 

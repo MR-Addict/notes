@@ -1,6 +1,6 @@
 # 使用 Powershell
 
-> 官方文档 📝:
+> 官方文档 📝
 >
 > [Install PowerShell on Raspbian](https://docs.microsoft.com/en-us/powershell/scripting/install/install-raspbian?view=powershell-7.2)
 

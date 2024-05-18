@@ -45,7 +45,7 @@ export https_proxy="http://127.0.0.1:7890"
 export no_proxy="localhost, 127.0.0.1, *edu.cn"
 ```
 
-> 注意 💥：
+> 注意 💥
 >
 > 系统变量的 https_proxy 的代理地址和 http_proxy 的代理地址是一样的，因为 Clash 使用一个地址同时代理 http 和 https。另外，no_proxy 表示其中的地址不需要代理，这一点很重要，比如我们不需要代理我们的校园网地址，因此加入要`*edu.cn`。
 
@@ -200,7 +200,7 @@ INFO[0000] SOCKS proxy listening at: [::]:7891
 
 你可以更新一下系统或者打开浏览器测试一下 Google，如果可以访问你就可以愉快地玩耍了！
 
-> 注意 💥：
+> 注意 💥
 >
 > 在终端请不要使用`ping google.com`来测试，因为 ping 使用不同的协议无法被 Clash 代理，但是可以使用`curl google.com`。
 

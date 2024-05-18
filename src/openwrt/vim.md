@@ -15,24 +15,4 @@ opkg install vim-full vim-runtime
 vim /usr/share/vim/vimrc
 ```
 
-你可以覆盖添加以下内容或者自行配置已有功能：
-
-```
-syntax on
-
-set number
-set relativenumber
-set tabstop=2 softtabstop=2
-set shiftwidth=2
-set expandtab
-set smartcase
-set incsearch
-set nobackup
-set undodir=~/.vim/undodir
-set undofile
-set backspace=indent,eol,start
-set smartindent
-
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-```
+配置内容可参考 [Linux-Vim](../linux/vim.md)

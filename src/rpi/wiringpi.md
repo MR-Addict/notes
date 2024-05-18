@@ -1,6 +1,6 @@
 # 使用 Wiringpi
 
-> 官方文档 📝:
+> 官方文档 📝
 >
 > [wiringpi](http://wiringpi.com/wiringpi-updated-to-2-52-for-the-raspberry-pi-4b)
 

@@ -40,7 +40,7 @@ PublicKey = client_public_key
 AllowedIPs = 10.0.0.2/32
 ```
 
-> 注意 💥：
+> 注意 💥
 >
 > 使用下面的命令查看你的默认网卡：
 >
@@ -141,7 +141,7 @@ sudo ufw status
 ufw allow 51820/udp
 ```
 
-> 注意 💥：
+> 注意 💥
 >
 > 如果你的服务器是在 VPS 上搭建的，那么你需要在你的服务商后台面板开启相应的`51820的UDP端口`
 

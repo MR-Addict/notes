@@ -1,6 +1,6 @@
 # 使用 Node
 
-> 官方文档 📝:
+> 官方文档 📝
 >
 > [node](https://github.com/nodesource/distributions/blob/master/README.md)
 
