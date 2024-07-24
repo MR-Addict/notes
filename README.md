@@ -16,6 +16,5 @@
 
 你可以通过以下网址访问网页内容：
 
-- [https://notes.mraddict.top](https://notes.mraddict.top)
 - [https://notes.mraddict.vercel.app](https://notes.mraddict.vercel.app)
 - [https://mr-addict.github.io/notes](https://mr-addict.github.io/notes)
