@@ -1,13 +1,17 @@
 # Summary
 
-[我的笔记](intro.md)
+[我的笔记](index.md)
 
-- [树莓派](rpi/intro.md)
+- [Windows]()
+
+  - [HOST](windows/host.md)
+
+- [树莓派]()
 
   - [使用 Wiringpi](rpi/wiringpi.md)
   - [使用 Powershell](rpi/powershell.md)
 
-- [Linux](linux/intro.md)
+- [Linux]()
 
   - [使用 Git](linux/git.md)
   - [使用 Vim](linux/vim.md)
@@ -19,7 +23,7 @@
   - [使用 Linux 用户和用户组](linux/users.md)
   - [其他配置及常用命令](linux/others.md)
 
-- [OpenWrt](openwrt/intro.md)
+- [OpenWrt]()
 
   - [使用 Init](openwrt/init.md)
   - [使用 Vim](openwrt/vim.md)
@@ -27,7 +31,7 @@
   - [使用 Mosquitto](openwrt/mosquitto.md)
   - [其他常用命令](openwrt/others.md)
 
-- [学习教程](tutorial/intro.md)
+- [学习教程]()
 
   - [使用 Node](tutorial/node.md)
   - [使用 V2ray](tutorial/v2ray.md)
@@ -41,7 +45,7 @@
   - [使用 Transmission](tutorial/transmission.md)
   - [使用 GitHub Actions](tutorial/github-actions.md)
 
-- [服务器搭建](server/intro.md)
+- [服务器搭建]()
 
   - [搭建 MC 服务器](server/minecraft.md)
   - [搭建 MQTT 服务器](server/mqtt.md)
@@ -55,13 +59,13 @@
   - [搭建 NextCloud 服务器](server/nextcloud.md)
   - [搭建 Home Assistant 服务器](server/homeassistant.md)
 
-- [编程语言](programming/intro.md)
-  - [SQL](programming/sql/intro.md)
+- [编程语言]()
+  - [SQL]()
     - [Hello World](programming/sql/hello-world.md)
     - [SELECT](programming/sql/select.md)
     - [WHERE](programming/sql/where.md)
     - [AND-OR-NOT](programming/sql/and-or-not.md)
-  - [Lua](programming/lua/intro.md)
+  - [Lua]()
     - [Hello World](programming/lua/hello-world.md)
     - [变量](programming/lua/variable.md)
     - [运算符](programming/lua/operator.md)
@@ -70,7 +74,7 @@
     - [Math](programming/lua/math.md)
     - [Table](programming/lua/table.md)
     - [Class](programming/lua/class.md)
-  - [Typescript](programming/typescript/intro.md)
+  - [Typescript]()
     - [Hello World](programming/typescript/hello-world.md)
     - [Types](programming/typescript/types.md)
     - [Function](programming/typescript/function.md)
