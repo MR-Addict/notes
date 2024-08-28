@@ -18,10 +18,6 @@ vim ~/.gitconfig
     proxy=http://127.0.0.1:7890
 [https]
     proxy=http://127.0.0.1:7890
-[init]
-    defaultBranch=main
-[pull]
-    ff=only
 ```
 
 ## 二、首次提交模板

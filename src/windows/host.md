@@ -1,4 +1,4 @@
-# HOST 位置
+# HOST
 
 Windows 上的 HOST 文件位于：
 

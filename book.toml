@@ -42,6 +42,3 @@ copy-js = true
 
 [preprocessor.embedify]
 scroll-to-top.enable = true
-
-[preprocessor.repl]
-typescript.enable = true
