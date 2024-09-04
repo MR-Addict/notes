@@ -8,12 +8,13 @@
 
 - [Windows]()
 
-  - [HOST](windows/host.md)
-  - [使用 Winget](windows/winget.md)
+  - [使用 HOST](windows/host.md)
   - [使用 GO](windows/go.md)
-  - [使用 Powershell](windows/powershell.md)
   - [使用 NVM](windows/nvm.md)
+  - [使用 Pyenv](windows/pyenv.md)
+  - [使用 Winget](windows/winget.md)
   - [使用 Oh My Posh](windows/oh-my-posh.md)
+  - [使用 Powershell](windows/powershell.md)
   - [设置环境变量](windows/env.md)
 
 - [Linux]()
