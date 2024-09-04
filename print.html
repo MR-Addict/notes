@@ -396,7 +396,7 @@ int main(void) {
 <p><strong>Raspberry Pi Imager</strong></p>
 <pre><code class="language-sh">winget install --id RaspberryPiFoundation.RaspberryPiImager
 </code></pre>
-<p><strong>Docker Destop</strong></p>
+<p><strong>Docker Desktop</strong></p>
 <pre><code class="language-sh">winget install --id Docker.DockerDesktop
 </code></pre>
 <h2 id="二终端类"><a class="header" href="#二终端类">二、终端类</a></h2>
@@ -534,14 +534,16 @@ setx /M HTTPS_PROXY "http://127.0.0.1:7890"
 <pre><code class="language-ps1"># Function
 function la_fun { Get-ChildItem -Force }
 function git_clean_fun { git restore . ; git clean -f }
+function docker_clean_fun { docker system prune -a -f }
 
 # Set Alias
 Set-Alias -Name vim -Value nvim
 Set-Alias -Name ll -Value Get-ChildItem
 Set-Alias -Name la -Value la_fun
 Set-Alias -Name htop -Value ntop
-Set-Alias -Name git-clean -Value git_clean_fun
 Set-Alias -Name ifconfig -Value ipconfig
+Set-Alias -Name git-clean -Value git_clean_fun
+Set-Alias -Name docker-clean -Value docker_clean_fun
 
 # Oh-My-Posh
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/paradox.omp.json" | Invoke-Expression
