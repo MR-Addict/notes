@@ -50,7 +50,7 @@ winget install --id Microsoft.PowerToys
 winget install --id RaspberryPiFoundation.RaspberryPiImager
 ```
 
-**Docker Destop**
+**Docker Desktop**
 
 ```sh
 winget install --id Docker.DockerDesktop
