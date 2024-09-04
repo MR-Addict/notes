@@ -50,6 +50,12 @@ winget install --id Microsoft.PowerToys
 winget install --id RaspberryPiFoundation.RaspberryPiImager
 ```
 
+**Docker Destop**
+
+```sh
+winget install --id Docker.DockerDesktop
+```
+
 ## 二、终端类
 
 **Git**
