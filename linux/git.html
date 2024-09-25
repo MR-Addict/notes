@@ -224,22 +224,7 @@ git push origin $tagNew :$tagOld
 <pre><code class="language-sh">git branch -D $branch
 git push origin --delete $branch
 </code></pre>
-<h2 id="三常用命令"><a class="header" href="#三常用命令">三、常用命令</a></h2>
-<p>查看提交记录：</p>
-<pre><code class="language-sh">git log
-</code></pre>
-<p>查看当前状态：</p>
-<pre><code class="language-sh">git status
-</code></pre>
-<p>设置全局用户名：</p>
-<pre><code class="language-sh">git config --global user.name Cael
-</code></pre>
-<p>配置全局用户邮箱：</p>
-<pre><code class="language-sh">git config --global user.email MR-Addict@qq.com
-</code></pre>
-<p>回退版本：</p>
-<pre><code class="language-sh">git reset --hard $hash_value_of_last_commit
-</code></pre>
+<h2 id="四配置命令"><a class="header" href="#四配置命令">四、配置命令</a></h2>
 <p>查看本地配置：</p>
 <pre><code class="language-sh">git config --list
 </code></pre>
@@ -249,14 +234,33 @@ git push origin --delete $branch
 <p>编辑全局配置：</p>
 <pre><code class="language-sh">git config --global --edit
 </code></pre>
+<p>设置全局用户名：</p>
+<pre><code class="language-sh">git config --global user.name Cael
+</code></pre>
+<p>配置全局用户邮箱：</p>
+<pre><code class="language-sh">git config --global user.email MR-Addict@qq.com
+</code></pre>
+<p>设置只拉取不提交：</p>
+<pre><code class="language-sh">git config --global pull.ff only
+</code></pre>
+<p>设置默认分支为 main：</p>
+<pre><code class="language-sh">git config --global init.defaultBranch main
+</code></pre>
 <p>保存系统登录验证：</p>
 <pre><code class="language-sh">git config --system credential.helper store
 </code></pre>
 <p>重置系统登录验证：</p>
 <pre><code class="language-sh">git config --system --unset credential.helper
 </code></pre>
-<p>只拉取不提交：</p>
-<pre><code class="language-sh">git config --global pull.ff only
+<h2 id="五其他常用命令"><a class="header" href="#五其他常用命令">五、其他常用命令</a></h2>
+<p>查看提交记录：</p>
+<pre><code class="language-sh">git log
+</code></pre>
+<p>查看当前状态：</p>
+<pre><code class="language-sh">git status
+</code></pre>
+<p>回退版本：</p>
+<pre><code class="language-sh">git reset --hard $hash_value_of_last_commit
 </code></pre>
 <p>重置所有内容，并且删除新文件：</p>
 <pre><code class="language-sh">git restore .
