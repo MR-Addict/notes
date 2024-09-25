@@ -73,37 +73,8 @@ git branch -D $branch
 git push origin --delete $branch
 ```
 
-## 三、常用命令
+## 四、配置命令
 
-查看提交记录：
-
-```sh
-git log
-```
-
-查看当前状态：
-
-```sh
-git status
-```
-
-设置全局用户名：
-
-```sh
-git config --global user.name Cael
-```
-
-配置全局用户邮箱：
-
-```sh
-git config --global user.email MR-Addict@qq.com
-```
-
-回退版本：
-
-```sh
-git reset --hard $hash_value_of_last_commit
-```
 
 查看本地配置：
 
@@ -123,6 +94,30 @@ git config --global --list
 git config --global --edit
 ```
 
+设置全局用户名：
+
+```sh
+git config --global user.name Cael
+```
+
+配置全局用户邮箱：
+
+```sh
+git config --global user.email MR-Addict@qq.com
+```
+
+设置只拉取不提交：
+
+```sh
+git config --global pull.ff only
+```
+
+设置默认分支为 main：
+
+```sh
+git config --global init.defaultBranch main
+```
+
 保存系统登录验证：
 
 ```sh
@@ -135,10 +130,24 @@ git config --system credential.helper store
 git config --system --unset credential.helper
 ```
 
-只拉取不提交：
+## 五、其他常用命令
+
+查看提交记录：
 
 ```sh
-git config --global pull.ff only
+git log
+```
+
+查看当前状态：
+
+```sh
+git status
+```
+
+回退版本：
+
+```sh
+git reset --hard $hash_value_of_last_commit
 ```
 
 重置所有内容，并且删除新文件：

@@ -62,6 +62,12 @@ winget install --id Docker.DockerDesktop
 winget install --id Postman.Postman
 ```
 
+**Telegram Desktop**
+
+```sh
+winget install --id Telegram.TelegramDesktop
+```
+
 ## 二、终端类
 
 **Git**
