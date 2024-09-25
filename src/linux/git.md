@@ -49,6 +49,30 @@ git branch -M main
 git push -u github main
 ```
 
+## 三、命令合集
+
+删除本地和远程标签：
+
+```sh
+git tag -d $tag
+git push origin :refs/tags/$tag
+```
+
+重命名本地和远程标签：
+
+```sh
+git tag $tagNew $tagOld
+git tag -d $tagOld
+git push origin $tagNew :$tagOld
+```
+
+删除本地和远程分支：
+
+```sh
+git branch -D $branch
+git push origin --delete $branch
+```
+
 ## 三、常用命令
 
 查看提交记录：
@@ -117,24 +141,9 @@ git config --system --unset credential.helper
 git config --global pull.ff only
 ```
 
-设置本地默认分支：
-
-```sh
-git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/$branch_name
-```
-
-删除本地和远程分支：
-
-```sh
-git branch -D $branch_name
-```
-
-```sh
-git push --delete $branch_name
-```
-
 重置所有内容，并且删除新文件：
 
 ```sh
-git restore . && git clean -f
+git restore .
+git clean -f
 ```

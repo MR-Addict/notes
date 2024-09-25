@@ -56,6 +56,12 @@ winget install --id RaspberryPiFoundation.RaspberryPiImager
 winget install --id Docker.DockerDesktop
 ```
 
+**Postman**
+
+```sh
+winget install --id Postman.Postman
+```
+
 ## 二、终端类
 
 **Git**
