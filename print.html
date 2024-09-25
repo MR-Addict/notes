@@ -584,8 +584,8 @@ pyenv install --list
 <p><strong>Docker Desktop</strong></p>
 <pre><code class="language-sh">winget install --id Docker.DockerDesktop
 </code></pre>
-<p><strong>Telegram Desktop</strong></p>
-<pre><code class="language-sh">winget install --id Telegram.TelegramDesktop
+<p><strong>Postman</strong></p>
+<pre><code class="language-sh">winget install --id Postman.Postman
 </code></pre>
 <h2 id="二终端类"><a class="header" href="#二终端类">二、终端类</a></h2>
 <p><strong>Git</strong></p>
@@ -879,6 +879,20 @@ git commit -m "First commit"
 <p>推送提交到远程仓库：</p>
 <pre><code class="language-sh">git push -u github main
 </code></pre>
+<h2 id="三命令合集"><a class="header" href="#三命令合集">三、命令合集</a></h2>
+<p>删除本地和远程标签：</p>
+<pre><code class="language-sh">git tag -d $tag
+git push origin :refs/tags/$tag
+</code></pre>
+<p>重命名本地和远程标签：</p>
+<pre><code class="language-sh">git tag $tagNew $tagOld
+git tag -d $tagOld
+git push origin $tagNew :$tagOld
+</code></pre>
+<p>删除本地和远程分支：</p>
+<pre><code class="language-sh">git branch -D $branch
+git push origin --delete $branch
+</code></pre>
 <h2 id="三常用命令"><a class="header" href="#三常用命令">三、常用命令</a></h2>
 <p>查看提交记录：</p>
 <pre><code class="language-sh">git log
@@ -913,16 +927,9 @@ git commit -m "First commit"
 <p>只拉取不提交：</p>
 <pre><code class="language-sh">git config --global pull.ff only
 </code></pre>
-<p>设置本地默认分支：</p>
-<pre><code class="language-sh">git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/$branch_name
-</code></pre>
-<p>删除本地和远程分支：</p>
-<pre><code class="language-sh">git branch -D $branch_name
-</code></pre>
-<pre><code class="language-sh">git push --delete $branch_name
-</code></pre>
 <p>重置所有内容，并且删除新文件：</p>
-<pre><code class="language-sh">git restore . &amp;&amp; git clean -f
+<pre><code class="language-sh">git restore .
+git clean -f
 </code></pre>
 <style>
   .scroll-to-top {
