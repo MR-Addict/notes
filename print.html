@@ -446,6 +446,9 @@ setx /M HTTPS_PROXY "http://127.0.0.1:7890"
 <p>停止某个 WSL 发行版：</p>
 <pre><code class="language-sh">wsl --terminate -d Ubuntu
 </code></pre>
+<p>重启某个 WSL 发行版：</p>
+<pre><code class="language-sh">wsl --shutdown -d Ubuntu
+</code></pre>
 <p>停止所有 WSL 发行版：</p>
 <pre><code class="language-sh">wsl --shutdown
 </code></pre>
@@ -495,6 +498,9 @@ enabled = true
 <p>参考配置：</p>
 <pre><code class="language-conf">[wsl2]
 memory=4GB
+firewall=true
+autoProxy=true
+dnsTunneling=true
 networkingMode=mirrored
 </code></pre>
 <h2 id="五备份和恢复"><a class="header" href="#五备份和恢复">五、备份和恢复</a></h2>
@@ -711,6 +717,9 @@ pyenv install --list
 </code></pre>
 <p><strong>Telegram Desktop</strong></p>
 <pre><code class="language-sh">winget install --id Telegram.TelegramDesktop
+</code></pre>
+<p><strong>MongoDB Compass</strong></p>
+<pre><code class="language-sh">winget install --id MongoDB.Compass.Full
 </code></pre>
 <h2 id="二终端类"><a class="header" href="#二终端类">二、终端类</a></h2>
 <p><strong>Git</strong></p>
