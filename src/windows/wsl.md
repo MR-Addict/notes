@@ -23,13 +23,13 @@ wsl --list --online
 安装某个 WSL 发行版：
 
 ```sh
-wsl --install -d Ubuntu
+wsl --install Ubuntu
 ```
 
 卸载某个 WSL 发行版：
 
 ```sh
-wsl --unregister -d Ubuntu
+wsl --unregister Ubuntu
 ```
 
 启动某个 WSL 发行版：
@@ -41,13 +41,13 @@ wsl -d Ubuntu
 停止某个 WSL 发行版：
 
 ```sh
-wsl --terminate -d Ubuntu
+wsl --terminate Ubuntu
 ```
 
 重启某个 WSL 发行版：
 
 ```sh
-wsl --shutdown -d Ubuntu
+wsl --shutdown Ubuntu
 ```
 
 停止所有 WSL 发行版：
@@ -59,7 +59,7 @@ wsl --shutdown
 设置默认的 WSL 发行版：
 
 ```sh
-wsl --set-default -d Ubuntu
+wsl --set-default Ubuntu
 ```
 
 ## 二、文件系统
