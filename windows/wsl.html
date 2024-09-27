@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>使用 WSL - 我的笔记</title>
+
+
+        <!-- Custom HTML head -->
+        <script defer src="https://us.umami.is/script.js" data-website-id="f52c913a-274a-4472-bd16-83a430cb2900"></script>
+        <meta name="description" content="我的笔记(方便施展Copy+Paste魔法)">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href=".././assets/css/patch.css">
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">我的笔记</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> 树莓派</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../rpi/wiringpi.html"><strong aria-hidden="true">1.1.</strong> 使用 Wiringpi</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Windows</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../windows/host.html"><strong aria-hidden="true">2.1.</strong> 修改 HOST</a></li><li class="chapter-item "><a href="../windows/go.html"><strong aria-hidden="true">2.2.</strong> 使用 GO</a></li><li class="chapter-item expanded "><a href="../windows/wsl.html" class="active"><strong aria-hidden="true">2.3.</strong> 使用 WSL</a></li><li class="chapter-item "><a href="../windows/nvm.html"><strong aria-hidden="true">2.4.</strong> 使用 NVM</a></li><li class="chapter-item "><a href="../windows/pyenv.html"><strong aria-hidden="true">2.5.</strong> 使用 Pyenv</a></li><li class="chapter-item "><a href="../windows/winget.html"><strong aria-hidden="true">2.6.</strong> 使用 Winget</a></li><li class="chapter-item "><a href="../windows/oh-my-posh.html"><strong aria-hidden="true">2.7.</strong> 使用 Oh My Posh</a></li><li class="chapter-item "><a href="../windows/powershell.html"><strong aria-hidden="true">2.8.</strong> 使用 Powershell</a></li><li class="chapter-item "><a href="../windows/env.html"><strong aria-hidden="true">2.9.</strong> 设置环境变量</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Linux</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../linux/git.html"><strong aria-hidden="true">3.1.</strong> 使用 Git</a></li><li class="chapter-item "><a href="../linux/vim.html"><strong aria-hidden="true">3.2.</strong> 使用 Vim</a></li><li class="chapter-item "><a href="../linux/ssh.html"><strong aria-hidden="true">3.3.</strong> 使用 SSH</a></li><li class="chapter-item "><a href="../linux/aliases.html"><strong aria-hidden="true">3.4.</strong> 使用 Alias</a></li><li class="chapter-item "><a href="../linux/crontab.html"><strong aria-hidden="true">3.5.</strong> 使用 Crontab</a></li><li class="chapter-item "><a href="../linux/systemd.html"><strong aria-hidden="true">3.6.</strong> 使用 Systemd</a></li><li class="chapter-item "><a href="../linux/swap.html"><strong aria-hidden="true">3.7.</strong> 使用 Swap 交换空间</a></li><li class="chapter-item "><a href="../linux/users.html"><strong aria-hidden="true">3.8.</strong> 使用 Linux 用户和用户组</a></li><li class="chapter-item "><a href="../linux/others.html"><strong aria-hidden="true">3.9.</strong> 其他配置及常用命令</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> OpenWrt</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../openwrt/init.html"><strong aria-hidden="true">4.1.</strong> 使用 Init</a></li><li class="chapter-item "><a href="../openwrt/vim.html"><strong aria-hidden="true">4.2.</strong> 使用 Vim</a></li><li class="chapter-item "><a href="../openwrt/uhttpd.html"><strong aria-hidden="true">4.3.</strong> 使用 Uhttpd</a></li><li class="chapter-item "><a href="../openwrt/mosquitto.html"><strong aria-hidden="true">4.4.</strong> 使用 Mosquitto</a></li><li class="chapter-item "><a href="../openwrt/others.html"><strong aria-hidden="true">4.5.</strong> 其他常用命令</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> 学习教程</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tutorial/node.html"><strong aria-hidden="true">5.1.</strong> 使用 Node</a></li><li class="chapter-item "><a href="../tutorial/v2ray.html"><strong aria-hidden="true">5.2.</strong> 使用 V2ray</a></li><li class="chapter-item "><a href="../tutorial/nginx.html"><strong aria-hidden="true">5.3.</strong> 使用 Nginx</a></li><li class="chapter-item "><a href="../tutorial/mysql.html"><strong aria-hidden="true">5.4.</strong> 使用 MySQL</a></li><li class="chapter-item "><a href="../tutorial/docker.html"><strong aria-hidden="true">5.5.</strong> 使用 Docker</a></li><li class="chapter-item "><a href="../tutorial/apache2.html"><strong aria-hidden="true">5.6.</strong> 使用 Apache2</a></li><li class="chapter-item "><a href="../tutorial/clash.html"><strong aria-hidden="true">5.7.</strong> 使用 Clash 内核</a></li><li class="chapter-item "><a href="../tutorial/wireguard.html"><strong aria-hidden="true">5.8.</strong> 使用 Wireguard</a></li><li class="chapter-item "><a href="../tutorial/oh-my-posh.html"><strong aria-hidden="true">5.9.</strong> 使用 Oh-my-posh</a></li><li class="chapter-item "><a href="../tutorial/transmission.html"><strong aria-hidden="true">5.10.</strong> 使用 Transmission</a></li><li class="chapter-item "><a href="../tutorial/github-actions.html"><strong aria-hidden="true">5.11.</strong> 使用 GitHub Actions</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> 服务器搭建</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../server/minecraft.html"><strong aria-hidden="true">6.1.</strong> 搭建 MC 服务器</a></li><li class="chapter-item "><a href="../server/mqtt.html"><strong aria-hidden="true">6.2.</strong> 搭建 MQTT 服务器</a></li><li class="chapter-item "><a href="../server/drone.html"><strong aria-hidden="true">6.3.</strong> 搭建 Drone 服务器</a></li><li class="chapter-item "><a href="../server/vscode.html"><strong aria-hidden="true">6.4.</strong> 搭建 VSCode 服务器</a></li><li class="chapter-item "><a href="../server/adguard.html"><strong aria-hidden="true">6.5.</strong> 搭建 Adguard 服务器</a></li><li class="chapter-item "><a href="../server/mongodb.html"><strong aria-hidden="true">6.6.</strong> 搭建 Mongodb 数据库</a></li><li class="chapter-item "><a href="../server/speedtest.html"><strong aria-hidden="true">6.7.</strong> 搭建 Speedtest 服务器</a></li><li class="chapter-item "><a href="../server/pocketbase.html"><strong aria-hidden="true">6.8.</strong> 搭建 Pocketbase 数据库</a></li><li class="chapter-item "><a href="../server/wireguard.html"><strong aria-hidden="true">6.9.</strong> 搭建 Wireguard 服务器</a></li><li class="chapter-item "><a href="../server/nextcloud.html"><strong aria-hidden="true">6.10.</strong> 搭建 NextCloud 服务器</a></li><li class="chapter-item "><a href="../server/homeassistant.html"><strong aria-hidden="true">6.11.</strong> 搭建 Home Assistant 服务器</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 编程语言</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">7.1.</strong> Batch</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/batch/wlan.html"><strong aria-hidden="true">7.1.1.</strong> Wlan</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">7.2.</strong> Powershell</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/powershell/basics.html"><strong aria-hidden="true">7.2.1.</strong> 基础命令</a></li><li class="chapter-item "><a href="../programming/powershell/variable-and-psdrive.html"><strong aria-hidden="true">7.2.2.</strong> 变量和PSDrive</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">7.3.</strong> SQL</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/sql/hello-world.html"><strong aria-hidden="true">7.3.1.</strong> Hello World</a></li><li class="chapter-item "><a href="../programming/sql/select.html"><strong aria-hidden="true">7.3.2.</strong> SELECT</a></li><li class="chapter-item "><a href="../programming/sql/where.html"><strong aria-hidden="true">7.3.3.</strong> WHERE</a></li><li class="chapter-item "><a href="../programming/sql/and-or-not.html"><strong aria-hidden="true">7.3.4.</strong> AND-OR-NOT</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">7.4.</strong> Bash</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/bash/intro.html"><strong aria-hidden="true">7.4.1.</strong> Bash 初识</a></li><li class="chapter-item "><a href="../programming/bash/input.html"><strong aria-hidden="true">7.4.2.</strong> 用户输入</a></li><li class="chapter-item "><a href="../programming/bash/variable.html"><strong aria-hidden="true">7.4.3.</strong> 变量</a></li><li class="chapter-item "><a href="../programming/bash/if.html"><strong aria-hidden="true">7.4.4.</strong> if 操作符</a></li><li class="chapter-item "><a href="../programming/bash/cat.html"><strong aria-hidden="true">7.4.5.</strong> cat 命令</a></li><li class="chapter-item "><a href="../programming/bash/rm.html"><strong aria-hidden="true">7.4.6.</strong> rm 命令</a></li><li class="chapter-item "><a href="../programming/bash/argements.html"><strong aria-hidden="true">7.4.7.</strong> 执行参数</a></li><li class="chapter-item "><a href="../programming/bash/file.html"><strong aria-hidden="true">7.4.8.</strong> 文件操作</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">7.5.</strong> Lua</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/lua/hello-world.html"><strong aria-hidden="true">7.5.1.</strong> Hello World</a></li><li class="chapter-item "><a href="../programming/lua/variable.html"><strong aria-hidden="true">7.5.2.</strong> 变量</a></li><li class="chapter-item "><a href="../programming/lua/operator.html"><strong aria-hidden="true">7.5.3.</strong> 运算符</a></li><li class="chapter-item "><a href="../programming/lua/while.html"><strong aria-hidden="true">7.5.4.</strong> 循环</a></li><li class="chapter-item "><a href="../programming/lua/function.html"><strong aria-hidden="true">7.5.5.</strong> 函数</a></li><li class="chapter-item "><a href="../programming/lua/math.html"><strong aria-hidden="true">7.5.6.</strong> Math</a></li><li class="chapter-item "><a href="../programming/lua/table.html"><strong aria-hidden="true">7.5.7.</strong> Table</a></li><li class="chapter-item "><a href="../programming/lua/class.html"><strong aria-hidden="true">7.5.8.</strong> Class</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">7.6.</strong> Typescript</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/typescript/hello-world.html"><strong aria-hidden="true">7.6.1.</strong> Hello World</a></li><li class="chapter-item "><a href="../programming/typescript/types.html"><strong aria-hidden="true">7.6.2.</strong> Types</a></li><li class="chapter-item "><a href="../programming/typescript/function.html"><strong aria-hidden="true">7.6.3.</strong> Function</a></li><li class="chapter-item "><a href="../programming/typescript/object.html"><strong aria-hidden="true">7.6.4.</strong> Object</a></li><li class="chapter-item "><a href="../programming/typescript/aliases.html"><strong aria-hidden="true">7.6.5.</strong> Aliases</a></li><li class="chapter-item "><a href="../programming/typescript/union.html"><strong aria-hidden="true">7.6.6.</strong> Union</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">我的笔记</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/mr-addict/notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/mr-addict/notes/edit/main/src/windows/wsl.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="使用-wsl"><a class="header" href="#使用-wsl">使用 WSL</a></h1>
+<h2 id="一卸载和安装"><a class="header" href="#一卸载和安装">一、卸载和安装</a></h2>
+<p>查看 WSL 信息：</p>
+<pre><code class="language-sh">wsl --status
+</code></pre>
+<p>查看已安装的 WSL 发行版：</p>
+<pre><code class="language-sh">wsl --list --verbose
+</code></pre>
+<p>查看可使用的 WSL 发行版：</p>
+<pre><code class="language-sh">wsl --list --online
+</code></pre>
+<p>安装某个 WSL 发行版：</p>
+<pre><code class="language-sh">wsl --install -d Ubuntu
+</code></pre>
+<p>卸载某个 WSL 发行版：</p>
+<pre><code class="language-sh">wsl --unregister -d Ubuntu
+</code></pre>
+<p>启动某个 WSL 发行版：</p>
+<pre><code class="language-sh">wsl -d Ubuntu
+</code></pre>
+<p>停止某个 WSL 发行版：</p>
+<pre><code class="language-sh">wsl --terminate -d Ubuntu
+</code></pre>
+<p>停止所有 WSL 发行版：</p>
+<pre><code class="language-sh">wsl --shutdown
+</code></pre>
+<p>设置默认的 WSL 发行版：</p>
+<pre><code class="language-sh">wsl --set-default -d Ubuntu
+</code></pre>
+<h2 id="二文件系统"><a class="header" href="#二文件系统">二、文件系统</a></h2>
+<p>WSL 与 Windows 共享文件系统，可以通过 <code>\\wsl$</code> 访问 WSL 文件系统。</p>
+<p>查看 WSL 文件系统：</p>
+<pre><code class="language-sh">explorer.exe \\wsl$
+</code></pre>
+<p>在 WSL 中访问 Windows 文件系统：</p>
+<pre><code class="language-sh">cd /mnt/c
+</code></pre>
+<p>在 Windows 中访问 WSL 文件系统：</p>
+<pre><code class="language-sh">cd \\wsl$\Ubuntu
+</code></pre>
+<h2 id="三wsl-与-windows-交互"><a class="header" href="#三wsl-与-windows-交互">三、WSL 与 Windows 交互</a></h2>
+<p>在 WSL 中执行 Windows 命令：</p>
+<pre><code class="language-sh">cmd.exe /c echo hello
+</code></pre>
+<p>在 WSL 中启动 Windows 程序：</p>
+<pre><code class="language-sh">explorer.exe .
+</code></pre>
+<p>在 Windows 中执行 WSL 命令：</p>
+<pre><code class="language-sh">ls | wsl grep .md
+</code></pre>
+<h2 id="四wsl-配置文件"><a class="header" href="#四wsl-配置文件">四、WSL 配置文件</a></h2>
+<blockquote>
+<p>官方文档 📝</p>
+<p><a href="https://learn.microsoft.com/en-us/windows/wsl/wsl-config">WSL Configuration</a></p>
+</blockquote>
+<p>某个 WSL 发行版的配置文件：</p>
+<pre><code class="language-sh">vim /etc/wsl.conf
+</code></pre>
+<p>参考配置：</p>
+<pre><code class="language-conf">[boot]
+systemd=true
+command = service nginx start
+
+[automount]
+enabled = true
+</code></pre>
+<p>全局 WSL 配置文件：</p>
+<pre><code class="language-sh">notepad ~/.wslconfig
+</code></pre>
+<p>参考配置：</p>
+<pre><code class="language-conf">[wsl2]
+memory=4GB
+networkingMode=mirrored
+</code></pre>
+<h2 id="五备份和恢复"><a class="header" href="#五备份和恢复">五、备份和恢复</a></h2>
+<p>备份 WSL 发行版：</p>
+<pre><code class="language-sh">wsl --export Ubuntu ubuntu.tar
+</code></pre>
+<p>恢复 WSL 发行版：</p>
+<pre><code class="language-sh">wsl --import Ubuntu ubuntu.tar
+</code></pre>
+<style>
+  .scroll-to-top {
+    font-size: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    padding: 0.75rem;
+    bottom: 4rem;
+    right: calc(1.25rem + 90px + var(--page-padding));
+    z-index: 999;
+    cursor: pointer;
+    border: none;
+    color: var(--bg);
+    background: var(--fg);
+    border-radius: 50%;
+  }
+  .scroll-to-top.hidden {
+    display: none;
+  }
+  .scroll-to-top i {
+    transform: translateY(-2px);
+  }
+  @media (min-width: 1080px) {
+    .scroll-to-top {
+      display: flex;
+    }
+  }
+</style>
+<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
+  <i class="fa fa-angle-up"></i>
+</button>
+<script>
+  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
+  window.addEventListener("scroll", () => {
+    const button = document.querySelector(".scroll-to-top");
+    button.classList.toggle("hidden", window.scrollY < 200);
+  });
+</script>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../windows/go.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../windows/nvm.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../windows/go.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../windows/nvm.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
