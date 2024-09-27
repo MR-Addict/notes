@@ -192,25 +192,25 @@
 <pre><code class="language-sh">wsl --list --online
 </code></pre>
 <p>安装某个 WSL 发行版：</p>
-<pre><code class="language-sh">wsl --install -d Ubuntu
+<pre><code class="language-sh">wsl --install Ubuntu
 </code></pre>
 <p>卸载某个 WSL 发行版：</p>
-<pre><code class="language-sh">wsl --unregister -d Ubuntu
+<pre><code class="language-sh">wsl --unregister Ubuntu
 </code></pre>
 <p>启动某个 WSL 发行版：</p>
 <pre><code class="language-sh">wsl -d Ubuntu
 </code></pre>
 <p>停止某个 WSL 发行版：</p>
-<pre><code class="language-sh">wsl --terminate -d Ubuntu
+<pre><code class="language-sh">wsl --terminate Ubuntu
 </code></pre>
 <p>重启某个 WSL 发行版：</p>
-<pre><code class="language-sh">wsl --shutdown -d Ubuntu
+<pre><code class="language-sh">wsl --shutdown Ubuntu
 </code></pre>
 <p>停止所有 WSL 发行版：</p>
 <pre><code class="language-sh">wsl --shutdown
 </code></pre>
 <p>设置默认的 WSL 发行版：</p>
-<pre><code class="language-sh">wsl --set-default -d Ubuntu
+<pre><code class="language-sh">wsl --set-default Ubuntu
 </code></pre>
 <h2 id="二文件系统"><a class="header" href="#二文件系统">二、文件系统</a></h2>
 <p>WSL 与 Windows 共享文件系统，可以通过 <code>\\wsl$</code> 访问 WSL 文件系统。</p>
