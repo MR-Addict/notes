@@ -8,8 +8,9 @@
 
 - [Windows]()
 
-  - [使用 HOST](windows/host.md)
+  - [修改 HOST](windows/host.md)
   - [使用 GO](windows/go.md)
+  - [使用 WSL](windows/wsl.md)
   - [使用 NVM](windows/nvm.md)
   - [使用 Pyenv](windows/pyenv.md)
   - [使用 Winget](windows/winget.md)

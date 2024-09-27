@@ -1,4 +1,4 @@
-# 使用 HOST
+# 修改 HOST
 
 Windows 上的 HOST 文件位于：
 
