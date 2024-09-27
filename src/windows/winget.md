@@ -68,6 +68,12 @@ winget install --id Postman.Postman
 winget install --id Telegram.TelegramDesktop
 ```
 
+**MongoDB Compass**
+
+```sh
+winget install --id MongoDB.Compass.Full
+```
+
 ## 二、终端类
 
 **Git**

@@ -44,6 +44,12 @@ wsl -d Ubuntu
 wsl --terminate -d Ubuntu
 ```
 
+重启某个 WSL 发行版：
+
+```sh
+wsl --shutdown -d Ubuntu
+```
+
 停止所有 WSL 发行版：
 
 ```sh
@@ -132,6 +138,9 @@ notepad ~/.wslconfig
 ```conf
 [wsl2]
 memory=4GB
+firewall=true
+autoProxy=true
+dnsTunneling=true
 networkingMode=mirrored
 ```
 
