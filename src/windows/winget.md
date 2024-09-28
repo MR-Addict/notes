@@ -117,3 +117,9 @@ winget install --id Gsass1.NTop
 ```sh
 winget install --id Neovim.Neovim
 ```
+
+**UPX**
+
+```sh
+winget install --id=UPX.UPX
+```
