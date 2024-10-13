@@ -4,7 +4,7 @@
 
 直接参考以下文章即可，这里不做详细介绍了：
 
-> 参考文章 🎉
+> 参考文章 📝
 >
 > [How to generate public and private ssh key using putty](https://docs.oracle.com/en/cloud/paas/goldengate-cloud/tutorial-change-private-key-format/)
 

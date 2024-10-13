@@ -192,7 +192,8 @@ trigger:
     - cron
 ```
 
-> 注意：
+> 注意 💥
+> 
 > 请谨慎允许 pull request 使用 CI，这样会容易暴露自己设置的 secret
 
 ## 四、如何使用 cron
@@ -208,7 +209,7 @@ curl -X POST https://drone.example.com/api/repos/USER/REPO/cron \
 --data '{"name": "default", "expr": "0 0 */10 * * *", "branch": "main" }'
 ```
 
-> 注意：
+> 注意 💥
 >
 > - 你需要修改时区保证时间的一致性，环境变量是 **TZ=Asia/Shanghai**
 > - drone 默认的 cron 检查间隔是一小时，非常不准确，环境变量是 **DRONE_CRON_INTERVAL=1m**
