@@ -6,9 +6,19 @@
 
   - [使用 Wiringpi](rpi/wiringpi.md)
 
+- [OpenWrt]()
+
+  - [使用 Init](openwrt/init.md)
+  - [使用 Vim](openwrt/vim.md)
+  - [使用 Uhttpd](openwrt/uhttpd.md)
+  - [使用 Mosquitto](openwrt/mosquitto.md)
+  - [其他常用命令](openwrt/others.md)
+
 - [Mac]()
 
-  - [使用快捷键](mac/shortcuts.md)
+  - [使用 快捷键](mac/shortcuts.md)
+  - [使用 NVM](mac/nvm.md)
+  - [使用 Homebrew](mac/homebrew.md)
 
 - [Windows]()
 
@@ -34,14 +44,6 @@
   - [使用 Swap 交换空间](linux/swap.md)
   - [使用 Linux 用户和用户组](linux/users.md)
   - [其他配置及常用命令](linux/others.md)
-
-- [OpenWrt]()
-
-  - [使用 Init](openwrt/init.md)
-  - [使用 Vim](openwrt/vim.md)
-  - [使用 Uhttpd](openwrt/uhttpd.md)
-  - [使用 Mosquitto](openwrt/mosquitto.md)
-  - [其他常用命令](openwrt/others.md)
 
 - [学习教程]()
 

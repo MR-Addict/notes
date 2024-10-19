@@ -8,6 +8,14 @@ sudo apt-get install vim -y
 
 ## 二、配置 Vim
 
+> 注意 💥
+>
+> 你可以在打开vim 编辑器之后，输入下面的命令查看支持的配置文件位置：
+>
+> ```sh
+> :version
+> ```
+
 进入 vim 配置文件：
 
 ```sh
