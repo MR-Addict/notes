@@ -6,6 +6,10 @@
 
   - [使用 Wiringpi](rpi/wiringpi.md)
 
+- [Mac]()
+
+  - [使用快捷键](mac/shortcuts.md)
+
 - [Windows]()
 
   - [修改 HOST](windows/host.md)
