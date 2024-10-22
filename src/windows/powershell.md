@@ -46,7 +46,7 @@ Set-Alias -Name git-clean -Value git_clean_fun
 Set-Alias -Name docker-clean -Value docker_clean_fun
 
 # Oh-My-Posh
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/paradox.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/amro.omp.json" | Invoke-Expression
 
 # Enviroments
 $env:TF_ENABLE_ONEDNN_OPTS=0

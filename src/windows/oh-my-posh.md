@@ -24,5 +24,5 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object
 
 ```ps1
 # Oh-My-Posh
-oh-my-posh init --config "$env:POSH_THEMES_PATH/paradox.omp.json" | Invoke-Expression
+oh-my-posh init --config "$env:POSH_THEMES_PATH/amro.omp.json" | Invoke-Expression
 ```

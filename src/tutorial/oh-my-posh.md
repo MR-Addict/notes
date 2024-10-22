@@ -38,19 +38,19 @@ rm ~/.poshthemes/themes.zip
 进入配置文件：
 
 ```sh
-sudo vim ~/.vimrc
+sudo vim ~/.bashrc
 ```
 
 在最后添加以下内容：
 
 ```sh
-eval "$(oh-my-posh --init --shell sh --config /home/cael/.poshthemes/paradox.omp.json)"
+eval "$(oh-my-posh --init --shell sh --config /home/cael/.poshthemes/amro.omp.json)"
 ```
 
 如果是 powershell，应该进入`$PROFILE`，然后添加以下内容：
 
 ```sh
-oh-my-posh --init --shell pwsh --config /home/cael/.poshthemes/paradox.omp.json | Invoke-Expression
+oh-my-posh --init --shell pwsh --config /home/cael/.poshthemes/amro.omp.json | Invoke-Expression
 ```
 
 最后重新启动终端就可以正常使用了。
