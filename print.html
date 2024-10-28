@@ -1571,6 +1571,9 @@ pyenv install --list
 <p><strong>UPX</strong></p>
 <pre><code class="language-sh">winget install --id=UPX.UPX
 </code></pre>
+<p><strong>mkcert</strong></p>
+<pre><code class="language-sh">winget install --id FiloSottile.Mkcert
+</code></pre>
 <style>
   .scroll-to-top {
     font-size: 2.5rem;
@@ -3713,6 +3716,32 @@ INFO[0000] SOCKS proxy listening at: [::]:7891
 </code></pre>
 <p>第一次使用可能需要你选择默认的编辑器，看个人喜好选择就好，然后在打开的文件末尾添加以下内容：</p>
 <pre><code>@reboot /usr/local/bin/clash
+</code></pre>
+<p>你也可以使用 systemd 来管理 Clash 的开机自启，首先创建一个服务文件：</p>
+<pre><code class="language-sh">sudo vim /etc/systemd/system/clash.service
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code class="language-sh">[Unit]
+After=network.target
+Description=clash
+StartLimitBurst=5
+StartLimitIntervalSec=100
+
+[Service]
+Type=simple
+User=ubuntu
+Restart=always
+RestartSec=1
+ExecStart=/usr/local/bin/clash
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>然后开机自启：</p>
+<pre><code class="language-sh">sudo systemctl enable clash
+</code></pre>
+<p>然后启动服务：</p>
+<pre><code class="language-sh">sudo systemctl start clash
 </code></pre>
 <h2 id="六控制面板"><a class="header" href="#六控制面板">六、控制面板</a></h2>
 <p>GitHub 上有很多优秀的有关 Clash Dashboard 的项目，这些项目可以非常方便地帮助你查看、设置和管理你的 Clash。</p>
