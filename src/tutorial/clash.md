@@ -220,6 +220,44 @@ crontab -e
 @reboot /usr/local/bin/clash
 ```
 
+你也可以使用 systemd 来管理 Clash 的开机自启，首先创建一个服务文件：
+
+```sh
+sudo vim /etc/systemd/system/clash.service
+```
+
+然后添加以下内容：
+
+```sh
+[Unit]
+After=network.target
+Description=clash
+StartLimitBurst=5
+StartLimitIntervalSec=100
+
+[Service]
+Type=simple
+User=ubuntu
+Restart=always
+RestartSec=1
+ExecStart=/usr/local/bin/clash
+
+[Install]
+WantedBy=multi-user.target
+```
+
+然后开机自启：
+
+```sh
+sudo systemctl enable clash
+```
+
+然后启动服务：
+
+```sh
+sudo systemctl start clash
+```
+
 ## 六、控制面板
 
 GitHub 上有很多优秀的有关 Clash Dashboard 的项目，这些项目可以非常方便地帮助你查看、设置和管理你的 Clash。

@@ -123,3 +123,9 @@ winget install --id Neovim.Neovim
 ```sh
 winget install --id=UPX.UPX
 ```
+
+**mkcert**
+
+```sh
+winget install --id FiloSottile.Mkcert
+```
