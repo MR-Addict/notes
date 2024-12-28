@@ -18,6 +18,7 @@
 
   - [快捷键](mac/shortcuts.md)
   - [使用 NVM](mac/nvm.md)
+  - [使用 Pyenv](mac/pyenv.md)
   - [使用 Homebrew](mac/homebrew.md)
   - [使用 Oh My Posh](mac/oh-my-posh.md)
   - [其他配置及常用命令](mac/others.md)
