@@ -125,6 +125,10 @@ command = service nginx start
 
 [automount]
 enabled = true
+
+[interop]
+enabled = false
+appendWindowsPath = false
 ```
 
 全局 WSL 配置文件：
