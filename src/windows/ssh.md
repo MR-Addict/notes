@@ -28,7 +28,6 @@ State : Installed
 
 如果 `State` 为 `Installed`，则表示 OpenSSH 服务已经安装。
 
-
 ## 二、配置 OpenSSH
 
 用**管理员权限**打开 **PowerShell**。
@@ -87,7 +86,6 @@ New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled Tru
 >
 > [OpenSSH 官方文档](https://man.openbsd.org/sshd_config)
 
-
 如果你有其他的 SSH 配置需求，可以修改 SSH 的配置文件：
 
 ```
@@ -139,4 +137,3 @@ ssh -i keyfile username@hostname
 ```
 
 其中 `keyfile` 是密钥文件的路径。
-

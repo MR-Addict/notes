@@ -73,7 +73,7 @@ systemctl is-failed application.service
 ```
 
 > 注意 💥
-> 
+>
 > systemd 可以自动检测服务的文件地址，因此可以省略上面的`.service`后缀，下同
 
 ## 二、系统服务

@@ -8,7 +8,7 @@ netsh wlan show interfaces
 
 查看WiFi信息：
 
-```batch 
+```batch
 netsh wlan show profiles
 ```
 

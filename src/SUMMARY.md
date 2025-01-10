@@ -19,8 +19,8 @@
   - [快捷键](mac/shortcuts.md)
   - [使用 NVM](mac/nvm.md)
   - [使用 Pyenv](mac/pyenv.md)
+  - [配置 Terminal](mac/terminal.md)
   - [使用 Homebrew](mac/homebrew.md)
-  - [使用 Oh My Posh](mac/oh-my-posh.md)
   - [其他配置及常用命令](mac/others.md)
 
 - [Windows]()
@@ -81,7 +81,7 @@
     - [Wlan](programming/batch/wlan.md)
   - [Powershell]()
     - [基础命令](programming/powershell/basics.md)
-    - [变量和PSDrive](programming/powershell/variable-and-psdrive.md)
+    - [变量和 PSDrive](programming/powershell/variable-and-psdrive.md)
   - [SQL]()
     - [Hello World](programming/sql/hello-world.md)
     - [SELECT](programming/sql/select.md)

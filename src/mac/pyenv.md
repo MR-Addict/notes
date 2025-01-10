@@ -1,8 +1,8 @@
 # Pyenv
 
-## 一、安装pyenv
+## 一、安装 pyenv
 
-首先你需要安装 [brew](./homebrew.md)，然后执行以下命令安装pyenv：
+首先你需要安装 [brew](./homebrew.md)，然后执行以下命令安装 pyenv：
 
 ```sh
 brew install pyenv
@@ -19,6 +19,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init - zsh)"
 ```
 
-## 三、使用pyenv
+## 三、使用 pyenv
 
-关于如何使用 nvm，请参考[Windows/使用Pyenv](../windows/pyenv.md) 。
+关于如何使用 pyenv，请参考[Windows/使用 Pyenv](../windows/pyenv.md) 。

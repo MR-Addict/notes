@@ -4,7 +4,7 @@
 
 ## 一、安装 xcode-select
 
-在安装 Homebrew 之前，你需要安装 `xcode-select`，它是 macOS 上的一个命令行工具，可以帮助你安装开发工具，如git、make、gcc等。
+在安装 Homebrew 之前，你需要安装 `xcode-select`，它是 macOS 上的一个命令行工具，可以帮助你安装开发工具，如 git、make、gcc 等。
 
 ```sh
 xcode-select --install

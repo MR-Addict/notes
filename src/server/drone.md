@@ -193,7 +193,7 @@ trigger:
 ```
 
 > 注意 💥
-> 
+>
 > 请谨慎允许 pull request 使用 CI，这样会容易暴露自己设置的 secret
 
 ## 四、如何使用 cron
