@@ -2,7 +2,6 @@
 authors = ["MR-Addict"]
 description = "我的笔记(方便施展Copy+Paste魔法)"
 language = "zh-CN"
-multilingual = false
 src = "src"
 title = "我的笔记"
 
