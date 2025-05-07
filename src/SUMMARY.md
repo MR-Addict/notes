@@ -2,6 +2,14 @@
 
 [我的笔记](index.md)
 
+# 生活
+
+- [娱乐]()
+
+  - [三丽鸥](life/sanrio.md)
+
+# 学习
+
 - [树莓派]()
 
   - [使用 Wiringpi](rpi/wiringpi.md)
