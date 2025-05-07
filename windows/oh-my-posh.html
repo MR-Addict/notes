@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="zh-CN" class="light" dir="ltr">
+<html lang="zh-CN" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -28,27 +28,30 @@
         <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../highlight.css">
-        <link rel="stylesheet" href="../tomorrow-night.css">
-        <link rel="stylesheet" href="../ayu-highlight.css">
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href=".././assets/css/patch.css">
 
-    </head>
-    <body class="sidebar-visible no-js">
-    <div id="body-container">
-        <!-- Provide site root to javascript -->
-        <script>
-            var path_to_root = "../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "light";
-        </script>
 
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "ayu";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
 
                 if (theme.startsWith('"') && theme.endsWith('"')) {
                     localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
@@ -62,24 +65,22 @@
 
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script>
-            var theme;
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            var body = document.querySelector('body');
-            body.classList.remove('no-js')
-            body.classList.add('js');
+            html.classList.add("js");
         </script>
 
         <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var body = document.querySelector('body');
-            var sidebar = null;
-            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
@@ -87,45 +88,25 @@
                 sidebar = 'hidden';
             }
             sidebar_toggle.checked = sidebar === 'visible';
-            body.classList.remove('sidebar-visible');
-            body.classList.add("sidebar-" + sidebar);
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">我的笔记</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> 树莓派</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../rpi/wiringpi.html"><strong aria-hidden="true">1.1.</strong> 使用 Wiringpi</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> OpenWrt</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../openwrt/init.html"><strong aria-hidden="true">2.1.</strong> 使用 Init</a></li><li class="chapter-item "><a href="../openwrt/vim.html"><strong aria-hidden="true">2.2.</strong> 使用 Vim</a></li><li class="chapter-item "><a href="../openwrt/uhttpd.html"><strong aria-hidden="true">2.3.</strong> 使用 Uhttpd</a></li><li class="chapter-item "><a href="../openwrt/mosquitto.html"><strong aria-hidden="true">2.4.</strong> 使用 Mosquitto</a></li><li class="chapter-item "><a href="../openwrt/others.html"><strong aria-hidden="true">2.5.</strong> 其他配置及常用命令</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Mac</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../mac/shortcuts.html"><strong aria-hidden="true">3.1.</strong> 快捷键</a></li><li class="chapter-item "><a href="../mac/nvm.html"><strong aria-hidden="true">3.2.</strong> 使用 NVM</a></li><li class="chapter-item "><a href="../mac/pyenv.html"><strong aria-hidden="true">3.3.</strong> 使用 Pyenv</a></li><li class="chapter-item "><a href="../mac/terminal.html"><strong aria-hidden="true">3.4.</strong> 配置 Terminal</a></li><li class="chapter-item "><a href="../mac/homebrew.html"><strong aria-hidden="true">3.5.</strong> 使用 Homebrew</a></li><li class="chapter-item "><a href="../mac/others.html"><strong aria-hidden="true">3.6.</strong> 其他配置及常用命令</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Windows</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../windows/host.html"><strong aria-hidden="true">4.1.</strong> 修改 HOST</a></li><li class="chapter-item "><a href="../windows/go.html"><strong aria-hidden="true">4.2.</strong> 使用 GO</a></li><li class="chapter-item "><a href="../windows/wsl.html"><strong aria-hidden="true">4.3.</strong> 使用 WSL</a></li><li class="chapter-item "><a href="../windows/ssh.html"><strong aria-hidden="true">4.4.</strong> 使用 SSH</a></li><li class="chapter-item "><a href="../windows/nvm.html"><strong aria-hidden="true">4.5.</strong> 使用 NVM</a></li><li class="chapter-item "><a href="../windows/pyenv.html"><strong aria-hidden="true">4.6.</strong> 使用 Pyenv</a></li><li class="chapter-item "><a href="../windows/winget.html"><strong aria-hidden="true">4.7.</strong> 使用 Winget</a></li><li class="chapter-item expanded "><a href="../windows/oh-my-posh.html" class="active"><strong aria-hidden="true">4.8.</strong> 使用 Oh My Posh</a></li><li class="chapter-item "><a href="../windows/powershell.html"><strong aria-hidden="true">4.9.</strong> 使用 Powershell</a></li><li class="chapter-item "><a href="../windows/env.html"><strong aria-hidden="true">4.10.</strong> 设置环境变量</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Linux</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../linux/git.html"><strong aria-hidden="true">5.1.</strong> 使用 Git</a></li><li class="chapter-item "><a href="../linux/vim.html"><strong aria-hidden="true">5.2.</strong> 使用 Vim</a></li><li class="chapter-item "><a href="../linux/ssh.html"><strong aria-hidden="true">5.3.</strong> 使用 SSH</a></li><li class="chapter-item "><a href="../linux/aliases.html"><strong aria-hidden="true">5.4.</strong> 使用 Alias</a></li><li class="chapter-item "><a href="../linux/crontab.html"><strong aria-hidden="true">5.5.</strong> 使用 Crontab</a></li><li class="chapter-item "><a href="../linux/systemd.html"><strong aria-hidden="true">5.6.</strong> 使用 Systemd</a></li><li class="chapter-item "><a href="../linux/swap.html"><strong aria-hidden="true">5.7.</strong> 使用 Swap 交换空间</a></li><li class="chapter-item "><a href="../linux/users.html"><strong aria-hidden="true">5.8.</strong> 使用 Linux 用户和用户组</a></li><li class="chapter-item "><a href="../linux/others.html"><strong aria-hidden="true">5.9.</strong> 其他配置及常用命令</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> 学习教程</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tutorial/node.html"><strong aria-hidden="true">6.1.</strong> 使用 Node</a></li><li class="chapter-item "><a href="../tutorial/v2ray.html"><strong aria-hidden="true">6.2.</strong> 使用 V2ray</a></li><li class="chapter-item "><a href="../tutorial/nginx.html"><strong aria-hidden="true">6.3.</strong> 使用 Nginx</a></li><li class="chapter-item "><a href="../tutorial/mysql.html"><strong aria-hidden="true">6.4.</strong> 使用 MySQL</a></li><li class="chapter-item "><a href="../tutorial/docker.html"><strong aria-hidden="true">6.5.</strong> 使用 Docker</a></li><li class="chapter-item "><a href="../tutorial/apache2.html"><strong aria-hidden="true">6.6.</strong> 使用 Apache2</a></li><li class="chapter-item "><a href="../tutorial/clash.html"><strong aria-hidden="true">6.7.</strong> 使用 Clash 内核</a></li><li class="chapter-item "><a href="../tutorial/wireguard.html"><strong aria-hidden="true">6.8.</strong> 使用 Wireguard</a></li><li class="chapter-item "><a href="../tutorial/oh-my-posh.html"><strong aria-hidden="true">6.9.</strong> 使用 Oh-my-posh</a></li><li class="chapter-item "><a href="../tutorial/transmission.html"><strong aria-hidden="true">6.10.</strong> 使用 Transmission</a></li><li class="chapter-item "><a href="../tutorial/github-actions.html"><strong aria-hidden="true">6.11.</strong> 使用 GitHub Actions</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 服务器搭建</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../server/minecraft.html"><strong aria-hidden="true">7.1.</strong> 搭建 MC 服务器</a></li><li class="chapter-item "><a href="../server/mqtt.html"><strong aria-hidden="true">7.2.</strong> 搭建 MQTT 服务器</a></li><li class="chapter-item "><a href="../server/drone.html"><strong aria-hidden="true">7.3.</strong> 搭建 Drone 服务器</a></li><li class="chapter-item "><a href="../server/vscode.html"><strong aria-hidden="true">7.4.</strong> 搭建 VSCode 服务器</a></li><li class="chapter-item "><a href="../server/adguard.html"><strong aria-hidden="true">7.5.</strong> 搭建 Adguard 服务器</a></li><li class="chapter-item "><a href="../server/mongodb.html"><strong aria-hidden="true">7.6.</strong> 搭建 Mongodb 数据库</a></li><li class="chapter-item "><a href="../server/speedtest.html"><strong aria-hidden="true">7.7.</strong> 搭建 Speedtest 服务器</a></li><li class="chapter-item "><a href="../server/pocketbase.html"><strong aria-hidden="true">7.8.</strong> 搭建 Pocketbase 数据库</a></li><li class="chapter-item "><a href="../server/wireguard.html"><strong aria-hidden="true">7.9.</strong> 搭建 Wireguard 服务器</a></li><li class="chapter-item "><a href="../server/nextcloud.html"><strong aria-hidden="true">7.10.</strong> 搭建 NextCloud 服务器</a></li><li class="chapter-item "><a href="../server/homeassistant.html"><strong aria-hidden="true">7.11.</strong> 搭建 Home Assistant 服务器</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> 编程语言</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">8.1.</strong> Batch</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/batch/wlan.html"><strong aria-hidden="true">8.1.1.</strong> Wlan</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">8.2.</strong> Powershell</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/powershell/basics.html"><strong aria-hidden="true">8.2.1.</strong> 基础命令</a></li><li class="chapter-item "><a href="../programming/powershell/variable-and-psdrive.html"><strong aria-hidden="true">8.2.2.</strong> 变量和 PSDrive</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">8.3.</strong> SQL</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/sql/hello-world.html"><strong aria-hidden="true">8.3.1.</strong> Hello World</a></li><li class="chapter-item "><a href="../programming/sql/select.html"><strong aria-hidden="true">8.3.2.</strong> SELECT</a></li><li class="chapter-item "><a href="../programming/sql/where.html"><strong aria-hidden="true">8.3.3.</strong> WHERE</a></li><li class="chapter-item "><a href="../programming/sql/and-or-not.html"><strong aria-hidden="true">8.3.4.</strong> AND-OR-NOT</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">8.4.</strong> Bash</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/bash/intro.html"><strong aria-hidden="true">8.4.1.</strong> Bash 初识</a></li><li class="chapter-item "><a href="../programming/bash/input.html"><strong aria-hidden="true">8.4.2.</strong> 用户输入</a></li><li class="chapter-item "><a href="../programming/bash/variable.html"><strong aria-hidden="true">8.4.3.</strong> 变量</a></li><li class="chapter-item "><a href="../programming/bash/if.html"><strong aria-hidden="true">8.4.4.</strong> if 操作符</a></li><li class="chapter-item "><a href="../programming/bash/cat.html"><strong aria-hidden="true">8.4.5.</strong> cat 命令</a></li><li class="chapter-item "><a href="../programming/bash/rm.html"><strong aria-hidden="true">8.4.6.</strong> rm 命令</a></li><li class="chapter-item "><a href="../programming/bash/argements.html"><strong aria-hidden="true">8.4.7.</strong> 执行参数</a></li><li class="chapter-item "><a href="../programming/bash/file.html"><strong aria-hidden="true">8.4.8.</strong> 文件操作</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">8.5.</strong> Lua</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/lua/hello-world.html"><strong aria-hidden="true">8.5.1.</strong> Hello World</a></li><li class="chapter-item "><a href="../programming/lua/variable.html"><strong aria-hidden="true">8.5.2.</strong> 变量</a></li><li class="chapter-item "><a href="../programming/lua/operator.html"><strong aria-hidden="true">8.5.3.</strong> 运算符</a></li><li class="chapter-item "><a href="../programming/lua/while.html"><strong aria-hidden="true">8.5.4.</strong> 循环</a></li><li class="chapter-item "><a href="../programming/lua/function.html"><strong aria-hidden="true">8.5.5.</strong> 函数</a></li><li class="chapter-item "><a href="../programming/lua/math.html"><strong aria-hidden="true">8.5.6.</strong> Math</a></li><li class="chapter-item "><a href="../programming/lua/table.html"><strong aria-hidden="true">8.5.7.</strong> Table</a></li><li class="chapter-item "><a href="../programming/lua/class.html"><strong aria-hidden="true">8.5.8.</strong> Class</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">8.6.</strong> Typescript</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../programming/typescript/hello-world.html"><strong aria-hidden="true">8.6.1.</strong> Hello World</a></li><li class="chapter-item "><a href="../programming/typescript/types.html"><strong aria-hidden="true">8.6.2.</strong> Types</a></li><li class="chapter-item "><a href="../programming/typescript/function.html"><strong aria-hidden="true">8.6.3.</strong> Function</a></li><li class="chapter-item "><a href="../programming/typescript/object.html"><strong aria-hidden="true">8.6.4.</strong> Object</a></li><li class="chapter-item "><a href="../programming/typescript/aliases.html"><strong aria-hidden="true">8.6.5.</strong> Aliases</a></li><li class="chapter-item "><a href="../programming/typescript/union.html"><strong aria-hidden="true">8.6.6.</strong> Union</a></li></ol></li></ol></li></ol>
-            </div>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
             </div>
         </nav>
 
-        <!-- Track and set sidebar scroll position -->
-        <script>
-            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
-            sidebarScrollbox.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
-                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
-                }
-            }, { passive: true });
-            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-            sessionStorage.removeItem('sidebar-scroll');
-            if (sidebarScrollTop) {
-                // preserve sidebar scroll position when navigating via links within sidebar
-                sidebarScrollbox.scrollTop = sidebarScrollTop;
-            } else {
-                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
-                var activeSection = document.querySelector('#sidebar .active');
-                if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
-                }
-            }
-        </script>
-
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -135,6 +116,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
@@ -201,47 +183,8 @@
 <pre><code class="language-ps1"># Oh-My-Posh
 oh-my-posh init --config "$env:POSH_THEMES_PATH/amro.omp.json" | Invoke-Expression
 </code></pre>
-<style>
-  .scroll-to-top {
-    font-size: 2.5rem;
-    width: 3.2rem;
-    height: 3.2rem;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    padding: 0.75rem;
-    bottom: 4rem;
-    right: calc(1.25rem + 90px + var(--page-padding));
-    z-index: 999;
-    cursor: pointer;
-    border: none;
-    color: var(--bg);
-    background: var(--fg);
-    border-radius: 50%;
-  }
-  .scroll-to-top.hidden {
-    display: none;
-  }
-  .scroll-to-top i {
-    transform: translateY(-2px);
-  }
-  @media (min-width: 1080px) {
-    .scroll-to-top {
-      display: flex;
-    }
-  }
-</style>
-<button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()">
-  <i class="fa fa-angle-up"></i>
-</button>
-<script>
-  const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" });
-  window.addEventListener("scroll", () => {
-    const button = document.querySelector(".scroll-to-top");
-    button.classList.toggle("hidden", window.scrollY < 200);
-  });
-</script>
+<!-- mdbook-embedify [scroll-to-top]  -->
+<style> .scroll-to-top { font-size: 2.5rem; width: 3.2rem; height: 3.2rem; display: none; align-items: center; justify-content: center; position: fixed; padding: 0.75rem; bottom: 4rem; right: calc(1.25rem + 90px + var(--page-padding)); z-index: 999; cursor: pointer; border: none; color: var(--bg); background: var(--fg); border-radius: 50%; } .scroll-to-top.hidden { display: none; } .scroll-to-top i { transform: translateY(-2px); } @media (min-width: 1080px) { .scroll-to-top { display: flex; } }</style><button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()"> <i class="fa fa-angle-up"></i></button><script> const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" }); window.addEventListener("scroll", () => { const button = document.querySelector(".scroll-to-top"); button.classList.toggle("hidden", window.scrollY <200); });</script>
 
                     </main>
 
