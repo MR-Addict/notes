@@ -6,7 +6,8 @@
 
 - [娱乐]()
 
-  - [三丽鸥](life/sanrio.md)
+  - [三丽鸥](life/sanrio/index.md)
+  - [吉伊卡哇](life/chiikawa/index.md)
 
 # 学习
 

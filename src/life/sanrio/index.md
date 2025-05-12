@@ -2,11 +2,25 @@
 
 ## 一、简介
 
-[Sanrio](https://en.wikipedia.org/wiki/Sanrio)（三丽鸥）是一个日本的公司，成立于 1960 年，以设计、授权和销售可爱的角色商品而闻名。Sanrio 的角色包括 **Hello Kitty**、**美乐蒂**、**库洛米**和**帕恰狗** 等，深受全球消费者的喜爱。
+[Sanrio](https://en.wikipedia.org/wiki/Sanrio)（三丽鸥）是一个日本的公司，成立于 1960 年，以设计、授权和销售可爱的角色商品而闻名。Sanrio 的角色包括 **帕恰狗**、**Hello Kitty**和**库洛米** 等，深受全球消费者的喜爱。
 
 ## 二、角色
 
 三丽鸥旗下有很多可爱的角色，以下是一些比较知名的角色：
+
+### 帕恰狗
+
+> Wikipedia 📝
+>
+> [帕恰狗](https://zh.wikipedia.org/wiki/帕恰狗)
+
+<img src="images/pochacco.png" alt="Pochacco" class="right" width="200" />
+
+帕恰狗（英语：Pochacco），香港叫 PC 狗/PC Dog，是三丽鸥一只白皮肤黑耳朵的狗造型的男性卡通形象。
+
+- 名称：Pochacco、帕恰狗
+- 物种：狗
+- 性别：男
 
 ### Hello Kitty
 
@@ -90,17 +104,3 @@
 - 性别：男
 - 最爱听的话：出门啰！
 - 最喜欢的食物：牛奶、妈妈做的布丁
-
-### 帕恰狗
-
-> Wikipedia 📝
->
-> [帕恰狗](https://zh.wikipedia.org/wiki/帕恰狗)
-
-<img src="images/pochacco.png" alt="Pochacco" class="right" width="200" />
-
-帕恰狗（英语：Pochacco），香港叫 PC 狗/PC Dog，是三丽鸥一只白皮肤黑耳朵的狗造型的男性卡通形象。
-
-- 名称：Pochacco、帕恰狗
-- 物种：狗
-- 性别：男
