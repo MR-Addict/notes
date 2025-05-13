@@ -4,18 +4,37 @@ table {
 }
 
 table tr :is(th, td) {
-  padding-block: 7px;
+  padding-block: 0.7rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 40rem) {
   table tr :is(th, td) {
-    padding-block: 10px;
+    padding-block: 1rem;
   }
 }
 
-/* float right image */
+/* images */
+main ul {
+  margin-block: 0;
+  padding-inline-start: 2rem;
+}
+
+main img {
+  outline: none;
+  border-radius: 1rem;
+}
+
 img.right {
-  margin-left: 1rem;
+  float: none;
+  width: 100%;
+}
+
+@media (min-width: 40rem) {
+  img.right {
+    float: right;
+    width: 20rem;
+    margin-left: 1rem;
+  }
 }
 
 /* patch for disabled link */
