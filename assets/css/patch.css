@@ -13,6 +13,11 @@ table tr :is(th, td) {
   }
 }
 
+/* float right image */
+img.right {
+  margin-left: 1rem;
+}
+
 /* patch for disabled link */
 .chapter-item div {
   color: var(--sidebar-fg);
