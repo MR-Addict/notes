@@ -1,9 +1,8 @@
 [book]
+title = "我的笔记"
 authors = ["MR-Addict"]
 description = "我的笔记(方便施展Copy+Paste魔法)"
-language = "zh-CN"
-src = "src"
-title = "我的笔记"
+language = "zh-Hans"
 
 [build]
 build-dir = "book"
@@ -11,8 +10,8 @@ create-missing = false
 use-default-preprocessors = false
 
 [output.html]
-default-theme = "Light"
-preferred-dark-theme = "Ayu"
+default-theme = "light"
+preferred-dark-theme = "ayu"
 smart-punctuation = true
 mathjax-support = false
 no-section-label = false
