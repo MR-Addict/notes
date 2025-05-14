@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>吉伊卡哇 - 我的笔记</title>
+        <title>搭建 Drone 服务器 - 我的笔记</title>
 
 
         <!-- Custom HTML head -->
@@ -137,7 +137,7 @@
                         <a href="https://github.com/mr-addict/notes" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/mr-addict/notes/edit/main/src/life/chiikawa/index.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/mr-addict/notes/edit/main/src/learn/server/drone.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -166,70 +166,170 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="吉伊卡哇"><a class="header" href="#吉伊卡哇">吉伊卡哇</a></h1>
+                        <h1 id="使用-drone-ci-服务器"><a class="header" href="#使用-drone-ci-服务器">使用 Drone CI 服务器</a></h1>
+<p>Drone CI 是一个基于 go 的 CI 工具，配合 Github 或者 Gitlab 等可以实现方便的持续部署。</p>
+<h2 id="一配置-docker-容器"><a class="header" href="#一配置-docker-容器">一、配置 Docker 容器</a></h2>
+<h3 id="部署-server"><a class="header" href="#部署-server">部署 Server</a></h3>
+<pre><code class="language-yaml">version: "3"
+services:
+  drone-server:
+    image: drone/drone
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    environment:
+      - TZ=Asia/Shanghai
+      - DRONE_CRON_INTERVAL=1m
+      - DRONE_SERVER_PROTO=https
+      - DRONE_SERVER_HOST=drone.mraddict.top
+
+      - DRONE_USER_FILTER=MR-Addict
+      - DRONE_USER_CREATE=username:MR-Addict,admin:true
+
+      - DRONE_RPC_SECRET=e0c4fab16337ae0c7faa3706379ccac9
+      - DRONE_GITHUB_CLIENT_ID=github_client_id
+      - DRONE_GITHUB_CLIENT_SECRET=github_client_secret
+    volumes:
+      - ./data:/data
+</code></pre>
+<p>启动容器：</p>
+<pre><code class="language-sh">docker-compose up -d
+</code></pre>
+<h3 id="部署-runner"><a class="header" href="#部署-runner">部署 Runner</a></h3>
+<h4 id="1-docker-runner"><a class="header" href="#1-docker-runner">1. Docker Runner</a></h4>
+<pre><code class="language-yaml">version: "3"
+services:
+  drone-runner-docker:
+    image: drone/drone-runner-docker
+    restart: unless-stopped
+    environment:
+      - DRONE_RPC_PROTO=https
+      - DRONE_RPC_HOST=drone.mraddict.top
+      - DRONE_RPC_SECRET=e0c4fab16337ae0c7faa3706379ccac9
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+</code></pre>
+<p>启动容器：</p>
+<pre><code class="language-sh">docker-compose up -d
+</code></pre>
+<h4 id="2-ssh-runner"><a class="header" href="#2-ssh-runner">2. SSH Runner</a></h4>
+<pre><code class="language-yaml">version: "3"
+services:
+  drone-runner-ssh:
+    image: drone/drone-runner-ssh
+    restart: unless-stopped
+    environment:
+      - DRONE_RPC_PROTO=https
+      - DRONE_RPC_HOST=drone.mraddict.top
+      - DRONE_RPC_SECRET=e0c4fab16337ae0c7faa3706379ccac9
+</code></pre>
+<p>启动容器：</p>
+<pre><code class="language-sh">docker-compose up -d
+</code></pre>
+<h4 id="3-exec-runner"><a class="header" href="#3-exec-runner">3. Exec Runner</a></h4>
+<p>安装 runner：</p>
+<pre><code class="language-sh">curl -L https://github.com/drone-runners/drone-runner-exec/releases/latest/download/drone_runner_exec_linux_amd64.tar.gz | tar zx
+sudo install -t /usr/local/bin drone-runner-exec
+</code></pre>
+<p>添加配置文件：</p>
+<pre><code class="language-sh">sudo vim /etc/drone-runner-exec/config
+</code></pre>
+<p>配置文件内容：</p>
+<pre><code>DRONE_RPC_PROTO=https
+DRONE_RPC_HOST=drone.mraddict.top
+DRONE_RPC_SECRET=e0c4fab16337ae0c7faa3706379ccac9
+</code></pre>
+<p>安装自启服务：</p>
+<pre><code class="language-sh">sudo drone-runner-exec service install --config="/home/ubuntu/projects/drone/client/config"
+</code></pre>
+<p>启动服务：</p>
+<pre><code class="language-sh">sudo drone-runner-exec service start
+</code></pre>
+<p>关闭服务：</p>
+<pre><code class="language-sh">sudo drone-runner-exec service stop
+</code></pre>
+<p>卸载自启服务：</p>
+<pre><code class="language-sh">sudo drone-runner-exec service uninstall
+</code></pre>
+<h2 id="二配置-nginx-反向代理"><a class="header" href="#二配置-nginx-反向代理">二、配置 Nginx 反向代理</a></h2>
+<pre><code>server{
+  listen 80;
+  listen [::]:80;
+  server_name drone.mraddict.top;
+  return 301 https://$host$request_uri;
+}
+
+server {
+  listen 443 ssl http2;
+  listen [::]:443 ssl http2;
+  server_name drone.mraddict.top;
+
+  ssl_certificate  /etc/nginx/certs/tencent/drone.mraddict.top/drone.mraddict.top.cert;
+  ssl_certificate_key /etc/nginx/certs/tencent/drone.mraddict.top/drone.mraddict.top.key;
+
+  location / {
+    proxy_pass http://localhost:8000;
+    proxy_buffering off;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+}
+</code></pre>
+<h2 id="三drone-ci-样例"><a class="header" href="#三drone-ci-样例">三、Drone CI 样例</a></h2>
+<pre><code class="language-yaml">kind: pipeline
+type: docker
+name: default
+
+clone:
+  disable: true
+
+steps:
+  - name: ssh
+    image: appleboy/drone-ssh
+    settings:
+      host:
+        from_secret: ssh_host
+      username:
+        from_secret: ssh_username
+      key:
+        from_secret: ssh_key
+      script:
+        - cd /home/ubuntu/projects/punch
+        - git pull
+        - docker-compose down
+        - docker rmi mraddict063/punch-next
+        - docker build -t mraddict063/punch-next .
+        - docker image prune -f --filter label=stage=builder
+        - docker-compose up -d
+
+trigger:
+  branch:
+    - main
+  event:
+    - push
+    - cron
+</code></pre>
 <blockquote>
-<p>Wikipedia 📝</p>
-<p><a href="https://zh.wikipedia.org/wiki/%E5%90%89%E4%BC%8A%E5%8D%A1%E5%93%87">吉伊卡哇</a></p>
+<p>注意 💥</p>
+<p>请谨慎允许 pull request 使用 CI，这样会容易暴露自己设置的 secret</p>
 </blockquote>
-<h2 id="一简介"><a class="header" href="#一简介">一、简介</a></h2>
-<p>《吉伊卡哇》（日语：ちいかわ，英语：Chiikawa）是由日本漫画家长野创作的漫画系列，副标题《这又小又可爱的家伙》。该系列自 2020 年 1 月起透过 Twitter 进行连载，并由讲谈社出版单行本。</p>
-<p>本作主要描绘一群画风独特的小动物<strong>小可爱的日常</strong>的漫画展开，并以简单的多格漫画，呈现不同的故事，世界充满了森林、草原等自然丰富的景色，周围还有巨大的食物、如同植物一样自生。虚构世界住宅和商店林立，存在货币经济和互联网。</p>
-<p>作为这个世界的居民，包括小可爱们主要从事像<strong>除草</strong>和<strong>讨伐</strong>这样的工作，以此维持生计。这些工作都是由一种叫做<strong>盔甲先生</strong>的种族提供的，此外，还存在着各种资格和相应的考试，根据资格的不同可以获得更高的报酬，还可以喝酒。</p>
-<p>此外，这个世界还有一些奇妙的生物，其中一些个体可能对生物造成危害。还有一些个体能够进行对话。</p>
-<p>这个世界的居民主要是小可爱们，以下是一些主要角色。</p>
-<h2 id="二主角"><a class="header" href="#二主角">二、主角</a></h2>
-<h3 id="吉伊卡哇-ちいかわ"><a class="header" href="#吉伊卡哇-ちいかわ">吉伊卡哇 （ちいかわ）</a></h3>
-<img src="images/chiikawa.jpg" alt="Chiikawa" class="right" />
+<h2 id="四如何使用-cron"><a class="header" href="#四如何使用-cron">四、如何使用 cron</a></h2>
+<p>用 drone 提供的 UI 设置定时任务只能设置几个基本的时段，非常不方便，更加灵活的方式是用直接调用 API。</p>
+<p>下面是 curl 的示例，<strong>DRONE_TOKEN</strong> 可以在个人中心找到，把 <strong>USER</strong> 和 <strong>REPO</strong> 换成你自己的项目：</p>
+<pre><code class="language-sh">curl -X POST https://drone.example.com/api/repos/USER/REPO/cron \
+-H "Authorization: Bearer DRONE_TOKEN" \
+-H "Content-Type: application/json" \
+--data '{"name": "default", "expr": "0 0 */10 * * *", "branch": "main" }'
+</code></pre>
+<blockquote>
+<p>注意 💥</p>
 <ul>
-<li>别名：吉伊、小可爱</li>
-<li>物种：仓鼠</li>
+<li>你需要修改时区保证时间的一致性，环境变量是 <strong>TZ=Asia/Shanghai</strong></li>
+<li>drone 默认的 cron 检查间隔是一小时，非常不准确，环境变量是 <strong>DRONE_CRON_INTERVAL=1m</strong></li>
+<li>drone 使用的 cron 表达式是 <strong>6 位</strong>的，包含秒，和常规 5 位的 linux 系统 cron 不太一样</li>
 </ul>
-<p>本作的主角。</p>
-<p>白色仓鼠外型的小可爱，是小八猫和兔兔最好的朋友，大部分时间都会在一起玩。虽然会说话但几乎没有台词，很多时候只会说<strong>哇</strong>、<strong>耶</strong>、<strong>呼</strong>等几句话。性格敏感懦弱、容易因害怕而哭泣。是三小只中的胆小鬼，有社交恐惧症，经常依赖小八猫帮忙传话。但往往都第一个冒着危险保护朋友免受邪恶怪物的攻击，展现出无私奉献的一面。</p>
-<p>不喜欢吃花椰菜。拥有很强的抽奖运，目前居住的房子是在超级可口优酪乳送房抽奖活动抽中的，此外也曾在美味布丁的抽奖活动中抽到日式牛肉火锅套餐。目前正在为通过除草检定 5 级考试而奋斗。吉伊卡哇的名字是该系列完整标题<strong>なんか小さくてかわいいやつ</strong>的缩写，意思是<strong>又小又可爱</strong>。</p>
-<h3 id="小八猫ハチワレ"><a class="header" href="#小八猫ハチワレ">小八猫（ハチワレ）</a></h3>
-<img src="images/hachiware.webp" alt="Hachiware" class="right" />
-<ul>
-<li>别名：小八、八字猫</li>
-<li>物种：奔驰猫</li>
-</ul>
-<p>吉伊卡哇和兔兔的朋友。</p>
-<p>有着独特的<strong>蓝色</strong>尾巴和耳朵的<strong>奔驰猫</strong>型小可爱。与吉伊卡哇相反，性格开朗健谈，积极向上，擅长社交。在三小只中是最成熟外向的，但偶尔有些天然呆。会对自己造成的错误加以反省并决心更加努力。小八猫对朋友相当忠诚，在有困难的时候会及时伸出援手，当吉伊卡哇感到沮丧时也会尽力安慰他。</p>
-<p>对艺术表现出了极高的兴趣。会存钱买了一台相机来追求自己的摄影爱好。一个人住在洞窟里。没有门所以常被怪物频繁入侵攻击。拥有除草检定 5 级证照。</p>
-<h3 id="兔兔うさぎ"><a class="header" href="#兔兔うさぎ">兔兔（うさぎ）</a></h3>
-<img src="images/usagi.webp" alt="Usagi" class="right" />
-<ul>
-<li>别名：乌萨奇、兔子、537</li>
-<li>物种：兔子</li>
-</ul>
-<p>吉伊卡哇和小八猫的朋友。</p>
-<p>黄色兔子外型的小可爱，几乎不太说话，平时只会发出<strong>乌拉</strong>、<strong>呀哈</strong>、<strong>哈</strong>等等叫声。性格贪吃，爱好自由，经常情绪高涨，导致有些时候会成为麻烦制造者，是三小只中最果断的。初期喜欢欺负吉伊卡哇，但随着和吉伊卡哇、小八猫的长时间相处开始变得重视朋友，也会小可爱出现危机时给予帮助。</p>
-<p>虽然平时疯疯癫癫，能力和警觉性却意外地很强，在营救睡衣党的三名成员时第一个从远处注意到他们遭遇大鸭追杀并前往拯救。当吉伊卡哇被怪物绑架时，被小八唤醒的兔兔立即保持警惕并做好战斗准备。拥有除草检定 3 级证照。即使面对危险，永远都维持着一样的表情。</p>
-<h2 id="三其他角色"><a class="header" href="#三其他角色">三、其他角色</a></h2>
-<h3 id="小桃鼠モモンガ"><a class="header" href="#小桃鼠モモンガ">小桃鼠（モモンガ）</a></h3>
-<img src="images/momonga.gif" alt="Momonga" class="right" />
-<ul>
-<li>别名：飞鼠、小桃、莫莫咖、毛毛力</li>
-<li>物种：飞鼠</li>
-</ul>
-<p>白色飞鼠外型的小可爱。</p>
-<p>个性聪明，非常以自我为中心，经常做出捣蛋、偷吃东西来乞求关注和赞扬的行为给其他角色制造麻烦。虽然没有正式证实，但故事中暗示了他原本是一只名叫<strong>大强</strong>的怪物，因为不明原因从真正的小桃那里夺得身体主导权。后来得知有游戏中心有一台能够交换灵魂的老虎机，并将它给砸烂以防万一。它的名字来源于日语单词“モモンガ“，意思是飞鼠。</p>
-<h3 id="栗子馒头栗まんじゅう"><a class="header" href="#栗子馒头栗まんじゅう">栗子馒头（栗まんじゅう）</a></h3>
-<img src="images/kuri.webp" alt="Kuri" class="right" />
-<ul>
-<li>别名：栗子馒头前辈、布丁狗前辈</li>
-<li>物种：蜜獾</li>
-</ul>
-<p>日本栗子面包和蜜獾外型的小可爱。</p>
-<p>经常表现得像一个中年日本男子，拥有饮酒证照。剧情中登场很多时候都是在喝酒或吃下酒零食。有时会因为喝太多宿醉脸色发青。性格豪迈大气，在除草劳动时会请吉伊卡哇喝罐装咖啡。 几乎没有台词，吃饭的时候只会发出<strong>哈</strong>的声音。</p>
-<h3 id="海獭ラッコ"><a class="header" href="#海獭ラッコ">海獭（ラッコ）</a></h3>
-<img src="images/lakko.gif" alt="Lakko" class="right" />
-<ul>
-<li>别名：海獭勇者、海獭师傅、师傅、獭师</li>
-<li>物种：海獭</li>
-</ul>
-<p>海獭外型的小可爱。</p>
-<p>右眼上方有一个十字形的疤痕。他在讨伐排名顺位第一。时常执行讨伐和其他高风险任务。外表看似严肃实则很照顾后辈，喜欢甜食，只要吃到甜的东西就会开心的作出托腮动作。拥有一台专属的汽车。时常在甜点特卖会时开车前往卖场。</p>
+</blockquote>
 <!-- mdbook-embedify [scroll-to-top]  -->
 <style> .scroll-to-top { font-size: 2.5rem; width: 3.2rem; height: 3.2rem; display: none; align-items: center; justify-content: center; position: fixed; padding: 0.75rem; bottom: 4rem; right: calc(1.25rem + 90px + var(--page-padding)); z-index: 999; cursor: pointer; border: none; color: var(--bg); background: var(--fg); border-radius: 50%; } .scroll-to-top.hidden { display: none; } .scroll-to-top i { transform: translateY(-2px); } @media (min-width: 1080px) { .scroll-to-top { display: flex; } }</style><button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()"> <i class="fa fa-angle-up"></i></button><script> const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" }); window.addEventListener("scroll", () => { const button = document.querySelector(".scroll-to-top"); button.classList.toggle("hidden", window.scrollY <200); });</script>
 
@@ -237,11 +337,11 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../life/sanrio/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../learn/server/mqtt.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../learn/rpi/wiringpi.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../learn/server/vscode.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -251,11 +351,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../life/sanrio/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../learn/server/mqtt.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../learn/rpi/wiringpi.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../learn/server/vscode.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

@@ -1,0 +1,391 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hans" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>使用 Clash 内核 - 我的笔记</title>
+
+
+        <!-- Custom HTML head -->
+        <script
+          defer
+          src="https://us.umami.is/script.js"
+          data-website-id="f52c913a-274a-4472-bd16-83a430cb2900"
+        ></script>
+        <meta name="description" content="我的笔记(方便施展Copy+Paste魔法)">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../.././assets/css/patch.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "ayu";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">我的笔记</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/mr-addict/notes" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        <a href="https://github.com/mr-addict/notes/edit/main/src/learn/tutorial/clash.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="使用-clash-内核"><a class="header" href="#使用-clash-内核">使用 Clash 内核</a></h1>
+<h2 id="一下载-clash"><a class="header" href="#一下载-clash">一、下载 Clash</a></h2>
+<p>在这里我们使用 Clash 作为科学上网的代理框架，为什么使用 Clash 呢，那是因为 Clash 内核支持各种 Unix 平台的各个架构；还支持各种代理协议，像 Trojan、Vmess、Shadowsocks 等等；以及强大的分流规则，可以非常方便地自定义各种规则。</p>
+<p>你可以到 GitHub 下载<a href="https://github.com/Dreamacro/clash/releases">Clash 内核</a>。如果你是<strong>树莓派 4B 32 位操作系统</strong>，那么你应该下载对应 armv7 版本的<a href="https://github.com/Dreamacro/clash/releases/download/v1.11.0/clash-linux-armv7-v1.11.0.gz">clash-linux-armv7-v1.11.0.gz</a>，如果是<strong>树莓派 4B 64 位操作系统</strong>，那么你应该下载对应 armv7 版本的<a href="https://github.com/Dreamacro/clash/releases/download/v1.11.0/clash-linux-armv8-v1.11.0.gz">clash-linux-armv8-v1.11.0.gz</a>。</p>
+<p>下载完成后解压文件，建议把文件名改为<code>clash</code>， 然后移动到<code>/usr/local/bin/clash</code>位置，同时给该文件以执行的权限：</p>
+<pre><code class="language-sh">wget https://github.com/Dreamacro/clash/releases/download/v1.10.6/clash-linux-armv7-v1.10.6.gz
+gunzip clash-linux-armv7-v1.10.6.gz
+rm -rf clash-linux-armv7-v1.10.6.gz
+mv clash-linux-armv7 clash
+sudo mv clash /usr/local/bin
+sudo chmod a+x /usr/local/bin/clash
+</code></pre>
+<h2 id="二配置-clash"><a class="header" href="#二配置-clash">二、配置 Clash</a></h2>
+<p>Clash 配置文件的默认路径是<code>~/.config/clash</code>，如果你的 Home 目录不存在相应文件夹就需要你自己创建，然后把你机场提供的配置文件放到该文件下就可以了，Clash 配置文件的默认名称应该是<code>config.yaml</code>。</p>
+<pre><code class="language-sh">mkdir ~/.config/clash
+mv your/clash/config/file config.yaml
+mv config.yaml ~/.config/clash
+</code></pre>
+<p>另外 Clash 还需要一个<a href="data/Country.mmdb">Country.mmdb 文件</a>，Country.mmdb 是全球 IP 库，可以实现各个国家的 IP 信息解析和地理定位，没有这个文件 clash 无法正常启动，你可以前往<a href="https://github.com/SukkaW/Koolshare-Clash/blob/master/koolclash/koolclash/config/Country.mmdb">GitHub 下载</a>。下载完成后同样放在默认路径下就可以了<code>~/.config/clash</code>。</p>
+<h2 id="三配置终端代理"><a class="header" href="#三配置终端代理">三、配置终端代理</a></h2>
+<p>首先我们需要添加几个环境变量：</p>
+<pre><code class="language-sh">sudo vim /etc/environment
+</code></pre>
+<p>然后添加以下配置内容：</p>
+<pre><code>export http_proxy="http://127.0.0.1:7890"
+export https_proxy="http://127.0.0.1:7890"
+export no_proxy="localhost, 127.0.0.1, *edu.cn"
+</code></pre>
+<blockquote>
+<p>注意 💥</p>
+<p>系统变量的 https_proxy 的代理地址和 http_proxy 的代理地址是一样的，因为 Clash 使用一个地址同时代理 http 和 https。另外，no_proxy 表示其中的地址不需要代理，这一点很重要，比如我们不需要代理我们的校园网地址，因此加入要<code>*edu.cn</code>。</p>
+</blockquote>
+<p>然后再对相应的终端应用配置代理：</p>
+<h3 id="为-sudo-配置代理"><a class="header" href="#为-sudo-配置代理">为 sudo 配置代理</a></h3>
+<p>进入 sudo 配置文件：</p>
+<pre><code class="language-sh">sudo visudo
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code>Defaults env_keep+="http_proxy https_proxy no_proxy"
+</code></pre>
+<h3 id="为-apt-配置代理"><a class="header" href="#为-apt-配置代理">为 apt 配置代理</a></h3>
+<p>进入 apt 配置文件：</p>
+<pre><code class="language-sh">sudo vim /etc/apt/apt.conf.d/10proxy
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code>Acquire::http::Proxy "http://127.0.0.1:7890/";
+</code></pre>
+<h3 id="为-git-配置代理"><a class="header" href="#为-git-配置代理">为 git 配置代理</a></h3>
+<p>进入 git 配置文件：</p>
+<pre><code class="language-sh">vim ~/.gitconfig
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code class="language-sh">[http]
+  proxy=http://127.0.0.1:7890
+[https]
+  proxy=http://127.0.0.1:7890
+</code></pre>
+<h3 id="为-pip-配置代理"><a class="header" href="#为-pip-配置代理">为 pip 配置代理</a></h3>
+<p>进入 pip 配置文件：</p>
+<pre><code class="language-sh">vim ~/.config/pip/pip.conf
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code>[global]
+  proxy = http://127.0.0.1:7890
+  http-proxy = http://127.0.0.1:7890
+  https-proxy = http://127.0.0.1:7890
+  trusted-host = pypi.python.org global.trusted-host pypi.org global.trusted-host files.pythonhosted.org
+</code></pre>
+<h3 id="为-npm-配置代理"><a class="header" href="#为-npm-配置代理">为 npm 配置代理</a></h3>
+<p>进入 npm 配置文件：</p>
+<pre><code class="language-sh">vim ~/.npmrc
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code>proxy=http://127.0.0.1:7890
+http-proxy=http://127.0.0.1:7890
+https-proxy=http://127.0.0.1:7890
+</code></pre>
+<h3 id="为-cargo-配置代理"><a class="header" href="#为-cargo-配置代理">为 cargo 配置代理</a></h3>
+<p>进入 cargo 配置文件：</p>
+<pre><code class="language-sh">vim ~/.cargo/config
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code>[http]
+  proxy=http://127.0.0.1:7890
+[https]
+  proxy=http://127.0.0.1:7890
+</code></pre>
+<h3 id="为-docker-配置代理"><a class="header" href="#为-docker-配置代理">为 docker 配置代理</a></h3>
+<p>新建 docker 配置文件夹：</p>
+<pre><code class="language-sh">sudo mkdir -p /etc/systemd/system/docker.service.d
+</code></pre>
+<p>新建 docker 代理配置文件：</p>
+<pre><code class="language-sh">sudo vim /etc/systemd/system/docker.service.d/proxy.conf
+</code></pre>
+<p>添加以下配置：</p>
+<pre><code class="language-sh">[Service]
+Environment="NO_PROXY="localhost,127.0.0.1"
+Environment="HTTP_PROXY=http://127.0.0.1:7890"
+Environment="HTTPS_PROXY=http://127.0.0.1:7890"
+</code></pre>
+<p>重启 serive 配置文件：</p>
+<pre><code class="language-sh">sudo systemctl daemon-reload
+</code></pre>
+<p>重启 docker：</p>
+<pre><code class="language-sh">sudo systemctl restart docker.service
+</code></pre>
+<h2 id="四使用-clash"><a class="header" href="#四使用-clash">四、使用 Clash</a></h2>
+<p>配置完成后需要重启树莓派让配置生效，这样配置才能生效。理论上这样一波配置后，大部分终端应用都可以正常使用了，如果你有其他的终端应用可自行参考相关文档进行配置。</p>
+<p>重启之后在终端中输入 clash，如果输出类似以下内容那么就说明 Clash 启动成功了。</p>
+<pre><code>INFO[0000] Start initial compatible provider 手动选择
+INFO[0000] Start initial compatible provider 节点选择
+INFO[0000] Start initial compatible provider 故障切换
+INFO[0000] Start initial compatible provider 自动选择
+INFO[0000] HTTP proxy listening at: [::]:7890
+INFO[0000] RESTful API listening at: 127.0.0.1:9090
+INFO[0000] SOCKS proxy listening at: [::]:7891
+</code></pre>
+<p>你可以更新一下系统或者打开浏览器测试一下 Google，如果可以访问你就可以愉快地玩耍了！</p>
+<blockquote>
+<p>注意 💥</p>
+<p>在终端请不要使用<code>ping google.com</code>来测试，因为 ping 使用不同的协议无法被 Clash 代理，但是可以使用<code>curl google.com</code>。</p>
+</blockquote>
+<h2 id="五开机自启"><a class="header" href="#五开机自启">五、开机自启</a></h2>
+<p>既然我们都已经可以使用 Clash 了，当然要让树莓派能够开机自启 Clash 对吧。在树莓派推荐使用 crontab 作为自动任务管理器。</p>
+<p>输入以下命令可以打开 crontab：</p>
+<pre><code class="language-sh">crontab -e
+</code></pre>
+<p>第一次使用可能需要你选择默认的编辑器，看个人喜好选择就好，然后在打开的文件末尾添加以下内容：</p>
+<pre><code>@reboot /usr/local/bin/clash
+</code></pre>
+<p>你也可以使用 systemd 来管理 Clash 的开机自启，首先创建一个服务文件：</p>
+<pre><code class="language-sh">sudo vim /etc/systemd/system/clash.service
+</code></pre>
+<p>然后添加以下内容：</p>
+<pre><code class="language-sh">[Unit]
+After=network.target
+Description=clash
+StartLimitBurst=5
+StartLimitIntervalSec=100
+
+[Service]
+Type=simple
+User=ubuntu
+Restart=always
+RestartSec=1
+ExecStart=/usr/local/bin/clash
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p>然后开机自启：</p>
+<pre><code class="language-sh">sudo systemctl enable clash
+</code></pre>
+<p>然后启动服务：</p>
+<pre><code class="language-sh">sudo systemctl start clash
+</code></pre>
+<h2 id="六控制面板"><a class="header" href="#六控制面板">六、控制面板</a></h2>
+<p>GitHub 上有很多优秀的有关 Clash Dashboard 的项目，这些项目可以非常方便地帮助你查看、设置和管理你的 Clash。</p>
+<p>从 GitHub 上克隆<a href="https://github.com/Dreamacro/clash-dashboard.git">Clash Dashbaord</a>到 Clash 的默认配置文件夹下。</p>
+<pre><code class="language-sh">cd ~/.config/clash
+git clone https://github.com/Dreamacro/clash-dashboard.git
+cd ~/.config/clash/clash-dashboard
+git checkout -b gh-pages origin/gh-pages
+</code></pre>
+<p>下载完成后你需要对 Clash 的配置文件稍作修改，在 config.yaml 的头部添加或者修改以下两项：</p>
+<pre><code class="language-config.yaml">external-ui: clash-dashboard
+external-controller: 127.0.0.1:9090
+</code></pre>
+<p>然后在浏览器中输入<a href="http://127.0.0.1:9090/ui">http://127.0.0.1:9090/ui</a>就可以看到 Clash 的控制面板了。</p>
+<!-- mdbook-embedify [scroll-to-top]  -->
+<style> .scroll-to-top { font-size: 2.5rem; width: 3.2rem; height: 3.2rem; display: none; align-items: center; justify-content: center; position: fixed; padding: 0.75rem; bottom: 4rem; right: calc(1.25rem + 90px + var(--page-padding)); z-index: 999; cursor: pointer; border: none; color: var(--bg); background: var(--fg); border-radius: 50%; } .scroll-to-top.hidden { display: none; } .scroll-to-top i { transform: translateY(-2px); } @media (min-width: 1080px) { .scroll-to-top { display: flex; } }</style><button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()"> <i class="fa fa-angle-up"></i></button><script> const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" }); window.addEventListener("scroll", () => { const button = document.querySelector(".scroll-to-top"); button.classList.toggle("hidden", window.scrollY <200); });</script>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../learn/tutorial/apache2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../learn/tutorial/wireguard.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../learn/tutorial/apache2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../learn/tutorial/wireguard.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

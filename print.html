@@ -446,7 +446,7 @@ opkg install vim-full vim-runtime
 <p>进入配置文件</p>
 <pre><code class="language-sh">vim /usr/share/vim/vimrc
 </code></pre>
-<p>配置内容可参考 <a href="openwrt/../linux/vim.html">Linux-Vim</a></p>
+<p>配置内容可参考 <a href="learn/openwrt/../linux/vim.html">Linux-Vim</a></p>
 <!-- mdbook-embedify [scroll-to-top]  -->
 <style> .scroll-to-top { font-size: 2.5rem; width: 3.2rem; height: 3.2rem; display: none; align-items: center; justify-content: center; position: fixed; padding: 0.75rem; bottom: 4rem; right: calc(1.25rem + 90px + var(--page-padding)); z-index: 999; cursor: pointer; border: none; color: var(--bg); background: var(--fg); border-radius: 50%; } .scroll-to-top.hidden { display: none; } .scroll-to-top i { transform: translateY(-2px); } @media (min-width: 1080px) { .scroll-to-top { display: flex; } }</style><button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()"> <i class="fa fa-angle-up"></i></button><script> const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" }); window.addEventListener("scroll", () => { const button = document.querySelector(".scroll-to-top"); button.classList.toggle("hidden", window.scrollY <200); });</script>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-uhttp"><a class="header" href="#使用-uhttp">使用 Uhttp</a></h1>
@@ -639,12 +639,12 @@ chmod 777 /etc/mosquitto/data/mosquitto.log
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] &amp;&amp; \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 </code></pre>
 <h2 id="三使用-nvm"><a class="header" href="#三使用-nvm">三、使用 NVM</a></h2>
-<p>关于如何使用 nvm，请参考 <a href="mac/../windows/nvm.html">Windows/使用 NVM</a>。</p>
+<p>关于如何使用 nvm，请参考 <a href="learn/mac/../windows/nvm.html">Windows/使用 NVM</a>。</p>
 <!-- mdbook-embedify [scroll-to-top]  -->
 <style> .scroll-to-top { font-size: 2.5rem; width: 3.2rem; height: 3.2rem; display: none; align-items: center; justify-content: center; position: fixed; padding: 0.75rem; bottom: 4rem; right: calc(1.25rem + 90px + var(--page-padding)); z-index: 999; cursor: pointer; border: none; color: var(--bg); background: var(--fg); border-radius: 50%; } .scroll-to-top.hidden { display: none; } .scroll-to-top i { transform: translateY(-2px); } @media (min-width: 1080px) { .scroll-to-top { display: flex; } }</style><button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()"> <i class="fa fa-angle-up"></i></button><script> const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" }); window.addEventListener("scroll", () => { const button = document.querySelector(".scroll-to-top"); button.classList.toggle("hidden", window.scrollY <200); });</script>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pyenv"><a class="header" href="#pyenv">Pyenv</a></h1>
 <h2 id="一安装-pyenv"><a class="header" href="#一安装-pyenv">一、安装 pyenv</a></h2>
-<p>首先你需要安装 <a href="mac/./homebrew.html">brew</a>，然后执行以下命令安装 pyenv：</p>
+<p>首先你需要安装 <a href="learn/mac/./homebrew.html">brew</a>，然后执行以下命令安装 pyenv：</p>
 <pre><code class="language-sh">brew install pyenv
 </code></pre>
 <h2 id="二配置环境变量"><a class="header" href="#二配置环境变量">二、配置环境变量</a></h2>
@@ -655,7 +655,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init - zsh)"
 </code></pre>
 <h2 id="三使用-pyenv"><a class="header" href="#三使用-pyenv">三、使用 pyenv</a></h2>
-<p>关于如何使用 pyenv，请参考<a href="mac/../windows/pyenv.html">Windows/使用 Pyenv</a> 。</p>
+<p>关于如何使用 pyenv，请参考<a href="learn/mac/../windows/pyenv.html">Windows/使用 Pyenv</a> 。</p>
 <!-- mdbook-embedify [scroll-to-top]  -->
 <style> .scroll-to-top { font-size: 2.5rem; width: 3.2rem; height: 3.2rem; display: none; align-items: center; justify-content: center; position: fixed; padding: 0.75rem; bottom: 4rem; right: calc(1.25rem + 90px + var(--page-padding)); z-index: 999; cursor: pointer; border: none; color: var(--bg); background: var(--fg); border-radius: 50%; } .scroll-to-top.hidden { display: none; } .scroll-to-top i { transform: translateY(-2px); } @media (min-width: 1080px) { .scroll-to-top { display: flex; } }</style><button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()"> <i class="fa fa-angle-up"></i></button><script> const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" }); window.addEventListener("scroll", () => { const button = document.querySelector(".scroll-to-top"); button.classList.toggle("hidden", window.scrollY <200); });</script>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="terminal"><a class="header" href="#terminal">Terminal</a></h1>
@@ -863,7 +863,7 @@ networkingMode=mirrored
 <p>如果你是 Windows 10，那么可以在 <code>设置</code> -&gt; <code>应用</code> -&gt; <code>可选功能</code> 中安装 OpenSSH 客户端和服务器。</p>
 <p>如果你是 Windows 11，那么可以在 <code>设置</code> -&gt; <code>系统</code> -&gt; <code>可选功能</code> 中安装 OpenSSH 客户端和服务器。</p>
 <p>请按照下图所示安装 <strong>OpenSSH Server</strong>，<strong>OpenSSH Client</strong> 可选安装，一般系统默认已经安装：</p>
-<p><img src="windows/images/install-openssh.png" alt="install-openssh" /></p>
+<p><img src="learn/windows/images/install-openssh.png" alt="install-openssh" /></p>
 <p>然后用管理员权限打开 PowerShell，运行以下命令查看 OpenSSH 服务状态：</p>
 <pre><code class="language-sh">Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 </code></pre>
@@ -920,7 +920,7 @@ OpenSSH-Server-In-TCP    True
 <pre><code class="language-sh">Restart-Service sshd
 </code></pre>
 <h2 id="五使用-ssh"><a class="header" href="#五使用-ssh">五、使用 SSH</a></h2>
-<p>在 Winddows 上使用 SSH 类似于在 Linux 或 macOS 上使用 SSH，可以参考后面 <a href="windows/../linux/ssh.html">在 Linux 中使用 SSH</a> 的文档。</p>
+<p>在 Winddows 上使用 SSH 类似于在 Linux 或 macOS 上使用 SSH，可以参考后面 <a href="learn/windows/../linux/ssh.html">在 Linux 中使用 SSH</a> 的文档。</p>
 <p>在 Windows 系统中，可以使用 <code>ssh</code> 命令连接远程服务器，例如：</p>
 <pre><code class="language-sh">ssh username@hostname
 </code></pre>
@@ -1849,10 +1849,10 @@ proxies:
 <p><a href="https://v2xtls.org/shadowrocket%E9%85%8D%E7%BD%AEv2ray%E6%95%99%E7%A8%8B">Shadowrocket</a></p>
 </blockquote>
 <p>请参考以下配置：</p>
-<img src="tutorial/images/v2ray-shadowrocket-1.png" alt="shadowrocket-1" width="400">
-<p>其中选择 websocket 传输方式：</p>
-<img src="tutorial/images/v2ray-shadowrocket-2.png" alt="shadowrocket-2" width="400">
-<!-- mdbook-embedify [scroll-to-top]  -->
+<div class="table-wrapper"><table><thead><tr><th>基本设置</th><th>传输方式</th></tr></thead><tbody>
+<tr><td><img src="learn/tutorial/images/v2ray-shadowrocket-configuration-basic.png" alt="Basic" /></td><td><img src="learn/tutorial/images/v2ray-shadowrocket-configuration-transmission.png" alt="Transmission" /></td></tr>
+</tbody></table>
+</div><!-- mdbook-embedify [scroll-to-top]  -->
 <style> .scroll-to-top { font-size: 2.5rem; width: 3.2rem; height: 3.2rem; display: none; align-items: center; justify-content: center; position: fixed; padding: 0.75rem; bottom: 4rem; right: calc(1.25rem + 90px + var(--page-padding)); z-index: 999; cursor: pointer; border: none; color: var(--bg); background: var(--fg); border-radius: 50%; } .scroll-to-top.hidden { display: none; } .scroll-to-top i { transform: translateY(-2px); } @media (min-width: 1080px) { .scroll-to-top { display: flex; } }</style><button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()"> <i class="fa fa-angle-up"></i></button><script> const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" }); window.addEventListener("scroll", () => { const button = document.querySelector(".scroll-to-top"); button.classList.toggle("hidden", window.scrollY <200); });</script>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="使用-nginx"><a class="header" href="#使用-nginx">使用 nginx</a></h1>
 <h2 id="一安装-nginx"><a class="header" href="#一安装-nginx">一、安装 nginx</a></h2>
@@ -2339,7 +2339,7 @@ sudo chmod a+x /usr/local/bin/clash
 mv your/clash/config/file config.yaml
 mv config.yaml ~/.config/clash
 </code></pre>
-<p>另外 Clash 还需要一个<a href="tutorial/data/Country.mmdb">Country.mmdb 文件</a>，Country.mmdb 是全球 IP 库，可以实现各个国家的 IP 信息解析和地理定位，没有这个文件 clash 无法正常启动，你可以前往<a href="https://github.com/SukkaW/Koolshare-Clash/blob/master/koolclash/koolclash/config/Country.mmdb">GitHub 下载</a>。下载完成后同样放在默认路径下就可以了<code>~/.config/clash</code>。</p>
+<p>另外 Clash 还需要一个<a href="learn/tutorial/data/Country.mmdb">Country.mmdb 文件</a>，Country.mmdb 是全球 IP 库，可以实现各个国家的 IP 信息解析和地理定位，没有这个文件 clash 无法正常启动，你可以前往<a href="https://github.com/SukkaW/Koolshare-Clash/blob/master/koolclash/koolclash/config/Country.mmdb">GitHub 下载</a>。下载完成后同样放在默认路径下就可以了<code>~/.config/clash</code>。</p>
 <h2 id="三配置终端代理"><a class="header" href="#三配置终端代理">三、配置终端代理</a></h2>
 <p>首先我们需要添加几个环境变量：</p>
 <pre><code class="language-sh">sudo vim /etc/environment
