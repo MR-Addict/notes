@@ -220,8 +220,6 @@ proxies:
 
 请参考以下配置：
 
-<img src="images/v2ray-shadowrocket-1.png" alt="shadowrocket-1" width="400">
-
-其中选择 websocket 传输方式：
-
-<img src="images/v2ray-shadowrocket-2.png" alt="shadowrocket-2" width="400">
+| 基本设置                                                    | 传输方式                                                                  |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------- |
+| ![Basic](images/v2ray-shadowrocket-configuration-basic.png) | ![Transmission](images/v2ray-shadowrocket-configuration-transmission.png) |
