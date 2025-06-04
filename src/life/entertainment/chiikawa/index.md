@@ -20,7 +20,7 @@
 
 ### 吉伊卡哇 （ちいかわ）
 
-{% embed img src="images/chiikawa.jpg" alt="Chiikawa" class="right"  %}
+{% embed img src="images/chiikawa.jpg" alt="Chiikawa" type="right" %}
 
 - 别名：吉伊、小可爱
 - 物种：仓鼠
@@ -33,7 +33,7 @@
 
 ### 小八猫（ハチワレ）
 
-{% embed img src="images/hachiware.webp" alt="Hachiware" class="right"  %}
+{% embed img src="images/hachiware.webp" alt="Hachiware" type="right" %}
 
 - 别名：小八、八字猫
 - 物种：奔驰猫
@@ -46,7 +46,7 @@
 
 ### 兔兔（うさぎ）
 
-{% embed img src="images/usagi.webp" alt="Usagi" class="right"  %}
+{% embed img src="images/usagi.webp" alt="Usagi" type="right" %}
 
 - 别名：乌萨奇、兔子、537
 - 物种：兔子
@@ -61,7 +61,7 @@
 
 ### 小桃鼠（モモンガ）
 
-{% embed img src="images/momonga.gif" alt="Momonga" class="right"  %}
+{% embed img src="images/momonga.gif" alt="Momonga" type="right" %}
 
 - 别名：飞鼠、小桃、莫莫咖、毛毛力
 - 物种：飞鼠
@@ -72,7 +72,7 @@
 
 ### 栗子馒头（栗まんじゅう）
 
-{% embed img src="images/kuri.webp" alt="Kuri" class="right"  %}
+{% embed img src="images/kuri.webp" alt="Kuri" type="right" %}
 
 - 别名：栗子馒头前辈、布丁狗前辈
 - 物种：蜜獾
@@ -83,7 +83,7 @@
 
 ### 海獭（ラッコ）
 
-{% embed img src="images/lakko.gif" alt="Lakko" class="right"  %}
+{% embed img src="images/lakko.gif" alt="Lakko" type="right" %}
 
 - 别名：海獭勇者、海獭师傅、师傅、獭师
 - 物种：海獭
