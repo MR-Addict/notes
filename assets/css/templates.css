@@ -3,8 +3,10 @@ main img {
   border-radius: 1rem;
 }
 
-.img-container {
-  float: none;
+.img-template {
+  & img {
+    width: 100%;
+  }
 
   & .caption {
     margin: 0;
@@ -15,10 +17,19 @@ main img {
 }
 
 @media (min-width: 40rem) {
-  .img-container {
-    float: right;
-    padding-left: 1rem;
+  .img-template[data-type="right"],
+  .img-template[data-type="left"] {
     padding-bottom: 1rem;
     width: attr(data-width rem, 20rem);
+  }
+
+  .img-template[data-type="right"] {
+    float: right;
+    padding-left: 1rem;
+  }
+
+  .img-template[data-type="left"] {
+    float: left;
+    padding-right: 1rem;
   }
 }
