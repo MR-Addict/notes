@@ -1,3 +1,9 @@
+/* patch for list */
+main ul {
+  margin-block: 0;
+  padding-inline-start: 2rem;
+}
+
 /* patch for table */
 table {
   width: 100%;
@@ -10,30 +16,6 @@ table tr :is(th, td) {
 @media (min-width: 40rem) {
   table tr :is(th, td) {
     padding-block: 1rem;
-  }
-}
-
-/* images */
-main ul {
-  margin-block: 0;
-  padding-inline-start: 2rem;
-}
-
-main img {
-  border-radius: 1rem;
-}
-
-img.right {
-  float: none;
-  width: 100%;
-}
-
-@media (min-width: 40rem) {
-  img.right {
-    float: right;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
-    width: attr(data-width rem, 20rem);
   }
 }
 
