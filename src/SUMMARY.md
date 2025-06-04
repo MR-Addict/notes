@@ -6,8 +6,13 @@
 
 - [娱乐]()
 
-  - [三丽鸥](life/sanrio/index.md)
-  - [吉伊卡哇](life/chiikawa/index.md)
+  - [三丽鸥](life/entertainment/sanrio/index.md)
+  - [吉伊卡哇](life/entertainment/chiikawa/index.md)
+
+- [工作室]()
+
+  - [皮克斯](life/studio/pixar/index.md)
+  - [迪士尼](life/studio/disney/index.md)
 
 # 学习
 

@@ -31,8 +31,9 @@ img.right {
 @media (min-width: 40rem) {
   img.right {
     float: right;
-    width: 20rem;
     margin-left: 1rem;
+    margin-bottom: 1rem;
+    width: attr(data-width rem, 20rem);
   }
 }
 
