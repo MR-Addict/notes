@@ -2,7 +2,7 @@
 
 ## 一、简介
 
-<img src="images/pixar-lamp.webp" alt="Pixar Lamp" class="right" data-width="34" />
+{% embed img src="images/pixar-lamp.webp" alt="小台灯是皮克斯的经典标识" width="34" %}
 
 皮克斯动画工作室（Pixar Animation Studios），简称皮克斯（英语：Pixar），其总部位于美国加利福尼亚州的埃默里维尔，是一家以**计算机动画制作**而闻名的动画电影制片公司。
 

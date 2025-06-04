@@ -14,7 +14,7 @@
 >
 > [帕恰狗](https://zh.wikipedia.org/wiki/帕恰狗)
 
-<img src="images/pochacco.png" alt="Pochacco" class="right" />
+{% embed img src="images/pochacco.png" alt="Pochacco" class="right"  %}
 
 - 名称：Pochacco、帕恰狗
 - 物种：狗
@@ -29,7 +29,7 @@
 >
 > [Hello Kitty](https://zh.wikipedia.org/wiki/Hello_Kitty)
 
-<img src="images/hello-kitty.png" alt="Hello Kitty" class="right" />
+{% embed img src="images/hello-kitty.png" alt="Hello Kitty" class="right"  %}
 
 - 名称：Hello Kitty，凯蒂猫、无口猫
 - 物种：猫/人（2015 年，三丽鸥发表新设定，指出：Hello Kitty 并不是猫。她走路是用两只脚，从来没有四只脚走路，并没有猫的行为特性，与过往设定并不相同。）
@@ -43,7 +43,7 @@
 >
 > [My Melody](https://zh.wikipedia.org/wiki/My_Melody)
 
-<img src="images/my-melody.png" alt="My Melody" class="right" />
+{% embed img src="images/my-melody.png" alt="My Melody" class="right"  %}
 
 - 名称：Little Red Riding Hood、My Melody、美乐蒂
 - 物种：兔子
@@ -59,7 +59,7 @@
 >
 > [酷洛米](https://zh.wikipedia.org/wiki/酷洛米)
 
-<img src="images/kuromi.png" alt="Kuromi" class="right" />
+{% embed img src="images/kuromi.png" alt="Kuromi" class="right"  %}
 
 - 名称：Kuromi、酷洛米
 - 物种：兔子
@@ -75,7 +75,7 @@
 >
 > [玉桂狗](https://zh.wikipedia.org/wiki/玉桂狗)
 
-<img src="images/cinnamoroll.png" alt="Cinnamoroll" class="right" />
+{% embed img src="images/cinnamoroll.png" alt="Cinnamoroll" class="right"  %}
 
 - 名称：Cinnamoroll、玉桂狗、肉桂狗
 - 物种：狗
@@ -94,7 +94,7 @@
 >
 > [布丁狗](https://zh.wikipedia.org/wiki/布丁狗)
 
-<img src="images/pom-pom-purin.png" alt="Pom Pom Purin" class="right" />
+{% embed img src="images/pom-pom-purin.png" alt="Pom Pom Purin" class="right"  %}
 
 - 名称：Pom Pom Purin、布丁狗
 - 物种：黄金猎犬（黄金寻回犬，Golden Retriever）

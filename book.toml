@@ -17,7 +17,7 @@ mathjax-support = false
 no-section-label = false
 git-repository-url = "https://github.com/mr-addict/notes"
 edit-url-template = "https://github.com/mr-addict/notes/edit/main/{path}"
-additional-css = ["./assets/css/patch.css"]
+additional-css = ["./assets/css/patch.css","./assets/css/templates.css"]
 
 [output.html.print]
 enable = true

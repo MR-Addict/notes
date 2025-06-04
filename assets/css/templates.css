@@ -1,0 +1,24 @@
+/* img template */
+main img {
+  border-radius: 1rem;
+}
+
+.img-container {
+  float: none;
+
+  & .caption {
+    margin: 0;
+    font-size: small;
+    text-align: center;
+    color: var(--icons);
+  }
+}
+
+@media (min-width: 40rem) {
+  .img-container {
+    float: right;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    width: attr(data-width rem, 20rem);
+  }
+}
