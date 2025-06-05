@@ -83,7 +83,7 @@
 
 ### 海獭（ラッコ）
 
-{% embed img src="images/lakko.gif" alt="Lakko" type="right" %}
+{% embed img src="images/lakko.jpg" alt="Lakko" type="right" %}
 
 - 别名：海獭勇者、海獭师傅、师傅、獭师
 - 物种：海獭
