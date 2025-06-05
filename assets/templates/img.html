@@ -1,4 +1,6 @@
 <div class="img-template" data-width="{% width=20 %}" data-type="{% type=block %}">
-  <img src="{% src %}" alt="{% alt %}" />
+  <a href="{% src %}" data-alt="{% alt %}" data-title="{% alt %}" data-lightbox="{% group=lightbox %}">
+    <img src="{% src %}" alt="{% alt %}" />
+  </a>
   <p class="caption">{% alt %}</p>
 </div>

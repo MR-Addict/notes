@@ -17,7 +17,8 @@ mathjax-support = false
 no-section-label = false
 git-repository-url = "https://github.com/mr-addict/notes"
 edit-url-template = "https://github.com/mr-addict/notes/edit/main/{path}"
-additional-css = ["./assets/css/patch.css","./assets/css/templates.css"]
+additional-css = ["./assets/css/patch.css","./assets/css/lightbox.min.css","./assets/css/templates.css"]
+additional-js = ["./assets/js/lightbox-plus-jquery.min.js","./assets/js/templates.js"]
 
 [output.html.print]
 enable = true
