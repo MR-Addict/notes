@@ -923,7 +923,7 @@ networkingMode=mirrored
 <p>如果你是 Windows 10，那么可以在 <code>设置</code> -&gt; <code>应用</code> -&gt; <code>可选功能</code> 中安装 OpenSSH 客户端和服务器。</p>
 <p>如果你是 Windows 11，那么可以在 <code>设置</code> -&gt; <code>系统</code> -&gt; <code>可选功能</code> 中安装 OpenSSH 客户端和服务器。</p>
 <p>请按照下图所示安装 <strong>OpenSSH Server</strong>，<strong>OpenSSH Client</strong> 可选安装，一般系统默认已经安装：</p>
-<p><img src="learn/windows/images/install-openssh.png" alt="install-openssh" /></p>
+<div class="img-template" data-width="20" data-type="block"> <a href="learn/windows/images/install-openssh.png" data-alt="在Windows上启用SSH" data-title="在Windows上启用SSH" data-lightbox="lightbox"> <img src="learn/windows/images/install-openssh.png" alt="在Windows上启用SSH" /> </a> <p class="caption">在Windows上启用SSH</p></div>
 <p>然后用管理员权限打开 PowerShell，运行以下命令查看 OpenSSH 服务状态：</p>
 <pre><code class="language-sh">Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 </code></pre>
@@ -1875,7 +1875,7 @@ proxies:
 </blockquote>
 <p>请参考以下配置：</p>
 <div class="table-wrapper"><table><thead><tr><th>基本设置</th><th>传输方式</th></tr></thead><tbody>
-<tr><td><img src="learn/tutorial/images/v2ray-shadowrocket-configuration-basic.png" alt="Basic" /></td><td><img src="learn/tutorial/images/v2ray-shadowrocket-configuration-transmission.png" alt="Transmission" /></td></tr>
+<tr><td><div class="img-template" data-width="20" data-type="block"> <a href="learn/tutorial/images/v2ray-shadowrocket-configuration-basic.png" data-alt="基本设置" data-title="基本设置" data-lightbox="lightbox"> <img src="learn/tutorial/images/v2ray-shadowrocket-configuration-basic.png" alt="基本设置" /> </a> <p class="caption">基本设置</p></div></td><td><div class="img-template" data-width="20" data-type="block"> <a href="learn/tutorial/images/v2ray-shadowrocket-configuration-transmission.png" data-alt="选择传输方式" data-title="选择传输方式" data-lightbox="lightbox"> <img src="learn/tutorial/images/v2ray-shadowrocket-configuration-transmission.png" alt="选择传输方式" /> </a> <p class="caption">选择传输方式</p></div></td></tr>
 </tbody></table>
 </div><style>.scroll-to-top { font-size: 2.5rem; width: 3.2rem; height: 3.2rem; display: none; align-items: center; justify-content: center; position: fixed; padding: 0.75rem; bottom: 4rem; right: calc(1.25rem + 90px + var(--page-padding)); z-index: 999; cursor: pointer; border: none; color: var(--bg); background: var(--fg); border-radius: 50%; } .scroll-to-top.hidden { display: none; } .scroll-to-top i { transform: translateY(-2px); } @media (min-width: 1080px) { .scroll-to-top { display: flex; } }</style><button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()"> <i class="fa fa-angle-up"></i></button><script>const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" }); window.addEventListener("scroll", () => { const button = document.querySelector(".scroll-to-top"); button.classList.toggle("hidden", window.scrollY <200); });</script><div style="break-before: page; page-break-before: always;"></div><h1 id="使用-nginx"><a class="header" href="#使用-nginx">使用 nginx</a></h1>
 <h2 id="一安装-nginx"><a class="header" href="#一安装-nginx">一、安装 nginx</a></h2>
