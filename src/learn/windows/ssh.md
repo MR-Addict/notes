@@ -8,7 +8,7 @@
 
 请按照下图所示安装 **OpenSSH Server**，**OpenSSH Client** 可选安装，一般系统默认已经安装：
 
-![install-openssh](images/install-openssh.png)
+{% embed img src="images/install-openssh.png" alt="在Windows上启用SSH" %}
 
 然后用管理员权限打开 PowerShell，运行以下命令查看 OpenSSH 服务状态：
 

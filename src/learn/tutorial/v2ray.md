@@ -220,6 +220,6 @@ proxies:
 
 请参考以下配置：
 
-| 基本设置                                                    | 传输方式                                                                  |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------- |
-| ![Basic](images/v2ray-shadowrocket-configuration-basic.png) | ![Transmission](images/v2ray-shadowrocket-configuration-transmission.png) |
+| 基本设置                                                                               | 传输方式                                                                                          |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| {% embed img src="images/v2ray-shadowrocket-configuration-basic.png" alt="基本设置" %} | {% embed img src="images/v2ray-shadowrocket-configuration-transmission.png" alt="选择传输方式" %} |
