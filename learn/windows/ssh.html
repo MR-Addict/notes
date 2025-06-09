@@ -184,7 +184,7 @@
 <p>如果你是 Windows 10，那么可以在 <code>设置</code> -&gt; <code>应用</code> -&gt; <code>可选功能</code> 中安装 OpenSSH 客户端和服务器。</p>
 <p>如果你是 Windows 11，那么可以在 <code>设置</code> -&gt; <code>系统</code> -&gt; <code>可选功能</code> 中安装 OpenSSH 客户端和服务器。</p>
 <p>请按照下图所示安装 <strong>OpenSSH Server</strong>，<strong>OpenSSH Client</strong> 可选安装，一般系统默认已经安装：</p>
-<div class="img-template" data-width="20" data-type="block"> <a href="images/install-openssh.png" data-alt="在Windows上启用SSH" data-title="在Windows上启用SSH" data-lightbox="lightbox"> <img src="images/install-openssh.png" alt="在Windows上启用SSH" /> </a> <p class="caption">在Windows上启用SSH</p></div>
+<div class="img-template" style="--width: 20rem" data-type="block"> <a href="images/install-openssh.png" data-alt="在Windows上启用SSH" data-title="在Windows上启用SSH" data-lightbox="lightbox"> <img src="images/install-openssh.png" alt="在Windows上启用SSH" /> </a> <p class="caption">在Windows上启用SSH</p></div>
 <p>然后用管理员权限打开 PowerShell，运行以下命令查看 OpenSSH 服务状态：</p>
 <pre><code class="language-sh">Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 </code></pre>
