@@ -22,7 +22,7 @@ main img {
 @media (min-width: 40rem) {
   .img-template[data-type="right"],
   .img-template[data-type="left"] {
-    width: attr(data-width rem, 20rem);
+    width: var(--width);
   }
 
   .img-template[data-type="right"] {

@@ -2,7 +2,7 @@
 
 ## 一、简介
 
-{% embed img src="images/disney.gif" alt="提到迪士尼就会让人想到公主和城堡" width="40" type="right" %}
+{% embed img src="images/disney.gif" alt="提到迪士尼就会让人想到公主和城堡" width="40rem" type="right" %}
 
 华特迪士尼公司（The Walt Disney Company）又称迪士尼公司，简称迪士尼、迪斯尼，是美国一家多元化跨国媒体集团，其总部位于加利福尼亚州伯班克，由**华特·迪士尼**和**洛伊·迪士尼**于 1923 年 10 月 16 日建立的`迪士尼兄弟卡通制片厂`（Disney Brothers Cartoon Studio）为其起始基础。随后迪士尼发展成为全美领先的动画电影制作公司，同时也开始涉足真人影视剧制作及主题公园等行业。
 
